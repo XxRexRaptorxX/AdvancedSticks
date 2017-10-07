@@ -1,0 +1,7 @@
+{
+    "parent": "block/crop",
+    "textures": {
+		"particle": "advancedsticks:blocks/shrub_7",
+        "crop": "advancedsticks:blocks/shrub_7"
+    }
+}

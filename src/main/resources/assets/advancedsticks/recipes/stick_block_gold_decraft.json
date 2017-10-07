@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  
+    {
+      "item": "advancedsticks:gold_stick_block"
+    }
+  ],
+  
+  "result": {
+    "item": "advancedsticks:stick_gold",
+    "count": 9
+  }
+}

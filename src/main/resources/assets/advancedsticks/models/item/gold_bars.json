@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "advancedsticks:blocks/gold_bars"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "longstick_iron",  
+  "pattern": [
+  
+    "#",
+    "#"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "rodIron",
+      "data": 0
+    }  
+  }, 
+  
+  "result": {
+    "item": "advancedsticks:longstick_iron"
+  }
+}

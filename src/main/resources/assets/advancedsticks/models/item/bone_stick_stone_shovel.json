@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "advancedsticks:items/bone_stick_stone_shovel"
+    }
+}

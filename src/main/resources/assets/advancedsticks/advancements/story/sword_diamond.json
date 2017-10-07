@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:diamond_stick_diamond_sword"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.sword_diamond.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.sword_diamond.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/sword_iron",
+    "criteria": {
+        "advancedsticks_sword_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:diamond_stick_diamond_sword"
+                    }
+                ]
+            }
+        }
+    }
+}

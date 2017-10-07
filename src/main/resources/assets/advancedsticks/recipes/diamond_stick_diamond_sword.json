@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickDiamond",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodDiamond",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:diamond_stick_diamond_sword"
+  }
+}

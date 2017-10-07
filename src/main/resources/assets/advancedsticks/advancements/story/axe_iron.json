@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:iron_stick_iron_axe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.axe_iron.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.axe_iron.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/axe_wood",
+    "criteria": {
+        "advancedsticks_axe_iron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:iron_stick_iron_axe"
+                    }
+                ]
+            }
+        }
+    }
+}

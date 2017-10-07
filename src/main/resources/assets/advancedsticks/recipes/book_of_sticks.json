@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " x ",
+    "x#x",
+    " x "
+    
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:book"
+    },
+    "x": {
+      "item": "minecraft:stick"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:book_of_sticks"
+  }
+}

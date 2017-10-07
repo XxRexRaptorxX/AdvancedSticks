@@ -1,0 +1,35 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickRedstone",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodRedstone",
+        "data": 0
+      }
+     ],
+    
+    "X": {  
+        "type": "forge:ore_dict",
+        "ore": "plankWood"
+      }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:redstone_stick_wood_shovel"
+  }
+}

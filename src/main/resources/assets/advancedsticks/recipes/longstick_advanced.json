@@ -1,0 +1,26 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "longstick_advanced",
+  "pattern": [
+  
+    "#x#"
+    
+  ],
+  
+  "key": {
+    "x": {
+      "type": "forge:ore_dict",
+      "ore": "stickIron",
+      "data": 0
+    },
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickDiamond",
+      "data": 0
+    }  
+  }, 
+  
+  "result": {
+    "item": "advancedsticks:longstick_advanced"
+  }
+}

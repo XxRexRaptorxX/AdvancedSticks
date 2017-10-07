@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "longstick_gold",  
+  "pattern": [
+  
+    "#",
+    "#"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickGold",
+      "data": 0
+    }  
+  }, 
+  
+  "result": {
+    "item": "advancedsticks:longstick_gold"
+  }
+}

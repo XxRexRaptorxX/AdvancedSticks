@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:iron_stick_iron_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.pickaxe_iron.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.pickaxe_iron.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/pickaxe_wood",
+    "criteria": {
+        "advancedsticks_pickaxe_iron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:iron_stick_iron_pickaxe"
+                    }
+                ]
+            }
+        }
+    }
+}

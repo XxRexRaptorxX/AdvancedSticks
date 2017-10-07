@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "advancedsticks:blocks/block_of_wood_sticks_top",
+		"up": "advancedsticks:blocks/block_of_wood_sticks_top",
+		"down": "advancedsticks:blocks/block_of_wood_sticks_top",
+		"north": "advancedsticks:blocks/block_of_wood_sticks_side",
+		"east": "advancedsticks:blocks/block_of_wood_sticks_side",
+		"west": "advancedsticks:blocks/block_of_wood_sticks_side",
+		"south": "advancedsticks:blocks/block_of_wood_sticks_side"
+	}
+}

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:advanced_stick_diamond_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.pickaxe_advanced.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.pickaxe_advanced.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true,
+        "frame": "challenge"
+    },
+    
+    "parent": "advancedsticks:story/pickaxe_diamond",
+    "rewards": {
+        "experience": 50
+    },
+    "criteria": {
+        "advancedsticks_pickaxe_advanced": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:advanced_stick_diamond_pickaxe"
+                    }
+                ]
+            }
+        }
+    }
+}

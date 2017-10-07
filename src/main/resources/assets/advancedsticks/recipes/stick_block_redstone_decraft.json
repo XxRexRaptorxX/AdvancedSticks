@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  
+    {
+      "item": "advancedsticks:redstone_stick_block"
+    }
+  ],
+  
+  "result": {
+    "item": "advancedsticks:stick_redstone",
+    "count": 9
+  }
+}

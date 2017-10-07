@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  "key": {
+    "#": {
+      "item": "advancedsticks:stick_quartz"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:quartz_stick_block"
+  }
+}

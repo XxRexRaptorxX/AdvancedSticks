@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_hoe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.hoe_wood.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.hoe_wood.description"
+        },   
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    
+    "parent": "advancedsticks:story/stick_wood",
+    "criteria": {
+        "advancedsticks_hoe_wood": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:iron_hoe"
+                    }
+                ]
+            }
+        }
+    }
+}

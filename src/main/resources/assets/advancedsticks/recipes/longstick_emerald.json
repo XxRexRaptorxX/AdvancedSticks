@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "longstick_emerald",  
+  "pattern": [
+  
+    "#",
+    "#"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickEmerald",
+      "data": 0
+    }  
+  }, 
+  
+  "result": {
+    "item": "advancedsticks:longstick_emerald"
+  }
+}

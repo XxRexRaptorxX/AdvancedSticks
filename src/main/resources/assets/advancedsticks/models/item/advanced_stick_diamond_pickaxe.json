@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "advancedsticks:items/advanced_stick_diamond_pickaxe"
+    }
+}

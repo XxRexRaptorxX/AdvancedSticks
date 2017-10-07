@@ -1,0 +1,37 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickBlaze",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodBlaze",
+        "data": 0
+      },
+      {
+      "item": "minecraft:blaze_rod"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:blazerod_diamond_hoe"
+  }
+}

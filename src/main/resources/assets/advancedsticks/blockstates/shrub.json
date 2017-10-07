@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "advancedsticks:shrub_0" },
+        "age=1": { "model": "advancedsticks:shrub_1" },
+        "age=2": { "model": "advancedsticks:shrub_2" },
+        "age=3": { "model": "advancedsticks:shrub_3" },
+        "age=4": { "model": "advancedsticks:shrub_4" },
+        "age=5": { "model": "advancedsticks:shrub_5" },
+        "age=6": { "model": "advancedsticks:shrub_6" },
+        "age=7": { "model": "advancedsticks:shrub_7" }
+    }
+}

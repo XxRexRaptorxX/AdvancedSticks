@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:diamond_stick_diamond_pickaxe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.pickaxe_diamond.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.pickaxe_diamond.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/pickaxe_iron",
+    "criteria": {
+        "advancedsticks_pickaxe_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:diamond_stick_diamond_pickaxe"
+                    }
+                ]
+            }
+        }
+    }
+}

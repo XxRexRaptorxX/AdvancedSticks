@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  
+    {
+      "item": "advancedsticks:diamond_stick_block"
+    }
+  ],
+  
+  "result": {
+    "item": "advancedsticks:stick_diamond",
+    "count": 9
+  }
+}

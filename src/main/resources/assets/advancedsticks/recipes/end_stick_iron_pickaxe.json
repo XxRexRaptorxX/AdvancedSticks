@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickEnd",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodEnd",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:endrod_iron_pickaxe"
+  }
+}

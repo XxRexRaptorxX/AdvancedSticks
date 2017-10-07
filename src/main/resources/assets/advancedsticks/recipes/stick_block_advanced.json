@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  "key": {
+    "#": {
+      "item": "advancedsticks:stick_advanced"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:advanced_stick_block"
+  }
+}

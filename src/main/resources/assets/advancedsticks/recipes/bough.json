@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "bough",
+  "ingredients": [
+  
+    {
+      "item": "minecraft:leaves",
+      "data": 32767
+    }
+  ],
+  
+  "result": {
+    "item": "advancedsticks:bough"
+  }
+}
