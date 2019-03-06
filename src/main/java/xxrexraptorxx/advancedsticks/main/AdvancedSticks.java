@@ -31,7 +31,7 @@ import xxrexraptorxx.advancedsticks.util.UpdateChecker;
 public class AdvancedSticks {
    
     public static final String MODID = "advancedsticks";
-    public static final String VERSION = "1.5.6";
+    public static final String VERSION = "1.5.7";
     
    
     @Instance("advancedsticks")
