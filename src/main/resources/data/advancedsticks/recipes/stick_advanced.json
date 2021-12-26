@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "advanced_stick",
+  "pattern": [
+  
+    "#",
+    "x",
+    "#"
+  
+  ],
+  
+  "key": {
+    "x": {
+      "item": "minecraft:iron_ingot"
+    },
+    "#": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:stick_advanced"
+  }
+}

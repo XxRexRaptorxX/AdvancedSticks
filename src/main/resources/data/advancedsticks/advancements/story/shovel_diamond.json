@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:diamond_stick_diamond_shovel"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.shovel_diamond.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.shovel_diamond.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/shovel_iron",
+    "criteria": {
+        "advancedsticks_shovel_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:diamond_stick_diamond_shovel"
+                    }
+                ]
+            }
+        }
+    }
+}

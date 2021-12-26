@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickGold",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodGold",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:gold_stick_gold_sword"
+  }
+}

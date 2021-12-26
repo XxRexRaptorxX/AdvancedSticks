@@ -1,11 +1,6 @@
-/**
- * 
- */
+package xxrexraptorxx.advancedsticks.main;
+
 /**
  * @author XxRexRaptorxX (RexRaptor)
- * @homepage www.WoM-Company.jimdo.com
- * @forumThread www.planetminecraft.com/mod/advanced-sticks/
- * @projectPage https://minecraft.curseforge.com/projects/advanced-sticks-mod
- *
- */
-package xxrexraptorxx.advancedsticks.main;
+ * @projectPage https://www.curseforge.com/minecraft/mc-mods/advanced-sticks
+ **/

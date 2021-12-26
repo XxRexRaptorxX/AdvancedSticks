@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickRedstone",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodRedstone",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:redstone_stick_iron_sword"
+  }
+}

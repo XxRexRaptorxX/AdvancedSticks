@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "advancedsticks:plakat", "y": 180},
-        "facing=south": { "model": "advancedsticks:plakat", "y": 0},
-        "facing=east": {  "model": "advancedsticks:plakat", "y": 270},
-        "facing=west": {  "model": "advancedsticks:plakat", "y": 90}
-    }
-}

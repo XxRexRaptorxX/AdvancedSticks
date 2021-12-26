@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickIron",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodIron",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:iron_stick_stone_pickaxe"
+  }
+}

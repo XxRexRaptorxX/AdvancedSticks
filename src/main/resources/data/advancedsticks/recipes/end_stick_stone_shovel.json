@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickEnd",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodEnd",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:endrod_stone_shovel"
+  }
+}

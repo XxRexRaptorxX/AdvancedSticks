@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickBone",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodBone",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:bone_stick_iron_pickaxe"
+  }
+}

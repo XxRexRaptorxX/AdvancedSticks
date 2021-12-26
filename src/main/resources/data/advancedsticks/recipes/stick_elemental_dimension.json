@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+  
+    {
+      "item": "advancedsticks:elemental_stick_darkness"
+    },
+    {
+      "item": "advancedsticks:elemental_stick_light"
+    }
+  ],
+  
+  "result": {
+    "item": "advancedsticks:elemental_stick_dimension"
+  }
+}

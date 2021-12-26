@@ -1,6 +1,7 @@
 {
-	"pack": {
-			"pack_format": 3,
-			"description": "Resources for the Advanced Sticks Mod"
-			}
-}	
+    "pack": {
+        "description": "AdvancedSticks resources",
+        "pack_format": 8,
+        "_comment": "by XxRexRaptorxX"
+    }
+}

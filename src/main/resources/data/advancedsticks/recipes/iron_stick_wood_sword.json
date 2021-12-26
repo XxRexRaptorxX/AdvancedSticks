@@ -1,0 +1,35 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickIron",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodIron",
+        "data": 0
+      }
+     ],
+    
+    "X": {  
+        "type": "forge:ore_dict",
+        "ore": "plankWood"
+      }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:iron_stick_wood_sword"
+  }
+}

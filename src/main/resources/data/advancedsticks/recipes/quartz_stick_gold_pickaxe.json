@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickQuartz",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodQuartz",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:quartz_stick_gold_pickaxe"
+  }
+}

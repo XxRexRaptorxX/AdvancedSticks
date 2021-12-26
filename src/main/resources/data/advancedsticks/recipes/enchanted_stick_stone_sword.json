@@ -1,0 +1,34 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "type": "forge:ore_dict",
+        "ore": "stickEnchanted",
+        "data": 0
+      },
+      {  
+        "type": "forge:ore_dict",
+        "ore": "rodEnchanted",
+        "data": 0
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:enchanted_stick_stone_sword"
+  }
+}

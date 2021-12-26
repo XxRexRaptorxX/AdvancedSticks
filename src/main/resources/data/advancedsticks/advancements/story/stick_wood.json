@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:stick"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.stick_wood.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.stick_wood.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": false
+    },
+    
+    "parent": "advancedsticks:story/root",
+    "criteria": {
+        "advancedsticks_stick": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:stick"
+                    }
+                ]
+            }
+        }
+    }
+}

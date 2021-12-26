@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:iron_stick_iron_sword"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.sword_iron.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.sword_iron.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/sword_wood",
+    "criteria": {
+        "advancedsticks_sword_iron": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:iron_stick_iron_sword"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:stick_advanced"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.stick_advanced.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.stick_advanced.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true,
+        "frame": "goal"
+    },
+    
+    "parent": "advancedsticks:story/stick_diamond",
+    "rewards": {
+        "experience": 25
+    },
+    "criteria": {
+        "advancedsticks_stick_advanced": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:stick_advanced"
+                    }
+                ]
+            }
+        }
+    }
+}

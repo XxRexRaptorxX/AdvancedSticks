@@ -1,0 +1,29 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "##",
+    "##"
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+      "type": "forge:ore_dict",
+      "ore": "stickWood",
+      "data": 0
+      },
+      {  
+      "type": "forge:ore_dict",
+      "ore": "rodWood",
+      "data": 0
+      }
+    ]
+  }, 
+  
+  "result": {
+    "item": "advancedsticks:wooden_bars",
+    "count": 20
+  }
+}

@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "advancedsticks:diamond_stick_diamond_hoe"
+        },
+        "title": {
+            "translate": "advancements.advancedsticks.hoe_diamond.title"
+        },
+        "description": {
+            "translate": "advancements.advancedsticks.hoe_diamond.description"
+        },   
+        "show_toast": true,
+        "announce_to_chat": true
+    },
+    
+    "parent": "advancedsticks:story/hoe_iron",
+    "criteria": {
+        "advancedsticks_hoe_diamond": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "advancedsticks:diamond_stick_diamond_hoe"
+                    }
+                ]
+            }
+        }
+    }
+}
