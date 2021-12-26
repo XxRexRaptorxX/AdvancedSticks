@@ -21,9 +21,9 @@ public class ModItems {
     public static final RegistryObject<ItemBasic> IRON_STICK = ITEMS.register("stick_iron", ItemBasic::new);
     public static final RegistryObject<ItemBasic> GOLD_STICK = ITEMS.register("stick_gold", ItemBasic::new);
     public static final RegistryObject<ItemBasic> EMERALD_STICK = ITEMS.register("stick_emerald", ItemBasic::new);
+    public static final RegistryObject<ItemBasic> AMETHYST_STICK = ITEMS.register("stick_amethyst", ItemBasic::new);
     public static final RegistryObject<ItemBasic> DIAMOND_STICK = ITEMS.register("stick_diamond", ItemBasic::new);
+    public static final RegistryObject<ItemBasic> NETHERITE_STICK = ITEMS.register("stick_netherite", ItemBasic::new);
     public static final RegistryObject<ItemBasic> ENCHANTED_STICK = ITEMS.register("stick_enchanted", ItemBasic::new);
-    public static final RegistryObject<ItemBasic> QUARTZ_STICK = ITEMS.register("stick_quartz", ItemBasic::new);
-    public static final RegistryObject<ItemBasic> REDSTONE_STICK = ITEMS.register("stick_redstone", ItemBasic::new);
 
 }
