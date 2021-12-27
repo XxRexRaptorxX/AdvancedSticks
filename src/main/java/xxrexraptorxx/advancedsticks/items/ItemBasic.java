@@ -1,7 +1,10 @@
 package xxrexraptorxx.advancedsticks.items;
 
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.Level;
 import xxrexraptorxx.advancedsticks.main.ModItems;
 import xxrexraptorxx.advancedsticks.utils.CreativeTab;
 
@@ -21,4 +24,5 @@ public class ItemBasic extends Item {
             return false;
         }
     }
+
 }
