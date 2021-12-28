@@ -28,6 +28,7 @@ public class ModItems {
     public static final RegistryObject<ItemBasic> DIAMOND_STICK = ITEMS.register("stick_diamond", ItemBasic::new);
     public static final RegistryObject<ItemBasic> NETHERITE_STICK = ITEMS.register("stick_netherite", ItemBasic::new);
     public static final RegistryObject<ItemBasic> ENCHANTED_STICK = ITEMS.register("stick_enchanted", ItemBasic::new);
+    public static final RegistryObject<ItemBasic> ADVANCED_STICK = ITEMS.register("stick_advanced", ItemBasic::new);
 
     /*
     public static final RegistryObject<ItemBasic> ELEMENTAL_STICK_AIR = ITEMS.register("elemental_stick_air", ItemBasic::new);

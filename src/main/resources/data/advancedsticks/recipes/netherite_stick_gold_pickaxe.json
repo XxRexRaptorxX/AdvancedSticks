@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/netherite"
+      },
+      {
+        "tag": "forge:rods/netherite"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:netherite_stick_gold_pickaxe"
+  }
+}

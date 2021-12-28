@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " X ",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/copper"
+      },
+      {
+        "tag": "forge:rods/copper"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:planks"
+      }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:copper_stick_wood_shovel"
+  }
+}

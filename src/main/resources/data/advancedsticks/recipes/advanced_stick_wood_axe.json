@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
   
     " XX",
@@ -11,20 +11,15 @@
   "key": {
     "#": [
       {
-        "type": "forge:ore_dict",
-        "ore": "stickAdvanced",
-        "data": 0
+        "tag": "forge:sticks/advanced"
       },
-      {  
-        "type": "forge:ore_dict",
-        "ore": "rodAdvanced",
-        "data": 0
+      {
+        "tag": "forge:rods/advanced"
       }
      ],
     
-    "X": {  
-        "type": "forge:ore_dict",
-        "ore": "plankWood"
+    "X": {
+      "tag": "minecraft:planks"
       }
   },
   

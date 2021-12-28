@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " XX",
+    " #X",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/amethyst"
+      },
+      {
+        "tag": "forge:rods/amethyst"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:amethyst_stick_diamond_axe"
+  }
+}

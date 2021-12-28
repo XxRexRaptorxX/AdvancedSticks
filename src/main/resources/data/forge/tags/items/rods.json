@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:rods/advanced",
+    "#forge:rods/amethyst",
+    "#forge:rods/bone",
+    "#forge:rods/copper",
+    "#forge:rods/diamond",
+    "#forge:rods/emerald",
+    "#forge:rods/enchanted",
+    "#forge:rods/gold",
+    "#forge:rods/iron",
+    "#forge:rods/end",
+    "#forge:rods/netherite",
+    "#forge:rods/wood",
+    "#forge:rods/blaze"
+  ]
+}

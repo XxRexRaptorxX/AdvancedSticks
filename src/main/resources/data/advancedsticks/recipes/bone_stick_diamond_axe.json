@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
   
     " XX",
@@ -11,16 +11,12 @@
   "key": {
     "#": [
       {
-        "type": "forge:ore_dict",
-        "ore": "stickBone",
-        "data": 0
+        "tag": "forge:sticks/bone"
       },
-      {  
-        "type": "forge:ore_dict",
-        "ore": "rodBone",
-        "data": 0
+      {
+        "tag": "forge:rods/bone"
       }
-     ],
+    ],
     
     "X": {
       "item": "minecraft:diamond"

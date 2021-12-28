@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
   
     " X ",
@@ -11,23 +11,19 @@
   "key": {
     "#": [
       {
-        "type": "forge:ore_dict",
-        "ore": "stickEnd",
-        "data": 0
+        "tag": "forge:sticks/end"
       },
-      {  
-        "type": "forge:ore_dict",
-        "ore": "rodEnd",
-        "data": 0
+      {
+        "tag": "forge:rods/end"
+      },
+      {
+        "item": "minecraft:end_rod"
       }
-     ],
-    
-    "X": {  
-        "type": "forge:ore_dict",
-        "ore": "plankWood"
-      }
+    ],
+    "X": {
+      "tag": "minecraft:planks"
+    }
   },
-  
   
   "result": {
     "item": "advancedsticks:endrod_wood_sword"

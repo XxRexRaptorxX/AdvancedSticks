@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "#x#",
+    "###"
+  
+  ],
+  
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "x": {
+      "item": "minecraft:stick"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:stick_netherite"
+  }
+}

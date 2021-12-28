@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/copper"
+      },
+      {
+        "tag": "forge:rods/copper"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:copper_stick_diamond_hoe"
+  }
+}

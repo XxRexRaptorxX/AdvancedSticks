@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "group": "gold_bars",
   "pattern": [
   
@@ -11,14 +11,10 @@
   "key": {
     "#": [
       {
-      "type": "forge:ore_dict",
-      "ore": "stickGold",
-      "data": 0
+        "tag": "forge:sticks/gold"
       },
-      {  
-      "type": "forge:ore_dict",
-      "ore": "rodGold",
-      "data": 0
+      {
+        "tag": "forge:rods/gold"
       }
     ]
   }, 

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/amethyst"
+      },
+      {
+        "tag": "forge:rods/amethyst"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:amethyst_stick_iron_hoe"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
   
     "XXX",
@@ -11,14 +11,10 @@
   "key": {
     "#": [
       {
-        "type": "forge:ore_dict",
-        "ore": "stickIron",
-        "data": 0
+        "tag": "forge:sticks/iron"
       },
-      {  
-        "type": "forge:ore_dict",
-        "ore": "rodIron",
-        "data": 0
+      {
+        "tag": "forge:rods/iron"
       }
      ],
     

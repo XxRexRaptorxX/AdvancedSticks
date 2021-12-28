@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:sticks/advanced",
+    "#forge:sticks/amethyst",
+    "#forge:sticks/bone",
+    "#forge:sticks/copper",
+    "#forge:sticks/diamond",
+    "#forge:sticks/emerald",
+    "#forge:sticks/enchanted",
+    "#forge:sticks/gold",
+    "#forge:sticks/iron",
+    "#forge:sticks/end",
+    "#forge:sticks/netherite",
+    "#forge:sticks/wood",
+    "#forge:sticks/blaze"
+  ]
+}

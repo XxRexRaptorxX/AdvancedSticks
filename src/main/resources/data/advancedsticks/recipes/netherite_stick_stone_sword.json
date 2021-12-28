@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/netherite"
+      },
+      {
+        "tag": "forge:rods/netherite"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:netherite_stick_stone_sword"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "type": "forge:ore_shaped",
+  "type": "minecraft:crafting_shaped",
   "pattern": [
   
     " X ",
@@ -11,19 +11,15 @@
   "key": {
     "#": [
       {
-        "type": "forge:ore_dict",
-        "ore": "stickGold",
-        "data": 0
+        "tag": "forge:sticks/gold"
       },
-      {  
-        "type": "forge:ore_dict",
-        "ore": "rodGold",
-        "data": 0
+      {
+        "tag": "forge:rods/gold"
       }
      ],
     
     "X": {
-      "item": "minecraft:cobblestone"
+      "tag": "minecraft:stone_tool_materials"
     }
   },
   
