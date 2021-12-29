@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " XX",
+    " #X",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/copper"
+      },
+      {
+        "tag": "forge:rods/copper"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:copper_stick_netherite_axe"
+  }
+}

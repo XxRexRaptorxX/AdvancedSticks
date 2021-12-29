@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/blaze"
+      },
+      {
+        "tag": "forge:rods/blaze"
+      },
+      {
+      "item": "minecraft:blaze_rod"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:blazerod_netherite_hoe"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "advancedsticks:items/emerald_stick_netherite_sword"
+    }
+}

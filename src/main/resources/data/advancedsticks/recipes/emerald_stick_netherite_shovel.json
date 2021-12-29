@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " X ",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/emerald"
+      },
+      {
+        "tag": "forge:rods/emerald"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:emerald_stick_netherite_shovel"
+  }
+}

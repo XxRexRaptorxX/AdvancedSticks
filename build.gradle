@@ -16,7 +16,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '2.0.0'
+version = '2.0.0-pre1'
 group = 'xxrexraptorxx.advancedsticks.main' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'advancedsticks'
 

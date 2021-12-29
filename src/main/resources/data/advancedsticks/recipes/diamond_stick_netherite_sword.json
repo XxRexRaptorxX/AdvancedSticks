@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/diamond"
+      },
+      {
+        "tag": "forge:rods/diamond"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "advancedsticks:diamond_stick_netherite_sword"
+  }
+}

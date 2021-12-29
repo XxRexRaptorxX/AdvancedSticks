@@ -51,7 +51,13 @@ public class Events {
         ItemStack stack = event.getCrafting();
 
         if(item.getRegistryName().toString().contains("advancedsticks:blazerod")) {
-            stack.enchant(Enchantments.FIRE_ASPECT, 0);
+            stack.enchant(Enchantments.FIRE_ASPECT, 1);
+        }
+        if(item.getRegistryName().toString().contains("advancedsticks:endrod")) {
+            stack.enchant(Enchantments.KNOCKBACK, 3);
+        }
+        if(item.getRegistryName().toString().contains("advancedsticks:enchanted")) {
+            stack.enchant(Enchantments.MENDING, 1);
         }
 
     }
