@@ -69,5 +69,8 @@ public class Events {
         if (item.getRegistryName().toString().contains("advancedsticks:enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
+
     }
+
+
 }

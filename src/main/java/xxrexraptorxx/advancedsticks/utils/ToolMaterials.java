@@ -3,9 +3,7 @@ package xxrexraptorxx.advancedsticks.utils;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.TierSortingRegistry;
@@ -122,6 +120,43 @@ public class ToolMaterials {
     private static final float ENCHANTED_SPEED = WOOD_BASE_SPEED + 2.0f;
     private static final float ENCHANTED_DMG = WOOD_BASE_DMG;
     private static final int   ENCHANTED_ENCH = WOOD_BASE_ENCH + 30;
+
+    /** SPEED **/
+    public static final float WOOD_SWORD_SPEED = 1.6f;
+    public static final float WOOD_PICKAXE_SPEED = 1.2f;
+    public static final float WOOD_AXE_SPEED = 0.8f;
+    public static final float WOOD_SHOVEL_SPEED = 1;
+    public static final float WOOD_HOE_SPEED = 1;
+
+    public static final float STONE_SWORD_SPEED = 1.6f;
+    public static final float STONE_PICKAXE_SPEED = 1.2f;
+    public static final float STONE_AXE_SPEED = 0.8f;
+    public static final float STONE_SHOVEL_SPEED = 1;
+    public static final float STONE_HOE_SPEED = 2;
+
+    public static final float IRON_SWORD_SPEED = 1.6f;
+    public static final float IRON_PICKAXE_SPEED = 1.2f;
+    public static final float IRON_AXE_SPEED = 0.9f;
+    public static final float IRON_SHOVEL_SPEED = 1;
+    public static final float IRON_HOE_SPEED = 3;
+
+    public static final float GOLD_SWORD_SPEED = 1.6f;
+    public static final float GOLD_PICKAXE_SPEED = 1.2f;
+    public static final float GOLD_AXE_SPEED = 1;
+    public static final float GOLD_SHOVEL_SPEED = 1;
+    public static final float GOLD_HOE_SPEED = 1;
+
+    public static final float DIAMOND_SWORD_SPEED = 1.6f;
+    public static final float DIAMOND_PICKAXE_SPEED = 1.2f;
+    public static final float DIAMOND_AXE_SPEED = 1;
+    public static final float DIAMOND_SHOVEL_SPEED = 1;
+    public static final float DIAMOND_HOE_SPEED = 4;
+
+    public static final float NETHERITE_SWORD_SPEED = 1.6f;
+    public static final float NETHERITE_PICKAXE_SPEED = 1.2f;
+    public static final float NETHERITE_AXE_SPEED = 1;
+    public static final float NETHERITE_SHOVEL_SPEED = 1;
+    public static final float NETHERITE_HOE_SPEED = 4;
 
 
     public static final Tier WOOD_BONE_TM = TierSortingRegistry.registerTier(
