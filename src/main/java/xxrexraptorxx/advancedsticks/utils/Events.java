@@ -28,9 +28,7 @@ import java.util.UUID;
 public class Events {
 
 
-    /**
-     * Update-Checker
-     **/
+    /** Update-Checker **/
     private static boolean hasShownUp = false;
 
     @SubscribeEvent
@@ -45,16 +43,18 @@ public class Events {
 
                     Minecraft.getInstance().player.sendMessage(new TextComponent(ChatFormatting.BLUE + "A newer version of " + ChatFormatting.YELLOW + References.NAME + ChatFormatting.BLUE + " is available!"), UUID.randomUUID());
                     Minecraft.getInstance().player.sendMessage(clickevent, UUID.randomUUID());
-
                     hasShownUp = true;
+
                 } else if (VersionChecker.getResult(ModList.get().getModContainerById(References.MODID).get().getModInfo()).status() == VersionChecker.Status.FAILED) {
                     System.err.println(References.NAME + "'s version checker failed!");
+                    hasShownUp = true;
                 }
             }
         }
     }
 
 
+    /** Item Enchanter **/
     @SubscribeEvent
     public static void onCrafting(PlayerEvent.ItemCraftedEvent event) {
         Item item = event.getCrafting().getItem();
@@ -69,7 +69,6 @@ public class Events {
         if (item.getRegistryName().toString().contains("advancedsticks:enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
-
     }
 
 

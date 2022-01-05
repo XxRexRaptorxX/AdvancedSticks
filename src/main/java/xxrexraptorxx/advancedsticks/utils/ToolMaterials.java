@@ -1,15 +1,11 @@
 package xxrexraptorxx.advancedsticks.utils;
 
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
-import net.minecraftforge.common.TierSortingRegistry;
-import xxrexraptorxx.advancedsticks.main.References;
-
-import java.util.List;
 
 public class ToolMaterials {
 
@@ -159,297 +155,153 @@ public class ToolMaterials {
     public static final float NETHERITE_HOE_SPEED = 4;
 
 
-    public static final Tier WOOD_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + BONE_USES, WOOD_BASE_SPEED + BONE_SPEED, WOOD_BASE_DMG + BONE_DMG, WOOD_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-bone"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_BONE_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + BONE_USES, WOOD_BASE_SPEED + BONE_SPEED, WOOD_BASE_DMG + BONE_DMG, WOOD_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + COPPER_USES, WOOD_BASE_SPEED + COPPER_SPEED, WOOD_BASE_DMG + COPPER_DMG, WOOD_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-copper"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_COPPER_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + COPPER_USES, WOOD_BASE_SPEED + COPPER_SPEED, WOOD_BASE_DMG + COPPER_DMG, WOOD_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ADVANCED_USES, WOOD_BASE_SPEED + ADVANCED_SPEED, WOOD_BASE_DMG + ADVANCED_DMG, WOOD_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-advanced"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_ADVANCED_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ADVANCED_USES, WOOD_BASE_SPEED + ADVANCED_SPEED, WOOD_BASE_DMG + ADVANCED_DMG, WOOD_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
     
-    public static final Tier WOOD_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ENCHANTED_USES, WOOD_BASE_SPEED + ENCHANTED_SPEED, WOOD_BASE_DMG + ENCHANTED_DMG, WOOD_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-enchanted"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_ENCHANTED_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ENCHANTED_USES, WOOD_BASE_SPEED + ENCHANTED_SPEED, WOOD_BASE_DMG + ENCHANTED_DMG, WOOD_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + BLAZEROD_USES, WOOD_BASE_SPEED + BLAZEROD_SPEED, WOOD_BASE_DMG + BLAZEROD_DMG, WOOD_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-blaze"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_BLAZEROD_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + BLAZEROD_USES, WOOD_BASE_SPEED + BLAZEROD_SPEED, WOOD_BASE_DMG + BLAZEROD_DMG, WOOD_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + EMERALD_USES, WOOD_BASE_SPEED + EMERALD_SPEED, WOOD_BASE_DMG + EMERALD_DMG, WOOD_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-emerald"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_EMERALD_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + EMERALD_USES, WOOD_BASE_SPEED + EMERALD_SPEED, WOOD_BASE_DMG + EMERALD_DMG, WOOD_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + AMETHYST_USES, WOOD_BASE_SPEED + AMETHYST_SPEED, WOOD_BASE_DMG + AMETHYST_DMG, WOOD_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-amethyst"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_AMETHYST_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + AMETHYST_USES, WOOD_BASE_SPEED + AMETHYST_SPEED, WOOD_BASE_DMG + AMETHYST_DMG, WOOD_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ENDROD_USES, WOOD_BASE_SPEED + ENDROD_SPEED, WOOD_BASE_DMG + ENDROD_DMG, WOOD_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-endrod"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_ENDROD_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + ENDROD_USES, WOOD_BASE_SPEED + ENDROD_SPEED, WOOD_BASE_DMG + ENDROD_DMG, WOOD_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + IRON_USES, WOOD_BASE_SPEED + IRON_SPEED, WOOD_BASE_DMG + IRON_DMG, WOOD_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-iron"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_IRON_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + IRON_USES, WOOD_BASE_SPEED + IRON_SPEED, WOOD_BASE_DMG + IRON_DMG, WOOD_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + GOLD_USES, WOOD_BASE_SPEED + GOLD_SPEED, WOOD_BASE_DMG + GOLD_DMG, WOOD_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-gold"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_GOLD_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + GOLD_USES, WOOD_BASE_SPEED + GOLD_SPEED, WOOD_BASE_DMG + GOLD_DMG, WOOD_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + DIAMOND_USES, WOOD_BASE_SPEED + DIAMOND_SPEED, WOOD_BASE_DMG + DIAMOND_DMG, WOOD_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-diamond"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_DIAMOND_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + DIAMOND_USES, WOOD_BASE_SPEED + DIAMOND_SPEED, WOOD_BASE_DMG + DIAMOND_DMG, WOOD_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
-    public static final Tier WOOD_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + NETHERITE_USES, WOOD_BASE_SPEED + NETHERITE_SPEED, WOOD_BASE_DMG + NETHERITE_DMG, WOOD_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS)),
-            new ResourceLocation(References.MODID, "wood-netherite"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier WOOD_NETHERITE_TM = new ForgeTier(Tiers.WOOD.getLevel(), WOOD_BASE_USES + NETHERITE_USES, WOOD_BASE_SPEED + NETHERITE_SPEED, WOOD_BASE_DMG + NETHERITE_DMG, WOOD_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.PLANKS));
 
 
-    public static final Tier STONE_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + BONE_USES, STONE_BASE_SPEED + BONE_SPEED, STONE_BASE_DMG + BONE_DMG, STONE_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-bone"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_BONE_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + BONE_USES, STONE_BASE_SPEED + BONE_SPEED, STONE_BASE_DMG + BONE_DMG, STONE_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + COPPER_USES, STONE_BASE_SPEED + COPPER_SPEED, STONE_BASE_DMG + COPPER_DMG, STONE_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-copper"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_COPPER_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + COPPER_USES, STONE_BASE_SPEED + COPPER_SPEED, STONE_BASE_DMG + COPPER_DMG, STONE_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ADVANCED_USES, STONE_BASE_SPEED + ADVANCED_SPEED, STONE_BASE_DMG + ADVANCED_DMG, STONE_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-advanced"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_ADVANCED_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ADVANCED_USES, STONE_BASE_SPEED + ADVANCED_SPEED, STONE_BASE_DMG + ADVANCED_DMG, STONE_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ENCHANTED_USES, STONE_BASE_SPEED + ENCHANTED_SPEED, STONE_BASE_DMG + ENCHANTED_DMG, STONE_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-enchanted"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_ENCHANTED_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ENCHANTED_USES, STONE_BASE_SPEED + ENCHANTED_SPEED, STONE_BASE_DMG + ENCHANTED_DMG, STONE_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + BLAZEROD_USES, STONE_BASE_SPEED + BLAZEROD_SPEED, STONE_BASE_DMG + BLAZEROD_DMG, STONE_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-blaze"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_BLAZEROD_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + BLAZEROD_USES, STONE_BASE_SPEED + BLAZEROD_SPEED, STONE_BASE_DMG + BLAZEROD_DMG, STONE_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + EMERALD_USES, STONE_BASE_SPEED + EMERALD_SPEED, STONE_BASE_DMG + EMERALD_DMG, STONE_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-emerald"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_EMERALD_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + EMERALD_USES, STONE_BASE_SPEED + EMERALD_SPEED, STONE_BASE_DMG + EMERALD_DMG, STONE_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + AMETHYST_USES, STONE_BASE_SPEED + AMETHYST_SPEED, STONE_BASE_DMG + AMETHYST_DMG, STONE_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-amethyst"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_AMETHYST_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + AMETHYST_USES, STONE_BASE_SPEED + AMETHYST_SPEED, STONE_BASE_DMG + AMETHYST_DMG, STONE_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ENDROD_USES, STONE_BASE_SPEED + ENDROD_SPEED, STONE_BASE_DMG + ENDROD_DMG, STONE_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-endrod"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_ENDROD_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + ENDROD_USES, STONE_BASE_SPEED + ENDROD_SPEED, STONE_BASE_DMG + ENDROD_DMG, STONE_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + IRON_USES, STONE_BASE_SPEED + IRON_SPEED, STONE_BASE_DMG + IRON_DMG, STONE_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-iron"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_IRON_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + IRON_USES, STONE_BASE_SPEED + IRON_SPEED, STONE_BASE_DMG + IRON_DMG, STONE_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + GOLD_USES, STONE_BASE_SPEED + GOLD_SPEED, STONE_BASE_DMG + GOLD_DMG, STONE_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-gold"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_GOLD_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + GOLD_USES, STONE_BASE_SPEED + GOLD_SPEED, STONE_BASE_DMG + GOLD_DMG, STONE_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + DIAMOND_USES, STONE_BASE_SPEED + DIAMOND_SPEED, STONE_BASE_DMG + DIAMOND_DMG, STONE_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-diamond"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_DIAMOND_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + DIAMOND_USES, STONE_BASE_SPEED + DIAMOND_SPEED, STONE_BASE_DMG + DIAMOND_DMG, STONE_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
-    public static final Tier STONE_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + NETHERITE_USES, STONE_BASE_SPEED + NETHERITE_SPEED, STONE_BASE_DMG + NETHERITE_DMG, STONE_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS)),
-            new ResourceLocation(References.MODID, "stone-netherite"), List.of(Tiers.WOOD), List.of(Tiers.STONE));
+    public static final ForgeTier STONE_NETHERITE_TM = new ForgeTier(Tiers.STONE.getLevel(), STONE_BASE_USES + NETHERITE_USES, STONE_BASE_SPEED + NETHERITE_SPEED, STONE_BASE_DMG + NETHERITE_DMG, STONE_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(ItemTags.STONE_TOOL_MATERIALS));
 
 
-    public static final Tier IRON_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + BONE_USES, IRON_BASE_SPEED + BONE_SPEED, IRON_BASE_DMG + BONE_DMG, IRON_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-bone"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_BONE_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + BONE_USES, IRON_BASE_SPEED + BONE_SPEED, IRON_BASE_DMG + BONE_DMG, IRON_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, IRON_BASE_DMG + COPPER_DMG, IRON_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-copper"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_COPPER_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, IRON_BASE_DMG + COPPER_DMG, IRON_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ADVANCED_USES, IRON_BASE_SPEED + ADVANCED_SPEED, IRON_BASE_DMG + ADVANCED_DMG, IRON_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-advanced"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_ADVANCED_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ADVANCED_USES, IRON_BASE_SPEED + ADVANCED_SPEED, IRON_BASE_DMG + ADVANCED_DMG, IRON_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ENCHANTED_USES, IRON_BASE_SPEED + ENCHANTED_SPEED, IRON_BASE_DMG + ENCHANTED_DMG, IRON_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-enchanted"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_ENCHANTED_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ENCHANTED_USES, IRON_BASE_SPEED + ENCHANTED_SPEED, IRON_BASE_DMG + ENCHANTED_DMG, IRON_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + BLAZEROD_USES, IRON_BASE_SPEED + BLAZEROD_SPEED, IRON_BASE_DMG + BLAZEROD_DMG, IRON_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-blaze"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_BLAZEROD_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + BLAZEROD_USES, IRON_BASE_SPEED + BLAZEROD_SPEED, IRON_BASE_DMG + BLAZEROD_DMG, IRON_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + EMERALD_USES, IRON_BASE_SPEED + EMERALD_SPEED, IRON_BASE_DMG + EMERALD_DMG, IRON_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-emerald"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_EMERALD_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + EMERALD_USES, IRON_BASE_SPEED + EMERALD_SPEED, IRON_BASE_DMG + EMERALD_DMG, IRON_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + AMETHYST_USES, IRON_BASE_SPEED + AMETHYST_SPEED, IRON_BASE_DMG + AMETHYST_DMG, IRON_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-amethyst"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_AMETHYST_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + AMETHYST_USES, IRON_BASE_SPEED + AMETHYST_SPEED, IRON_BASE_DMG + AMETHYST_DMG, IRON_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ENDROD_USES, IRON_BASE_SPEED + ENDROD_SPEED, IRON_BASE_DMG + ENDROD_DMG, IRON_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-endrod"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_ENDROD_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + ENDROD_USES, IRON_BASE_SPEED + ENDROD_SPEED, IRON_BASE_DMG + ENDROD_DMG, IRON_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + IRON_USES, IRON_BASE_SPEED + IRON_SPEED, IRON_BASE_DMG + IRON_DMG, IRON_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-iron"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_IRON_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + IRON_USES, IRON_BASE_SPEED + IRON_SPEED, IRON_BASE_DMG + IRON_DMG, IRON_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, IRON_BASE_DMG + GOLD_DMG, IRON_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-gold"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_GOLD_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, IRON_BASE_DMG + GOLD_DMG, IRON_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + DIAMOND_USES, IRON_BASE_SPEED + DIAMOND_SPEED, IRON_BASE_DMG + DIAMOND_DMG, IRON_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-diamond"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_DIAMOND_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + DIAMOND_USES, IRON_BASE_SPEED + DIAMOND_SPEED, IRON_BASE_DMG + DIAMOND_DMG, IRON_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
-    public static final Tier IRON_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + NETHERITE_USES, IRON_BASE_SPEED + NETHERITE_SPEED, IRON_BASE_DMG + NETHERITE_DMG, IRON_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT)),
-            new ResourceLocation(References.MODID, "iron-netherite"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+    public static final ForgeTier IRON_NETHERITE_TM = new ForgeTier(Tiers.IRON.getLevel(), IRON_BASE_USES + NETHERITE_USES, IRON_BASE_SPEED + NETHERITE_SPEED, IRON_BASE_DMG + NETHERITE_DMG, IRON_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(Items.IRON_INGOT));
 
 
-    public static final Tier GOLD_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + BONE_SPEED, GOLD_BASE_DMG + BONE_DMG, GOLD_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-bone"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_BONE_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + BONE_SPEED, GOLD_BASE_DMG + BONE_DMG, GOLD_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, GOLD_BASE_DMG + COPPER_DMG, GOLD_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-copper"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_COPPER_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, GOLD_BASE_DMG + COPPER_DMG, GOLD_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ADVANCED_USES, IRON_BASE_SPEED + ADVANCED_SPEED, GOLD_BASE_DMG + ADVANCED_DMG, GOLD_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-advanced"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_ADVANCED_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ADVANCED_USES, IRON_BASE_SPEED + ADVANCED_SPEED, GOLD_BASE_DMG + ADVANCED_DMG, GOLD_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ENCHANTED_USES, GOLD_BASE_SPEED + ENCHANTED_SPEED, GOLD_BASE_DMG + ENCHANTED_DMG, GOLD_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-enchanted"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_ENCHANTED_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ENCHANTED_USES, GOLD_BASE_SPEED + ENCHANTED_SPEED, GOLD_BASE_DMG + ENCHANTED_DMG, GOLD_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + BLAZEROD_USES, GOLD_BASE_SPEED + BLAZEROD_SPEED, GOLD_BASE_DMG + BLAZEROD_DMG, GOLD_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-blaze"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_BLAZEROD_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + BLAZEROD_USES, GOLD_BASE_SPEED + BLAZEROD_SPEED, GOLD_BASE_DMG + BLAZEROD_DMG, GOLD_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + EMERALD_USES, GOLD_BASE_SPEED + EMERALD_SPEED, GOLD_BASE_DMG + EMERALD_DMG, GOLD_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-emerald"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_EMERALD_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + EMERALD_USES, GOLD_BASE_SPEED + EMERALD_SPEED, GOLD_BASE_DMG + EMERALD_DMG, GOLD_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + AMETHYST_USES, GOLD_BASE_SPEED + AMETHYST_SPEED, GOLD_BASE_DMG + AMETHYST_DMG, GOLD_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-amethyst"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_AMETHYST_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + AMETHYST_USES, GOLD_BASE_SPEED + AMETHYST_SPEED, GOLD_BASE_DMG + AMETHYST_DMG, GOLD_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ENDROD_USES, GOLD_BASE_SPEED + ENDROD_SPEED, GOLD_BASE_DMG + ENDROD_DMG, GOLD_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-endrod"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_ENDROD_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + ENDROD_USES, GOLD_BASE_SPEED + ENDROD_SPEED, GOLD_BASE_DMG + ENDROD_DMG, GOLD_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + IRON_SPEED, GOLD_BASE_DMG + IRON_DMG, GOLD_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-iron"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_IRON_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + IRON_SPEED, GOLD_BASE_DMG + IRON_DMG, GOLD_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, GOLD_BASE_DMG + GOLD_DMG, GOLD_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-gold"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_GOLD_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, GOLD_BASE_DMG + GOLD_DMG, GOLD_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + DIAMOND_USES, GOLD_BASE_SPEED + DIAMOND_SPEED, GOLD_BASE_DMG + DIAMOND_DMG, GOLD_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-diamond"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_DIAMOND_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + DIAMOND_USES, GOLD_BASE_SPEED + DIAMOND_SPEED, GOLD_BASE_DMG + DIAMOND_DMG, GOLD_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
-    public static final Tier GOLD_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + NETHERITE_USES, GOLD_BASE_SPEED + NETHERITE_SPEED, GOLD_BASE_DMG + NETHERITE_DMG, GOLD_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT)),
-            new ResourceLocation(References.MODID, "gold-netherite"), List.of(Tiers.WOOD), List.of(Tiers.GOLD));
+    public static final ForgeTier GOLD_NETHERITE_TM = new ForgeTier(Tiers.GOLD.getLevel(), GOLD_BASE_USES + NETHERITE_USES, GOLD_BASE_SPEED + NETHERITE_SPEED, GOLD_BASE_DMG + NETHERITE_DMG, GOLD_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.GOLD_INGOT));
 
 
-    public static final Tier DIAMOND_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + BONE_USES, DIAMOND_BASE_SPEED + BONE_SPEED, DIAMOND_BASE_DMG + BONE_DMG, DIAMOND_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-bone"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_BONE_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + BONE_USES, DIAMOND_BASE_SPEED + BONE_SPEED, DIAMOND_BASE_DMG + BONE_DMG, DIAMOND_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + COPPER_USES, DIAMOND_BASE_SPEED + COPPER_SPEED, DIAMOND_BASE_DMG + COPPER_DMG, DIAMOND_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-copper"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_COPPER_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + COPPER_USES, DIAMOND_BASE_SPEED + COPPER_SPEED, DIAMOND_BASE_DMG + COPPER_DMG, DIAMOND_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ADVANCED_USES, DIAMOND_BASE_SPEED + ADVANCED_SPEED, DIAMOND_BASE_DMG + ADVANCED_DMG, DIAMOND_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-advanced"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_ADVANCED_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ADVANCED_USES, DIAMOND_BASE_SPEED + ADVANCED_SPEED, DIAMOND_BASE_DMG + ADVANCED_DMG, DIAMOND_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ENCHANTED_USES, DIAMOND_BASE_SPEED + ENCHANTED_SPEED, DIAMOND_BASE_DMG + ENCHANTED_DMG, DIAMOND_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-enchanted"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_ENCHANTED_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ENCHANTED_USES, DIAMOND_BASE_SPEED + ENCHANTED_SPEED, DIAMOND_BASE_DMG + ENCHANTED_DMG, DIAMOND_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + BLAZEROD_USES, DIAMOND_BASE_SPEED + BLAZEROD_SPEED, DIAMOND_BASE_DMG + BLAZEROD_DMG, DIAMOND_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-blaze"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_BLAZEROD_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + BLAZEROD_USES, DIAMOND_BASE_SPEED + BLAZEROD_SPEED, DIAMOND_BASE_DMG + BLAZEROD_DMG, DIAMOND_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + EMERALD_USES, DIAMOND_BASE_SPEED + EMERALD_SPEED, DIAMOND_BASE_DMG + EMERALD_DMG, DIAMOND_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-emerald"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_EMERALD_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + EMERALD_USES, DIAMOND_BASE_SPEED + EMERALD_SPEED, DIAMOND_BASE_DMG + EMERALD_DMG, DIAMOND_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + AMETHYST_USES, DIAMOND_BASE_SPEED + AMETHYST_SPEED, DIAMOND_BASE_DMG + AMETHYST_DMG, DIAMOND_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-amethyst"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_AMETHYST_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + AMETHYST_USES, DIAMOND_BASE_SPEED + AMETHYST_SPEED, DIAMOND_BASE_DMG + AMETHYST_DMG, DIAMOND_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ENDROD_USES, DIAMOND_BASE_SPEED + ENDROD_SPEED, DIAMOND_BASE_DMG + ENDROD_DMG, DIAMOND_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-endrod"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_ENDROD_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + ENDROD_USES, DIAMOND_BASE_SPEED + ENDROD_SPEED, DIAMOND_BASE_DMG + ENDROD_DMG, DIAMOND_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + IRON_USES, DIAMOND_BASE_SPEED + IRON_SPEED, DIAMOND_BASE_DMG + IRON_DMG, DIAMOND_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-iron"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_IRON_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + IRON_USES, DIAMOND_BASE_SPEED + IRON_SPEED, DIAMOND_BASE_DMG + IRON_DMG, DIAMOND_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + GOLD_USES, DIAMOND_BASE_SPEED + GOLD_SPEED, DIAMOND_BASE_DMG + GOLD_DMG, DIAMOND_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-gold"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_GOLD_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + GOLD_USES, DIAMOND_BASE_SPEED + GOLD_SPEED, DIAMOND_BASE_DMG + GOLD_DMG, DIAMOND_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + DIAMOND_USES, DIAMOND_BASE_SPEED + DIAMOND_SPEED, DIAMOND_BASE_DMG + DIAMOND_DMG, DIAMOND_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-diamond"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_DIAMOND_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + DIAMOND_USES, DIAMOND_BASE_SPEED + DIAMOND_SPEED, DIAMOND_BASE_DMG + DIAMOND_DMG, DIAMOND_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
-    public static final Tier DIAMOND_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + NETHERITE_USES, DIAMOND_BASE_SPEED + NETHERITE_SPEED, DIAMOND_BASE_DMG + NETHERITE_DMG, DIAMOND_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND)),
-            new ResourceLocation(References.MODID, "diamond-netherite"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final ForgeTier DIAMOND_NETHERITE_TM = new ForgeTier(Tiers.DIAMOND.getLevel(), DIAMOND_BASE_USES + NETHERITE_USES, DIAMOND_BASE_SPEED + NETHERITE_SPEED, DIAMOND_BASE_DMG + NETHERITE_DMG, DIAMOND_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.DIAMOND));
 
 
-    public static final Tier NETHERITE_BONE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + BONE_USES, NETHERITE_BASE_SPEED + BONE_SPEED, NETHERITE_BASE_DMG + BONE_DMG, NETHERITE_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-bone"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_BONE_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + BONE_USES, NETHERITE_BASE_SPEED + BONE_SPEED, NETHERITE_BASE_DMG + BONE_DMG, NETHERITE_BASE_ENCH + BONE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_COPPER_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + COPPER_USES, NETHERITE_BASE_SPEED + COPPER_SPEED, NETHERITE_BASE_DMG + COPPER_DMG, NETHERITE_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-copper"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_COPPER_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + COPPER_USES, NETHERITE_BASE_SPEED + COPPER_SPEED, NETHERITE_BASE_DMG + COPPER_DMG, NETHERITE_BASE_ENCH + COPPER_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_ADVANCED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ADVANCED_USES, NETHERITE_BASE_SPEED + ADVANCED_SPEED, NETHERITE_BASE_DMG + ADVANCED_DMG, NETHERITE_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-advanced"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_ADVANCED_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ADVANCED_USES, NETHERITE_BASE_SPEED + ADVANCED_SPEED, NETHERITE_BASE_DMG + ADVANCED_DMG, NETHERITE_BASE_ENCH + ADVANCED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_ENCHANTED_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ENCHANTED_USES, NETHERITE_BASE_SPEED + ENCHANTED_SPEED, NETHERITE_BASE_DMG + ENCHANTED_DMG, NETHERITE_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-enchanted"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_ENCHANTED_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ENCHANTED_USES, NETHERITE_BASE_SPEED + ENCHANTED_SPEED, NETHERITE_BASE_DMG + ENCHANTED_DMG, NETHERITE_BASE_ENCH + ENCHANTED_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_BLAZEROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + BLAZEROD_USES, NETHERITE_BASE_SPEED + BLAZEROD_SPEED, NETHERITE_BASE_DMG + BLAZEROD_DMG, NETHERITE_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-blaze"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_BLAZEROD_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + BLAZEROD_USES, NETHERITE_BASE_SPEED + BLAZEROD_SPEED, NETHERITE_BASE_DMG + BLAZEROD_DMG, NETHERITE_BASE_ENCH + BLAZEROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_EMERALD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + EMERALD_USES, NETHERITE_BASE_SPEED + EMERALD_SPEED, NETHERITE_BASE_DMG + EMERALD_DMG, NETHERITE_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-emerald"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_EMERALD_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + EMERALD_USES, NETHERITE_BASE_SPEED + EMERALD_SPEED, NETHERITE_BASE_DMG + EMERALD_DMG, NETHERITE_BASE_ENCH + EMERALD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_AMETHYST_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + AMETHYST_USES, NETHERITE_BASE_SPEED + AMETHYST_SPEED, NETHERITE_BASE_DMG + AMETHYST_DMG, NETHERITE_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-amethyst"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_AMETHYST_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + AMETHYST_USES, NETHERITE_BASE_SPEED + AMETHYST_SPEED, NETHERITE_BASE_DMG + AMETHYST_DMG, NETHERITE_BASE_ENCH + AMETHYST_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_ENDROD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ENDROD_USES, NETHERITE_BASE_SPEED + ENDROD_SPEED, NETHERITE_BASE_DMG + ENDROD_DMG, NETHERITE_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-endrod"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_ENDROD_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + ENDROD_USES, NETHERITE_BASE_SPEED + ENDROD_SPEED, NETHERITE_BASE_DMG + ENDROD_DMG, NETHERITE_BASE_ENCH + ENDROD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_IRON_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + IRON_USES, NETHERITE_BASE_SPEED + IRON_SPEED, NETHERITE_BASE_DMG + IRON_DMG, NETHERITE_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-iron"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_IRON_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + IRON_USES, NETHERITE_BASE_SPEED + IRON_SPEED, NETHERITE_BASE_DMG + IRON_DMG, NETHERITE_BASE_ENCH + IRON_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_GOLD_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + GOLD_USES, NETHERITE_BASE_SPEED + GOLD_SPEED, NETHERITE_BASE_DMG + GOLD_DMG, NETHERITE_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-gold"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_GOLD_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + GOLD_USES, NETHERITE_BASE_SPEED + GOLD_SPEED, NETHERITE_BASE_DMG + GOLD_DMG, NETHERITE_BASE_ENCH + GOLD_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_DIAMOND_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + DIAMOND_USES, NETHERITE_BASE_SPEED + DIAMOND_SPEED, NETHERITE_BASE_DMG + DIAMOND_DMG, NETHERITE_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-diamond"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_DIAMOND_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + DIAMOND_USES, NETHERITE_BASE_SPEED + DIAMOND_SPEED, NETHERITE_BASE_DMG + DIAMOND_DMG, NETHERITE_BASE_ENCH + DIAMOND_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    public static final Tier NETHERITE_NETHERITE_TM = TierSortingRegistry.registerTier(
-            new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + NETHERITE_USES, NETHERITE_BASE_SPEED + NETHERITE_SPEED, NETHERITE_BASE_DMG + NETHERITE_DMG, NETHERITE_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT)),
-            new ResourceLocation(References.MODID, "netherite-netherite"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    public static final ForgeTier NETHERITE_NETHERITE_TM = new ForgeTier(Tiers.NETHERITE.getLevel(), NETHERITE_BASE_USES + NETHERITE_USES, NETHERITE_BASE_SPEED + NETHERITE_SPEED, NETHERITE_BASE_DMG + NETHERITE_DMG, NETHERITE_BASE_ENCH + NETHERITE_ENCH, BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(Items.NETHERITE_INGOT));
 }
 
