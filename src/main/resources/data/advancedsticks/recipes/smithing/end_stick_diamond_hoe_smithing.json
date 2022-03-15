@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+      "item": "advancedsticks:endrod_diamond_hoe"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "advancedsticks:endrod_netherite_hoe"
+  }
+}

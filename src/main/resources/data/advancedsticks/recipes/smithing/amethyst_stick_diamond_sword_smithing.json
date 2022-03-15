@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "advancedsticks:amethyst_stick_diamond_sword"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "advancedsticks:amethyst_stick_netherite_sword"
+  }
+}

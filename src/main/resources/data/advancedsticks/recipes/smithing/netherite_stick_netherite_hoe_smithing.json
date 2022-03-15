@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+      "item": "minecraft:netherite_hoe"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "item": "advancedsticks:netherite_stick_netherite_hoe"
+  }
+}
