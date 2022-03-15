@@ -479,4 +479,8 @@ public class ModItems {
     public static final RegistryObject<ShovelItem> ENCHANTED_STICK_NETHERITE_SHOVEL = ITEMS.register("enchanted_stick_netherite_shovel", () -> new ShovelItem(ToolMaterials.NETHERITE_ENCHANTED_TM, 1.5f, -4.0f + ToolMaterials.NETHERITE_SHOVEL_SPEED, new Item.Properties().tab(CreativeTab.MOD_TAB)));
     public static final RegistryObject<HoeItem> ENCHANTED_STICK_NETHERITE_HOE = ITEMS.register("enchanted_stick_netherite_hoe", () -> new HoeItem(ToolMaterials.NETHERITE_ENCHANTED_TM, 0, -4.0f + ToolMaterials.NETHERITE_HOE_SPEED, new Item.Properties().tab(CreativeTab.MOD_TAB)));
 
+    public static final RegistryObject<Item> IRON_BOW = ITEMS.register("iron_bow", () -> new BowItem(new Item.Properties().tab(CreativeTab.MOD_TAB).durability(500)));
+    public static final RegistryObject<Item> GOLD_BOW = ITEMS.register("gold_bow", () -> new BowItem(new Item.Properties().tab(CreativeTab.MOD_TAB).durability(250)));
+    public static final RegistryObject<Item> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new BowItem(new Item.Properties().tab(CreativeTab.MOD_TAB).durability(1560)));
+    public static final RegistryObject<Item> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().tab(CreativeTab.MOD_TAB).durability(2030)));
 }

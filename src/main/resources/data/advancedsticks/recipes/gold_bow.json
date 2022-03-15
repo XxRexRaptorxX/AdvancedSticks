@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " #X",
+    "# X",
+    " #X"
+  ],
+  "key": {
+    "#": [
+      {
+        "tag": "forge:sticks/gold"
+      },
+      {
+        "tag": "forge:rods/gold"
+      }
+    ],
+    "X": {
+      "item": "minecraft:string"
+    }
+  },
+  "result": {
+    "item": "advancedsticks:gold_bow"
+  }
+}

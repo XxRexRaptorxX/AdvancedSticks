@@ -1,0 +1,6 @@
+{
+    "parent": "advancedsticks:item/netherite_bow",
+    "textures": {
+        "layer0": "advancedsticks:items/netherite_bow_pulling_1"
+    }
+}

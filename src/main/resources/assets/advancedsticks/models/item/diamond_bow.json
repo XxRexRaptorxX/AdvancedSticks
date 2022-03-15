@@ -1,9 +1,9 @@
-
 {
     "parent": "item/generated",
     "textures": {
         "layer0": "advancedsticks:items/diamond_bow_standby"
     },
+
     "display": {
         "thirdperson_righthand": {
             "rotation": [ -80, 260, -40 ],
@@ -26,6 +26,7 @@
             "scale": [ 0.68, 0.68, 0.68 ]
         }
     },
+
     "overrides": [
         {
             "predicate": {

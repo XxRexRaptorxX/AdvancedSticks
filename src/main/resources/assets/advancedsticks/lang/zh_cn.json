@@ -80,6 +80,7 @@
   "item.advancedsticks.stick_bone": "骨棍",
   "item.advancedsticks.stick_advanced": "先进的棍",
   "item.advancedsticks.stick_enchanted": "附魔的棍",
+
   "item.advancedsticks.elemental_stick_air": "元素棍",
   "item.advancedsticks.elemental_stick_earth": "元素棍",
   "item.advancedsticks.elemental_stick_fire": "元素棍",
@@ -88,9 +89,12 @@
   "item.advancedsticks.elemental_stick_light": "元素棍",
   "item.advancedsticks.elemental_stick_darkness": "元素棍",
   "item.advancedsticks.elemental_stick_dimension": "元素棍",
+
   "item.advancedsticks.iron_bow": "铁弓",
   "item.advancedsticks.gold_bow": "金弓",
   "item.advancedsticks.diamond_bow": "钻石弓",
+  "item.advancedsticks.netherite_bow": "Netherite Bow",
+
   "item.advancedsticks.bone_stick_wood_sword": "木剑",
   "item.advancedsticks.bone_stick_wood_axe": "木斧",
   "item.advancedsticks.bone_stick_wood_pickaxe": "木镐",
