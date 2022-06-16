@@ -1,12 +1,15 @@
 package xxrexraptorxx.advancedsticks.utils;
 
 import net.minecraft.world.item.Item;
+import net.minecraftforge.registries.ForgeRegistries;
 import xxrexraptorxx.advancedsticks.main.References;
+
+import java.sql.Ref;
 
 public class ToolUtils {
 
     public static String getStickFromName(Item item) {
-        String name = item.getRegistryName().toString();
+        String name = ForgeRegistries.ITEMS.getKey(item).toString();
         Integer prefix = References.MODID.length() + 1;
 
         if(name.contains("rod")) {

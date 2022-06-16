@@ -2,8 +2,7 @@ package xxrexraptorxx.advancedsticks.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.ClickEvent;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -13,9 +12,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.VersionChecker;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
+import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
 import xxrexraptorxx.advancedsticks.main.References;
-
-import java.util.UUID;
 
 @Mod.EventBusSubscriber(modid = References.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class Events {
@@ -29,18 +28,17 @@ public class Events {
         if (Config.UPDATE_CHECKER.get()) {
             if (!hasShownUp && Minecraft.getInstance().screen == null) {
                 if (VersionChecker.getResult(ModList.get().getModContainerById(References.MODID).get().getModInfo()).status() == VersionChecker.Status.OUTDATED ||
-                        VersionChecker.getResult(ModList.get().getModContainerById(References.MODID).get().getModInfo()).status() == VersionChecker.Status.BETA_OUTDATED) {
+                        VersionChecker.getResult(ModList.get().getModContainerById(References.MODID).get().getModInfo()).status() == VersionChecker.Status.BETA_OUTDATED ) {
 
-                    TextComponent clickevent = new TextComponent(ChatFormatting.RED + "Click here to update!");
-                    clickevent.withStyle(clickevent.getStyle().withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, References.URL)));
+                    Minecraft.getInstance().player.sendSystemMessage(Component.literal(ChatFormatting.BLUE + "A newer version of " + ChatFormatting.YELLOW + References.NAME + ChatFormatting.BLUE + " is available!"));
+                    Minecraft.getInstance().player.sendSystemMessage(Component.literal(ChatFormatting.GRAY + References.URL));
 
-                    Minecraft.getInstance().player.sendMessage(new TextComponent(ChatFormatting.BLUE + "A newer version of " + ChatFormatting.YELLOW + References.NAME + ChatFormatting.BLUE + " is available!"), UUID.randomUUID());
-                    Minecraft.getInstance().player.sendMessage(clickevent, UUID.randomUUID());
                     hasShownUp = true;
 
                 } else if (VersionChecker.getResult(ModList.get().getModContainerById(References.MODID).get().getModInfo()).status() == VersionChecker.Status.FAILED) {
-                    System.err.println(References.NAME + "'s version checker failed!");
+                    AdvancedSticks.LOGGER.error(References.NAME + "'s version checker failed!");
                     hasShownUp = true;
+
                 }
             }
         }
@@ -53,13 +51,13 @@ public class Events {
         Item item = event.getCrafting().getItem();
         ItemStack stack = event.getCrafting();
 
-        if (item.getRegistryName().toString().contains("advancedsticks:blazerod")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:blazerod")) {
             stack.enchant(Enchantments.FIRE_ASPECT, 1);
         }
-        if (item.getRegistryName().toString().contains("advancedsticks:endrod")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:endrod")) {
             stack.enchant(Enchantments.KNOCKBACK, 3);
         }
-        if (item.getRegistryName().toString().contains("advancedsticks:enchanted")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
     }
