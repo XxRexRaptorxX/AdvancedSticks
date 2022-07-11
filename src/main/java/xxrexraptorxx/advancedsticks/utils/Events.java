@@ -51,13 +51,13 @@ public class Events {
         Item item = event.getCrafting().getItem();
         ItemStack stack = event.getCrafting();
 
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:blazerod")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":blazerod")) {
             stack.enchant(Enchantments.FIRE_ASPECT, 1);
         }
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:endrod")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":endrod")) {
             stack.enchant(Enchantments.KNOCKBACK, 3);
         }
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains("advancedsticks:enchanted")) {
+        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
     }
