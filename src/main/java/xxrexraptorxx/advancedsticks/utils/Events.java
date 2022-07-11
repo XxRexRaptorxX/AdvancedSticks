@@ -2,10 +2,16 @@ package xxrexraptorxx.advancedsticks.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -15,6 +21,12 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
 import xxrexraptorxx.advancedsticks.main.References;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.security.cert.Certificate;
+import java.util.List;
+import java.util.Scanner;
 
 @Mod.EventBusSubscriber(modid = References.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class Events {
@@ -60,6 +72,82 @@ public class Events {
         if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
+    }
+
+
+    /**
+     * Distributes the supporter rewards on first join.
+     */
+    @SubscribeEvent
+    public static void SupporterRewards(PlayerEvent.PlayerLoggedInEvent event) {
+        Player player = event.getPlayer();
+        Level world = player.getLevel();
+
+        if (Config.PATREON_REWARDS.get()) {
+
+            try {
+                URL SUPPORTER_URL = new URL("https://raw.githubusercontent.com/XxRexRaptorxX/Patreons/main/Supporter");
+                URL PREMIUM_SUPPORTER_URL = new URL("https://raw.githubusercontent.com/XxRexRaptorxX/Patreons/main/Premium%20Supporter");
+                URL ELITE_URL = new URL("https://raw.githubusercontent.com/XxRexRaptorxX/Patreons/main/Elite");
+
+                //test if player is supporter
+                if (SupporterCheck(SUPPORTER_URL, player)) {
+                    ItemStack reward = new ItemStack(Items.PLAYER_HEAD);
+                    CompoundTag nbt = new CompoundTag();
+                    nbt.putString("SkullOwner", player.getName().getString());
+                    reward.setTag(nbt);
+
+                    player.getLevel().playSound((Player) null, player.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 0.5F, world.random.nextFloat() * 0.15F + 0.8F);
+                    player.addItem(reward);
+                    player.addItem(new ItemStack(Items.PAPER).setHoverName(Component.literal("Certificate"))); //TODO   + TODO first world spawn
+
+                }
+
+                //test if player is premium supporter
+                if (SupporterCheck(PREMIUM_SUPPORTER_URL, player)) {
+                    player.addItem(new ItemStack(Items.DIAMOND, 10));
+                }
+
+                //test if player is elite
+                if (SupporterCheck(ELITE_URL, player)) {
+                    player.addItem(new ItemStack(Items.NETHER_STAR).setHoverName(Component.literal("Elite Star")));
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * Tests if a player is a supporter
+     *
+     * @param url url to a file that contains the supporter names
+     * @param player ingame player
+     * @return true/false
+     */
+    private static boolean SupporterCheck(URL url, Player player) {
+        try {
+            Scanner scanner = new Scanner(url.openStream());
+            List<String> supporterList = scanner.tokens().toList();
+
+            for (String name: supporterList) {
+                //test if player is in supporter list
+                if (player.getName().getString().equals(name)) {
+                    return true;
+                }
+            }
+
+            scanner.close();
+
+        } catch (MalformedURLException e) {
+            AdvancedSticks.LOGGER.error("Supporter list URL not found! >>" + url);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
 

@@ -15,6 +15,7 @@ public class Config {
 
     public static ForgeConfigSpec.BooleanValue UPDATE_CHECKER;
     public static ForgeConfigSpec.BooleanValue SHOW_STICK_TYPE;
+    public static ForgeConfigSpec.BooleanValue PATREON_REWARDS;
 
 
     public static void init() {
@@ -42,7 +43,8 @@ public class Config {
         ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
 
         builder.comment("General").push(CATEGORY_GENERAL);
-           builder.pop();
+        PATREON_REWARDS = builder.comment("Enables ingame rewards on first spawn for Patreons").define("patreon_rewards", true);
+        builder.pop();
 
         SERVER_CONFIG = builder.build();
     }
