@@ -4,10 +4,13 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.ForgeRegistries;
 import xxrexraptorxx.advancedsticks.main.References;
 
-import java.sql.Ref;
-
 public class ToolUtils {
 
+    /** Returns the cleaned name of the handle type from a AS-Tool.
+     *
+     * @param item AS-Tool
+     * @return name
+     */
     public static String getStickFromName(Item item) {
         String name = ForgeRegistries.ITEMS.getKey(item).toString();
         Integer prefix = References.MODID.length() + 1;
@@ -15,9 +18,13 @@ public class ToolUtils {
         if(name.contains("rod")) {
             return name.substring(prefix, prefix + 1).toUpperCase() +
                     name.substring(prefix + 1, name.indexOf("_"));
-        } else {
+
+        } else if (name.contains("enchanted_stick") || name.contains("advanced_stick")){
             return name.substring(prefix, prefix + 1).toUpperCase() +
                     name.substring(prefix + 1, name.indexOf("_")) + " Stick";
+        } else {
+            return name.substring(prefix, prefix + 1).toUpperCase() +
+                    name.substring(prefix + 1, name.indexOf("_")) + " Rod";
         }
     }
 
