@@ -7,6 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeTier;
+import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
 import javax.annotation.Nullable;
@@ -22,6 +23,8 @@ public class CustomHoeItem extends HoeItem {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
-        list.add(Component.literal("> " + ToolUtils.getStickFromName(stack.getItem())).withStyle(ChatFormatting.DARK_GRAY));
+        if (Config.SHOW_STICK_TYPE.get()) {
+            list.add(Component.literal("> " + ToolUtils.getStickFromName(stack.getItem())).withStyle(ChatFormatting.DARK_GRAY));
+        }
     }
 }
