@@ -4,8 +4,12 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.StatType;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -90,29 +94,42 @@ public class Events {
                 URL PREMIUM_SUPPORTER_URL = new URL("https://raw.githubusercontent.com/XxRexRaptorxX/Patreons/main/Premium%20Supporter");
                 URL ELITE_URL = new URL("https://raw.githubusercontent.com/XxRexRaptorxX/Patreons/main/Elite");
 
-                //test if player is supporter
-                if (SupporterCheck(SUPPORTER_URL, player)) {
-                    ItemStack reward = new ItemStack(Items.PLAYER_HEAD);
-                    CompoundTag nbt = new CompoundTag();
-                    nbt.putString("SkullOwner", player.getName().getString());
-                    reward.setTag(nbt);
+                //test if a player already has rewards
+                if (!player.getInventory().contains(new ItemStack(Items.PAPER))) {
 
-                    player.getLevel().playSound((Player) null, player.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 0.5F, world.random.nextFloat() * 0.15F + 0.8F);
-                    player.addItem(reward);
-                    player.addItem(new ItemStack(Items.PAPER).setHoverName(Component.literal("Certificate"))); //TODO   + TODO first world spawn
+                    ServerPlayer serverPlayer = (ServerPlayer) player;
+                    //test if player joins the first time
+                    if (serverPlayer.getStats().getValue(Stats.CUSTOM, Stats.PLAY_TIME) < 5) {
 
+                        //test if player is supporter
+                        if (SupporterCheck(SUPPORTER_URL, player)) {
+
+                            ItemStack certificate = new ItemStack(Items.PAPER).setHoverName((Component.literal("Thank you for supporting me in my work!").withStyle(ChatFormatting.GOLD).append(Component.literal(" - XxRexRaptorxX").withStyle(ChatFormatting.ITALIC).withStyle(ChatFormatting.GREEN))));
+
+                            CompoundTag ownerNBT = new CompoundTag();
+                            ItemStack reward = new ItemStack(Items.PLAYER_HEAD);
+                            ownerNBT.putString("SkullOwner", player.getName().getString());
+                            reward.setTag(ownerNBT);
+
+                            player.getLevel().playSound((Player) null, player.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 0.5F, world.random.nextFloat() * 0.15F + 0.8F);
+                            player.addItem(reward);
+                            player.addItem(certificate);
+                        }
+
+                        //test if player is premium supporter
+                        if (SupporterCheck(PREMIUM_SUPPORTER_URL, player)) {
+                            ItemStack reward = new ItemStack(Items.DIAMOND_SWORD, 1).setHoverName(Component.literal("Rex's Night Sword").withStyle(ChatFormatting.DARK_GRAY));
+                            reward.enchant(Enchantments.MENDING, 1);
+                            reward.enchant(Enchantments.SHARPNESS, 3);
+                            player.addItem(reward);
+                        }
+
+                        //test if player is elite
+                        if (SupporterCheck(ELITE_URL, player)) {
+                            player.addItem(new ItemStack(Items.NETHER_STAR).setHoverName(Component.literal("Elite Star")));
+                        }
+                    }
                 }
-
-                //test if player is premium supporter
-                if (SupporterCheck(PREMIUM_SUPPORTER_URL, player)) {
-                    player.addItem(new ItemStack(Items.DIAMOND, 10));
-                }
-
-                //test if player is elite
-                if (SupporterCheck(ELITE_URL, player)) {
-                    player.addItem(new ItemStack(Items.NETHER_STAR).setHoverName(Component.literal("Elite Star")));
-                }
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
