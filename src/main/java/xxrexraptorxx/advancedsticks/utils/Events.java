@@ -84,7 +84,7 @@ public class Events {
      */
     @SubscribeEvent
     public static void SupporterRewards(PlayerEvent.PlayerLoggedInEvent event) {
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         Level world = player.getLevel();
 
         if (Config.PATREON_REWARDS.get()) {

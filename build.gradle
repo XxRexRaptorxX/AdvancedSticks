@@ -141,7 +141,7 @@ dependencies {
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-common:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
     //JADE
-    runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
+    //runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
 
 }
 

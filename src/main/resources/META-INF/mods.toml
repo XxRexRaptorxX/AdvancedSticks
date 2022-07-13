@@ -20,7 +20,7 @@ Advanced Sticks is a mod that adds new sticks to modify the default weapons and 
 [[dependencies.advancedsticks]]
     modId="forge"
     mandatory=true
-    versionRange="[41,)"
+    versionRange="[41.0.98,)"
     ordering="NONE"
     side="BOTH"
 
