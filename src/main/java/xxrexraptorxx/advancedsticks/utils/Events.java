@@ -17,6 +17,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
@@ -75,6 +76,24 @@ public class Events {
         }
         if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
+        }
+    }
+
+
+    /**
+     * Adds tooltips to vanilla tools with stick variant.
+     **/
+    @SubscribeEvent
+    public static void addingToolTips(ItemTooltipEvent event) {
+        Item item = event.getItemStack().getItem();
+
+        if (Config.SHOW_STICK_TYPE.get()) {
+            if (ForgeRegistries.ITEMS.getKey(item).getNamespace().equals("minecraft") &&
+                    ForgeRegistries.ITEMS.getKey(item).getPath().contains("sword") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("axe") ||
+                    ForgeRegistries.ITEMS.getKey(item).getPath().contains("shovel") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("hoe"))  {
+
+                event.getToolTip().add(1, Component.literal("> Wooden Stick").withStyle(ChatFormatting.DARK_GRAY));
+            }
         }
     }
 
