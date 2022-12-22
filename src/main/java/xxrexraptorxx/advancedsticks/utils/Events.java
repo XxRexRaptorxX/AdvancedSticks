@@ -89,11 +89,13 @@ public class Events {
         Item item = event.getItemStack().getItem();
 
         if (Config.SHOW_STICK_TYPE.get()) {
-            if (ForgeRegistries.ITEMS.getKey(item).getNamespace().equals("minecraft") &&
-                    ForgeRegistries.ITEMS.getKey(item).getPath().contains("sword") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("axe") ||
-                    ForgeRegistries.ITEMS.getKey(item).getPath().contains("shovel") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("hoe"))  {
+            if (ForgeRegistries.ITEMS.getKey(item).getNamespace().equals("minecraft")) {
+                if (ForgeRegistries.ITEMS.getKey(item).getPath().contains("sword") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("axe") ||
+                            ForgeRegistries.ITEMS.getKey(item).getPath().contains("shovel") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("hoe")) {
 
-                event.getToolTip().add(1, Component.literal("> Wooden Stick").withStyle(ChatFormatting.DARK_GRAY));
+                    event.getToolTip().add(1, Component.literal("> Wooden Stick").withStyle(ChatFormatting.DARK_GRAY));
+                }
+
             }
         }
     }
