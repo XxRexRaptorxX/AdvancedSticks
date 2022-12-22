@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/amethyst_stick_gold_sword"
+        "layer0": "advancedsticks:item/amethyst_stick_gold_sword"
     }
 }

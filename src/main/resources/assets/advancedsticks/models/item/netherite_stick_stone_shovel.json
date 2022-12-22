@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/netherite_stick_stone_shovel"
+        "layer0": "advancedsticks:item/netherite_stick_stone_shovel"
     }
 }

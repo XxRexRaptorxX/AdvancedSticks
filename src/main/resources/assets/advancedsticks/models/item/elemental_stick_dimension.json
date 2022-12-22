@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "advancedsticks:items/elemental_stick_dimension"
+        "layer0": "advancedsticks:item/elemental_stick_dimension"
     }
 }

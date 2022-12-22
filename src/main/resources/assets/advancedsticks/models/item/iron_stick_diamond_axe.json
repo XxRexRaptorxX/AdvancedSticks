@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/iron_stick_diamond_axe"
+        "layer0": "advancedsticks:item/iron_stick_diamond_axe"
     }
 }

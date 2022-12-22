@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/blazerod_stone_shovel"
+        "layer0": "advancedsticks:item/blazerod_stone_shovel"
     }
 }

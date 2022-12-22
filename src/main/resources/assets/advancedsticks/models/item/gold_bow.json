@@ -2,7 +2,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "advancedsticks:items/gold_bow_standby"
+        "layer0": "advancedsticks:item/gold_bow_standby"
     },
     "display": {
         "thirdperson_righthand": {

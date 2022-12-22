@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/endrod_wood_sword"
+        "layer0": "advancedsticks:item/endrod_wood_sword"
     }
 }

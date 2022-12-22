@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/endrod_stone_shovel"
+        "layer0": "advancedsticks:item/endrod_stone_shovel"
     }
 }

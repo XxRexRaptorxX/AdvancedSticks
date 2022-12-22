@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/diamond_stick_diamond_hoe"
+        "layer0": "advancedsticks:item/diamond_stick_diamond_hoe"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/endrod_netherite_axe"
+        "layer0": "advancedsticks:item/endrod_netherite_axe"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/bone_stick_gold_pickaxe"
+        "layer0": "advancedsticks:item/bone_stick_gold_pickaxe"
     }
 }

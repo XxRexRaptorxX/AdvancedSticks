@@ -1,6 +1,6 @@
 {
     "parent": "advancedsticks:item/gold_bow",
     "textures": {
-        "layer0": "advancedsticks:items/gold_bow_pulling_0"
+        "layer0": "advancedsticks:item/gold_bow_pulling_0"
     }
 }

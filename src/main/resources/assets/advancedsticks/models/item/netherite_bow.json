@@ -2,7 +2,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "advancedsticks:items/netherite_bow_standby"
+        "layer0": "advancedsticks:item/netherite_bow_standby"
     },
     "display": {
         "thirdperson_righthand": {

@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "advancedsticks:items/netherite_stick_diamond_sword"
+        "layer0": "advancedsticks:item/netherite_stick_diamond_sword"
     }
 }

@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "advancedsticks:items/stick_enchanted"
+        "layer0": "advancedsticks:item/stick_enchanted"
     }
 }
