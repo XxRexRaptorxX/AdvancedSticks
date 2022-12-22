@@ -1,11 +1,11 @@
 modLoader="javafml"
-loaderVersion="[41,)"
+loaderVersion="[44,)"
 license="All rights reserved"
 issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/advanced-sticks/issues"
 
 [[mods]]
 modId="advancedsticks"
-version="2.2.3"
+version="2.2.4"
 displayName="AdvancedSticks"
 itemIcon="advancedsticks:diamond_stick"
 updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/AdvancedSticks.json"
@@ -20,13 +20,13 @@ Advanced Sticks is a mod that adds new sticks to modify the default weapons and 
 [[dependencies.advancedsticks]]
     modId="forge"
     mandatory=true
-    versionRange="[41.0.98,)"
+    versionRange="[44,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.advancedsticks]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.19.3,1.20)"
     ordering="NONE"
     side="BOTH"
