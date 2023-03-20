@@ -46,7 +46,7 @@ public class AdvancedSticks {
     @SubscribeEvent
     public static void registerTabs(final CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(CREATIVE_TAB, (cf) -> cf.icon(() -> new ItemStack(ModItems.IRON_STICK_DIAMOND_PICKAXE.get()))
-                .title(Component.translatable("itemGroup." + References.MODID + "_tab")).displayItems((flagSet, output, ifSth) -> {
+                .title(Component.translatable("itemGroup." + References.MODID + "_tab")).displayItems((p_270258_, output) -> {
                     output.accept(ModItems.BONE_STICK.get());
                     output.accept(ModItems.IRON_STICK.get());
                     output.accept(ModItems.GOLD_STICK.get());
