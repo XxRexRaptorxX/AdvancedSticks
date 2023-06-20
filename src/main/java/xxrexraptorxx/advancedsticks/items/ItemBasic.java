@@ -2,7 +2,7 @@ package xxrexraptorxx.advancedsticks.items;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import xxrexraptorxx.advancedsticks.main.ModItems;
+import xxrexraptorxx.advancedsticks.registry.ModItems;
 
 public class ItemBasic extends Item {
 

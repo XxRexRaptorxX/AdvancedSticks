@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-      "item": "advancedsticks:emerald_stick_diamond_hoe"
-  },
+  "type": "minecraft:smithing_transform",
   "addition": {
     "item": "minecraft:netherite_ingot"
   },
+  "base": {
+    "item": "advancedsticks:emerald_stick_diamond_hoe"
+  },
   "result": {
     "item": "advancedsticks:emerald_stick_netherite_hoe"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
   }
 }

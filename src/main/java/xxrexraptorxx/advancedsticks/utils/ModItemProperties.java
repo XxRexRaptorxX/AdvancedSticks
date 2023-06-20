@@ -3,7 +3,7 @@ package xxrexraptorxx.advancedsticks.utils;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import xxrexraptorxx.advancedsticks.main.ModItems;
+import xxrexraptorxx.advancedsticks.registry.ModItems;
 
 public class ModItemProperties {
 
