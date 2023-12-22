@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "group": "advanced_stick",
+  "category": "misc",
+  "group": "rods",
   "pattern": [
   
     "#x#"
