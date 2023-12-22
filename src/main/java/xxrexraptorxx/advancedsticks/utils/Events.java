@@ -2,35 +2,31 @@ package xxrexraptorxx.advancedsticks.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.stats.StatType;
 import net.minecraft.stats.Stats;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.VersionChecker;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModList;
+import net.neoforged.fml.VersionChecker;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
 import xxrexraptorxx.advancedsticks.main.References;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.security.cert.Certificate;
 import java.util.List;
 import java.util.Scanner;
 
@@ -69,13 +65,13 @@ public class Events {
         Item item = event.getCrafting().getItem();
         ItemStack stack = event.getCrafting();
 
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":blazerod")) {
+        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":blazerod")) {
             stack.enchant(Enchantments.FIRE_ASPECT, 1);
         }
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":endrod")) {
+        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":endrod")) {
             stack.enchant(Enchantments.KNOCKBACK, 3);
         }
-        if (ForgeRegistries.ITEMS.getKey(item).toString().contains(References.MODID + ":enchanted")) {
+        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":enchanted")) {
             stack.enchant(Enchantments.MENDING, 1);
         }
     }
@@ -89,9 +85,9 @@ public class Events {
         Item item = event.getItemStack().getItem();
 
         if (Config.SHOW_STICK_TYPE.get()) {
-            if (ForgeRegistries.ITEMS.getKey(item).getNamespace().equals("minecraft")) {
-                if (ForgeRegistries.ITEMS.getKey(item).getPath().contains("sword") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("axe") ||
-                            ForgeRegistries.ITEMS.getKey(item).getPath().contains("shovel") || ForgeRegistries.ITEMS.getKey(item).getPath().contains("hoe")) {
+            if (BuiltInRegistries.ITEM.getKey(item).getNamespace().equals("minecraft")) {
+                if (BuiltInRegistries.ITEM.getKey(item).getPath().contains("sword") || BuiltInRegistries.ITEM.getKey(item).getPath().contains("axe") ||
+                            BuiltInRegistries.ITEM.getKey(item).getPath().contains("shovel") || BuiltInRegistries.ITEM.getKey(item).getPath().contains("hoe")) {
 
                     event.getToolTip().add(1, Component.literal("> Wooden Stick").withStyle(ChatFormatting.DARK_GRAY));
                 }

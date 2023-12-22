@@ -17,7 +17,7 @@ description='''Advanced Sticks is a mod that adds new sticks to modify the defau
 
 
 [[dependencies.${mod_id}]]
-modId="forge"
+modId="neoforge"
 mandatory=true
 versionRange="${forge_version_range}"
 ordering="NONE"

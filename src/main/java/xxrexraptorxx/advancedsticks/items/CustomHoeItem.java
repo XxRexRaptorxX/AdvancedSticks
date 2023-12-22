@@ -6,7 +6,7 @@ import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.ForgeTier;
+import net.neoforged.neoforge.common.SimpleTier;
 import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomHoeItem extends HoeItem {
 
 
-    public CustomHoeItem(ForgeTier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+    public CustomHoeItem(SimpleTier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
     }
 

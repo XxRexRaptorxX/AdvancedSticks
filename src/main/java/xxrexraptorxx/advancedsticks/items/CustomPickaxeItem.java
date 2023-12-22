@@ -6,7 +6,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.ForgeTier;
+import net.neoforged.neoforge.common.SimpleTier;
 import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomPickaxeItem extends PickaxeItem {
 
 
-    public CustomPickaxeItem(ForgeTier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
+    public CustomPickaxeItem(SimpleTier tier, int attackDamageModifier, float attackSpeedModifier, Properties properties) {
         super(tier, attackDamageModifier, attackSpeedModifier, properties);
     }
 

@@ -1,7 +1,7 @@
 package xxrexraptorxx.advancedsticks.utils;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.registries.ForgeRegistries;
 import xxrexraptorxx.advancedsticks.main.References;
 
 public class ToolUtils {
@@ -12,7 +12,7 @@ public class ToolUtils {
      * @return name
      */
     public static String getStickFromName(Item item) {
-        String name = ForgeRegistries.ITEMS.getKey(item).toString();
+        String name = BuiltInRegistries.ITEM.getKey(item).toString();
         Integer prefix = References.MODID.length() + 1;
 
         if(name.contains("rod")) {
