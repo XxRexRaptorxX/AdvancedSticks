@@ -19,6 +19,7 @@ description='''Advanced Sticks is a mod that adds new sticks to modify the defau
 [[dependencies.${mod_id}]]
 modId="neoforge"
 mandatory=true
+type="required"
 versionRange="${forge_version_range}"
 ordering="NONE"
 side="BOTH"
@@ -26,6 +27,7 @@ side="BOTH"
 [[dependencies.${mod_id}]]
 modId="minecraft"
 mandatory=true
+type="required"
 versionRange="${mc_version_range}"
 ordering="NONE"
 side="BOTH"
