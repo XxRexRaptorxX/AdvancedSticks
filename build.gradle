@@ -16,7 +16,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '2.2.0'
+version = '2.2.0a'
 group = 'xxrexraptorxx.advancedsticks.main' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'advancedsticks'
 
@@ -170,5 +170,10 @@ publishing {
         maven {
             url "file://${project.projectDir}/mcmodsrepo"
         }
+    }
+
+
+//Dummy task to fix post sync error caused by NeoGradle
+    tasks.register("idePostSync") {
     }
 }
