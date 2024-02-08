@@ -178,3 +178,7 @@ publishing {
         }
     }
 }
+
+//Dummy task to fix post sync error caused by NeoGradle
+tasks.register("idePostSync") {
+}
