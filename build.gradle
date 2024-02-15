@@ -153,6 +153,9 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
     runtimeOnly fg.deobf("curse.maven:energized-power-782147:${ep_version}")
     runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${ie_version}")
+    runtimeOnly fg.deobf("curse.maven:assemblylinemachine-388282:${assembly_line_machines_version}")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${mc_version}-${patchouli_version}")
+
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
