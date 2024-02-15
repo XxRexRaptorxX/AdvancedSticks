@@ -1,0 +1,17 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "assemblylinemachines"
+    }
+  ],
+  "type": "assemblylinemachines:pneumatic",
+  "input": {
+    "tag": "forge:gems/emerald"
+  },
+  "mold": "rod",
+  "output": {
+    "item": "advancedsticks:stick_emerald"
+  },
+  "time": 8
+}
