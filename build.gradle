@@ -27,8 +27,8 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
 
-    //mappings channel: 'official', version: "{mc_version}"
-     mappings channel: 'parchment', version: "${parchment_version}"
+    //mappings channel: 'official', version: "{mc_version}
+    mappings channel: 'parchment', version: "${parchment_version}"
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -48,6 +48,10 @@ minecraft {
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             property 'forge.logging.console.level', 'debug'
+
+            // Patchouli mixin fix
+            property 'mixin.env.remapRefMap', 'true'
+            property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
 
 
             mods {
@@ -111,21 +115,19 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        // location of the maven that hosts JEI files before January 2023
-        name = "Progwml6's maven"
+        // location of the maven that hosts JEI files
+        name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
-
-    maven {
-        // location of the maven that hosts JEI files since January 2023
-        name = "Jared's maven"
-        url = "https://maven.blamejared.com/"
-    }
-
     maven {
         // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
-        url = "https://modmaven.dev"
+        url = "https://modmaven.k-4u.nl"
+    }
+
+    maven {
+        // patchouli
+        url 'https://maven.blamejared.com'
     }
 
     maven {
@@ -142,13 +144,15 @@ dependencies {
     minecraft "net.minecraftforge:forge:${mc_version}-${forge_version}"
 
     //JEI
-    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
-    compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}"))
-    // at runtime, use the full JEI jar for Forge
-    runtimeOnly(fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}"))
-    //JADE
-    //runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
+    // at runtime, use the full JEI
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-common:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
 
+    runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_version}")
+    runtimeOnly fg.deobf("curse.maven:energized-power-782147:${ep_version}")
+    runtimeOnly fg.deobf("curse.maven:immersive-engineering-231951:${ie_version}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -157,7 +161,7 @@ jar {
         attributes([
                 "Specification-Title"     : "${mod_id}",
                 "Specification-Vendor"    : "XxRexRaptorxX",
-                "Specification-Version"   : "1", // We are version 1 of ourselves
+                "Specification-Version"   : project.version,
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "XxRexRaptorxX",

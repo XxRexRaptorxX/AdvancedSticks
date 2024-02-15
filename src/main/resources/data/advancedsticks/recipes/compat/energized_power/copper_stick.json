@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "energizedpower"
+    },
+    {
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/copper"
+      },
+      "type": "forge:not"
+    }
+  ],
+  "type": "energizedpower:metal_press",
+  "ingredient": [
+    {
+      "tag": "forge:plates/copper"
+    }
+  ],
+  "pressMold": {
+    "item": "energizedpower:rod_press_mold"
+  },
+  "output": {
+    "item": "advancedsticks:stick_copper",
+    "count": 2
+  }
+}

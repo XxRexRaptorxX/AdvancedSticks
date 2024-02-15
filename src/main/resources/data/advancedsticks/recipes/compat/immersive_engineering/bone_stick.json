@@ -1,0 +1,23 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "immersiveengineering"
+    }
+  ],
+  "type":"immersiveengineering:metal_press",
+  "energy":2400,
+  "input":
+  {
+    "item": "minecraft:bone"
+  },
+  "mold":"immersiveengineering:mold_rod",
+  "result":
+  {
+    "base_ingredient":
+    {
+      "item":"advancedsticks:stick_bone"
+    },
+    "count":2
+  }
+}
