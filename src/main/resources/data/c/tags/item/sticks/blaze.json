@@ -2,7 +2,6 @@
   "replace": false,
   "values":
   [
-    "#c:rods/blaze",
     "minecraft:blaze_rod"
   ]
 }

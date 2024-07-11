@@ -2,7 +2,6 @@
   "replace": false,
   "values":
   [
-    "#c:rods/copper",
     "advancedsticks:stick_copper"
   ]
 }
