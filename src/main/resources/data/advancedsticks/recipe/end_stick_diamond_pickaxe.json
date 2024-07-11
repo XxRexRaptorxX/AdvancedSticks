@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/end"
+      },
+      {
+        "tag": "c:rods/end"
+      },
+      {
+        "item": "minecraft:end_rod"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:endrod_diamond_pickaxe"
+  }
+}

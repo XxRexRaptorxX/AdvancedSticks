@@ -1,7 +1,10 @@
 package xxrexraptorxx.advancedsticks.main;
 
 import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import org.apache.logging.log4j.LogManager;
@@ -21,14 +24,14 @@ public class AdvancedSticks {
     public static final Logger LOGGER = LogManager.getLogger();
 
 
-    public AdvancedSticks() {
-        Config.init();
-        ModItems.init();
-        CreativeModeTabs.init();
+    public AdvancedSticks(IEventBus bus, ModContainer container) {
+        Config.init(container);
+        ModItems.init(bus);
+        CreativeModeTabs.init(bus);
     }
 
 
-    @Mod.EventBusSubscriber(modid = References.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
 
         @SubscribeEvent

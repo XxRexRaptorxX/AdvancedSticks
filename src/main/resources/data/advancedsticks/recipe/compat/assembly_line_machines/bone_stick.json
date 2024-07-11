@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "assemblylinemachines"
+    }
+  ],
+  "type": "assemblylinemachines:pneumatic",
+  "input": {
+    "item": "minecraft:bone"
+  },
+  "mold": "rod",
+  "output": {
+    "item": "advancedsticks:stick_bone"
+  },
+  "time": 8
+}

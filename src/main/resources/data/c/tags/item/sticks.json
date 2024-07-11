@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#c:sticks/advanced",
+    "#c:sticks/amethyst",
+    "#c:sticks/bone",
+    "#c:sticks/copper",
+    "#c:sticks/diamond",
+    "#c:sticks/emerald",
+    "#c:sticks/enchanted",
+    "#c:sticks/gold",
+    "#c:sticks/iron",
+    "#c:sticks/end",
+    "#c:sticks/netherite",
+    "#c:sticks/wood",
+    "#c:sticks/blaze"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+  
+    "#",
+    "x",
+    "#"
+  
+  ],
+  
+  "key": {
+    "x": {
+      "tag": "c:ingots/iron"
+    },
+    "#": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:stick_advanced"
+  }
+}

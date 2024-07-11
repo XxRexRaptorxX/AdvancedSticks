@@ -13,7 +13,7 @@ public class ToolUtils {
      */
     public static String getStickFromName(Item item) {
         String name = BuiltInRegistries.ITEM.getKey(item).toString();
-        Integer prefix = References.MODID.length() + 1;
+        int prefix = References.MODID.length() + 1;
 
         if(name.contains("rod")) {
             return name.substring(prefix, prefix + 1).toUpperCase() +

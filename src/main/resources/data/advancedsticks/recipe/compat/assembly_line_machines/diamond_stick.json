@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "assemblylinemachines"
+    }
+  ],
+  "type": "assemblylinemachines:pneumatic",
+  "input": {
+    "tag": "c:gems/diamond"
+  },
+  "mold": "rod",
+  "output": {
+    "item": "advancedsticks:stick_diamond"
+  },
+  "time": 8
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/amethyst"
+      },
+      {
+        "tag": "c:rods/amethyst"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:planks"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:amethyst_stick_wood_sword"
+  }
+}

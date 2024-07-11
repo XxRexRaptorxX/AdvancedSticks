@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/enchanted"
+      },
+      {
+        "tag": "c:rods/enchanted"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:enchanted_stick_stone_hoe"
+  }
+}

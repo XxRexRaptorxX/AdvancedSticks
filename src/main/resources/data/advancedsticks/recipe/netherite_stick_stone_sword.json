@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/netherite"
+      },
+      {
+        "tag": "c:rods/netherite"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:netherite_stick_stone_sword"
+  }
+}

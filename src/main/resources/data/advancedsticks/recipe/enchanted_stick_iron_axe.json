@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " XX",
+    " #X",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/enchanted"
+      },
+      {
+        "tag": "c:rods/enchanted"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:enchanted_stick_iron_axe"
+  }
+}

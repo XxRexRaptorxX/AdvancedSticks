@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " XX",
+    " #X",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/end"
+      },
+      {
+        "tag": "c:rods/end"
+      },
+      {
+        "item": "minecraft:end_rod"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:endrod_stone_axe"
+  }
+}

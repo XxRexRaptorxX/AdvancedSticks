@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "#c:rods/advanced",
+    "#c:rods/amethyst",
+    "#c:rods/bone",
+    "#c:rods/copper",
+    "#c:rods/diamond",
+    "#c:rods/emerald",
+    "#c:rods/enchanted",
+    "#c:rods/gold",
+    "#c:rods/iron",
+    "#c:rods/end",
+    "#c:rods/netherite",
+    "#c:rods/wood",
+    "#c:rods/blaze"
+  ]
+}

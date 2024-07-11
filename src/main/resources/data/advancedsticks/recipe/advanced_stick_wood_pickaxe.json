@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/advanced"
+      },
+      {
+        "tag": "c:rods/advanced"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:planks"
+      }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:advanced_stick_wood_pickaxe"
+  }
+}

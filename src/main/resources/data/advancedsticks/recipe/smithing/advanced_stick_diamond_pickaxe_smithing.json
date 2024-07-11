@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "base": {
+    "item": "advancedsticks:advanced_stick_diamond_pickaxe"
+  },
+  "result": {
+    "id": "advancedsticks:advanced_stick_netherite_pickaxe"
+  },
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  }
+}

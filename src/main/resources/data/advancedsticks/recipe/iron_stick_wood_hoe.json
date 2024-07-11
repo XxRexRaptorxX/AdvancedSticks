@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " XX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/iron"
+      },
+      {
+        "tag": "c:rods/iron"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:planks"
+      }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:iron_stick_wood_hoe"
+  }
+}

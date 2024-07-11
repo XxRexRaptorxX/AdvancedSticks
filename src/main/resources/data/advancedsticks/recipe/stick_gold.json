@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+  
+    "#",
+    "#"
+  
+  ],
+  
+  "key": {
+    "#": {
+      "tag": "c:ingots/gold"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:stick_gold"
+  }
+}

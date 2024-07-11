@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+  
+    "#",
+    "#"
+  
+  ],
+  
+  "key": {
+    "#": {
+      "item": "minecraft:bone"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:stick_bone"
+  }
+}

@@ -5,26 +5,25 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.SimpleTier;
 import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
-import javax.annotation.Nullable;
 import java.util.List;
 
 public class CustomShovelItem extends ShovelItem {
 
 
-    public CustomShovelItem(SimpleTier tier, float attackDamageModifier, float attackSpeedModifier, Properties properties) {
-        super(tier, attackDamageModifier, attackSpeedModifier, properties);
+    public CustomShovelItem(SimpleTier tier, Properties properties) {
+        super(tier, properties);
     }
 
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> list, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> list, TooltipFlag flag) {
         if (Config.SHOW_STICK_TYPE.get()) {
             list.add(Component.literal("> " + ToolUtils.getStickFromName(stack.getItem())).withStyle(ChatFormatting.DARK_GRAY));
         }
     }
+
 }

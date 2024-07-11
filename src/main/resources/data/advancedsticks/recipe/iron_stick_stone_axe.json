@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " XX",
+    " #X",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/iron"
+      },
+      {
+        "tag": "c:rods/iron"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:stone_tool_materials"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:iron_stick_stone_axe"
+  }
+}

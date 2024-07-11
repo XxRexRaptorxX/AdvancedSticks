@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    "XXX",
+    " # ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/copper"
+      },
+      {
+        "tag": "c:rods/copper"
+      }
+     ],
+    
+    "X": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:copper_stick_gold_pickaxe"
+  }
+}

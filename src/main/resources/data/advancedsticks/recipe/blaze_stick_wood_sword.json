@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    " # "
+    
+  ],
+  
+  "key": {
+    "#": [
+      {
+        "tag": "c:sticks/blaze"
+      },
+      {
+        "tag": "c:rods/blaze"
+      },
+      {
+      "item": "minecraft:blaze_rod"
+      }
+     ],
+    
+    "X": {
+      "tag": "minecraft:planks"
+      }
+  },
+  
+  
+  "result": {
+    "id": "advancedsticks:blazerod_wood_sword"
+  }
+}
