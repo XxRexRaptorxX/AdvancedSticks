@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:blazerod_gold_pickaxe"
+    "id": "advancedsticks:blazerod_gold_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
 }

@@ -26,6 +26,11 @@
   
   
   "result": {
-    "id": "advancedsticks:enchanted_stick_iron_sword"
+    "id": "advancedsticks:enchanted_stick_iron_sword",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:silk_touch": 1
+      }
+    }
   }
 }

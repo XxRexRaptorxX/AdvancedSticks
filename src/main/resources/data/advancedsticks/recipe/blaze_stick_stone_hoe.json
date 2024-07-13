@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:blazerod_stone_hoe"
+    "id": "advancedsticks:blazerod_stone_hoe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
 }

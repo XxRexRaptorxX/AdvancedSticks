@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:endrod_stone_shovel"
+    "id": "advancedsticks:endrod_stone_shovel",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:efficiency": 1
+      }
+    }
   }
 }

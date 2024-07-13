@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:blazerod_wood_pickaxe"
+    "id": "advancedsticks:blazerod_wood_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
-}
+}}

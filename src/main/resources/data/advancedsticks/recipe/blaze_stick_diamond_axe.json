@@ -27,8 +27,13 @@
     }
   },
   
-  
+
   "result": {
-    "id": "advancedsticks:blazerod_diamond_axe"
+    "id": "advancedsticks:blazerod_diamond_axe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
 }

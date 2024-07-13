@@ -26,6 +26,11 @@
   
   
   "result": {
-    "id": "advancedsticks:enchanted_stick_iron_pickaxe"
+    "id": "advancedsticks:enchanted_stick_iron_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:silk_touch": 1
+      }
+    }
   }
 }

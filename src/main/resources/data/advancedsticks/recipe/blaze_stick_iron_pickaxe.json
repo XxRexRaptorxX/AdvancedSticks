@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:blazerod_iron_pickaxe"
+    "id": "advancedsticks:blazerod_iron_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
 }

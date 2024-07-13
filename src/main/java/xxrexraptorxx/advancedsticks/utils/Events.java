@@ -169,26 +169,6 @@ public class Events {
     }
 
 
-    /** Item Enchanter **/
-    @SubscribeEvent
-    public static void onCrafting(PlayerEvent.ItemCraftedEvent event) {
-        Item item = event.getCrafting().getItem();
-        ItemStack stack = event.getCrafting();
-
-        Registry<Enchantment> enchantmentsRegistry = event.getEntity().level().registryAccess().registryOrThrow(Registries.ENCHANTMENT);
-
-        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":blazerod")) {
-            stack.enchant(enchantmentsRegistry.getHolderOrThrow(Enchantments.FIRE_ASPECT), 1);
-        }
-        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":endrod")) {
-            stack.enchant(enchantmentsRegistry.getHolderOrThrow(Enchantments.KNOCKBACK), 3);
-        }
-        if (BuiltInRegistries.ITEM.getKey(item).toString().contains(References.MODID + ":enchanted")) {
-            stack.enchant(enchantmentsRegistry.getHolderOrThrow(Enchantments.MENDING), 1);
-        }
-    }
-
-
     /**
      * Adds tooltips to vanilla tools with stick variant.
      **/

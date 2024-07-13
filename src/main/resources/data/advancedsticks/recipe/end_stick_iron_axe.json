@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:endrod_iron_axe"
+    "id": "advancedsticks:endrod_iron_axe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:efficiency": 1
+      }
+    }
   }
 }

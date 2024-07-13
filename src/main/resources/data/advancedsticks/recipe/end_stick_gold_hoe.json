@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:endrod_gold_hoe"
+    "id": "advancedsticks:endrod_gold_hoe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:efficiency": 1
+      }
+    }
   }
 }

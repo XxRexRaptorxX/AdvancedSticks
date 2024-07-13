@@ -29,6 +29,11 @@
   
   
   "result": {
-    "id": "advancedsticks:endrod_gold_pickaxe"
+    "id": "advancedsticks:endrod_gold_pickaxe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:efficiency": 1
+      }
+    }
   }
 }

@@ -2,13 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-  
     " XX",
     " # ",
     " # "
-    
   ],
-  
   "key": {
     "#": [
       {
@@ -18,17 +15,20 @@
         "tag": "c:rods/blaze"
       },
       {
-      "item": "minecraft:blaze_rod"
+        "item": "minecraft:blaze_rod"
       }
-     ],
-    
+    ],
     "X": {
       "item": "minecraft:diamond"
     }
   },
-  
-  
+
   "result": {
-    "id": "advancedsticks:blazerod_diamond_hoe"
+    "id": "advancedsticks:blazerod_diamond_hoe",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:fire_aspect": 1
+      }
+    }
   }
 }

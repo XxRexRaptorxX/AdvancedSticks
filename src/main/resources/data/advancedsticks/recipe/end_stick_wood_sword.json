@@ -27,6 +27,11 @@
   },
   
   "result": {
-    "id": "advancedsticks:endrod_wood_sword"
+    "id": "advancedsticks:endrod_wood_sword",
+    "components": {
+      "minecraft:enchantments": {
+        "minecraft:looting": 1
+      }
+    }
   }
 }
