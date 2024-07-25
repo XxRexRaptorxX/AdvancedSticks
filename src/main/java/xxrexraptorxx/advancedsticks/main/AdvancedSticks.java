@@ -16,7 +16,7 @@ import xxrexraptorxx.advancedsticks.utils.ModItemProperties;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
- * @projectPage https://www.curseforge.com/minecraft/mc-mods/advanced-sticks
+ * @projectPage <a href="https://www.curseforge.com/minecraft/mc-mods/advanced-sticks">...</a>
  **/
 @Mod(References.MODID)
 public class AdvancedSticks {
