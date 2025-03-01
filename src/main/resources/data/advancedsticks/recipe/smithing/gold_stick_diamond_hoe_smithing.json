@@ -1,20 +1,5 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "tag": "c:ingots/netherite"
-  },
-  "base": {
-    "item": "minecraft:diamond_shovel"
-  },
-  "result": {
-    "id": "minecraft:netherite_shovel"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
-{
-  "type": "minecraft:smithing",
   "base": {
       "item": "advancedsticks:gold_stick_diamond_hoe"
   },
