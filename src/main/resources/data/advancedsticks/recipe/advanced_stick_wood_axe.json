@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " #X",
-    " # "
+    "XX",
+    "#X",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/advanced"
-      },
-      {
-        "tag": "c:rods/advanced"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/advanced",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:advanced_stick_wood_axe"

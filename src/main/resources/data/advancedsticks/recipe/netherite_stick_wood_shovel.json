@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/netherite"
-      },
-      {
-        "tag": "c:rods/netherite"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/netherite",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:netherite_stick_wood_shovel"

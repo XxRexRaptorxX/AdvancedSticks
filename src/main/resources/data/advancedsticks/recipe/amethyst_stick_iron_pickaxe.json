@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/amethyst"
-      },
-      {
-        "tag": "c:rods/amethyst"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:rods/amethyst",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:amethyst_stick_iron_pickaxe"

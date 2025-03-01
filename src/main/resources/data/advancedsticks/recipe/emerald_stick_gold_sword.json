@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " X ",
-    " # "
+    "X",
+    "X",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/emerald"
-      },
-      {
-        "tag": "c:rods/emerald"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#c:rods/emerald",
+    "X": "#c:ingots/gold"
   },
-  
   
   "result": {
     "id": "advancedsticks:iron_stick_gold_sword"

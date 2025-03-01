@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/enchanted"
-      },
-      {
-        "tag": "c:rods/enchanted"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:sticks/enchanted",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:enchanted_stick_wood_shovel",

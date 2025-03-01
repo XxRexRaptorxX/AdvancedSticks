@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/iron"
-      },
-      {
-        "tag": "c:rods/iron"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:rods/iron",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:iron_stick_iron_shovel"

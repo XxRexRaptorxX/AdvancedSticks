@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " #X",
-    " # "
+    "XX",
+    "#X",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/bone"
-      },
-      {
-        "tag": "c:rods/bone"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:rods/bone",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:bone_stick_iron_axe"

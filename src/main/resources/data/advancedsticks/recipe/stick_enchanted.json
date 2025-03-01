@@ -3,13 +3,8 @@
   "category": "misc",
   "group": "rods",
   "ingredients": [
-  
-    {
-      "item": "minecraft:enchanted_book"
-    },
-    {
-      "tag": "c:sticks/wood"
-    }
+    "minecraft:enchanted_book",
+    "#c:sticks/wood"
   ],
   
   "result": {

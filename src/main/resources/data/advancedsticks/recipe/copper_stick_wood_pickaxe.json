@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/copper"
-      },
-      {
-        "tag": "c:rods/copper"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/copper",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:copper_stick_wood_pickaxe"

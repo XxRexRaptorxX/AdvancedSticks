@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/emerald"
-      },
-      {
-        "tag": "c:rods/emerald"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#c:rods/emerald",
+    "X": "#c:ingots/gold"
   },
-  
   
   "result": {
     "id": "advancedsticks:emerald_stick_gold_pickaxe"

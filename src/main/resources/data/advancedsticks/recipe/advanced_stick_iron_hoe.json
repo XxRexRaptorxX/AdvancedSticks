@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/advanced"
-      },
-      {
-        "tag": "c:rods/advanced"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:netherite_ingot"
-    }
+    "#": "#c:rods/advanced",
+    "X": "#c:ingots/netherite"
   },
-  
   
   "result": {
     "id": "advancedsticks:advanced_stick_iron_hoe"

@@ -1,15 +1,12 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "advancedsticks:blazerod_diamond_axe"
-  },
+  "addition": "minecraft:netherite_ingot",
+
+  "base": "advancedsticks:blazerod_diamond_axe",
+
   "result": {
     "id": "advancedsticks:blazerod_netherite_axe"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

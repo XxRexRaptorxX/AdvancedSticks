@@ -14,9 +14,8 @@
   ],
   "type": "energizedpower:metal_press",
   "ingredient": [
-    {
-      "tag": "c:plates/amethyst"
-    }
+    "#c:plates/amethyst"
+
   ],
   "pressMold": {
     "item": "energizedpower:rod_press_mold"

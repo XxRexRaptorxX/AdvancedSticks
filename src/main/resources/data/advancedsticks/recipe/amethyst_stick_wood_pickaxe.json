@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/amethyst"
-      },
-      {
-        "tag": "c:rods/amethyst"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/amethyst",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:amethyst_stick_wood_pickaxe"

@@ -10,11 +10,8 @@
   ],
   
   "key": {
-    "#": {
-      "tag": "c:ingots/netherite"
-    }
+    "#": "#c:ingots/netherite"
   },
-  
   
   "result": {
     "id": "advancedsticks:stick_netherite"

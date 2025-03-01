@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/copper"
-      },
-      {
-        "tag": "c:rods/copper"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/copper",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:copper_stick_diamond_hoe"

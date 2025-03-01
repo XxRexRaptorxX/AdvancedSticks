@@ -10,11 +10,8 @@
   ],
 
   "key": {
-    "#": {
-      "tag": "c:ingots/copper"
-    }
+    "#": "#c:ingots/copper"
   },
-  
   
   "result": {
     "id": "advancedsticks:stick_copper"

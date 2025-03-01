@@ -1,219 +1,79 @@
 {
   "type": "minecraft:blasting",
   "ingredient": [
-    {
-      "item": "advancedsticks:iron_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:iron_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:iron_stick_diamond_pickaxe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_diamond_shovel"
-    },
-    {
-      "item": "advancedsticks:iron_stick_diamond_axe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_diamond_hoe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_diamond_sword"
-    },
-    {
-      "item": "advancedsticks:iron_stick_netherite_pickaxe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_netherite_shovel"
-    },
-    {
-      "item": "advancedsticks:iron_stick_netherite_axe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_netherite_hoe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_netherite_sword"
-    },
-    {
-      "item": "advancedsticks:iron_stick_wood_pickaxe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_wood_shovel"
-    },
-    {
-      "item": "advancedsticks:iron_stick_wood_axe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_wood_hoe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_wood_sword"
-    },
-    {
-      "item": "advancedsticks:iron_stick_stone_pickaxe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_stone_shovel"
-    },
-    {
-      "item": "advancedsticks:iron_stick_stone_axe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_stone_hoe"
-    },
-    {
-      "item": "advancedsticks:iron_stick_stone_sword"
-    },
+    "advancedsticks:iron_stick_iron_pickaxe",
+    "advancedsticks:iron_stick_iron_shovel",
+    "advancedsticks:iron_stick_iron_axe",
+    "advancedsticks:iron_stick_iron_hoe",
+    "advancedsticks:iron_stick_iron_sword",
+    "advancedsticks:iron_stick_diamond_pickaxe",
+    "advancedsticks:iron_stick_diamond_shovel",
+    "advancedsticks:iron_stick_diamond_axe",
+    "advancedsticks:iron_stick_diamond_hoe",
+    "advancedsticks:iron_stick_diamond_sword",
+    "advancedsticks:iron_stick_netherite_pickaxe",
+    "advancedsticks:iron_stick_netherite_shovel",
+    "advancedsticks:iron_stick_netherite_axe",
+    "advancedsticks:iron_stick_netherite_hoe",
+    "advancedsticks:iron_stick_netherite_sword",
+    "advancedsticks:iron_stick_wood_pickaxe",
+    "advancedsticks:iron_stick_wood_shovel",
+    "advancedsticks:iron_stick_wood_axe",
+    "advancedsticks:iron_stick_wood_hoe",
+    "advancedsticks:iron_stick_wood_sword",
+    "advancedsticks:iron_stick_stone_pickaxe",
+    "advancedsticks:iron_stick_stone_shovel",
+    "advancedsticks:iron_stick_stone_axe",
+    "advancedsticks:iron_stick_stone_hoe",
+    "advancedsticks:iron_stick_stone_sword",
 
-
-    {
-      "item": "advancedsticks:bone_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:bone_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:bone_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:bone_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:bone_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:gold_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:gold_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:gold_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:gold_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:gold_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:diamond_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:diamond_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:diamond_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:diamond_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:diamond_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:netherite_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:netherite_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:netherite_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:netherite_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:netherite_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:copper_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:copper_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:copper_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:copper_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:copper_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:emerald_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:emerald_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:emerald_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:emerald_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:emerald_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:amethyst_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:amethyst_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:amethyst_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:amethyst_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:amethyst_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:enchanted_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:enchanted_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:enchanted_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:enchanted_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:enchanted_stick_iron_sword"
-    },
-    {
-      "item": "advancedsticks:advanced_stick_iron_pickaxe"
-    },
-    {
-      "item": "advancedsticks:advanced_stick_iron_shovel"
-    },
-    {
-      "item": "advancedsticks:advanced_stick_iron_axe"
-    },
-    {
-      "item": "advancedsticks:advanced_stick_iron_hoe"
-    },
-    {
-      "item": "advancedsticks:advanced_stick_iron_sword"
-    }
+    "advancedsticks:bone_stick_iron_pickaxe",
+    "advancedsticks:bone_stick_iron_shovel",
+    "advancedsticks:bone_stick_iron_axe",
+    "advancedsticks:bone_stick_iron_hoe",
+    "advancedsticks:bone_stick_iron_sword",
+    "advancedsticks:gold_stick_iron_pickaxe",
+    "advancedsticks:gold_stick_iron_shovel",
+    "advancedsticks:gold_stick_iron_axe",
+    "advancedsticks:gold_stick_iron_hoe",
+    "advancedsticks:gold_stick_iron_sword",
+    "advancedsticks:diamond_stick_iron_pickaxe",
+    "advancedsticks:diamond_stick_iron_shovel",
+    "advancedsticks:diamond_stick_iron_axe",
+    "advancedsticks:diamond_stick_iron_hoe",
+    "advancedsticks:diamond_stick_iron_sword",
+    "advancedsticks:netherite_stick_iron_pickaxe",
+    "advancedsticks:netherite_stick_iron_shovel",
+    "advancedsticks:netherite_stick_iron_axe",
+    "advancedsticks:netherite_stick_iron_hoe",
+    "advancedsticks:netherite_stick_iron_sword",
+    "advancedsticks:copper_stick_iron_pickaxe",
+    "advancedsticks:copper_stick_iron_shovel",
+    "advancedsticks:copper_stick_iron_axe",
+    "advancedsticks:copper_stick_iron_hoe",
+    "advancedsticks:copper_stick_iron_sword",
+    "advancedsticks:emerald_stick_iron_pickaxe",
+    "advancedsticks:emerald_stick_iron_shovel",
+    "advancedsticks:emerald_stick_iron_axe",
+    "advancedsticks:emerald_stick_iron_hoe",
+    "advancedsticks:emerald_stick_iron_sword",
+    "advancedsticks:amethyst_stick_iron_pickaxe",
+    "advancedsticks:amethyst_stick_iron_shovel",
+    "advancedsticks:amethyst_stick_iron_axe",
+    "advancedsticks:amethyst_stick_iron_hoe",
+    "advancedsticks:amethyst_stick_iron_sword",
+    "advancedsticks:enchanted_stick_iron_pickaxe",
+    "advancedsticks:enchanted_stick_iron_shovel",
+    "advancedsticks:enchanted_stick_iron_axe",
+    "advancedsticks:enchanted_stick_iron_hoe",
+    "advancedsticks:enchanted_stick_iron_sword",
+    "advancedsticks:advanced_stick_iron_pickaxe",
+    "advancedsticks:advanced_stick_iron_shovel",
+    "advancedsticks:advanced_stick_iron_axe",
+    "advancedsticks:advanced_stick_iron_hoe",
+    "advancedsticks:advanced_stick_iron_sword"
   ],
+
   "result": {
     "id": "minecraft:iron_nugget"
   },

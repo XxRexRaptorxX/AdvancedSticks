@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/advanced"
-      },
-      {
-        "tag": "c:rods/advanced"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#c:rods/advanced",
+    "X": "#c:ingots/gold"
   },
-  
   
   "result": {
     "id": "advancedsticks:advanced_stick_gold_pickaxe"

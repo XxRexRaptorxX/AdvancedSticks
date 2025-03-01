@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/diamond"
-      },
-      {
-        "tag": "c:rods/diamond"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/diamond",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:diamond_stick_diamond_shovel"

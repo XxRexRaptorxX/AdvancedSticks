@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/enchanted"
-      },
-      {
-        "tag": "c:rods/enchanted"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:sticks/enchanted",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:enchanted_stick_iron_hoe",

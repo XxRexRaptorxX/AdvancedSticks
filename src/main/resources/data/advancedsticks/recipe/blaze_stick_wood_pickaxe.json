@@ -10,23 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/blaze"
-      },
-      {
-        "tag": "c:rods/blaze"
-      },
-      {
-      "item": "minecraft:blaze_rod"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/blaze",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:blazerod_wood_pickaxe",

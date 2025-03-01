@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/netherite"
-      },
-      {
-        "tag": "c:rods/netherite"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:rods/netherite",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:netherite_stick_iron_shovel"

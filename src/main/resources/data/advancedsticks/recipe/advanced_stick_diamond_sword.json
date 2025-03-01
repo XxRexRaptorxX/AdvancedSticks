@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " X ",
-    " # "
+    "X",
+    "X",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/advanced"
-      },
-      {
-        "tag": "c:rods/advanced"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/advanced",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:advanced_stick_diamond_sword"

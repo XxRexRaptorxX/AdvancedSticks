@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/gold"
-      },
-      {
-        "tag": "c:rods/gold"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#c:rods/gold",
+    "X": "#minecraft:stone_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:gold_stick_stone_hoe"

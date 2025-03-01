@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/amethyst"
-      },
-      {
-        "tag": "c:rods/amethyst"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#c:rods/amethyst",
+    "X": "#minecraft:stone_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:amethyst_stick_stone_shovel"

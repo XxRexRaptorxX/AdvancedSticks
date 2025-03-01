@@ -3,27 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " # ",
-    " # "
+    "X",
+    "#",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/emerald"
-      },
-      {
-        "tag": "c:rods/emerald"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#c:rods/emerald",
+    "X": "#minecraft:stone_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:emerald_stick_stone_shovel"

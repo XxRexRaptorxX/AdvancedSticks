@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/netherite"
-      },
-      {
-        "tag": "c:rods/netherite"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/netherite",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:netherite_stick_diamond_pickaxe"

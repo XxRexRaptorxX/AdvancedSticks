@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/bone"
-      },
-      {
-        "tag": "c:rods/bone"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/bone",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:bone_stick_diamond_pickaxe"

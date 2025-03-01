@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/diamond"
-      },
-      {
-        "tag": "c:rods/diamond"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#c:rods/diamond",
+    "X": "#minecraft:stone_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:diamond_stick_stone_pickaxe"

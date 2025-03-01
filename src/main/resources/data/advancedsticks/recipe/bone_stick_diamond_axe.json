@@ -3,27 +3,21 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " #X",
-    " # "
+    "XX",
+    "#X",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/bone"
+    "#": "#c:rods/bone"
       },
       {
         "tag": "c:rods/bone"
       }
     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:bone_stick_diamond_axe"

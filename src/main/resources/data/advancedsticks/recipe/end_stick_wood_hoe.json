@@ -3,30 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/end"
-      },
-      {
-        "tag": "c:rods/end"
-      },
-      {
-        "item": "minecraft:end_rod"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-      }
+    "#": "#c:rods/end",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:endrod_wood_hoe",

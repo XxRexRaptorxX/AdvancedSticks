@@ -10,23 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/end"
-      },
-      {
-        "tag": "c:rods/end"
-      },
-      {
-        "item": "minecraft:end_rod"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "#": "#c:rods/end",
+    "X": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:endrod_diamond_pickaxe",

@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values":
-  [
-    "#c:sticks/end",
-    "minecraft:end_rod"
-  ]
-}

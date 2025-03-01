@@ -9,14 +9,9 @@
   ],
   
   "key": {
-    "x": {
-      "tag": "c:ingots/iron"
-    },
-    "#": {
-      "tag": "c:gems/diamond"
-    }
+    "x": "#c:ingots/iron",
+    "#": "#c:gems/diamond"
   },
-  
   
   "result": {
     "id": "advancedsticks:stick_advanced"

@@ -1,15 +1,13 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
+  "addition": "minecraft:netherite_ingot",
+
   "base": {
-    "tag": "c:sticks/diamond"
-  },
+    "tag": "c:sticks/diamond",
+
   "result": {
     "id": "advancedsticks:stick_netherite"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

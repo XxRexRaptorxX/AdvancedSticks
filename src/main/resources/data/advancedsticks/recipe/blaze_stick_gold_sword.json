@@ -3,30 +3,16 @@
   "category": "equipment",
   "pattern": [
   
-    " X ",
-    " X ",
-    " # "
+    "X",
+    "X",
+    "#"
     
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/blaze"
-      },
-      {
-        "tag": "c:rods/blaze"
-      },
-      {
-      "item": "minecraft:blaze_rod"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:gold_ingot"
-    }
+    "#": "#c:rods/blaze",
+    "X": "#c:ingots/gold"
   },
-  
   
   "result": {
     "id": "advancedsticks:blazerod_gold_sword",

@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/netherite"
-      },
-      {
-        "tag": "c:rods/netherite"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:stone_tool_materials"
-    }
+    "#": "#c:rods/netherite",
+    "X": "#minecraft:stone_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:netherite_stick_stone_pickaxe"

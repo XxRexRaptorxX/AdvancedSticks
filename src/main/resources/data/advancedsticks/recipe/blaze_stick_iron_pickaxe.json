@@ -10,23 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/blaze"
-      },
-      {
-        "tag": "c:rods/blaze"
-      },
-      {
-      "item": "minecraft:blaze_rod"
-      }
-     ],
-    
-    "X": {
-      "item": "minecraft:iron_ingot"
-    }
+    "#": "#c:rods/blaze",
+    "X": "#c:ingots/iron"
   },
-  
   
   "result": {
     "id": "advancedsticks:blazerod_iron_pickaxe",

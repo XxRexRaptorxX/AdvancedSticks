@@ -2,14 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " XX",
-    " # ",
-    " # "
+    "XX",
+    "# ",
+    "# "
   ],
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/blaze"
+    "#": "#c:rods/blaze"
       },
       {
         "tag": "c:rods/blaze"
@@ -18,9 +16,7 @@
         "item": "minecraft:blaze_rod"
       }
     ],
-    "X": {
-      "item": "minecraft:diamond"
-    }
+    "X": "#c:gems/diamond"
   },
 
   "result": {

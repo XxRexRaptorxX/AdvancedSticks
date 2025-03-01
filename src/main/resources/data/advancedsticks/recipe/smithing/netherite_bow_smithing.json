@@ -1,15 +1,12 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "advancedsticks:diamond_bow"
-  },
+  "addition": "minecraft:netherite_ingot",
+
+  "base": "advancedsticks:diamond_bow",
+
   "result": {
     "id": "advancedsticks:netherite_bow"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

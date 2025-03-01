@@ -10,20 +10,9 @@
   ],
   
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/iron"
-      },
-      {
-        "tag": "c:rods/iron"
-      }
-     ],
-    
-    "X": {
-      "tag": "minecraft:planks"
-    }
+    "#": "#c:rods/iron",
+    "X": "#minecraft:plank_tool_materials"
   },
-  
   
   "result": {
     "id": "advancedsticks:iron_stick_wood_pickaxe"

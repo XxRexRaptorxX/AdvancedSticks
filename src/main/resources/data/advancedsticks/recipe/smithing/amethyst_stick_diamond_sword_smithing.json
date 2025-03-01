@@ -1,15 +1,12 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "advancedsticks:amethyst_stick_diamond_sword"
-  },
+  "addition": "minecraft:netherite_ingot",
+
+  "base": "advancedsticks:amethyst_stick_diamond_sword",
+
   "result": {
     "id": "advancedsticks:amethyst_stick_netherite_sword"
   },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
+
+  "template": "minecraft:netherite_upgrade_smithing_template"
 }

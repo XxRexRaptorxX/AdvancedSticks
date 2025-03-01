@@ -6,19 +6,12 @@
     "# X",
     " #X"
   ],
+
   "key": {
-    "#": [
-      {
-        "tag": "c:sticks/gold"
-      },
-      {
-        "tag": "c:rods/gold"
-      }
-    ],
-    "X": {
-      "item": "minecraft:string"
-    }
+    "#": "#c:rods/gold",
+    "X": "minecraft:string"
   },
+
   "result": {
     "id": "advancedsticks:gold_bow"
   }

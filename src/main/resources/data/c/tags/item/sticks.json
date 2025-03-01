@@ -10,9 +10,7 @@
     "#c:sticks/enchanted",
     "#c:sticks/gold",
     "#c:sticks/iron",
-    "#c:sticks/end",
     "#c:sticks/netherite",
-    "#c:sticks/wood",
-    "#c:sticks/blaze"
+    "#c:sticks/wood"
   ]
 }
