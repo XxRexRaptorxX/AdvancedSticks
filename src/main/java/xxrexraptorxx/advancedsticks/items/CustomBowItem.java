@@ -18,4 +18,5 @@ public class CustomBowItem extends BowItem {
         if (this == ModItems.NETHERITE_BOW.get()) return 35;
         return super.getDefaultProjectileRange();
     }
+
 }
