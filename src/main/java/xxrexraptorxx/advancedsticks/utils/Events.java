@@ -175,21 +175,23 @@ public class Events {
     @SubscribeEvent
     public static void addingToolTips(ItemTooltipEvent event) {
         Item item = event.getItemStack().getItem();
-        String name = BuiltInRegistries.ITEM.getKey(item).getNamespace();
+        String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
+        String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
-        if (Config.SHOW_STICK_TYPE.get() && !name.contains("tconstruct") && !name.contains("silentgems") && !name.contains("tetra")) {
+        if (Config.SHOW_STICK_TYPE.get() && !namespace.contains("tconstruct") && !namespace.contains("silentgems") && !namespace.contains("tetra")) {
 
             if (item instanceof PickaxeItem && name.contains("pickaxe") || item instanceof AxeItem && name.contains("axe") || item instanceof SwordItem && name.contains("sword")
                     || item instanceof ShovelItem && name.contains("shovel") || item instanceof HoeItem && name.contains("hoe")) {
+                event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
 
-                if (name.equals(References.MODID)) {
-                    event.getToolTip().add(1, Component.literal("> " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                if (namespace.equals(References.MODID)) {
+                    event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
 
-                } else if (name.equals("bedrockminer")) {
-                    event.getToolTip().add(1, Component.literal("> ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
+                } else if (namespace.equals("bedrockminer")) {
+                    event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
 
                 } else {
-                    event.getToolTip().add(1, Component.literal("> ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                    event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                 }
             }
         }

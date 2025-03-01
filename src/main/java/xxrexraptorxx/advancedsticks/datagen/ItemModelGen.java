@@ -29,10 +29,10 @@ public class ItemModelGen extends ItemModelGenerators {
         this.generateFlatItem(ModItems.ENCHANTED_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
         this.generateFlatItem(ModItems.ADVANCED_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
         //bows
-        this.generateFlatItem(ModItems.IRON_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        this.generateFlatItem(ModItems.GOLD_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        this.generateFlatItem(ModItems.DIAMOND_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
-        this.generateFlatItem(ModItems.NETHERITE_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        this.generateBow(ModItems.IRON_BOW.get());
+        this.generateBow(ModItems.GOLD_BOW.get());
+        this.generateBow(ModItems.DIAMOND_BOW.get());
+        this.generateBow(ModItems.NETHERITE_BOW.get());
         //tools
         this.generateFlatItem(ModItems.BONE_STICK_WOOD_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         this.generateFlatItem(ModItems.BONE_STICK_WOOD_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);

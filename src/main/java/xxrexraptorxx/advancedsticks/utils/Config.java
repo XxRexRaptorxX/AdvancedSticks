@@ -31,7 +31,7 @@ public class Config {
         builder.comment("General").push(CATEGORY_GENERAL);
         UPDATE_CHECKER = builder.comment("Activate the Update-Checker").define("update-checker", true);
         SHOW_STICK_TYPE = builder.comment("Shows you the stick type under the tool").define("show_stick_type", true);
-         builder.pop();
+        builder.pop();
 
         CLIENT_CONFIG = builder.build();
     }

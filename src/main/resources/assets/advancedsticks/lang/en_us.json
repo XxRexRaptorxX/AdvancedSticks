@@ -64,6 +64,8 @@
   "advancements.advancedsticks.hoe_advanced.title": "Over the top?",
   "advancements.advancedsticks.hoe_advanced.description": "Craft a diamond hoe with a advanced stick",
 
+  "message.advancedsticks.handle": "Handle:",
+
   "item.advancedsticks.rod": "Rod",
   "item.advancedsticks.branch": "Branch",
   "item.advancedsticks.stick_wood": "Wooden Stick",
@@ -86,13 +88,13 @@
   "item.advancedsticks.elemental_stick_earth": "Elemental Stick",
   "item.advancedsticks.elemental_stick_fire": "Elemental Stick",
   "item.advancedsticks.elemental_stick_water": "Elemental Stick",
-  "item.advancedsticks.elemental_stick_nature": "Elemantal Stick",
+  "item.advancedsticks.elemental_stick_nature": "Elemental Stick",
   "item.advancedsticks.elemental_stick_light": "Elemental Stick",
   "item.advancedsticks.elemental_stick_darkness": "Elemental Stick",
   "item.advancedsticks.elemental_stick_dimension": "Elemental Stick",
 
   "item.advancedsticks.iron_bow": "Iron Bow",
-  "item.advancedsticks.gold_bow": "Gold Bow",
+  "item.advancedsticks.gold_bow": "Golden Bow",
   "item.advancedsticks.diamond_bow": "Diamond Bow",
   "item.advancedsticks.netherite_bow": "Netherite Bow",
 
@@ -455,5 +457,5 @@
   "item.advancedsticks.amethyst_stick_netherite_axe": "Netherite Axe",
   "item.advancedsticks.amethyst_stick_netherite_pickaxe": "Netherite Pickaxe",
   "item.advancedsticks.amethyst_stick_netherite_shovel": "Netherite Shovel",
-  "item.advancedsticks.amethyst_stick_netherite_hoe": "Netherite Hoe",
+  "item.advancedsticks.amethyst_stick_netherite_hoe": "Netherite Hoe"
 }

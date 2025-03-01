@@ -7,6 +7,7 @@ import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import xxrexraptorxx.advancedsticks.items.CustomBowItem;
 import xxrexraptorxx.advancedsticks.items.StickItem;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.utils.ToolMaterials;
@@ -480,10 +481,10 @@ public class ModItems {
     public static final DeferredItem<ShovelItem> ENCHANTED_STICK_NETHERITE_SHOVEL = ITEMS.registerItem("enchanted_stick_netherite_shovel", props -> new ShovelItem(ToolMaterials.NETHERITE_ENCHANTED_TM, 1.5f, -4.0f + ToolMaterials.NETHERITE_SHOVEL_SPEED, props));
     public static final DeferredItem<HoeItem> ENCHANTED_STICK_NETHERITE_HOE = ITEMS.registerItem("enchanted_stick_netherite_hoe", props -> new HoeItem(ToolMaterials.NETHERITE_ENCHANTED_TM, 0, -4.0f + ToolMaterials.NETHERITE_HOE_SPEED, props));
 
-    public static final DeferredItem<BowItem> IRON_BOW = ITEMS.register("iron_bow", () -> new BowItem(new Item.Properties().durability(500).setId(itemId("iron_bow"))));
-    public static final DeferredItem<BowItem> GOLD_BOW = ITEMS.register("gold_bow", () -> new BowItem(new Item.Properties().durability(250).setId(itemId("gold_bow"))));
-    public static final DeferredItem<BowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new BowItem(new Item.Properties().durability(1560).setId(itemId("diamond_bow"))));
-    public static final DeferredItem<BowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new BowItem(new Item.Properties().durability(2030).setId(itemId("netherite_bow"))));
+    public static final DeferredItem<CustomBowItem> IRON_BOW = ITEMS.register("iron_bow", () -> new CustomBowItem(new Item.Properties().durability(500).setId(itemId("iron_bow"))));
+    public static final DeferredItem<CustomBowItem> GOLD_BOW = ITEMS.register("gold_bow", () -> new CustomBowItem(new Item.Properties().durability(250).setId(itemId("gold_bow"))));
+    public static final DeferredItem<CustomBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new CustomBowItem(new Item.Properties().durability(1560).setId(itemId("diamond_bow"))));
+    public static final DeferredItem<CustomBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new CustomBowItem(new Item.Properties().durability(2030).setId(itemId("netherite_bow"))));
 
     
     public static ResourceKey<Item> itemId(String name) {

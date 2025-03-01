@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "advancedsticks:item/gold_bow_pulling_0"
+  }
+}

@@ -12,10 +12,10 @@ public class CustomBowItem extends BowItem {
 
     @Override
     public int getDefaultProjectileRange() {
-        if (this == ModItems.IRON_BOW.get()) return 17;
-        if (this == ModItems.GOLD_BOW.get()) return 19;
-        if (this == ModItems.DIAMOND_BOW.get()) return 21;
-        if (this == ModItems.NETHERITE_BOW.get()) return 23;
+        if (this == ModItems.IRON_BOW.get()) return 20;
+        if (this == ModItems.GOLD_BOW.get()) return 25;
+        if (this == ModItems.DIAMOND_BOW.get()) return 30;
+        if (this == ModItems.NETHERITE_BOW.get()) return 35;
         return super.getDefaultProjectileRange();
     }
 }
