@@ -64,8 +64,9 @@
   "advancements.advancedsticks.hoe_advanced.title": "Übertrieben?",
   "advancements.advancedsticks.hoe_advanced.description": "Crafte eine Diamant Hacke mit verbessertem Stab",
 
-  "item.advancedsticks.shrub_seeds": "Strauch Samen",
+  "item.advancedsticks.rod": "Stab",
   "item.advancedsticks.branch": "Ast",
+  "item.advancedsticks.stick_wood": "Holz Stab",
   "item.advancedsticks.stick_iron": "Eisen Stab",
   "item.advancedsticks.stick_gold": "Gold Stab",
   "item.advancedsticks.stick_diamond": "Diamant Stab",

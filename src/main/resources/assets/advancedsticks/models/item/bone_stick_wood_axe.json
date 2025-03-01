@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "advancedsticks:item/bone_stick_wood_axe"
-    }
-}

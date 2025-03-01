@@ -1,6 +1,0 @@
-{
-    "parent": "advancedsticks:item/diamond_bow",
-    "textures": {
-        "layer0": "advancedsticks:item/diamond_bow_pulling_1"
-    }
-}

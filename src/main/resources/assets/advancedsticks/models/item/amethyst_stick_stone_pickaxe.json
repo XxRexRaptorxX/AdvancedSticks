@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "advancedsticks:item/amethyst_stick_stone_pickaxe"
-    }
-}

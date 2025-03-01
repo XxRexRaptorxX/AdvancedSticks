@@ -1,6 +1,0 @@
-{
-    "parent": "item/handheld",
-    "textures": {
-        "layer0": "advancedsticks:item/advanced_stick_diamond_sword"
-    }
-}
