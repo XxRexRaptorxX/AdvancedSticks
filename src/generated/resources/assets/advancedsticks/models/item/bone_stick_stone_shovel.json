@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedsticks:item/bone_stick_stone_shovel"
+  }
+}

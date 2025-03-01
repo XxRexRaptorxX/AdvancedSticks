@@ -1,9 +1,8 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": "minecraft:netherite_ingot",
+  "addition": "#c:ingots/netherite",
 
-  "base": {
-    "tag": "c:sticks/diamond",
+  "base": "#c:rods/diamond",
 
   "result": {
     "id": "advancedsticks:stick_netherite"

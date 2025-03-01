@@ -17,22 +17,22 @@ public class ItemModelGen extends ItemModelGenerators {
 
     @Override
     public void run() {
-        //Generic
-        this.generateFlatItem(ModItems.BONE_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.IRON_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.GOLD_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.COPPER_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.EMERALD_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.AMETHYST_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.DIAMOND_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.NETHERITE_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.ENCHANTED_STICK.get(), ModelTemplates.FLAT_ITEM);
-        this.generateFlatItem(ModItems.ADVANCED_STICK.get(), ModelTemplates.FLAT_ITEM);
+        //rods
+        this.generateFlatItem(ModItems.BONE_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.IRON_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.GOLD_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.COPPER_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.EMERALD_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.AMETHYST_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.DIAMOND_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.NETHERITE_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.ENCHANTED_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+        this.generateFlatItem(ModItems.ADVANCED_STICK.get(), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
         //bows
-        this.generateFlatItem(ModItems.IRON_BOW.get(), ModelTemplates.BOW);
-        this.generateFlatItem(ModItems.GOLD_BOW.get(), ModelTemplates.BOW);
-        this.generateFlatItem(ModItems.DIAMOND_BOW.get(), ModelTemplates.BOW);
-        this.generateFlatItem(ModItems.NETHERITE_BOW.get(), ModelTemplates.BOW);
+        this.generateFlatItem(ModItems.IRON_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        this.generateFlatItem(ModItems.GOLD_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        this.generateFlatItem(ModItems.DIAMOND_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+        this.generateFlatItem(ModItems.NETHERITE_BOW.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         //tools
         this.generateFlatItem(ModItems.BONE_STICK_WOOD_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         this.generateFlatItem(ModItems.BONE_STICK_WOOD_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);

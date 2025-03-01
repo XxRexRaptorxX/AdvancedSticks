@@ -21,7 +21,6 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
 import xxrexraptorxx.advancedsticks.main.References;
-import xxrexraptorxx.extragems.main.References;
 
 import java.nio.file.Path;
 import java.util.HashMap;

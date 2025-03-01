@@ -13,15 +13,14 @@
     }
   ],
   "type": "energizedpower:metal_press",
-  "ingredient": [
-    "#c:plates/gold"
-    }
-  ],
-  "pressMold": {
-    "item": "energizedpower:rod_press_mold"
+  "ingredient": {
+    "ingredient": "#c:plates/gold"
   },
-  "output": {
-    "item": "advancedsticks:stick_gold",
+  "pressMold": {
+    "id": "energizedpower:rod_press_mold"
+  },
+  "result": {
+    "id": "advancedsticks:stick_gold",
     "count": 2
   }
 }

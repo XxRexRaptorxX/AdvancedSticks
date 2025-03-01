@@ -7,15 +7,7 @@
     "# "
   ],
   "key": {
-    "#": "#c:rods/blaze"
-      },
-      {
-        "tag": "c:rods/blaze"
-      },
-      {
-        "item": "minecraft:blaze_rod"
-      }
-    ],
+    "#": "#c:rods/blaze",
     "X": "#c:gems/diamond"
   },
 

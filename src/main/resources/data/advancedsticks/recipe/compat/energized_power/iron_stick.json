@@ -13,15 +13,14 @@
     }
   ],
   "type": "energizedpower:metal_press",
-  "ingredient": [
-    "#c:plates/iron"
-    }
-  ],
-  "pressMold": {
-    "item": "energizedpower:rod_press_mold"
+  "ingredient": {
+    "ingredient": "#c:plates/iron"
   },
-  "output": {
-    "item": "advancedsticks:stick_iron",
+  "pressMold": {
+    "id": "energizedpower:rod_press_mold"
+  },
+  "result": {
+    "id": "advancedsticks:stick_iron",
     "count": 2
   }
 }

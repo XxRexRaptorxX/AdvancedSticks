@@ -13,15 +13,14 @@
     }
   ],
   "type": "energizedpower:metal_press",
-  "ingredient": [
-    "#c:plates/emerald"
-    }
-  ],
-  "pressMold": {
-    "item": "energizedpower:rod_press_mold"
+  "ingredient": {
+    "ingredient": "#c:plates/emerald"
   },
-  "output": {
-    "item": "advancedsticks:stick_emerald",
+  "pressMold": {
+    "id": "energizedpower:rod_press_mold"
+  },
+  "result": {
+    "id": "advancedsticks:stick_emerald",
     "count": 2
   }
 }

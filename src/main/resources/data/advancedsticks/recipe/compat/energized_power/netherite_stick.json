@@ -13,15 +13,14 @@
     }
   ],
   "type": "energizedpower:metal_press",
-  "ingredient": [
-    "#c:plates/netherite"
-    }
-  ],
-  "pressMold": {
-    "item": "energizedpower:rod_press_mold"
+  "ingredient": {
+    "ingredient": "#c:plates/netherite"
   },
-  "output": {
-    "item": "advancedsticks:stick_netheriter",
+  "pressMold": {
+    "id": "energizedpower:rod_press_mold"
+  },
+  "result": {
+    "id": "advancedsticks:stick_netherite",
     "count": 2
   }
 }

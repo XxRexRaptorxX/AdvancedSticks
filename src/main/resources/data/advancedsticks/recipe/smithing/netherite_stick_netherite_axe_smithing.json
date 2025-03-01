@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smithing_transform",
-  "addition": "minecraft:netherite_ingot",
+  "addition": "#c:ingots/netherite",
 
   "base": "minecraft:netherite_axe",
 
