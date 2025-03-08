@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/endrod_stone_shovel"
+    "layer0": "advancedsticks:item/end_shovel_base",
+    "layer1": "advancedsticks:item/stone_shovel_overlay"
   }
 }

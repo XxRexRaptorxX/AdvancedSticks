@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/endrod_diamond_axe"
+    "layer0": "advancedsticks:item/end_axe_base",
+    "layer1": "advancedsticks:item/diamond_axe_overlay"
   }
 }

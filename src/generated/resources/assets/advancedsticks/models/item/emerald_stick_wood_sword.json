@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/emerald_stick_wood_sword"
+    "layer0": "advancedsticks:item/emerald_sword_base",
+    "layer1": "advancedsticks:item/wood_sword_overlay"
   }
 }

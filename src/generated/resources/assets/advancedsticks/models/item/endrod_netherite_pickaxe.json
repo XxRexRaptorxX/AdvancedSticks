@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/endrod_netherite_pickaxe"
+    "layer0": "advancedsticks:item/end_tool_base",
+    "layer1": "advancedsticks:item/netherite_pickaxe_overlay"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/netherite_stick_iron_sword"
+    "layer0": "advancedsticks:item/netherite_sword_base",
+    "layer1": "advancedsticks:item/iron_sword_overlay"
   }
 }

@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/bone_stick_stone_hoe"
+    "layer0": "advancedsticks:item/bone_tool_base",
+    "layer1": "advancedsticks:item/stone_hoe_overlay"
   }
 }

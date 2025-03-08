@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "advancedsticks:item/blazerod_iron_sword"
+    "layer0": "advancedsticks:item/blaze_sword_base",
+    "layer1": "advancedsticks:item/iron_sword_overlay"
   }
 }
