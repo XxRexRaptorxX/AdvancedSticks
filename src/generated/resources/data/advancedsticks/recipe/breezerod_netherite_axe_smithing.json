@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedsticks:breezerod_diamond_axe",
+  "result": {
+    "count": 1,
+    "id": "advancedsticks:breezerod_netherite_axe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

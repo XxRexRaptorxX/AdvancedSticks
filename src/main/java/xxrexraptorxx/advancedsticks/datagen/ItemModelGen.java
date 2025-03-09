@@ -396,6 +396,37 @@ public class ItemModelGen extends ItemModelGenerators {
         this.generateLayeredHandheldItem(ModItems.ENCHANTED_STICK_NETHERITE_SHOVEL.get());
         this.generateLayeredHandheldItem(ModItems.ENCHANTED_STICK_NETHERITE_HOE.get());
         this.generateLayeredHandheldItem(ModItems.ENCHANTED_STICK_NETHERITE_PICKAXE.get());
+
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_WOOD_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_WOOD_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_WOOD_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_WOOD_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_WOOD_PICKAXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_STONE_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_STONE_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_STONE_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_STONE_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_STONE_PICKAXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_IRON_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_IRON_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_IRON_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_IRON_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_IRON_PICKAXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_GOLD_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_GOLD_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_GOLD_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_GOLD_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_GOLD_PICKAXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_DIAMOND_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_DIAMOND_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_DIAMOND_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_DIAMOND_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_DIAMOND_PICKAXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_NETHERITE_AXE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_NETHERITE_SWORD.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_NETHERITE_SHOVEL.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_NETHERITE_HOE.get());
+        this.generateLayeredHandheldItem(ModItems.BREEZE_STICK_NETHERITE_PICKAXE.get());
     }
 
 

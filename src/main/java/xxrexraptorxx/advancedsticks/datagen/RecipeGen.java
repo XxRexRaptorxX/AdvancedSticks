@@ -40,7 +40,7 @@ public class RecipeGen extends RecipeProvider {
         generateToolRecipes(ModTags.ADVANCED_STICKS);
         generateToolRecipes(ModTags.END_STICKS);
         generateToolRecipes(ModTags.BLAZE_STICKS);
-        //generateToolRecipes(ModTags.BREEZE_STICKS);
+        generateToolRecipes(ModTags.BREEZE_STICKS);
         //generateToolRecipes(ModTags.WITHER_STICKS);
     }
 
