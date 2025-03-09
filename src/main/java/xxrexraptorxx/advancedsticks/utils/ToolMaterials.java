@@ -45,40 +45,40 @@ public class ToolMaterials {
     private static final float NETHERITE_BASE_DMG = 4.0f;
     private static final int   NETHERITE_BASE_ENCH = 15;
 
-    private static final int   WOOD_USES = WOOD_BASE_USES / 3 * 2;
-    private static final float WOOD_SPEED = WOOD_BASE_SPEED / 3 * 2;
-    private static final float WOOD_DMG = WOOD_BASE_DMG / 3 * 2;
-    private static final int   WOOD_ENCH = WOOD_BASE_ENCH / 3 * 2;
+    private static final int   WOOD_USES = WOOD_BASE_USES / 3 * 2; //38
+    private static final float WOOD_SPEED = WOOD_BASE_SPEED / 3 * 2; //1.3
+    private static final float WOOD_DMG = WOOD_BASE_DMG / 3 * 2; //0
+    private static final int   WOOD_ENCH = WOOD_BASE_ENCH / 3 * 2; //10
 
-    private static final int   STONE_USES = STONE_BASE_USES / 3 * 2;
-    private static final float STONE_SPEED = STONE_BASE_SPEED / 3 * 2;
-    private static final float STONE_DMG = STONE_BASE_DMG / 3 * 2;
-    private static final int   STONE_ENCH = STONE_BASE_ENCH / 3 * 2;
+    private static final int   STONE_USES = STONE_BASE_USES / 3 * 2; //48
+    private static final float STONE_SPEED = STONE_BASE_SPEED / 3 * 2; //1.3
+    private static final float STONE_DMG = STONE_BASE_DMG / 3 * 2; //0.6
+    private static final int   STONE_ENCH = STONE_BASE_ENCH / 3 * 2; //2
 
-    private static final int   IRON_USES = IRON_BASE_USES / 3 * 2;
-    private static final float IRON_SPEED = IRON_BASE_SPEED / 3 * 2;
-    private static final float IRON_DMG = IRON_BASE_DMG / 3 * 2;
-    private static final int   IRON_ENCH = IRON_BASE_ENCH / 3 * 2;
+    private static final int   IRON_USES = IRON_BASE_USES / 3 * 2; //126
+    private static final float IRON_SPEED = IRON_BASE_SPEED / 3 * 2; //2.6
+    private static final float IRON_DMG = IRON_BASE_DMG / 3 * 2; //1.3
+    private static final int   IRON_ENCH = IRON_BASE_ENCH / 3 * 2; //8
 
-    private static final int   GOLD_USES = GOLD_BASE_USES / 3 * 2;
-    private static final float GOLD_SPEED = GOLD_BASE_SPEED / 3 * 2;
+    private static final int   GOLD_USES = GOLD_BASE_USES / 3 * 2; // 20
+    private static final float GOLD_SPEED = GOLD_BASE_SPEED / 3 * 2; //6.6
     private static final float GOLD_DMG = 0.0f;
-    private static final int   GOLD_ENCH = GOLD_BASE_ENCH  / 3 * 2;
+    private static final int   GOLD_ENCH = GOLD_BASE_ENCH  / 3 * 2; //14
 
-    private static final int   DIAMOND_USES = DIAMOND_BASE_USES / 3 * 2;
-    private static final float DIAMOND_SPEED = DIAMOND_BASE_SPEED / 3 * 2;
-    private static final float DIAMOND_DMG = DIAMOND_BASE_DMG / 3 * 2;
-    private static final int   DIAMOND_ENCH = DIAMOND_BASE_ENCH / 3 * 2;
+    private static final int   DIAMOND_USES = DIAMOND_BASE_USES / 3 * 2; //1000
+    private static final float DIAMOND_SPEED = DIAMOND_BASE_SPEED / 3 * 2; //4.0
+    private static final float DIAMOND_DMG = DIAMOND_BASE_DMG / 3 * 2; //2.0
+    private static final int   DIAMOND_ENCH = DIAMOND_BASE_ENCH / 3 * 2; //6
 
-    private static final int   NETHERITE_USES = NETHERITE_BASE_USES  / 3 * 2;
-    private static final float NETHERITE_SPEED = NETHERITE_BASE_SPEED / 3 * 2;
-    private static final float NETHERITE_DMG = NETHERITE_BASE_DMG / 3 * 2;
-    private static final int   NETHERITE_ENCH = NETHERITE_BASE_ENCH / 3 * 2;
+    private static final int   NETHERITE_USES = NETHERITE_BASE_USES  / 3 * 2; //1314
+    private static final float NETHERITE_SPEED = NETHERITE_BASE_SPEED / 3 * 2; //4.6
+    private static final float NETHERITE_DMG = NETHERITE_BASE_DMG / 3 * 2; //2.6
+    private static final int   NETHERITE_ENCH = NETHERITE_BASE_ENCH / 3 * 2; //10
 
-    private static final int   ADVANCED_USES = (DIAMOND_USES / 3 * 2) + (IRON_USES / 3);
-    private static final float ADVANCED_SPEED = (DIAMOND_SPEED / 3 * 2) + (IRON_SPEED / 3);
-    private static final float ADVANCED_DMG = (DIAMOND_DMG / 3 * 2) + (IRON_DMG / 3);
-    private static final int   ADVANCED_ENCH = (DIAMOND_ENCH / 3 * 2) + (IRON_ENCH / 3);
+    private static final int   ADVANCED_USES = (DIAMOND_USES / 3 * 2) + (IRON_USES / 3); //708
+    private static final float ADVANCED_SPEED = (DIAMOND_SPEED / 3 * 2) + (IRON_SPEED / 3); //3.5
+    private static final float ADVANCED_DMG = (DIAMOND_DMG / 3 * 2) + (IRON_DMG / 3); //1.7
+    private static final int   ADVANCED_ENCH = (DIAMOND_ENCH / 3 * 2) + (IRON_ENCH / 3); //6
 
     private static final int   BONE_USES = 47;
     private static final float BONE_SPEED = 2.0f;
@@ -91,9 +91,14 @@ public class ToolMaterials {
     private static final int   ENDROD_ENCH = 17;
 
     private static final int   BLAZEROD_USES = 120;
-    private static final float BLAZEROD_SPEED = 5.5f;
+    private static final float BLAZEROD_SPEED = 4.2f;
     private static final float BLAZEROD_DMG = 1.5f;
     private static final int   BLAZEROD_ENCH = 15;
+
+    private static final int   BREEZEROD_USES = 110;
+    private static final float BREEZEROD_SPEED = 5.0f;
+    private static final float BREEZEROD_DMG = 0.5f;
+    private static final int   BREEZEROD_ENCH = 13;
 
     private static final int   EMERALD_USES = 600;
     private static final float EMERALD_SPEED = 4.2f;
@@ -165,6 +170,7 @@ public class ToolMaterials {
     public static ToolMaterial WOOD_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, WOOD_BASE_USES + GOLD_USES, WOOD_BASE_SPEED + GOLD_SPEED, WOOD_BASE_DMG + GOLD_DMG, WOOD_BASE_ENCH + GOLD_ENCH, ItemTags.WOODEN_TOOL_MATERIALS);
     public static ToolMaterial WOOD_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, WOOD_BASE_USES + DIAMOND_USES, WOOD_BASE_SPEED + DIAMOND_SPEED, WOOD_BASE_DMG + DIAMOND_DMG, WOOD_BASE_ENCH + DIAMOND_ENCH, ItemTags.WOODEN_TOOL_MATERIALS);
     public static ToolMaterial WOOD_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, WOOD_BASE_USES + NETHERITE_USES, WOOD_BASE_SPEED + NETHERITE_SPEED, WOOD_BASE_DMG + NETHERITE_DMG, WOOD_BASE_ENCH + NETHERITE_ENCH, ItemTags.WOODEN_TOOL_MATERIALS);
+    public static ToolMaterial WOOD_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, WOOD_BASE_USES + BREEZEROD_USES, WOOD_BASE_SPEED + BREEZEROD_SPEED, WOOD_BASE_DMG + BREEZEROD_DMG, WOOD_BASE_ENCH + BREEZEROD_ENCH, ItemTags.WOODEN_TOOL_MATERIALS);
 
     public static ToolMaterial STONE_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + BONE_USES, STONE_BASE_SPEED + BONE_SPEED, STONE_BASE_DMG + BONE_DMG, STONE_BASE_ENCH + BONE_ENCH, ItemTags.STONE_TOOL_MATERIALS);
     public static ToolMaterial STONE_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + COPPER_USES, STONE_BASE_SPEED + COPPER_SPEED, STONE_BASE_DMG + COPPER_DMG, STONE_BASE_ENCH + COPPER_ENCH, ItemTags.STONE_TOOL_MATERIALS);
@@ -178,6 +184,7 @@ public class ToolMaterials {
     public static ToolMaterial STONE_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + GOLD_USES, STONE_BASE_SPEED + GOLD_SPEED, STONE_BASE_DMG + GOLD_DMG, STONE_BASE_ENCH + GOLD_ENCH, ItemTags.STONE_TOOL_MATERIALS);
     public static ToolMaterial STONE_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + DIAMOND_USES, STONE_BASE_SPEED + DIAMOND_SPEED, STONE_BASE_DMG + DIAMOND_DMG, STONE_BASE_ENCH + DIAMOND_ENCH, ItemTags.STONE_TOOL_MATERIALS);
     public static ToolMaterial STONE_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + NETHERITE_USES, STONE_BASE_SPEED + NETHERITE_SPEED, STONE_BASE_DMG + NETHERITE_DMG, STONE_BASE_ENCH + NETHERITE_ENCH, ItemTags.STONE_TOOL_MATERIALS);
+    public static ToolMaterial STONE_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, STONE_BASE_USES + BREEZEROD_USES, STONE_BASE_SPEED + BREEZEROD_SPEED, STONE_BASE_DMG + BREEZEROD_DMG, STONE_BASE_ENCH + BREEZEROD_ENCH, ItemTags.STONE_TOOL_MATERIALS);
 
     public static ToolMaterial IRON_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + BONE_USES, IRON_BASE_SPEED + BONE_SPEED, IRON_BASE_DMG + BONE_DMG, IRON_BASE_ENCH + BONE_ENCH, Tags.Items.INGOTS_IRON);
     public static ToolMaterial IRON_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, IRON_BASE_DMG + COPPER_DMG, IRON_BASE_ENCH + COPPER_ENCH, Tags.Items.INGOTS_IRON);
@@ -191,6 +198,7 @@ public class ToolMaterials {
     public static ToolMaterial IRON_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, IRON_BASE_DMG + GOLD_DMG, IRON_BASE_ENCH + GOLD_ENCH, Tags.Items.INGOTS_IRON);
     public static ToolMaterial IRON_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + DIAMOND_USES, IRON_BASE_SPEED + DIAMOND_SPEED, IRON_BASE_DMG + DIAMOND_DMG, IRON_BASE_ENCH + DIAMOND_ENCH, Tags.Items.INGOTS_IRON);
     public static ToolMaterial IRON_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + NETHERITE_USES, IRON_BASE_SPEED + NETHERITE_SPEED, IRON_BASE_DMG + NETHERITE_DMG, IRON_BASE_ENCH + NETHERITE_ENCH, Tags.Items.INGOTS_IRON);
+    public static ToolMaterial IRON_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + BREEZEROD_USES, IRON_BASE_SPEED + BREEZEROD_SPEED, IRON_BASE_DMG + BREEZEROD_DMG, IRON_BASE_ENCH + BREEZEROD_ENCH, Tags.Items.INGOTS_IRON);
 
     public static ToolMaterial GOLD_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + BONE_SPEED, GOLD_BASE_DMG + BONE_DMG, GOLD_BASE_ENCH + BONE_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, GOLD_BASE_DMG + COPPER_DMG, GOLD_BASE_ENCH + COPPER_ENCH, Tags.Items.INGOTS_GOLD);
@@ -204,6 +212,7 @@ public class ToolMaterials {
     public static ToolMaterial GOLD_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, GOLD_BASE_DMG + GOLD_DMG, GOLD_BASE_ENCH + GOLD_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + DIAMOND_USES, GOLD_BASE_SPEED + DIAMOND_SPEED, GOLD_BASE_DMG + DIAMOND_DMG, GOLD_BASE_ENCH + DIAMOND_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + NETHERITE_USES, GOLD_BASE_SPEED + NETHERITE_SPEED, GOLD_BASE_DMG + NETHERITE_DMG, GOLD_BASE_ENCH + NETHERITE_ENCH, Tags.Items.INGOTS_GOLD);
+    public static ToolMaterial GOLD_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + BREEZEROD_USES, GOLD_BASE_SPEED + BREEZEROD_SPEED, GOLD_BASE_DMG + BREEZEROD_DMG, GOLD_BASE_ENCH + BREEZEROD_ENCH, Tags.Items.INGOTS_GOLD);
 
     public static ToolMaterial DIAMOND_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + BONE_USES, DIAMOND_BASE_SPEED + BONE_SPEED, DIAMOND_BASE_DMG + BONE_DMG, DIAMOND_BASE_ENCH + BONE_ENCH, Tags.Items.GEMS_DIAMOND);
     public static ToolMaterial DIAMOND_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + COPPER_USES, DIAMOND_BASE_SPEED + COPPER_SPEED, DIAMOND_BASE_DMG + COPPER_DMG, DIAMOND_BASE_ENCH + COPPER_ENCH, Tags.Items.GEMS_DIAMOND);
@@ -217,6 +226,7 @@ public class ToolMaterials {
     public static ToolMaterial DIAMOND_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + GOLD_USES, DIAMOND_BASE_SPEED + GOLD_SPEED, DIAMOND_BASE_DMG + GOLD_DMG, DIAMOND_BASE_ENCH + GOLD_ENCH, Tags.Items.GEMS_DIAMOND);
     public static ToolMaterial DIAMOND_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + DIAMOND_USES, DIAMOND_BASE_SPEED + DIAMOND_SPEED, DIAMOND_BASE_DMG + DIAMOND_DMG, DIAMOND_BASE_ENCH + DIAMOND_ENCH, Tags.Items.GEMS_DIAMOND);
     public static ToolMaterial DIAMOND_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + NETHERITE_USES, DIAMOND_BASE_SPEED + NETHERITE_SPEED, DIAMOND_BASE_DMG + NETHERITE_DMG, DIAMOND_BASE_ENCH + NETHERITE_ENCH, Tags.Items.GEMS_DIAMOND);
+    public static ToolMaterial DIAMOND_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, DIAMOND_BASE_USES + BREEZEROD_USES, DIAMOND_BASE_SPEED + BREEZEROD_SPEED, DIAMOND_BASE_DMG + BREEZEROD_DMG, DIAMOND_BASE_ENCH + BREEZEROD_ENCH, Tags.Items.GEMS_DIAMOND);
 
     public static ToolMaterial NETHERITE_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + BONE_USES, NETHERITE_BASE_SPEED + BONE_SPEED, NETHERITE_BASE_DMG + BONE_DMG, NETHERITE_BASE_ENCH + BONE_ENCH, Tags.Items.INGOTS_NETHERITE);
     public static ToolMaterial NETHERITE_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + COPPER_USES, NETHERITE_BASE_SPEED + COPPER_SPEED, NETHERITE_BASE_DMG + COPPER_DMG, NETHERITE_BASE_ENCH + COPPER_ENCH, Tags.Items.INGOTS_NETHERITE);
@@ -230,5 +240,7 @@ public class ToolMaterials {
     public static ToolMaterial NETHERITE_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + GOLD_USES, NETHERITE_BASE_SPEED + GOLD_SPEED, NETHERITE_BASE_DMG + GOLD_DMG, NETHERITE_BASE_ENCH + GOLD_ENCH, Tags.Items.INGOTS_NETHERITE);
     public static ToolMaterial NETHERITE_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + DIAMOND_USES, NETHERITE_BASE_SPEED + DIAMOND_SPEED, NETHERITE_BASE_DMG + DIAMOND_DMG, NETHERITE_BASE_ENCH + DIAMOND_ENCH, Tags.Items.INGOTS_NETHERITE);
     public static ToolMaterial NETHERITE_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + NETHERITE_USES, NETHERITE_BASE_SPEED + NETHERITE_SPEED, NETHERITE_BASE_DMG + NETHERITE_DMG, NETHERITE_BASE_ENCH + NETHERITE_ENCH, Tags.Items.INGOTS_NETHERITE);
+    public static ToolMaterial NETHERITE_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, NETHERITE_BASE_USES + BREEZEROD_USES, NETHERITE_BASE_SPEED + BREEZEROD_SPEED, NETHERITE_BASE_DMG + BREEZEROD_DMG, NETHERITE_BASE_ENCH + BREEZEROD_ENCH, Tags.Items.INGOTS_NETHERITE);
+
 }
 

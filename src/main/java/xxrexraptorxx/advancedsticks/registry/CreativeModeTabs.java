@@ -85,6 +85,11 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_WOOD_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_WOOD_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_WOOD_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_SWORD.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_HOE.get());
                 output.accept(ModItems.END_STICK_WOOD_SWORD.get());
                 output.accept(ModItems.END_STICK_WOOD_PICKAXE.get());
                 output.accept(ModItems.END_STICK_WOOD_AXE.get());
@@ -146,6 +151,11 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_STONE_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_STONE_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_STONE_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_WOOD_SWORD.get());
+                output.accept(ModItems.BREEZE_STICK_STONE_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_STONE_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_STONE_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_STONE_HOE.get());
                 output.accept(ModItems.END_STICK_STONE_SWORD.get());
                 output.accept(ModItems.END_STICK_STONE_PICKAXE.get());
                 output.accept(ModItems.END_STICK_STONE_AXE.get());
@@ -207,6 +217,10 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_IRON_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_IRON_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_IRON_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_IRON_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_IRON_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_IRON_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_IRON_HOE.get());
                 output.accept(ModItems.END_STICK_IRON_SWORD.get());
                 output.accept(ModItems.END_STICK_IRON_PICKAXE.get());
                 output.accept(ModItems.END_STICK_IRON_AXE.get());
@@ -268,6 +282,10 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_GOLD_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_GOLD_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_GOLD_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_GOLD_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_GOLD_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_GOLD_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_GOLD_HOE.get());
                 output.accept(ModItems.END_STICK_GOLD_SWORD.get());
                 output.accept(ModItems.END_STICK_GOLD_PICKAXE.get());
                 output.accept(ModItems.END_STICK_GOLD_AXE.get());
@@ -329,6 +347,10 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_DIAMOND_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_DIAMOND_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_DIAMOND_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_DIAMOND_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_DIAMOND_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_DIAMOND_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_DIAMOND_HOE.get());
                 output.accept(ModItems.END_STICK_DIAMOND_SWORD.get());
                 output.accept(ModItems.END_STICK_DIAMOND_PICKAXE.get());
                 output.accept(ModItems.END_STICK_DIAMOND_AXE.get());
@@ -390,6 +412,10 @@ public class CreativeModeTabs {
                 output.accept(ModItems.BLAZE_STICK_NETHERITE_AXE.get());
                 output.accept(ModItems.BLAZE_STICK_NETHERITE_SHOVEL.get());
                 output.accept(ModItems.BLAZE_STICK_NETHERITE_HOE.get());
+                output.accept(ModItems.BREEZE_STICK_NETHERITE_PICKAXE.get());
+                output.accept(ModItems.BREEZE_STICK_NETHERITE_AXE.get());
+                output.accept(ModItems.BREEZE_STICK_NETHERITE_SHOVEL.get());
+                output.accept(ModItems.BREEZE_STICK_NETHERITE_HOE.get());
                 output.accept(ModItems.END_STICK_NETHERITE_SWORD.get());
                 output.accept(ModItems.END_STICK_NETHERITE_PICKAXE.get());
                 output.accept(ModItems.END_STICK_NETHERITE_AXE.get());
