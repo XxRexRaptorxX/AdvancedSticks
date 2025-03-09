@@ -80,45 +80,152 @@ public class ToolMaterials {
     private static final float ADVANCED_DMG = (DIAMOND_DMG / 3 * 2) + (IRON_DMG / 3); //1.7
     private static final int   ADVANCED_ENCH = (DIAMOND_ENCH / 3 * 2) + (IRON_ENCH / 3); //6
 
-    private static final int   BONE_USES = 47;
+    private static final int   BONE_USES  = 47;
     private static final float BONE_SPEED = 2.0f;
-    private static final float BONE_DMG = 0.5f;
-    private static final int   BONE_ENCH = 7;
+    private static final float BONE_DMG   = 0.5f;
+    private static final int   BONE_ENCH  = 7;
 
-    private static final int   ENDROD_USES = 133;
+    private static final int   ENDROD_USES  = 133;
     private static final float ENDROD_SPEED = 5.3f;
-    private static final float ENDROD_DMG = 1.7f;
-    private static final int   ENDROD_ENCH = 17;
+    private static final float ENDROD_DMG   = 1.7f;
+    private static final int   ENDROD_ENCH  = 17;
 
-    private static final int   BLAZEROD_USES = 120;
+    private static final int   BLAZEROD_USES  = 120;
     private static final float BLAZEROD_SPEED = 4.2f;
-    private static final float BLAZEROD_DMG = 1.5f;
-    private static final int   BLAZEROD_ENCH = 15;
+    private static final float BLAZEROD_DMG   = 1.5f;
+    private static final int   BLAZEROD_ENCH  = 15;
 
-    private static final int   BREEZEROD_USES = 110;
+    private static final int   BREEZEROD_USES  = 110;
     private static final float BREEZEROD_SPEED = 5.0f;
-    private static final float BREEZEROD_DMG = 0.5f;
-    private static final int   BREEZEROD_ENCH = 13;
+    private static final float BREEZEROD_DMG   = 0.5f;
+    private static final int   BREEZEROD_ENCH  = 13;
 
-    private static final int   EMERALD_USES = 600;
+    private static final int   EMERALD_USES  = 600;
     private static final float EMERALD_SPEED = 4.2f;
-    private static final float EMERALD_DMG = 1.4f;
-    private static final int   EMERALD_ENCH = 12;
+    private static final float EMERALD_DMG   = 1.4f;
+    private static final int   EMERALD_ENCH  = 12;
 
-    private static final int   COPPER_USES = 133;
+    private static final int   COPPER_USES  = 133;
     private static final float COPPER_SPEED = 4.4f;
-    private static final float COPPER_DMG = 1.2f;
-    private static final int   COPPER_ENCH = 9;
+    private static final float COPPER_DMG   = 1.2f;
+    private static final int   COPPER_ENCH  = 9;
 
-    private static final int   AMETHYST_USES = 666;
+    private static final int   AMETHYST_USES  = 666;
     private static final float AMETHYST_SPEED = 4.6f;
-    private static final float AMETHYST_DMG = 1.6f;
-    private static final int   AMETHYST_ENCH = 20;
+    private static final float AMETHYST_DMG   = 1.6f;
+    private static final int   AMETHYST_ENCH  = 20;
 
-    private static final int   ENCHANTED_USES = WOOD_BASE_USES + 30;
-    private static final float ENCHANTED_SPEED = WOOD_BASE_SPEED + 2.0f;
-    private static final float ENCHANTED_DMG = WOOD_BASE_DMG;
-    private static final int   ENCHANTED_ENCH = WOOD_BASE_ENCH + 30;
+    private static final int   ENCHANTED_USES = WOOD_BASE_USES + 30; //89
+    private static final float ENCHANTED_SPEED = WOOD_BASE_SPEED + 2.0f; //4
+    private static final float ENCHANTED_DMG = WOOD_BASE_DMG; //0
+    private static final int   ENCHANTED_ENCH = WOOD_BASE_ENCH + 30; //45
+
+    private static final int   ALUMINUM_USES  = 30;
+    private static final float ALUMINUM_SPEED = 7.0f;
+    private static final float ALUMINUM_DMG   = 0.0f;
+    private static final int   ALUMINUM_ENCH  = 16;
+
+    private static final int   ELECTRUM_USES    = 25;
+    private static final float ELECTRUM_SPEED   = 7.5f;
+    private static final float ELECTRUM_DMG     = 0.0f;
+    private static final int   ELECTRUM_ENCH    = 18;
+
+    private static final int   TIN_USES       = 120;
+    private static final float TIN_SPEED      = 4.2f;
+    private static final float TIN_DMG        = 1.1f;
+    private static final int   TIN_ENCH       = 8;
+
+    private static final int   BRASS_USES     = 140;
+    private static final float BRASS_SPEED    = 4.5f;
+    private static final float BRASS_DMG      = 1.3f;
+    private static final int   BRASS_ENCH     = 10;
+
+    private static final int   BRONZE_USES    = 160;
+    private static final float BRONZE_SPEED   = 3.8f;
+    private static final float BRONZE_DMG     = 1.5f;
+    private static final int   BRONZE_ENCH    = 8;
+
+    private static final int   CONSTANTAN_USES  = 130;
+    private static final float CONSTANTAN_SPEED = 4.0f;
+    private static final float CONSTANTAN_DMG   = 1.4f;
+    private static final int   CONSTANTAN_ENCH  = 11;
+
+    private static final int   NICKEL_USES    = 140;
+    private static final float NICKEL_SPEED   = 3.0f;
+    private static final float NICKEL_DMG     = 1.5f;
+    private static final int   NICKEL_ENCH    = 9;
+
+    private static final int   INVAR_USES     = 200;
+    private static final float INVAR_SPEED    = 3.0f;
+    private static final float INVAR_DMG      = 1.7f;
+    private static final int   INVAR_ENCH     = 10;
+
+    private static final int   STEEL_USES     = 300;
+    private static final float STEEL_SPEED    = 3.2f;
+    private static final float STEEL_DMG      = 1.8f;
+    private static final int   STEEL_ENCH     = 10;
+
+    private static final int   LUMIUM_USES    = 300;
+    private static final float LUMIUM_SPEED   = 5.0f;
+    private static final float LUMIUM_DMG     = 2.0f;
+    private static final int   LUMIUM_ENCH    = 22;
+
+    private static final int   IRIDIUM_USES   = 1600;
+    private static final float IRIDIUM_SPEED  = 5.0f;
+    private static final float IRIDIUM_DMG    = 3.0f;
+    private static final int   IRIDIUM_ENCH   = 14;
+
+    private static final int   OSMIUM_USES    = 1700;
+    private static final float OSMIUM_SPEED   = 4.5f;
+    private static final float OSMIUM_DMG     = 3.2f;
+    private static final int   OSMIUM_ENCH    = 8;
+
+    private static final int   PLATINUM_USES  = 1500;
+    private static final float PLATINUM_SPEED = 4.8f;
+    private static final float PLATINUM_DMG   = 2.9f;
+    private static final int   PLATINUM_ENCH  = 16;
+
+    private static final int   ENDERIUM_USES  = 1400;
+    private static final float ENDERIUM_SPEED = 5.0f;
+    private static final float ENDERIUM_DMG   = 2.8f;
+    private static final int   ENDERIUM_ENCH  = 12;
+
+    private static final int   URANIUM_USES   = 1400;
+    private static final float URANIUM_SPEED  = 3.8f;
+    private static final float URANIUM_DMG    = 3.0f;
+    private static final int   URANIUM_ENCH   = 5;
+
+    private static final int   SIGNALUM_USES  = 1000;
+    private static final float SIGNALUM_SPEED = 6.0f;
+    private static final float SIGNALUM_DMG   = 2.5f;
+    private static final int   SIGNALUM_ENCH  = 20;
+
+    // Schwermetalle
+    private static final int   LEAD_USES      = 45;
+    private static final float LEAD_SPEED     = 2.0f;
+    private static final float LEAD_DMG       = 0.8f;
+    private static final int   LEAD_ENCH      = 6;
+
+    private static final int   RUBY_USES      = 650;
+    private static final float RUBY_SPEED     = 4.5f;
+    private static final float RUBY_DMG       = 1.6f;
+    private static final int   RUBY_ENCH      = 15;
+
+    private static final int   SAPPHIRE_USES  = 650;
+    private static final float SAPPHIRE_SPEED = 4.5f;
+    private static final float SAPPHIRE_DMG   = 1.6f;
+    private static final int   SAPPHIRE_ENCH  = 15;
+
+    private static final int   TOPAZ_USES     = 550;
+    private static final float TOPAZ_SPEED    = 4.0f;
+    private static final float TOPAZ_DMG      = 1.5f;
+    private static final int   TOPAZ_ENCH     = 18;
+
+    private static final int   PERIDOT_USES   = 600;
+    private static final float PERIDOT_SPEED  = 4.2f;
+    private static final float PERIDOT_DMG    = 1.5f;
+    private static final int   PERIDOT_ENCH   = 17;
+
 
     /** SPEED **/
     public static final float WOOD_SWORD_SPEED = 1.6f;
@@ -200,7 +307,7 @@ public class ToolMaterials {
     public static ToolMaterial IRON_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + NETHERITE_USES, IRON_BASE_SPEED + NETHERITE_SPEED, IRON_BASE_DMG + NETHERITE_DMG, IRON_BASE_ENCH + NETHERITE_ENCH, Tags.Items.INGOTS_IRON);
     public static ToolMaterial IRON_BREEZEROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, IRON_BASE_USES + BREEZEROD_USES, IRON_BASE_SPEED + BREEZEROD_SPEED, IRON_BASE_DMG + BREEZEROD_DMG, IRON_BASE_ENCH + BREEZEROD_ENCH, Tags.Items.INGOTS_IRON);
 
-    public static ToolMaterial GOLD_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + BONE_SPEED, GOLD_BASE_DMG + BONE_DMG, GOLD_BASE_ENCH + BONE_ENCH, Tags.Items.INGOTS_GOLD);
+    public static ToolMaterial GOLD_BONE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + BONE_USES, IRON_BASE_SPEED + BONE_SPEED, GOLD_BASE_DMG + BONE_DMG, GOLD_BASE_ENCH + BONE_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_COPPER_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + COPPER_USES, IRON_BASE_SPEED + COPPER_SPEED, GOLD_BASE_DMG + COPPER_DMG, GOLD_BASE_ENCH + COPPER_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_ADVANCED_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + ADVANCED_USES, IRON_BASE_SPEED + ADVANCED_SPEED, GOLD_BASE_DMG + ADVANCED_DMG, GOLD_BASE_ENCH + ADVANCED_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_ENCHANTED_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + ENCHANTED_USES, GOLD_BASE_SPEED + ENCHANTED_SPEED, GOLD_BASE_DMG + ENCHANTED_DMG, GOLD_BASE_ENCH + ENCHANTED_ENCH, Tags.Items.INGOTS_GOLD);
@@ -208,7 +315,7 @@ public class ToolMaterials {
     public static ToolMaterial GOLD_EMERALD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + EMERALD_USES, GOLD_BASE_SPEED + EMERALD_SPEED, GOLD_BASE_DMG + EMERALD_DMG, GOLD_BASE_ENCH + EMERALD_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_AMETHYST_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + AMETHYST_USES, GOLD_BASE_SPEED + AMETHYST_SPEED, GOLD_BASE_DMG + AMETHYST_DMG, GOLD_BASE_ENCH + AMETHYST_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_ENDROD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + ENDROD_USES, GOLD_BASE_SPEED + ENDROD_SPEED, GOLD_BASE_DMG + ENDROD_DMG, GOLD_BASE_ENCH + ENDROD_ENCH, Tags.Items.INGOTS_GOLD);
-    public static ToolMaterial GOLD_IRON_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + IRON_SPEED, GOLD_BASE_DMG + IRON_DMG, GOLD_BASE_ENCH + IRON_ENCH, Tags.Items.INGOTS_GOLD);
+    public static ToolMaterial GOLD_IRON_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + IRON_USES, IRON_BASE_SPEED + IRON_SPEED, GOLD_BASE_DMG + IRON_DMG, GOLD_BASE_ENCH + IRON_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_GOLD_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + GOLD_USES, IRON_BASE_SPEED + GOLD_SPEED, GOLD_BASE_DMG + GOLD_DMG, GOLD_BASE_ENCH + GOLD_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_DIAMOND_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + DIAMOND_USES, GOLD_BASE_SPEED + DIAMOND_SPEED, GOLD_BASE_DMG + DIAMOND_DMG, GOLD_BASE_ENCH + DIAMOND_ENCH, Tags.Items.INGOTS_GOLD);
     public static ToolMaterial GOLD_NETHERITE_TM = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, GOLD_BASE_USES + NETHERITE_USES, GOLD_BASE_SPEED + NETHERITE_SPEED, GOLD_BASE_DMG + NETHERITE_DMG, GOLD_BASE_ENCH + NETHERITE_ENCH, Tags.Items.INGOTS_GOLD);
