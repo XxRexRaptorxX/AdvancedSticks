@@ -41,7 +41,37 @@ public class RecipeGen extends RecipeProvider {
         generateToolRecipes(ModTags.END_STICKS);
         generateToolRecipes(ModTags.BLAZE_STICKS);
         generateToolRecipes(ModTags.BREEZE_STICKS);
-        //generateToolRecipes(ModTags.WITHER_STICKS);
+
+        generateToolRecipes(ModTags.ALUMINUM_STICKS);
+        generateToolRecipes(ModTags.ELECTRUM_STICKS);
+        generateToolRecipes(ModTags.TIN_STICKS);
+        generateToolRecipes(ModTags.BRASS_STICKS);
+        generateToolRecipes(ModTags.BRONZE_STICKS);
+        generateToolRecipes(ModTags.CONSTANTAN_STICKS);
+        generateToolRecipes(ModTags.NICKEL_STICKS);
+        generateToolRecipes(ModTags.INVAR_STICKS);
+        generateToolRecipes(ModTags.STEEL_STICKS);
+        generateToolRecipes(ModTags.LUMIUM_STICKS);
+        generateToolRecipes(ModTags.IRIDIUM_STICKS);
+        generateToolRecipes(ModTags.OSMIUM_STICKS);
+        generateToolRecipes(ModTags.PLATINUM_STICKS);
+        generateToolRecipes(ModTags.ENDERIUM_STICKS);
+        generateToolRecipes(ModTags.URANIUM_STICKS);
+        generateToolRecipes(ModTags.SIGNALUM_STICKS);
+        generateToolRecipes(ModTags.LEAD_STICKS);
+        generateToolRecipes(ModTags.RUBY_STICKS);
+        generateToolRecipes(ModTags.SAPPHIRE_STICKS);
+        generateToolRecipes(ModTags.TOPAZ_STICKS);
+        generateToolRecipes(ModTags.PERIDOT_STICKS);
+        generateToolRecipes(ModTags.CINNABAR_STICKS);
+        generateToolRecipes(ModTags.FLUORITE_STICKS);
+        generateToolRecipes(ModTags.VIBRANIUM_STICKS);
+        generateToolRecipes(ModTags.UNOBTAINIUM_STICKS);
+        generateToolRecipes(ModTags.QUARTZ_STICKS);
+        generateToolRecipes(ModTags.CERTUS_QUARTZ_STICKS);
+        generateToolRecipes(ModTags.ALLTHEMODIUM_STICKS);
+        generateToolRecipes(ModTags.COBALT_STICKS);
+        generateToolRecipes(ModTags.TITANIUM_STICKS);
     }
 
     public void generateToolRecipes(TagKey<Item> handle) {
@@ -153,14 +183,9 @@ public class RecipeGen extends RecipeProvider {
 
 
     private String getStickName(TagKey<Item> handle) {
-        String stick = handle.location().getPath().replace("rods/", "");
+        String stick = handle.location().getPath().replace("rods/", "").replace("_", "");
 
-        if (stick.contains("end") || stick.contains("breeze") || stick.contains("blaze")) {
-            return stick + "rod";
-
-        } else {
-            return stick + "_stick";
-        }
+        return stick + "_stick";
     }
 
 

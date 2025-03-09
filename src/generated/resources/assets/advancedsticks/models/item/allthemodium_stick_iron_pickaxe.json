@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedsticks:item/allthemodium_tool_base",
+    "layer1": "advancedsticks:item/iron_pickaxe_overlay"
+  }
+}

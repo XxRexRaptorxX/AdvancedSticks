@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedsticks:item/cinnabar_tool_base",
+    "layer1": "advancedsticks:item/stone_hoe_overlay"
+  }
+}

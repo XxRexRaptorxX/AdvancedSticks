@@ -1,8 +1,10 @@
 package xxrexraptorxx.advancedsticks.items;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
+import xxrexraptorxx.advancedsticks.main.References;
 
 public class StickItem extends Item {
 
@@ -13,7 +15,7 @@ public class StickItem extends Item {
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        return this == ModItems.ENCHANTED_STICK.get();
+        return this == BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_enchanted"));
     }
 
 }

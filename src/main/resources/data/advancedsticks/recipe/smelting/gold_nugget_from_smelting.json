@@ -72,11 +72,21 @@
     "advancedsticks:advanced_stick_gold_axe",
     "advancedsticks:advanced_stick_gold_hoe",
     "advancedsticks:advanced_stick_gold_sword",
-    "advancedsticks:breezerod_gold_pickaxe",
-    "advancedsticks:breezerod_gold_shovel",
-    "advancedsticks:breezerod_gold_axe",
-    "advancedsticks:breezerod_gold_hoe",
-    "advancedsticks:breezerod_gold_sword"
+    "advancedsticks:breeze_stick_gold_pickaxe",
+    "advancedsticks:breeze_stick_gold_shovel",
+    "advancedsticks:breeze_stick_gold_axe",
+    "advancedsticks:breeze_stick_gold_hoe",
+    "advancedsticks:breeze_stick_gold_sword",
+    "advancedsticks:blaze_stick_gold_pickaxe",
+    "advancedsticks:blaze_stick_gold_shovel",
+    "advancedsticks:blaze_stick_gold_axe",
+    "advancedsticks:blaze_stick_gold_hoe",
+    "advancedsticks:blaze_stick_gold_sword",
+    "advancedsticks:end_stick_gold_pickaxe",
+    "advancedsticks:end_stick_gold_shovel",
+    "advancedsticks:end_stick_gold_axe",
+    "advancedsticks:end_stick_gold_hoe",
+    "advancedsticks:end_stick_gold_sword"
   ],
 
   "result": {

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedsticks:item/bronze_axe_base",
+    "layer1": "advancedsticks:item/gold_axe_overlay"
+  }
+}

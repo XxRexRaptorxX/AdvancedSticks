@@ -72,11 +72,21 @@
     "advancedsticks:advanced_stick_iron_axe",
     "advancedsticks:advanced_stick_iron_hoe",
     "advancedsticks:advanced_stick_iron_sword",
-    "advancedsticks:breezerod_iron_pickaxe",
-    "advancedsticks:breezerod_iron_shovel",
-    "advancedsticks:breezerod_iron_axe",
-    "advancedsticks:breezerod_iron_hoe",
-    "advancedsticks:breezerod_iron_sword"
+    "advancedsticks:breeze_stick_iron_pickaxe",
+    "advancedsticks:breeze_stick_iron_shovel",
+    "advancedsticks:breeze_stick_iron_axe",
+    "advancedsticks:breeze_stick_iron_hoe",
+    "advancedsticks:breeze_stick_iron_sword",
+    "advancedsticks:blaze_stick_iron_pickaxe",
+    "advancedsticks:blaze_stick_iron_shovel",
+    "advancedsticks:blaze_stick_iron_axe",
+    "advancedsticks:blaze_stick_iron_hoe",
+    "advancedsticks:blaze_stick_iron_sword",
+    "advancedsticks:end_stick_iron_pickaxe",
+    "advancedsticks:end_stick_iron_shovel",
+    "advancedsticks:end_stick_iron_axe",
+    "advancedsticks:end_stick_iron_hoe",
+    "advancedsticks:end_stick_iron_sword"
   ],
 
   "result": {

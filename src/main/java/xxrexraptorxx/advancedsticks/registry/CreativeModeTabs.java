@@ -1,7 +1,9 @@
 package xxrexraptorxx.advancedsticks.registry;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -17,448 +19,41 @@ public class CreativeModeTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register(References.MODID, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + References.MODID + "_tab"))
-            .icon(() -> ModItems.IRON_STICK_DIAMOND_PICKAXE.get().getDefaultInstance())
+            .icon(() -> BuiltInRegistries.ITEM.getValue(getItemLoc( "iron_stick_diamond_pickaxe")).getDefaultInstance())
             .displayItems((params, output) -> {
-                output.accept(ModItems.BONE_STICK.get());
-                output.accept(ModItems.IRON_STICK.get());
-                output.accept(ModItems.GOLD_STICK.get());
-                output.accept(ModItems.COPPER_STICK.get());
-                output.accept(ModItems.EMERALD_STICK.get());
-                output.accept(ModItems.AMETHYST_STICK.get());
-                output.accept(ModItems.DIAMOND_STICK.get());
-                output.accept(ModItems.NETHERITE_STICK.get());
-                output.accept(ModItems.ENCHANTED_STICK.get());
-                output.accept(ModItems.ADVANCED_STICK.get());
+
+                //rods
+                for (String handle : ModItems.HANDLE_MATERIALS) {
+                    //AdvancedSticks.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+                    if (!handle.contains("blaze") && !handle.contains("breeze") && !handle.contains("end"))
+                        output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+
+                    //tools
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+
+                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_sword")));
+                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_pickaxe")));
+                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_axe")));
+                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_shovel")));
+                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_hoe")));
+                    }
+                }
 
                 output.accept(ModItems.IRON_BOW.get());
                 output.accept(ModItems.GOLD_BOW.get());
                 output.accept(ModItems.DIAMOND_BOW.get());
                 output.accept(ModItems.NETHERITE_BOW.get());
 
-                //Swords
-                output.accept(ModItems.BONE_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.IRON_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.END_STICK_WOOD_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_WOOD_SWORD.get());
-
-                output.accept(ModItems.BONE_STICK_STONE_SWORD.get());
-                output.accept(ModItems.IRON_STICK_STONE_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_STONE_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_STONE_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_STONE_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_STONE_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_STONE_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_STONE_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_STONE_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_STONE_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_STONE_SWORD.get());
-                output.accept(ModItems.END_STICK_STONE_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_STONE_SWORD.get());
-
-                output.accept(ModItems.BONE_STICK_IRON_SWORD.get());
-                output.accept(ModItems.IRON_STICK_IRON_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_IRON_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_IRON_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_IRON_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_IRON_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_IRON_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_IRON_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_IRON_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_IRON_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_IRON_SWORD.get());
-                output.accept(ModItems.END_STICK_IRON_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_IRON_SWORD.get());
-
-                output.accept(ModItems.BONE_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.IRON_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.END_STICK_GOLD_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_GOLD_SWORD.get());
-
-                output.accept(ModItems.BONE_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.IRON_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.END_STICK_DIAMOND_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_DIAMOND_SWORD.get());
-
-                output.accept(ModItems.BONE_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.IRON_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.COPPER_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.GOLD_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.DIAMOND_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.EMERALD_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.AMETHYST_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.NETHERITE_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.ADVANCED_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.BLAZE_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.BREEZE_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.END_STICK_NETHERITE_SWORD.get());
-                output.accept(ModItems.ENCHANTED_STICK_NETHERITE_SWORD.get());
-
-                //Pickaxes
-                output.accept(ModItems.BONE_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.END_STICK_WOOD_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_WOOD_PICKAXE.get());
-
-                output.accept(ModItems.BONE_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.END_STICK_STONE_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_STONE_PICKAXE.get());
-
-                output.accept(ModItems.BONE_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.END_STICK_IRON_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_IRON_PICKAXE.get());
-
-                output.accept(ModItems.BONE_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.END_STICK_GOLD_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_GOLD_PICKAXE.get());
-
-                output.accept(ModItems.BONE_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.END_STICK_DIAMOND_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_DIAMOND_PICKAXE.get());
-
-                output.accept(ModItems.BONE_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.IRON_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.COPPER_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.GOLD_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.DIAMOND_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.EMERALD_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.AMETHYST_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.NETHERITE_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.ADVANCED_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.BLAZE_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.BREEZE_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.END_STICK_NETHERITE_PICKAXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_NETHERITE_PICKAXE.get());
-
-                //Axes
-                output.accept(ModItems.BONE_STICK_WOOD_AXE.get());
-                output.accept(ModItems.IRON_STICK_WOOD_AXE.get());
-                output.accept(ModItems.COPPER_STICK_WOOD_AXE.get());
-                output.accept(ModItems.GOLD_STICK_WOOD_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_WOOD_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_WOOD_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_WOOD_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_WOOD_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_WOOD_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_WOOD_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_WOOD_AXE.get());
-                output.accept(ModItems.END_STICK_WOOD_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_WOOD_AXE.get());
-
-                output.accept(ModItems.BONE_STICK_STONE_AXE.get());
-                output.accept(ModItems.IRON_STICK_STONE_AXE.get());
-                output.accept(ModItems.COPPER_STICK_STONE_AXE.get());
-                output.accept(ModItems.GOLD_STICK_STONE_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_STONE_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_STONE_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_STONE_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_STONE_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_STONE_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_STONE_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_STONE_AXE.get());
-                output.accept(ModItems.END_STICK_STONE_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_STONE_AXE.get());
-
-                output.accept(ModItems.BONE_STICK_IRON_AXE.get());
-                output.accept(ModItems.IRON_STICK_IRON_AXE.get());
-                output.accept(ModItems.COPPER_STICK_IRON_AXE.get());
-                output.accept(ModItems.GOLD_STICK_IRON_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_IRON_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_IRON_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_IRON_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_IRON_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_IRON_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_IRON_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_IRON_AXE.get());
-                output.accept(ModItems.END_STICK_IRON_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_IRON_AXE.get());
-
-                output.accept(ModItems.BONE_STICK_GOLD_AXE.get());
-                output.accept(ModItems.IRON_STICK_GOLD_AXE.get());
-                output.accept(ModItems.COPPER_STICK_GOLD_AXE.get());
-                output.accept(ModItems.GOLD_STICK_GOLD_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_GOLD_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_GOLD_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_GOLD_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_GOLD_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_GOLD_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_GOLD_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_GOLD_AXE.get());
-                output.accept(ModItems.END_STICK_GOLD_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_GOLD_AXE.get());
-
-                output.accept(ModItems.BONE_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.IRON_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.COPPER_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.GOLD_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.END_STICK_DIAMOND_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_DIAMOND_AXE.get());
-
-                output.accept(ModItems.BONE_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.IRON_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.COPPER_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.GOLD_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.DIAMOND_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.EMERALD_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.AMETHYST_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.NETHERITE_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.ADVANCED_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.BLAZE_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.BREEZE_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.END_STICK_NETHERITE_AXE.get());
-                output.accept(ModItems.ENCHANTED_STICK_NETHERITE_AXE.get());
-
-                //Shovels
-                output.accept(ModItems.BONE_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.END_STICK_WOOD_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_WOOD_SHOVEL.get());
-
-                output.accept(ModItems.BONE_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.END_STICK_STONE_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_STONE_SHOVEL.get());
-
-                output.accept(ModItems.BONE_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.END_STICK_IRON_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_IRON_SHOVEL.get());
-
-                output.accept(ModItems.BONE_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.END_STICK_GOLD_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_GOLD_SHOVEL.get());
-
-                output.accept(ModItems.BONE_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.END_STICK_DIAMOND_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_DIAMOND_SHOVEL.get());
-
-                output.accept(ModItems.BONE_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.IRON_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.COPPER_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.GOLD_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.DIAMOND_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.EMERALD_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.AMETHYST_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.NETHERITE_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.ADVANCED_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.BLAZE_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.BREEZE_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.END_STICK_NETHERITE_SHOVEL.get());
-                output.accept(ModItems.ENCHANTED_STICK_NETHERITE_SHOVEL.get());
-
-                //Hoes
-                output.accept(ModItems.BONE_STICK_WOOD_HOE.get());
-                output.accept(ModItems.IRON_STICK_WOOD_HOE.get());
-                output.accept(ModItems.COPPER_STICK_WOOD_HOE.get());
-                output.accept(ModItems.GOLD_STICK_WOOD_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_WOOD_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_WOOD_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_WOOD_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_WOOD_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_WOOD_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_WOOD_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_WOOD_HOE.get());
-                output.accept(ModItems.END_STICK_WOOD_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_WOOD_HOE.get());
-
-                output.accept(ModItems.BONE_STICK_STONE_HOE.get());
-                output.accept(ModItems.IRON_STICK_STONE_HOE.get());
-                output.accept(ModItems.COPPER_STICK_STONE_HOE.get());
-                output.accept(ModItems.GOLD_STICK_STONE_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_STONE_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_STONE_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_STONE_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_STONE_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_STONE_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_STONE_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_STONE_HOE.get());
-                output.accept(ModItems.END_STICK_STONE_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_STONE_HOE.get());
-
-                output.accept(ModItems.BONE_STICK_IRON_HOE.get());
-                output.accept(ModItems.IRON_STICK_IRON_HOE.get());
-                output.accept(ModItems.COPPER_STICK_IRON_HOE.get());
-                output.accept(ModItems.GOLD_STICK_IRON_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_IRON_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_IRON_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_IRON_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_IRON_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_IRON_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_IRON_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_IRON_HOE.get());
-                output.accept(ModItems.END_STICK_IRON_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_IRON_HOE.get());
-
-                output.accept(ModItems.BONE_STICK_GOLD_HOE.get());
-                output.accept(ModItems.IRON_STICK_GOLD_HOE.get());
-                output.accept(ModItems.COPPER_STICK_GOLD_HOE.get());
-                output.accept(ModItems.GOLD_STICK_GOLD_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_GOLD_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_GOLD_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_GOLD_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_GOLD_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_GOLD_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_GOLD_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_GOLD_HOE.get());
-                output.accept(ModItems.END_STICK_GOLD_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_GOLD_HOE.get());
-
-                output.accept(ModItems.BONE_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.IRON_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.COPPER_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.GOLD_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.END_STICK_DIAMOND_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_DIAMOND_HOE.get());
-
-                output.accept(ModItems.BONE_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.IRON_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.COPPER_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.GOLD_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.DIAMOND_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.EMERALD_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.AMETHYST_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.NETHERITE_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.ADVANCED_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.BLAZE_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.BREEZE_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.END_STICK_NETHERITE_HOE.get());
-                output.accept(ModItems.ENCHANTED_STICK_NETHERITE_HOE.get());
 
             }).build());
+
+
+    private static ResourceLocation getStickLoc(String name){
+        return ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_" + name);
+    }
+
+    private static ResourceLocation getItemLoc(String name){
+        return ResourceLocation.fromNamespaceAndPath(References.MODID, name);
+    }
 }

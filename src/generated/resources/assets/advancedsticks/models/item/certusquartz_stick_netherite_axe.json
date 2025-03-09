@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedsticks:item/certusquartz_axe_base",
+    "layer1": "advancedsticks:item/netherite_axe_overlay"
+  }
+}

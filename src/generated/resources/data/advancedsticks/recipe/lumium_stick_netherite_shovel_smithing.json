@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedsticks:lumium_stick_diamond_shovel",
+  "result": {
+    "count": 1,
+    "id": "advancedsticks:lumium_stick_netherite_shovel"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}
