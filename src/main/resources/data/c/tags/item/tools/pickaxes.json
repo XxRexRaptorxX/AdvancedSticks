@@ -73,6 +73,13 @@
     "advancedsticks:advanced_stick_netherite_pickaxe",
     "advancedsticks:blazerod_netherite_pickaxe",
     "advancedsticks:endrod_netherite_pickaxe",
-    "advancedsticks:enchanted_stick_netherite_pickaxe"
+    "advancedsticks:enchanted_stick_netherite_pickaxe",
+
+    "advancedsticks:breezerod_wood_pickaxe",
+    "advancedsticks:breezerod_stone_pickaxe",
+    "advancedsticks:breezerod_iron_pickaxe",
+    "advancedsticks:breezerod_gold_pickaxe",
+    "advancedsticks:breezerod_diamond_pickaxe",
+    "advancedsticks:breezerod_netherite_pickaxe"
   ]
 }

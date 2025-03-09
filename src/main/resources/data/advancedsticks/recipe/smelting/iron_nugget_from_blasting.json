@@ -71,7 +71,12 @@
     "advancedsticks:advanced_stick_iron_shovel",
     "advancedsticks:advanced_stick_iron_axe",
     "advancedsticks:advanced_stick_iron_hoe",
-    "advancedsticks:advanced_stick_iron_sword"
+    "advancedsticks:advanced_stick_iron_sword",
+    "advancedsticks:breezerod_iron_pickaxe",
+    "advancedsticks:breezerod_iron_shovel",
+    "advancedsticks:breezerod_iron_axe",
+    "advancedsticks:breezerod_iron_hoe",
+    "advancedsticks:breezerod_iron_sword"
   ],
 
   "result": {

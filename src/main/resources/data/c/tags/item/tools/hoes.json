@@ -73,6 +73,13 @@
     "advancedsticks:advanced_stick_netherite_hoe",
     "advancedsticks:blazerod_netherite_hoe",
     "advancedsticks:endrod_netherite_hoe",
-    "advancedsticks:enchanted_stick_netherite_hoe"
+    "advancedsticks:enchanted_stick_netherite_hoe",
+
+    "advancedsticks:breezerod_wood_hoe",
+    "advancedsticks:breezerod_stone_hoe",
+    "advancedsticks:breezerod_iron_hoe",
+    "advancedsticks:breezerod_gold_hoe",
+    "advancedsticks:breezerod_diamond_hoe",
+    "advancedsticks:breezerod_netherite_hoe"
   ]
 }

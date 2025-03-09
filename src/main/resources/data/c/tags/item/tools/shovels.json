@@ -73,6 +73,13 @@
     "advancedsticks:advanced_stick_netherite_shovel",
     "advancedsticks:blazerod_netherite_shovel",
     "advancedsticks:endrod_netherite_shovel",
-    "advancedsticks:enchanted_stick_netherite_shovel"
+    "advancedsticks:enchanted_stick_netherite_shovel",
+
+    "advancedsticks:breezerod_wood_shovel",
+    "advancedsticks:breezerod_stone_shovel",
+    "advancedsticks:breezerod_iron_shovel",
+    "advancedsticks:breezerod_gold_shovel",
+    "advancedsticks:breezerod_diamond_shovel",
+    "advancedsticks:breezerod_netherite_shovel"
   ]
 }

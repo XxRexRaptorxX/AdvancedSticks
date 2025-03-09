@@ -71,7 +71,12 @@
     "advancedsticks:advanced_stick_gold_shovel",
     "advancedsticks:advanced_stick_gold_axe",
     "advancedsticks:advanced_stick_gold_hoe",
-    "advancedsticks:advanced_stick_gold_sword"
+    "advancedsticks:advanced_stick_gold_sword",
+    "advancedsticks:breezerod_gold_pickaxe",
+    "advancedsticks:breezerod_gold_shovel",
+    "advancedsticks:breezerod_gold_axe",
+    "advancedsticks:breezerod_gold_hoe",
+    "advancedsticks:breezerod_gold_sword"
   ],
 
   "result": {

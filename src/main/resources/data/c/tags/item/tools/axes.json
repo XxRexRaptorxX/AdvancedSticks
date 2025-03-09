@@ -73,6 +73,13 @@
     "advancedsticks:advanced_stick_netherite_axe",
     "advancedsticks:blazerod_netherite_axe",
     "advancedsticks:endrod_netherite_axe",
-    "advancedsticks:enchanted_stick_netherite_axe"
+    "advancedsticks:enchanted_stick_netherite_axe",
+
+    "advancedsticks:breezerod_wood_axe",
+    "advancedsticks:breezerod_stone_axe",
+    "advancedsticks:breezerod_iron_axe",
+    "advancedsticks:breezerod_gold_axe",
+    "advancedsticks:breezerod_diamond_axe",
+    "advancedsticks:breezerod_netherite_axe"
   ]
 }
