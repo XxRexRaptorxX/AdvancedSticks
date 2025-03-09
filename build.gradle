@@ -129,12 +129,13 @@ repositories {
 
 dependencies {
     //JEI
-    compileOnly("mezz.jei:jei-1.21.1-common-api:${jei_version}")
-    compileOnly("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}")
+    //compileOnly ("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    //compileOnly("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
+    //compileOnly("mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}")
     //REI
-    //runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
-    //compileOnly "me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}"
-    //compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}"
+    runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
+    compileOnly "me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}"
+    compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}"
     //JEED
     //runtimeOnly ("curse.maven:jeed-532286:${jeed_version}")
     //JADE
