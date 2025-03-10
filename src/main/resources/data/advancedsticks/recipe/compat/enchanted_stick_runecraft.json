@@ -1,0 +1,19 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "runecraft"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rods",
+  "ingredients": [
+    "runecraft:magical_book",
+    "#c:sticks/wood"
+  ],
+  
+  "result": {
+    "id": "advancedsticks:stick_enchanted"
+  }
+}
