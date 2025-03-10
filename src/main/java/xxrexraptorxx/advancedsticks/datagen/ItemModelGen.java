@@ -29,7 +29,7 @@ public class ItemModelGen extends ItemModelGenerators {
         //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
-            if (!handle.contains("blaze") && !handle.contains("breeze") && !handle.contains("end")) {
+            if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end")) {
                 AdvancedSticks.LOGGER.info("Generate item model of " + handle);
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }

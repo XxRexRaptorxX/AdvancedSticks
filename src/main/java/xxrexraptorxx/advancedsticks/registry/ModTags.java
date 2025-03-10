@@ -1,9 +1,14 @@
 package xxrexraptorxx.advancedsticks.registry;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+
+import java.util.Optional;
 
 public class ModTags {
 
@@ -56,6 +61,20 @@ public class ModTags {
 
     private static TagKey<Item> createItemTag(String id, String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
+    }
+
+
+    public static boolean isTagNotEmpty(ResourceLocation tagLocation) {
+        if (Minecraft.getInstance().level != null) {
+            HolderLookup.Provider lookupProvider = Minecraft.getInstance().level.registryAccess();
+            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), tagLocation);
+            Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
+
+            return lookup.map(l -> !l.get(tagKey).isEmpty()).orElse(false);
+
+        } else {
+            return false;
+        }
     }
 
 }

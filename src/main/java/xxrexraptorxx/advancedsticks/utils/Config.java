@@ -3,6 +3,11 @@ package xxrexraptorxx.advancedsticks.utils;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.ModConfigSpec;
+import xxrexraptorxx.advancedsticks.registry.ModItems;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Config {
 
@@ -14,6 +19,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue UPDATE_CHECKER;
     public static ModConfigSpec.BooleanValue SHOW_STICK_TYPE;
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
+    public static ModConfigSpec.ConfigValue<List<String>> STICK_MATERIALS;
 
 
     public static void init(ModContainer container) {
@@ -42,6 +48,8 @@ public class Config {
 
         builder.comment("General").push(CATEGORY_GENERAL);
         PATREON_REWARDS = builder.comment("Enables ingame rewards on first spawn for Patreons").define("patreon_rewards", true);
+        STICK_MATERIALS = builder.comment("Here you can specify which stick materials should be enabled. (The sticks and tools only appear if the basic material is also available in the game)").define("stick_materials",
+                new ArrayList<>(Arrays.asList(ModItems.HANDLE_MATERIALS)));
         builder.pop();
 
         SERVER_CONFIG = builder.build();

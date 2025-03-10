@@ -9,6 +9,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedsticks.utils.Config;
 
 public class CreativeModeTabs {
 
@@ -25,43 +26,42 @@ public class CreativeModeTabs {
                 //rods
                 for (String handle : ModItems.HANDLE_MATERIALS) {
                     //AdvancedSticks.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-                    if (!handle.contains("blaze") && !handle.contains("breeze") && !handle.contains("end"))
+                    if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end") && Config.STICK_MATERIALS.get().contains(handle))
                         output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
                 }
                 //tools
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
-
-                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_sword")));
+                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_sword")));
                     }
                 }
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_shovel")));
+                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_shovel")));
                     }
                 }
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_pickaxe")));
+                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_pickaxe")));
                     }
                 }
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_axe")));
+                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_axe")));
                     }
                 }
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_hoe")));
+                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_hoe")));
                     }
                 }
 

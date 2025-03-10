@@ -30,15 +30,15 @@ public class ModItems {
 
     public static final String[] HANDLE_MATERIALS = {
             "bone", "iron", "iridium", "netherite", "steel", "titanium", "invar", "end", "nickel", "quartz", "osmium", "aluminum",
-            "platinum", "topaz", "gold", "brass", "bronze", "blaze", "allthemodium",  "constantan", "breeze", "lead", "cobalt",
-            "tin", "certusquartz", "peridot", "electrum", "lumium", "signalum", "copper", "cinnabar", "ruby", "fluorite", "unobtainium",
-            "enchanted", "amethyst", "sapphire", "uranium", "vibranium", "diamond", "enderium", "emerald",  "advanced"
+            "platinum", "topaz", "peridot", "gold", "brass", "bronze", "blaze", "allthemodium",  "constantan", "breeze", "lead",
+            "cobalt", "tin", "certusquartz", "electrum", "lumium", "signalum", "copper", "cinnabar", "ruby", "fluorite", "unobtainium",
+            "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced"
     };
 
 
     static {
         for (String handle : HANDLE_MATERIALS) {
-            if (!handle.contains("blaze_stick") || !handle.contains("breeze_stick") || !handle.contains("end_stick"))
+            if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end"))
                 ITEMS.register("stick_" + handle, () -> new StickItem(new Item.Properties().setId(itemId("stick_" + handle))));
 
             for (String base : BASE_MATERIALS) {

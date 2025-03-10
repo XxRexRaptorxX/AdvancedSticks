@@ -1,4 +1,4 @@
-// 1.21.4	2025-03-09T22:06:31.6935624	Model Definitions - advancedsticks
+// 1.21.4	2025-03-10T20:50:02.9535678	Model Definitions - advancedsticks
 e91a04c9bb2489e355f8b61b251c7f116d465d71 assets/advancedsticks/items/advanced_stick_diamond_axe.json
 92426e8e45e06be4bb5c17f71762dad8e9a8deb9 assets/advancedsticks/items/advanced_stick_diamond_hoe.json
 594d08cada3e6d3f62fb6f752bf1ddf6d289f6c6 assets/advancedsticks/items/advanced_stick_diamond_pickaxe.json
@@ -1129,6 +1129,7 @@ e15b458be520e8182401daf9a1ada13e47dc5aac assets/advancedsticks/items/stick_diamo
 6bb712eafcf05a7658f1a52e29fbfbf6e1a67174 assets/advancedsticks/items/stick_electrum.json
 825a7465afddc360dfb7f95ca433819d56459f46 assets/advancedsticks/items/stick_emerald.json
 e0aca460ddd2639f6c9523ead33ccb208074c545 assets/advancedsticks/items/stick_enchanted.json
+04c317be11cbeecbdee3229d115cd4b6782f85d1 assets/advancedsticks/items/stick_enderium.json
 201f7b306578591ed5d7528b3192dcef1d5d6053 assets/advancedsticks/items/stick_fluorite.json
 e458ccc16c6e3350fce0dafd0e2ae4946bd665c5 assets/advancedsticks/items/stick_gold.json
 22e816a8265df828f478b609655fbab5a7bcbfe0 assets/advancedsticks/items/stick_invar.json
@@ -2470,6 +2471,7 @@ b7647ec614feff652e7c99edbf4615f317665b79 assets/advancedsticks/models/item/stick
 566c9291758a88e55325212ab0ca689bf796dfe3 assets/advancedsticks/models/item/stick_electrum.json
 bf9ddf7f90038711dd05f351b6291058ed9eec40 assets/advancedsticks/models/item/stick_emerald.json
 c69448915439822d77a006e57c92ebca8963e325 assets/advancedsticks/models/item/stick_enchanted.json
+f83e6e03c375280d67fa56f205656a1052f1d05e assets/advancedsticks/models/item/stick_enderium.json
 beb7e83ed53db869e757a55e518c6068244f242f assets/advancedsticks/models/item/stick_fluorite.json
 03cd7dec1d81b5882e661e1e0e2fd185e60823fd assets/advancedsticks/models/item/stick_gold.json
 011ddfc19858abacf5da9f7ef5468aa79cf3835f assets/advancedsticks/models/item/stick_invar.json
