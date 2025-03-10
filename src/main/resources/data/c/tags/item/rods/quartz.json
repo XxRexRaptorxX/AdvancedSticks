@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":
+  [
+    "#c:sticks/quartz",
+    "advancedsticks:stick_quartz"
+  ]
+}

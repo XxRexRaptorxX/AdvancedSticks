@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":
+  [
+    "#c:sticks/uranium",
+    "advancedsticks:stick_uranium"
+  ]
+}

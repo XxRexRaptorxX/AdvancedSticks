@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":
+  [
+    "#c:sticks/signalum",
+    "advancedsticks:stick_signalum"
+  ]
+}

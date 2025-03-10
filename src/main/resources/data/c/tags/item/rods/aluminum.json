@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":
+  [
+    "#c:sticks/aluminum",
+    "advancedsticks:stick_aluminum"
+  ]
+}

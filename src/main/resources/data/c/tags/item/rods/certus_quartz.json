@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values":
+  [
+    "#c:sticks/certus_quartz",
+    "advancedsticks:stick_certus_quartz"
+  ]
+}
