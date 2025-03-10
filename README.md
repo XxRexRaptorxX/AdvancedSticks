@@ -13,8 +13,7 @@ Advanced Sticks is a mod that lets you combine tools and weapons with many diffe
 
 -----
 
-### New sticks for your tools:
-Iron, Gold, Diamond, Emerald, Bone, Blazerod, Endrod, Amethyst, Copper, Enchanted, Netherite & Advanced!
+![review picture](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/resources/review.png?raw=true)
 
 (All values and how they are calculated can be found [here](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/java/xxrexraptorxx/advancedsticks/utils/ToolMaterials.java))
 
