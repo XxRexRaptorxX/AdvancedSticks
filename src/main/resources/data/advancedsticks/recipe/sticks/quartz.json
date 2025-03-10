@@ -3,17 +3,17 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-  
+
     "#",
     "#"
-  
+
   ],
-  
+
   "key": {
-    "#": "#c:bones"
+    "#": "#c:gems/quartz"
   },
-  
+
   "result": {
-    "id": "advancedsticks:stick_bone"
+    "id": "advancedsticks:stick_quartz"
   }
 }
