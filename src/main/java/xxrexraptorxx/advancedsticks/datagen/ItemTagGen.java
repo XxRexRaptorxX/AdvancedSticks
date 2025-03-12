@@ -27,16 +27,15 @@ public class ItemTagGen extends ItemTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
-            if (!ToolUtils.isVanillaRod(handle)) {
-                TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
-                TagKey<Item> stickTag = ModTags.createItemTag("c", "sticks/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> stickTag = ModTags.createItemTag("c", "sticks/" + ToolUtils.transformMaterialNames(handle));
 
-                tag(rodTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle))).addTags(stickTag);
-                tag(stickTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
+            tag(rodTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle))).addTags(stickTag);
+            tag(stickTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
 
-                tag(ModTags.createItemTag("c", "rods")).addTags(rodTag);
-                tag(ModTags.createItemTag("c", "sticks")).addTags(stickTag);
-            }
+            tag(ModTags.createItemTag("c", "rods")).addTags(rodTag);
+            tag(ModTags.createItemTag("c", "sticks")).addTags(stickTag);
+
 
             //tools
             for (String base : ModItems.BASE_MATERIALS) {

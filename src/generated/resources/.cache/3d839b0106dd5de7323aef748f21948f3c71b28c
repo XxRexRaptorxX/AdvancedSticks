@@ -1,11 +1,13 @@
-// 1.21.4	2025-03-12T22:27:20.8380663	Tags for minecraft:item mod id advancedsticks
-a84bf8eed272025b74229df93fe028266d6634cb data/c/tags/item/rods.json
+// 1.21.4	2025-03-12T22:47:24.2404424	Tags for minecraft:item mod id advancedsticks
+62c10846029497c8f862488b2440df06dadca5cf data/c/tags/item/rods.json
 370dea31de597c542b6883e3838cb5f7dc09f232 data/c/tags/item/rods/advanced.json
 648c1da410acc2cd26f42606d104971a35acfdca data/c/tags/item/rods/allthemodium.json
 a037162b67d54379f8d8ffc0696f66b221376ef2 data/c/tags/item/rods/aluminum.json
 87f53a036a0879b294573aebc2a633a01bd0dd2d data/c/tags/item/rods/amethyst.json
+21e6fae724de909f5896832a7860a51c7495c8ec data/c/tags/item/rods/blaze.json
 9a30b3050bb800331905b97dcc3814a2e5162236 data/c/tags/item/rods/bone.json
 17d14b274cd0c927962b98d453422abb5e40c26c data/c/tags/item/rods/brass.json
+427976f2ad5560f093941461ea03eb4000a3a335 data/c/tags/item/rods/breeze.json
 c660743d81ff51155531ab4b170e40ca64555fa9 data/c/tags/item/rods/bronze.json
 6211861063e14654c035abcf3d0be83e4b3b9d30 data/c/tags/item/rods/certus_quartz.json
 56af6971b6ddd5e68db4119205207e45796c89d1 data/c/tags/item/rods/cinnabar.json
@@ -16,6 +18,7 @@ badb7cf83ae076a7260bdaa838f042934b3d23cd data/c/tags/item/rods/constantan.json
 db83dba4b5235866e7acba5e5340c23e7f2ca631 data/c/tags/item/rods/electrum.json
 10dedc337ca381aa739431887ed75310340b0e18 data/c/tags/item/rods/emerald.json
 e7f1c3f5b88497f905c59522e0d5fb6a04339cad data/c/tags/item/rods/enchanted.json
+cd77f63850aabf1d9b9acccced17d8876967ae06 data/c/tags/item/rods/end.json
 df5c7451b3fc5915a8d0d7335de5a1d50698f4dc data/c/tags/item/rods/enderium.json
 df7031faa050e0adeb3495bc6dc131008b27913e data/c/tags/item/rods/fluorite.json
 fd7a9c7aa22af40b8af1ef866d97c1146c3490e9 data/c/tags/item/rods/gold.json
@@ -41,13 +44,15 @@ c40fca25d2d17cc400de2df204be265b87a03c9a data/c/tags/item/rods/unobtainium.json
 29deb14eef69751f0b996d331454d87c1ff65973 data/c/tags/item/rods/uranium.json
 615093836612ca9ab1b43d197e62874d52567090 data/c/tags/item/rods/vibranium.json
 f2937055200cb93e8a823a5f094d6178e40c9cc1 data/c/tags/item/rods/zinc.json
-69b8a199ca876baa4a080c864d24e253c42b4112 data/c/tags/item/sticks.json
+2f95407805acb7e0b5fbf7d9ede2b91ae91c6adc data/c/tags/item/sticks.json
 b8224e113fa258a2071b737280815b7a050e2f02 data/c/tags/item/sticks/advanced.json
 47a6553624f9d394e53215b027a22caf37811cb9 data/c/tags/item/sticks/allthemodium.json
 618b41c53fba70bf1a46f505ae3d5a78aa5561fe data/c/tags/item/sticks/aluminum.json
 1daff4f40781fe132bdefc54c2c4c7242bf679aa data/c/tags/item/sticks/amethyst.json
+8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/blaze.json
 c915e9cdcbee3ca5088b0a8af0b13b319e8db6b6 data/c/tags/item/sticks/bone.json
 6b0cae83a04ac597ab28e7e6458704aa670cf672 data/c/tags/item/sticks/brass.json
+8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/breeze.json
 c6c0f7734cdc44d27b3b0080810f1da08c1f2dd2 data/c/tags/item/sticks/bronze.json
 c82fcde41c8f412e991d7e9174e613b1020d8932 data/c/tags/item/sticks/certus_quartz.json
 faecfefebb177841143ce557113a6443d06b7037 data/c/tags/item/sticks/cinnabar.json
@@ -58,6 +63,7 @@ ad949f052b8d90ef157908066c139343484a8851 data/c/tags/item/sticks/copper.json
 fe02103835c6afe7dae5f3d681169d5a91200930 data/c/tags/item/sticks/electrum.json
 361d4950caca481607ee2f26f41163b0396ce952 data/c/tags/item/sticks/emerald.json
 07f554ec1fd4c8b9d958cc487fd68f255c12155b data/c/tags/item/sticks/enchanted.json
+8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/end.json
 9bb21dab9ec08d83943f83310d1851f0d8348e5c data/c/tags/item/sticks/enderium.json
 81fcd61a9e837a0569395620d0a3fac087c1d4d7 data/c/tags/item/sticks/fluorite.json
 436a5827339e15ca5697e62d3f054f7abc59c029 data/c/tags/item/sticks/gold.json
