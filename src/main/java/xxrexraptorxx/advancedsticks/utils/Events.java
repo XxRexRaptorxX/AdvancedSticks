@@ -178,7 +178,7 @@ public class Events {
         String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
-        if (Config.SHOW_STICK_TYPE.get() && !namespace.contains("tconstruct") && !namespace.contains("silentgems") && !namespace.contains("tetra")) {
+        if (Config.SHOW_STICK_TYPE.get() && !namespace.equals("tconstruct") && !namespace.equals("silentgems") && !namespace.equals("tetra")) {
 
             if (item instanceof PickaxeItem && name.contains("pickaxe") || item instanceof AxeItem && name.contains("axe") || item instanceof SwordItem && name.contains("sword")
                     || item instanceof ShovelItem && name.contains("shovel") || item instanceof HoeItem && name.contains("hoe")) {
