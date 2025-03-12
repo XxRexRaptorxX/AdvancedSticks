@@ -7,6 +7,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.utils.Config;
+import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
 import java.util.Optional;
 
@@ -64,17 +67,37 @@ public class ModTags {
     }
 
 
-    public static boolean isTagNotEmpty(ResourceLocation tagLocation) {
-        if (Minecraft.getInstance().level != null) {
+    public static boolean isTagNotEmpty(String material) {
+        if (Minecraft.getInstance().level != null && !ToolUtils.isSpecial(material)) {
+
             HolderLookup.Provider lookupProvider = Minecraft.getInstance().level.registryAccess();
-            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), tagLocation);
+            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), getIngotOrGemLocation(material));
             Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
 
-            return lookup.map(l -> !l.get(tagKey).isEmpty()).orElse(false);
+            boolean flag = lookup.map(l -> !l.get(tagKey).isEmpty()).orElse(false);
+
+            return Config.FORCE_ALL_MATERIALS.get() || flag;
 
         } else {
             return false;
         }
+    }
+
+
+    public static ResourceLocation getIngotOrGemLocation(String material) {
+        ResourceLocation tagLocation;
+
+        if (material.equals("certusquartz")) material = "certus_quartz";
+
+        if (ToolUtils.isSpecial(material)) AdvancedSticks.LOGGER.error("Invalid item tag for material: " + material);
+
+        if (ToolUtils.isGem(material)) {
+            tagLocation = ResourceLocation.fromNamespaceAndPath("c", "gems/" + material);
+        } else {
+            tagLocation = ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material);
+        }
+
+        return tagLocation;
     }
 
 }

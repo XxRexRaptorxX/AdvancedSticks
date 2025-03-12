@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.utils.Config;
+import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
 public class CreativeModeTabs {
 
@@ -23,47 +24,52 @@ public class CreativeModeTabs {
             .icon(() -> BuiltInRegistries.ITEM.getValue(getItemLoc( "iron_stick_diamond_pickaxe")).getDefaultInstance())
             .displayItems((params, output) -> {
 
-                //rods
-                for (String handle : ModItems.HANDLE_MATERIALS) {
-                    //AdvancedSticks.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-                    if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end") && Config.STICK_MATERIALS.get().contains(handle))
-                        output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-                }
-                //tools
-                for (String base : ModItems.BASE_MATERIALS) {
+                    //rods
                     for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
-                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_sword")));
+                        //AdvancedSticks.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+                        if (!ToolUtils.isVanillaRod(handle) && Config.STICK_MATERIALS.get().contains(handle))
+                            output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
                     }
-                }
-                for (String base : ModItems.BASE_MATERIALS) {
-                    for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                    //tools
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        for (String handle : ModItems.HANDLE_MATERIALS) {
+                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.STICK_MATERIALS.get().contains(handle))
+                                output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_sword")));
+                        }
+                    }
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        for (String handle : ModItems.HANDLE_MATERIALS) {
+                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_shovel")));
+                            if (Config.STICK_MATERIALS.get().contains(handle))
+                                output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_shovel")));
+                        }
                     }
-                }
-                for (String base : ModItems.BASE_MATERIALS) {
-                    for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        for (String handle : ModItems.HANDLE_MATERIALS) {
+                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_pickaxe")));
+                            if (Config.STICK_MATERIALS.get().contains(handle))
+                                output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_pickaxe")));
+                        }
                     }
-                }
-                for (String base : ModItems.BASE_MATERIALS) {
-                    for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        for (String handle : ModItems.HANDLE_MATERIALS) {
+                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_axe")));
+                            if (Config.STICK_MATERIALS.get().contains(handle))
+                                output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_axe")));
+                        }
                     }
-                }
-                for (String base : ModItems.BASE_MATERIALS) {
-                    for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                    for (String base : ModItems.BASE_MATERIALS) {
+                        for (String handle : ModItems.HANDLE_MATERIALS) {
+                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
-                        if (Config.STICK_MATERIALS.get().contains(handle)) output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID,handle + "_stick_" + base + "_hoe")));
+                            if (Config.STICK_MATERIALS.get().contains(handle))
+                                output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_hoe")));
+                        }
                     }
-                }
 
                 output.accept(ModItems.IRON_BOW.get());
                 output.accept(ModItems.GOLD_BOW.get());
