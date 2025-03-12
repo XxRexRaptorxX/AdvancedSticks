@@ -121,7 +121,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("wood_blaze", ToolMaterials.WOOD_BLAZE_TM);
         MATERIAL_MAP.put("wood_emerald", ToolMaterials.WOOD_EMERALD_TM);
         MATERIAL_MAP.put("wood_amethyst", ToolMaterials.WOOD_AMETHYST_TM);
-        MATERIAL_MAP.put("wood_end", ToolMaterials.WOOD_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("wood_end", ToolMaterials.WOOD_END_TM);
         MATERIAL_MAP.put("wood_iron", ToolMaterials.WOOD_IRON_TM);
         MATERIAL_MAP.put("wood_gold", ToolMaterials.WOOD_GOLD_TM);
         MATERIAL_MAP.put("wood_diamond", ToolMaterials.WOOD_DIAMOND_TM);
@@ -157,6 +157,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("wood_quartz", ToolMaterials.WOOD_QUARTZ_TM);
         MATERIAL_MAP.put("wood_cobalt", ToolMaterials.WOOD_COBALT_TM);
         MATERIAL_MAP.put("wood_titanium", ToolMaterials.WOOD_TITANIUM_TM);
+        MATERIAL_MAP.put("wood_zinc", ToolMaterials.WOOD_ZINC_TM);
+
         MATERIAL_MAP.put("stone_bone", ToolMaterials.STONE_BONE_TM);
         MATERIAL_MAP.put("stone_copper", ToolMaterials.STONE_COPPER_TM);
         MATERIAL_MAP.put("stone_advanced", ToolMaterials.STONE_ADVANCED_TM);
@@ -164,7 +166,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("stone_blaze", ToolMaterials.STONE_BLAZE_TM);
         MATERIAL_MAP.put("stone_emerald", ToolMaterials.STONE_EMERALD_TM);
         MATERIAL_MAP.put("stone_amethyst", ToolMaterials.STONE_AMETHYST_TM);
-        MATERIAL_MAP.put("stone_end", ToolMaterials.STONE_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("stone_end", ToolMaterials.STONE_END_TM);
         MATERIAL_MAP.put("stone_iron", ToolMaterials.STONE_IRON_TM);
         MATERIAL_MAP.put("stone_gold", ToolMaterials.STONE_GOLD_TM);
         MATERIAL_MAP.put("stone_diamond", ToolMaterials.STONE_DIAMOND_TM);
@@ -200,6 +202,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("stone_quartz", ToolMaterials.STONE_QUARTZ_TM);
         MATERIAL_MAP.put("stone_cobalt", ToolMaterials.STONE_COBALT_TM);
         MATERIAL_MAP.put("stone_titanium", ToolMaterials.STONE_TITANIUM_TM);
+        MATERIAL_MAP.put("stone_zinc", ToolMaterials.STONE_ZINC_TM);
+
         MATERIAL_MAP.put("iron_bone", ToolMaterials.IRON_BONE_TM);
         MATERIAL_MAP.put("iron_copper", ToolMaterials.IRON_COPPER_TM);
         MATERIAL_MAP.put("iron_advanced", ToolMaterials.IRON_ADVANCED_TM);
@@ -207,7 +211,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("iron_blaze", ToolMaterials.IRON_BLAZE_TM);
         MATERIAL_MAP.put("iron_emerald", ToolMaterials.IRON_EMERALD_TM);
         MATERIAL_MAP.put("iron_amethyst", ToolMaterials.IRON_AMETHYST_TM);
-        MATERIAL_MAP.put("iron_end", ToolMaterials.IRON_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("iron_end", ToolMaterials.IRON_END_TM);
         MATERIAL_MAP.put("iron_iron", ToolMaterials.IRON_IRON_TM);
         MATERIAL_MAP.put("iron_gold", ToolMaterials.IRON_GOLD_TM);
         MATERIAL_MAP.put("iron_diamond", ToolMaterials.IRON_DIAMOND_TM);
@@ -243,6 +247,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("iron_quartz", ToolMaterials.IRON_QUARTZ_TM);
         MATERIAL_MAP.put("iron_cobalt", ToolMaterials.IRON_COBALT_TM);
         MATERIAL_MAP.put("iron_titanium", ToolMaterials.IRON_TITANIUM_TM);
+        MATERIAL_MAP.put("iron_zinc", ToolMaterials.IRON_ZINC_TM);
+
         MATERIAL_MAP.put("gold_bone", ToolMaterials.GOLD_BONE_TM);
         MATERIAL_MAP.put("gold_copper", ToolMaterials.GOLD_COPPER_TM);
         MATERIAL_MAP.put("gold_advanced", ToolMaterials.GOLD_ADVANCED_TM);
@@ -250,7 +256,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("gold_blaze", ToolMaterials.GOLD_BLAZE_TM);
         MATERIAL_MAP.put("gold_emerald", ToolMaterials.GOLD_EMERALD_TM);
         MATERIAL_MAP.put("gold_amethyst", ToolMaterials.GOLD_AMETHYST_TM);
-        MATERIAL_MAP.put("gold_end", ToolMaterials.GOLD_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("gold_end", ToolMaterials.GOLD_END_TM);
         MATERIAL_MAP.put("gold_iron", ToolMaterials.GOLD_IRON_TM);
         MATERIAL_MAP.put("gold_gold", ToolMaterials.GOLD_GOLD_TM);
         MATERIAL_MAP.put("gold_diamond", ToolMaterials.GOLD_DIAMOND_TM);
@@ -286,6 +292,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("gold_quartz", ToolMaterials.GOLD_QUARTZ_TM);
         MATERIAL_MAP.put("gold_cobalt", ToolMaterials.GOLD_COBALT_TM);
         MATERIAL_MAP.put("gold_titanium", ToolMaterials.GOLD_TITANIUM_TM);
+        MATERIAL_MAP.put("gold_zinc", ToolMaterials.GOLD_ZINC_TM);
+
         MATERIAL_MAP.put("diamond_bone", ToolMaterials.DIAMOND_BONE_TM);
         MATERIAL_MAP.put("diamond_copper", ToolMaterials.DIAMOND_COPPER_TM);
         MATERIAL_MAP.put("diamond_advanced", ToolMaterials.DIAMOND_ADVANCED_TM);
@@ -293,7 +301,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("diamond_blaze", ToolMaterials.DIAMOND_BLAZE_TM);
         MATERIAL_MAP.put("diamond_emerald", ToolMaterials.DIAMOND_EMERALD_TM);
         MATERIAL_MAP.put("diamond_amethyst", ToolMaterials.DIAMOND_AMETHYST_TM);
-        MATERIAL_MAP.put("diamond_end", ToolMaterials.DIAMOND_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("diamond_end", ToolMaterials.DIAMOND_END_TM);
         MATERIAL_MAP.put("diamond_iron", ToolMaterials.DIAMOND_IRON_TM);
         MATERIAL_MAP.put("diamond_gold", ToolMaterials.DIAMOND_GOLD_TM);
         MATERIAL_MAP.put("diamond_diamond", ToolMaterials.DIAMOND_DIAMOND_TM);
@@ -329,6 +337,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("diamond_quartz", ToolMaterials.DIAMOND_QUARTZ_TM);
         MATERIAL_MAP.put("diamond_cobalt", ToolMaterials.DIAMOND_COBALT_TM);
         MATERIAL_MAP.put("diamond_titanium", ToolMaterials.DIAMOND_TITANIUM_TM);
+        MATERIAL_MAP.put("diamond_zinc", ToolMaterials.DIAMOND_ZINC_TM);
+
         MATERIAL_MAP.put("netherite_bone", ToolMaterials.NETHERITE_BONE_TM);
         MATERIAL_MAP.put("netherite_copper", ToolMaterials.NETHERITE_COPPER_TM);
         MATERIAL_MAP.put("netherite_advanced", ToolMaterials.NETHERITE_ADVANCED_TM);
@@ -336,7 +346,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("netherite_blaze", ToolMaterials.NETHERITE_BLAZE_TM);
         MATERIAL_MAP.put("netherite_emerald", ToolMaterials.NETHERITE_EMERALD_TM);
         MATERIAL_MAP.put("netherite_amethyst", ToolMaterials.NETHERITE_AMETHYST_TM);
-        MATERIAL_MAP.put("netherite_end", ToolMaterials.NETHERITE_CERTUSQUARTZ_TM);
+        MATERIAL_MAP.put("netherite_end", ToolMaterials.NETHERITE_END_TM);
         MATERIAL_MAP.put("netherite_iron", ToolMaterials.NETHERITE_IRON_TM);
         MATERIAL_MAP.put("netherite_gold", ToolMaterials.NETHERITE_GOLD_TM);
         MATERIAL_MAP.put("netherite_diamond", ToolMaterials.NETHERITE_DIAMOND_TM);
@@ -372,6 +382,8 @@ public class ToolUtils {
         MATERIAL_MAP.put("netherite_quartz", ToolMaterials.NETHERITE_QUARTZ_TM);
         MATERIAL_MAP.put("netherite_cobalt", ToolMaterials.NETHERITE_COBALT_TM);
         MATERIAL_MAP.put("netherite_titanium", ToolMaterials.NETHERITE_TITANIUM_TM);
+        MATERIAL_MAP.put("netherite_zinc", ToolMaterials.NETHERITE_ZINC_TM);
+
     }
 
     public static ToolMaterial getTMfromStrings(String handleMaterial, String baseMaterial) {
@@ -420,9 +432,39 @@ public class ToolUtils {
         SPEED_MAP.put("netherite_hoe", ToolMaterials.NETHERITE_HOE_SPEED);
     }
 
+
     public static float getSpeed(String baseMaterial, String toolType) {
         String key = baseMaterial.toLowerCase() + "_" + toolType.toLowerCase();
         return SPEED_MAP.getOrDefault(key, 1.0f);
     }
 
-}
+
+    public static boolean isGem(String material) {
+        return switch (material) {
+            case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz",
+                 "fluorite", "cinnabar"
+                    -> true;
+
+            default -> false;
+        };
+    }
+
+
+    public static boolean isSpecial(String material) {
+        return switch (material) {
+            case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze"
+                    -> true;
+
+            default -> false;
+        };
+    }
+
+
+    public static boolean isVanillaRod(String material) {
+        return switch (material) {
+            case "end", "blaze", "breeze"
+                    -> true;
+
+            default -> false;
+        };
+    }}
