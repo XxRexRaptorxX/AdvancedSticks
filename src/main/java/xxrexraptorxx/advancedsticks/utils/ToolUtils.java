@@ -496,6 +496,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     * Transforms compressed material names into the correct ones
+     */
     public static String transformMaterialNames(String material) {
         if (material.equals("certusquartz")) material = "certus_quartz";
         if (material.equals("witherbone")) material = "wither_bone";

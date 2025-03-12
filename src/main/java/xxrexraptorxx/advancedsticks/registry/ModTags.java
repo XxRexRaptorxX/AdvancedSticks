@@ -71,6 +71,9 @@ public class ModTags {
     }
 
 
+    /**
+     * Tests whether an item tag is empty and checks against Config.FORCE_ALL_MATERIALS in the output
+     */
     public static boolean isTagNotEmpty(String material) {
         if (Minecraft.getInstance().level != null && !ToolUtils.isSpecial(material)) {
 
@@ -88,6 +91,9 @@ public class ModTags {
     }
 
 
+    /**
+     * Outputs the resource locaton of ingot and gem item tags
+     */
     public static ResourceLocation getIngotOrGemLocation(String material) {
         ResourceLocation tagLocation;
 
