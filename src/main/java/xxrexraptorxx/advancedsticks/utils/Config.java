@@ -51,7 +51,7 @@ public class Config {
         PATREON_REWARDS = builder.comment("Enables ingame rewards on first spawn for Patreons").define("patreon_rewards", true);
         STICK_MATERIALS = builder.comment("Here you can specify which stick materials should be enabled. (The sticks and tools only appear if the basic material is also available in the game)").define("stick_materials",
                 new ArrayList<>(Arrays.asList(ModItems.HANDLE_MATERIALS)));
-        FORCE_ALL_MATERIALS = builder.comment("Normally the item variants of a material are only displayed if the basic material is also available in the game (e.g. through other mods), but here you can also activate all of them manually").define("enable_all_materials", false);
+        FORCE_ALL_MATERIALS = builder.comment("Normally the item variants of a material are only displayed if the basic material is also available in the game (e.g. through other mods), but here you can also activate all of them manually").define("force_all_materials", false);
         builder.pop();
 
         SERVER_CONFIG = builder.build();
