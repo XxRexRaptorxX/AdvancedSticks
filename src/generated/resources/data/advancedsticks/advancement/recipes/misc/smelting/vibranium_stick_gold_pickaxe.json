@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedsticks:smelting/vibranium_stick_gold_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vibranium_stick_gold_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedsticks:vibranium_stick_gold_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vibranium_stick_gold_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedsticks:smelting/vibranium_stick_gold_pickaxe"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_sapphire_stick_iron_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedsticks:sapphire_stick_iron_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedsticks:blasting/sapphire_stick_iron_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sapphire_stick_iron_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedsticks:blasting/sapphire_stick_iron_shovel"
+    ]
+  }
+}

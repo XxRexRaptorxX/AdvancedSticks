@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_stick_gold_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedsticks:enderium_stick_gold_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedsticks:smelting/enderium_stick_gold_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_stick_gold_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedsticks:smelting/enderium_stick_gold_axe"
+    ]
+  }
+}

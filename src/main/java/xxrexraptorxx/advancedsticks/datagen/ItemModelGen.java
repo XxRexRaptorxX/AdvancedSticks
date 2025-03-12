@@ -82,15 +82,15 @@ public class ItemModelGen extends ItemModelGenerators {
 
 
 
-    private static ResourceLocation getTextureLoc(String name){
+    public static ResourceLocation getTextureLoc(String name){
         return ResourceLocation.fromNamespaceAndPath(References.MODID, "item/" + name);
     }
 
-    private static ResourceLocation getStickLoc(String name){
+    public static ResourceLocation getStickLoc(String name){
         return ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_" + name);
     }
 
-    private static ResourceLocation getItemLoc(String name){
+    public static ResourceLocation getItemLoc(String name){
         return ResourceLocation.fromNamespaceAndPath(References.MODID, name);
     }
 

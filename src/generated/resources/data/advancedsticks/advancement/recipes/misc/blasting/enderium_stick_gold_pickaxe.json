@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_stick_gold_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedsticks:enderium_stick_gold_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedsticks:blasting/enderium_stick_gold_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_stick_gold_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedsticks:blasting/enderium_stick_gold_pickaxe"
+    ]
+  }
+}

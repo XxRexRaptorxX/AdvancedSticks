@@ -494,4 +494,12 @@ public class ToolUtils {
             return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagNotEmpty(material);
         }
     }
+
+
+    public static String transformMaterialNames(String material) {
+        if (material.equals("certusquartz")) material = "certus_quartz";
+        if (material.equals("witherbone")) material = "wither_bone";
+
+        return material;
+    }
 }

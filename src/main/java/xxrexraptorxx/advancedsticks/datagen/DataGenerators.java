@@ -10,7 +10,8 @@ public class DataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent.Client event) {
-        event.createProvider(RecipeGen.Runner::new);
         event.createProvider(ModelDataGen::new);
+        event.createBlockAndItemTags(BlockTagGen::new, ItemTagGen::new);
+        event.createProvider(RecipeGen.Runner::new);
     }
 }

@@ -8,12 +8,16 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
 import java.util.Optional;
 
 public class ModTags {
+
+    public static final TagKey<Item> GOLD_SMELATBLES = createItemTag(References.MODID, "gold_smeltables");
+    public static final TagKey<Item> IRON_SMELATBLES = createItemTag(References.MODID, "iron_smeltables");
 
     public static final TagKey<Item> BONE_STICKS = createItemTag("c", "rods/bone");
     public static final TagKey<Item> IRON_STICKS = createItemTag("c", "rods/iron");
@@ -62,7 +66,7 @@ public class ModTags {
     public static final TagKey<Item> TITANIUM_STICKS = createItemTag("c", "rods/titanium");
 
 
-    private static TagKey<Item> createItemTag(String id, String name) {
+    public static TagKey<Item> createItemTag(String id, String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
     }
 
@@ -87,7 +91,7 @@ public class ModTags {
     public static ResourceLocation getIngotOrGemLocation(String material) {
         ResourceLocation tagLocation;
 
-        if (material.equals("certusquartz")) material = "certus_quartz";
+        ToolUtils.transformMaterialNames(material);
 
         if (ToolUtils.isSpecial(material)) AdvancedSticks.LOGGER.error("Invalid item tag for material: " + material);
 

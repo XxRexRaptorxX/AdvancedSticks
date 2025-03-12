@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedsticks:smelting/unobtainium_stick_gold_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_unobtainium_stick_gold_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedsticks:unobtainium_stick_gold_sword"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_unobtainium_stick_gold_sword"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedsticks:smelting/unobtainium_stick_gold_sword"
+    ]
+  }
+}
