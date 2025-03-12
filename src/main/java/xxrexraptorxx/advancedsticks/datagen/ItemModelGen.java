@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.registry.ModItems;
+import xxrexraptorxx.advancedsticks.utils.ToolUtils;
 
 import java.util.function.BiConsumer;
 
@@ -29,7 +30,7 @@ public class ItemModelGen extends ItemModelGenerators {
         //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
-            if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end")) {
+            if (!ToolUtils.isVanillaRod(handle)) {
                 AdvancedSticks.LOGGER.info("Generate item model of " + handle);
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
