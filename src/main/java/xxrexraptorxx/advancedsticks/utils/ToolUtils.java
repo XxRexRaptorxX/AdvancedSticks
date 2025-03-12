@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedsticks.registry.ModTags;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +38,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     * Converts the names of the AS-tools into the names of the Vanilla base tools via the translation keys
+     */
     public static Component getVanillaToolTranslationKey(Item item) {
         if (item.getDescriptionId().contains("wood_axe")) {
             return Component.translatable(Items.WOODEN_AXE.getName().getString());
@@ -439,6 +443,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     * Tests whether the material is a gemstone
+     */
     public static boolean isGem(String material) {
         return switch (material) {
             case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz",
@@ -450,6 +457,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     * Tests whether the basic raw material of the material is neither a gem nor an ingot
+     */
     public static boolean isSpecial(String material) {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze"
@@ -460,6 +470,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     * Tests whether the material belongs to a Vanilla rod item
+     */
     public static boolean isVanillaRod(String material) {
         return switch (material) {
             case "end", "blaze", "breeze"
@@ -467,4 +480,18 @@ public class ToolUtils {
 
             default -> false;
         };
-    }}
+    }
+
+
+    /**
+     * Tests whether the material fulfills all criteria to appear in the creative tab
+     */
+    public static boolean isValidMaterialForCreative(String material) {
+        if (Config.FORCE_ALL_MATERIALS.get()) {
+            return true;
+
+        } else {
+            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagNotEmpty(material);
+        }
+    }
+}

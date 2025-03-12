@@ -38,7 +38,7 @@ public class ModItems {
 
     static {
         for (String handle : HANDLE_MATERIALS) {
-            if (!handle.equals("blaze") && !handle.equals("breeze") && !handle.equals("end"))
+            if (!ToolUtils.isVanillaRod(handle))
                 ITEMS.register("stick_" + handle, () -> new StickItem(new Item.Properties().setId(itemId("stick_" + handle))));
 
             for (String base : BASE_MATERIALS) {
