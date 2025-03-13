@@ -7,7 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.main.AdvancedTools;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.utils.Config;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
@@ -99,7 +99,7 @@ public class ModTags {
 
         ToolUtils.transformMaterialNames(material);
 
-        if (ToolUtils.isSpecial(material)) AdvancedSticks.LOGGER.error("Invalid item tag for material: " + material);
+        if (ToolUtils.isSpecial(material)) AdvancedTools.LOGGER.error("Invalid item tag for material: " + material);
 
         if (ToolUtils.isGem(material)) {
             tagLocation = ResourceLocation.fromNamespaceAndPath("c", "gems/" + material);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/breeze",
+    "X": "#c:ingots/gold"
+  },
+  "pattern": [
+    "XX",
+    "#X",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:breeze_stick_gold_axe"
+  }
+}

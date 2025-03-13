@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "assemblylinemachines"
+    }
+  ],
+  "type": "assemblylinemachines:pneumatic",
+  "input": {
+    "tag": "c:gems/emerald"
+  },
+  "mold": "rod",
+  "output": {
+    "item": "advancedtools:stick_emerald"
+  },
+  "time": 8
+}

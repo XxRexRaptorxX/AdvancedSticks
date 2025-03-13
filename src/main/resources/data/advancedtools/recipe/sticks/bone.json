@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+  
+    "#",
+    "#"
+  
+  ],
+  
+  "key": {
+    "#": "#c:bones"
+  },
+  
+  "result": {
+    "id": "advancedtools:stick_bone"
+  }
+}

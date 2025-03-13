@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/blaze",
+    "X": "#c:gems/diamond"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:blaze_stick_diamond_shovel"
+  }
+}

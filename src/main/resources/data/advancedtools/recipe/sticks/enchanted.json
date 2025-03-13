@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rods",
+  "ingredients": [
+    "minecraft:enchanted_book",
+    "#c:sticks/wood"
+  ],
+  
+  "result": {
+    "id": "advancedtools:stick_enchanted"
+  }
+}

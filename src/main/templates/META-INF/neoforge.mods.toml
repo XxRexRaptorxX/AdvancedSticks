@@ -7,13 +7,13 @@ issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/advanced-sticks/is
 modId="${mod_id}"
 version="${mod_version}"
 displayName="${mod_name}"
-itemIcon="advancedsticks:iron_stick_diamond_pickaxe"
+itemIcon="advancedtools:iron_stick_diamond_pickaxe"
 updateJSONURL="https://raw.githubusercontent.com/XxRexRaptorxX/Update-Checker/main/AdvancedSticks_NEO.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/advanced-sticks"
 logoFile="logo.png"
 #credits=""
 authors="${mod_authors}"
-description='''Advanced Sticks is a mod that adds new sticks to modify the default weapons and tools! Every Stick has other values that adds to the normal tool.'''
+description='''Advanced Tools is a mod that adds new sticks to modify the default weapons and tools! Every Stick has other values that adds to the normal tool.'''
 
 
 [[dependencies.${mod_id}]]

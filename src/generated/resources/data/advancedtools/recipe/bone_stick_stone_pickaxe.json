@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/bone",
+    "X": "#minecraft:stone_tool_materials"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:bone_stick_stone_pickaxe"
+  }
+}

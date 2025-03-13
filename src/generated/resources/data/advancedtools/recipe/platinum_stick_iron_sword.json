@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/platinum",
+    "X": "#c:ingots/iron"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:platinum_stick_iron_sword"
+  }
+}

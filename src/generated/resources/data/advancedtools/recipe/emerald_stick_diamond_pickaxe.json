@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/emerald",
+    "X": "#c:gems/diamond"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:emerald_stick_diamond_pickaxe"
+  }
+}

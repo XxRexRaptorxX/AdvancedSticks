@@ -11,7 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
-import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.main.AdvancedTools;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.registry.ModItems;
 import xxrexraptorxx.advancedsticks.registry.ModTags;
@@ -119,7 +119,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void swordRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
-        AdvancedSticks.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
                 .define('#', handle)
@@ -133,7 +133,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void pickaxeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
-        AdvancedSticks.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
                 .define('#', handle)
@@ -147,7 +147,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void axeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
-        AdvancedSticks.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
                 .define('#', handle)
@@ -161,7 +161,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void shovelRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
-        AdvancedSticks.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
                 .define('#', handle)
@@ -175,7 +175,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void hoeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
-        AdvancedSticks.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
                 .define('#', handle)
@@ -191,7 +191,7 @@ public class RecipeGen extends RecipeProvider {
     public void toolRecyclingRecipes(String toolType) {
         for (String handle : ModItems.HANDLE_MATERIALS) {
             Item result = BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_iron_" + toolType));
-            AdvancedSticks.LOGGER.info("Generate smelting recipes for " + getItemName(result));
+            AdvancedTools.LOGGER.info("Generate smelting recipes for " + getItemName(result));
 
             SimpleCookingRecipeBuilder.smelting(Ingredient.of(result), RecipeCategory.MISC, Items.IRON_NUGGET, 0.1F, 200)
                     .unlockedBy(getHasName(result), has(result)).save(output, References.MODID + ":" + "smelting/" + handle + "_stick_iron_" + toolType);
@@ -200,7 +200,7 @@ public class RecipeGen extends RecipeProvider {
                     .unlockedBy(getHasName(result), has(result)).save(output, References.MODID + ":" + "blasting/" + handle + "_stick_iron_" + toolType);
 
             result = BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_gold_" + toolType));
-            AdvancedSticks.LOGGER.info("Generate smelting recipes for " + getItemName(result));
+            AdvancedTools.LOGGER.info("Generate smelting recipes for " + getItemName(result));
 
             SimpleCookingRecipeBuilder.smelting(Ingredient.of(result), RecipeCategory.MISC, Items.GOLD_NUGGET, 0.1F, 200)
                     .unlockedBy(getHasName(result), has(result)).save(output, References.MODID + ":" + "smelting/" + handle + "_stick_gold_" + toolType);
@@ -212,7 +212,7 @@ public class RecipeGen extends RecipeProvider {
 
 
     public void netheriteSmithing(Item item, Item result) {
-        AdvancedSticks.LOGGER.info("Generate smithing recipe for " + getItemName(result));
+        AdvancedTools.LOGGER.info("Generate smithing recipe for " + getItemName(result));
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, result)

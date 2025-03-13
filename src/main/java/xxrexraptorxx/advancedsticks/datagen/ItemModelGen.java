@@ -6,7 +6,7 @@ import net.minecraft.client.data.models.model.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.main.AdvancedTools;
 import xxrexraptorxx.advancedsticks.main.References;
 import xxrexraptorxx.advancedsticks.registry.ModItems;
 import xxrexraptorxx.advancedsticks.utils.ToolUtils;
@@ -31,12 +31,12 @@ public class ItemModelGen extends ItemModelGenerators {
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
             if (!ToolUtils.isVanillaRod(handle)) {
-                AdvancedSticks.LOGGER.info("Generate item model of " + handle);
+                AdvancedTools.LOGGER.info("Generate item model of " + handle);
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
             //tools
             for (String base : ModItems.BASE_MATERIALS) {
-                AdvancedSticks.LOGGER.info("Generate tool item model of " + base + " head with " + handle + " handle");
+                AdvancedTools.LOGGER.info("Generate tool item model of " + base + " head with " + handle + " handle");
                 this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_sword")));
                 this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_pickaxe")));
                 this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_axe")));

@@ -28,7 +28,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import xxrexraptorxx.advancedsticks.main.AdvancedSticks;
+import xxrexraptorxx.advancedsticks.main.AdvancedTools;
 import xxrexraptorxx.advancedsticks.main.References;
 
 import java.net.URI;
@@ -67,7 +67,7 @@ public class Events {
                         hasShownUp = true;
 
                     } else if (versionCheckResult.status() == VersionChecker.Status.FAILED) {
-                        AdvancedSticks.LOGGER.error(References.NAME + "'s version checker failed!");
+                        AdvancedTools.LOGGER.error(References.NAME + "'s version checker failed!");
                         hasShownUp = true;
                     }
                 }
@@ -129,7 +129,7 @@ public class Events {
             return supporterList.contains(player.getName().getString());
 
         } catch (Exception e) {
-            AdvancedSticks.LOGGER.error("Failed to fetch or process supporter list from URI: {}", uri, e);
+            AdvancedTools.LOGGER.error("Failed to fetch or process supporter list from URI: {}", uri, e);
             return false;
         }
     }

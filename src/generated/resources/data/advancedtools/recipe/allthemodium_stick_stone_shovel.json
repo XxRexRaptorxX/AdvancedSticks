@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/allthemodium",
+    "X": "#minecraft:stone_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:allthemodium_stick_stone_shovel"
+  }
+}

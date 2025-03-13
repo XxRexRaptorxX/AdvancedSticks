@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "#c:ingots/netherite",
+
+  "base": "advancedtools:diamond_bow",
+
+  "result": {
+    "id": "advancedtools:netherite_bow"
+  },
+
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

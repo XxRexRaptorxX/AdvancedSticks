@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_allthemodium_stick_gold_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedtools:allthemodium_stick_gold_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:blasting/allthemodium_stick_gold_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_allthemodium_stick_gold_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:blasting/allthemodium_stick_gold_pickaxe"
+    ]
+  }
+}

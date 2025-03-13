@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/allthemodium",
+    "X": "#c:gems/diamond"
+  },
+  "pattern": [
+    "XX",
+    "#X",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:allthemodium_stick_diamond_axe"
+  }
+}

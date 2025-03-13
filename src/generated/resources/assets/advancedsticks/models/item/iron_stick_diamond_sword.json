@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "advancedsticks:item/iron_sword_base",
-    "layer1": "advancedsticks:item/diamond_sword_overlay"
-  }
-}

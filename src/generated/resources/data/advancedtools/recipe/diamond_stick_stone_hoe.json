@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/diamond",
+    "X": "#minecraft:stone_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "# ",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:diamond_stick_stone_hoe"
+  }
+}

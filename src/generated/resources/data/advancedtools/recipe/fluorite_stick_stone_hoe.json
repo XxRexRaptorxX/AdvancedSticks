@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/fluorite",
+    "X": "#minecraft:stone_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "# ",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:fluorite_stick_stone_hoe"
+  }
+}
