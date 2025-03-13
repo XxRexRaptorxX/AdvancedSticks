@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.datagen;
+package xxrexraptorxx.advancedtools.datagen;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelOutput;

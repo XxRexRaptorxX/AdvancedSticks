@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.registry;
+package xxrexraptorxx.advancedtools.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -7,9 +7,9 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import xxrexraptorxx.advancedsticks.items.*;
-import xxrexraptorxx.advancedsticks.main.References;
-import xxrexraptorxx.advancedsticks.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.items.*;
+import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 public class ModItems {
 

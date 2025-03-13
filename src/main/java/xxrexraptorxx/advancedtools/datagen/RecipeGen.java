@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.datagen;
+package xxrexraptorxx.advancedtools.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,10 +11,10 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.Tags;
-import xxrexraptorxx.advancedsticks.main.AdvancedTools;
-import xxrexraptorxx.advancedsticks.main.References;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
-import xxrexraptorxx.advancedsticks.registry.ModTags;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.registry.ModItems;
+import xxrexraptorxx.advancedtools.registry.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 

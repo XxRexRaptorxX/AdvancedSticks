@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.utils;
+package xxrexraptorxx.advancedtools.utils;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.ChatFormatting;
@@ -28,8 +28,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import xxrexraptorxx.advancedsticks.main.AdvancedTools;
-import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.main.References;
 
 import java.net.URI;
 import java.net.http.HttpClient;

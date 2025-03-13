@@ -1,9 +1,9 @@
-package xxrexraptorxx.advancedsticks.utils;
+package xxrexraptorxx.advancedtools.utils;
 
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.common.ModConfigSpec;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
+import xxrexraptorxx.advancedtools.registry.ModItems;
 
 import java.util.ArrayList;
 import java.util.Arrays;

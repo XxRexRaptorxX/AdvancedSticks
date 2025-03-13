@@ -1,9 +1,9 @@
-package xxrexraptorxx.advancedsticks.datagen;
+package xxrexraptorxx.advancedtools.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedtools.main.References;
 
 import java.util.concurrent.CompletableFuture;
 

@@ -1,7 +1,7 @@
-package xxrexraptorxx.advancedsticks.items;
+package xxrexraptorxx.advancedtools.items;
 
 import net.minecraft.world.item.BowItem;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
+import xxrexraptorxx.advancedtools.registry.ModItems;
 
 public class CustomBowItem extends BowItem {
 

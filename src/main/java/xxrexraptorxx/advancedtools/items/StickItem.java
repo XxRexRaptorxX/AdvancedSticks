@@ -1,10 +1,10 @@
-package xxrexraptorxx.advancedsticks.items;
+package xxrexraptorxx.advancedtools.items;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedtools.main.References;
 
 public class StickItem extends Item {
 

@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.datagen;
+package xxrexraptorxx.advancedtools.datagen;
 
 import com.google.gson.JsonElement;
 import net.minecraft.client.data.models.ItemModelOutput;
@@ -20,7 +20,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
-import xxrexraptorxx.advancedsticks.main.References;
+import xxrexraptorxx.advancedtools.main.References;
 
 import java.nio.file.Path;
 import java.util.HashMap;

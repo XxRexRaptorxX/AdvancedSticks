@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.utils;
+package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;

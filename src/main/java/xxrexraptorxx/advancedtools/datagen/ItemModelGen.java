@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.datagen;
+package xxrexraptorxx.advancedtools.datagen;
 
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ItemModelOutput;
@@ -6,10 +6,10 @@ import net.minecraft.client.data.models.model.*;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import xxrexraptorxx.advancedsticks.main.AdvancedTools;
-import xxrexraptorxx.advancedsticks.main.References;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
-import xxrexraptorxx.advancedsticks.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.registry.ModItems;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.function.BiConsumer;
 

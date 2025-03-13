@@ -1,13 +1,13 @@
-package xxrexraptorxx.advancedsticks.main;
+package xxrexraptorxx.advancedtools.main;
 
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import xxrexraptorxx.advancedsticks.registry.CreativeModeTabs;
-import xxrexraptorxx.advancedsticks.registry.ModItems;
-import xxrexraptorxx.advancedsticks.utils.Config;
+import xxrexraptorxx.advancedtools.registry.CreativeModeTabs;
+import xxrexraptorxx.advancedtools.registry.ModItems;
+import xxrexraptorxx.advancedtools.utils.Config;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)

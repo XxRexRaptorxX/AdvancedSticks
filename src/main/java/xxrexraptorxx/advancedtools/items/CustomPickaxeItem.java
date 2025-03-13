@@ -1,10 +1,10 @@
-package xxrexraptorxx.advancedsticks.items;
+package xxrexraptorxx.advancedtools.items;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ToolMaterial;
-import xxrexraptorxx.advancedsticks.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 public class CustomPickaxeItem extends PickaxeItem {
 

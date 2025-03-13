@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedsticks.utils;
+package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -7,8 +7,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
-import xxrexraptorxx.advancedsticks.main.References;
-import xxrexraptorxx.advancedsticks.registry.ModTags;
+import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.registry.ModTags;
 
 import java.util.HashMap;
 import java.util.Map;
