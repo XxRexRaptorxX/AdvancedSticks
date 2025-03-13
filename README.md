@@ -1,9 +1,10 @@
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/247091.svg?badge_style=for_the_badge)][cf_mod] [![CurseForge Game Versions](https://cf.way2muchnoise.eu/versions/247091.svg?badge_style=for_the_badge)][cf_mod]
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/e4rqAMfN?label=Modrinth&logo=modrinth&style=for-the-badge)][mr_mod] [![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/e4rqAMfN?label=Available%20for&logo=modrinth&style=for-the-badge)][mr_mod]
-# Advanced Tools for Minecraft
 
-![Logo](https://i.imgur.com/6uT3nwA.png)
+# AdvancedTools mod for Minecraft
+
+![Logo](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/resources/logo.png?raw=true)
 
 ## 📖 Description
 
