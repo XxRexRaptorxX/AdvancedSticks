@@ -1,4 +1,4 @@
-// 1.21.4	2025-03-13T20:10:38.4027494	Tags for minecraft:item mod id advancedtools
+// 1.21.4	2025-03-13T21:44:55.8838182	Tags for minecraft:item mod id advancedtools
 15a3a79b7cdc92fb077faa97c12e5b50d88fc3fd data/c/tags/item/rods.json
 dd1c9e853b4dea8318ad07e775a2ccff8f81b598 data/c/tags/item/rods/advanced.json
 fae0dd9e21d425d82bfac8fde9893d425f562d11 data/c/tags/item/rods/allthemodium.json
@@ -44,7 +44,7 @@ f3abbcb9ff5be865c1a987826f53d58dc977bcea data/c/tags/item/rods/unobtainium.json
 9a803771a1a87abe8184151fdc4338977ff90344 data/c/tags/item/rods/uranium.json
 8361033f26debdc6a46d3181a392d0ed6abf0450 data/c/tags/item/rods/vibranium.json
 1570634560ae5b5a32ad1c1e4969961bc352492f data/c/tags/item/rods/zinc.json
-d8224cf3f0712a4c03e205b10b76dc81df59ec62 data/c/tags/item/sticks.json
+b9ea0582a49f88e62c4935ee2050587f2c3bd974 data/c/tags/item/sticks.json
 72d56c51db4ad98710b103d52c3d9854b60220cd data/c/tags/item/sticks/advanced.json
 7c4a84363d4c21a839bda39fad48a46764169e98 data/c/tags/item/sticks/allthemodium.json
 a664e295f928f57c4a590b291a84346096fb33d7 data/c/tags/item/sticks/aluminum.json
@@ -88,6 +88,7 @@ d07531c30927da25da681f0e794d0ee6e97bed2f data/c/tags/item/sticks/topaz.json
 3125e4d8b913ef7b8a58fdbed02f4e98dd19d72c data/c/tags/item/sticks/unobtainium.json
 d20855d9646d7ff1519cc4c44db9e898474765f2 data/c/tags/item/sticks/uranium.json
 f19210d97899a79e0bc922c3233e368e9f9739c6 data/c/tags/item/sticks/vibranium.json
+1ad920aa65e2706dabb6265f3b12546ab33e8936 data/c/tags/item/sticks/wood.json
 310411b3829de492132a3664afb47bf3caebb803 data/c/tags/item/sticks/zinc.json
 b7b3e71150d9622d1bf82f7cdce128d98a104c17 data/c/tags/item/tools/bow.json
 507f9ecc576f307d893b7dbd72c38ae6c5d54300 data/minecraft/tags/item/axes.json

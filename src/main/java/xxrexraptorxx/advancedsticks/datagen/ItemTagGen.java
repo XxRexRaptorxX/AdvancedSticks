@@ -7,6 +7,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.Tags;
 import xxrexraptorxx.advancedsticks.main.References;
@@ -46,6 +47,10 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.HOES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
             }
         }
+
+        TagKey<Item> woodStick = ModTags.createItemTag("c", "sticks/wood");
+        tag(woodStick).add(Items.STICK);
+        tag(ModTags.createItemTag("c", "sticks")).addTags(woodStick);
 
         //bows
         tag(Tags.Items.TOOLS_BOW).add(
