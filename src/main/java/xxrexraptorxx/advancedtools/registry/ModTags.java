@@ -7,7 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
@@ -75,10 +74,10 @@ public class ModTags {
      * Tests whether an item tag is empty and checks against Config.FORCE_ALL_MATERIALS in the output
      */
     public static boolean isTagNotEmpty(String material) {
-        if (Minecraft.getInstance().level != null && !ToolUtils.isSpecial(material)) {
+        if (Minecraft.getInstance().level != null) {
 
             HolderLookup.Provider lookupProvider = Minecraft.getInstance().level.registryAccess();
-            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), getIngotOrGemLocation(material));
+            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), getTagLocationFromMaterial(material));
             Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
 
             boolean flag = lookup.map(l -> !l.get(tagKey).isEmpty()).orElse(false);
@@ -92,22 +91,24 @@ public class ModTags {
 
 
     /**
-     * Outputs the resource locaton of ingot and gem item tags
+     * Outputs the resource location of material item tags
      */
-    public static ResourceLocation getIngotOrGemLocation(String material) {
-        ResourceLocation tagLocation;
-
+    public static ResourceLocation getTagLocationFromMaterial(String material) {
         ToolUtils.transformMaterialNames(material);
 
-        if (ToolUtils.isSpecial(material)) AdvancedTools.LOGGER.error("Invalid item tag for material: " + material);
+        if (ToolUtils.isSpecial(material)) {
+            if (material.equals("wither_bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones/wither");
+            if (material.equals("bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones");
 
-        if (ToolUtils.isGem(material)) {
-            tagLocation = ResourceLocation.fromNamespaceAndPath("c", "gems/" + material);
-        } else {
-            tagLocation = ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material);
+                return ResourceLocation.fromNamespaceAndPath("c", "rods/" + material); //returns the standard rod tags for materials that do not have normal base materials
         }
 
-        return tagLocation;
+        if (ToolUtils.isGem(material)) {
+            return ResourceLocation.fromNamespaceAndPath("c", "gems/" + material);
+
+        } else {
+            return ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material);
+        }
     }
 
 }

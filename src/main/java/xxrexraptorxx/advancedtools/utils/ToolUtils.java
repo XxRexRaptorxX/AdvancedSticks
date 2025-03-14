@@ -6,6 +6,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
@@ -14,8 +16,10 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class ToolUtils {
 
@@ -508,6 +512,35 @@ public class ToolUtils {
         if (material.equals("witherbone")) material = "wither_bone";
 
         return material;
+    }
+
+
+    @Nullable
+    public static MobEffectInstance getHandleMaterialEffect(String material) {
+        Random random = new Random();
+        switch (material) {
+            case "lumium":
+                return new MobEffectInstance(MobEffects.GLOWING, 10);
+            case "enchanted":
+                return new MobEffectInstance(MobEffects.LUCK, 10);
+            case "breeze":
+                return new MobEffectInstance(MobEffects.WIND_CHARGED, 10);
+            case "end":
+                return new MobEffectInstance(MobEffects.NIGHT_VISION, 10);
+            default: return null;
+        }
+    }
+
+    @Nullable
+    public static MobEffectInstance getHandleMaterialRandomEffect(String material) {
+        Random random = new Random();
+        switch (material) {
+            case "uranium", "thorium":
+                return new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 10000));
+            case "witherbone":
+                return new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 1000));
+            default: return null;
+        }
     }
 
 
