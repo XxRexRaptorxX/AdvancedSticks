@@ -517,30 +517,25 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHandleMaterialEffect(String material) {
-        Random random = new Random();
-        switch (material) {
-            case "lumium":
-                return new MobEffectInstance(MobEffects.GLOWING, 10);
-            case "enchanted":
-                return new MobEffectInstance(MobEffects.LUCK, 10);
-            case "breeze":
-                return new MobEffectInstance(MobEffects.WIND_CHARGED, 10);
-            case "end":
-                return new MobEffectInstance(MobEffects.NIGHT_VISION, 10);
-            default: return null;
-        }
+        return switch (material) {
+            case "lumium" -> new MobEffectInstance(MobEffects.GLOWING, 10);
+            case "enchanted" -> new MobEffectInstance(MobEffects.LUCK, 10);
+            case "breeze" -> new MobEffectInstance(MobEffects.WIND_CHARGED, 10);
+            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 10);
+            default -> null;
+        };
     }
+
 
     @Nullable
     public static MobEffectInstance getHandleMaterialRandomEffect(String material) {
         Random random = new Random();
-        switch (material) {
-            case "uranium", "thorium":
-                return new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 10000));
-            case "witherbone":
-                return new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 1000));
-            default: return null;
-        }
+
+        return switch (material) {
+            case "uranium", "thorium" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000));
+            case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 300));
+            default -> null;
+        };
     }
 
 
