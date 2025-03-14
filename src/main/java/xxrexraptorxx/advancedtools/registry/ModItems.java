@@ -31,7 +31,7 @@ public class ModItems {
     public static final String[] HANDLE_MATERIALS = {
             "bone", "iron", "iridium", "netherite", "steel", "titanium", "invar", "end", "nickel", "quartz", "osmium", "aluminum",
             "platinum", "lead", "cobalt", "tin", "zinc", "certusquartz", "breeze", "electrum", "lumium", "constantan", "topaz",
-            "peridot", "brass", "bronze", "gold", "signalum", "blaze", "allthemodium", "copper", "cinnabar", "ruby", "fluorite",
+            "peridot", "brass", "bronze", "gold", "blaze", "allthemodium", "signalum", "copper", "cinnabar", "ruby", "fluorite",
             "unobtainium", "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced"
     };
 
