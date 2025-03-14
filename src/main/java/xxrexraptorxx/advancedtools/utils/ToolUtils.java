@@ -4,9 +4,13 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
+import net.minecraft.world.level.block.Block;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 
@@ -504,5 +508,28 @@ public class ToolUtils {
         if (material.equals("witherbone")) material = "wither_bone";
 
         return material;
+    }
+
+
+    public static int getMiningLevel(TagKey<Block> tag) {
+        if (tag.equals(BlockTags.INCORRECT_FOR_WOODEN_TOOL) || tag.equals(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
+            return 0;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_STONE_TOOL)) {
+            return 1;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_IRON_TOOL)) {
+            return 2;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)) {
+            return 3;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)) {
+            return 4;
+
+        } else {
+            AdvancedTools.LOGGER.error("Unknown 'harvest'- block tag: " + tag);
+            return 2;
+        }
     }
 }

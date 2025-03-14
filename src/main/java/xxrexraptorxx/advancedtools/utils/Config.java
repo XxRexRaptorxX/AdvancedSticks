@@ -21,6 +21,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
     public static ModConfigSpec.BooleanValue FORCE_ALL_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> STICK_MATERIALS;
+    public static ModConfigSpec.BooleanValue JEI_DESCRIPTION;
 
 
     public static void init(ModContainer container) {
@@ -38,6 +39,7 @@ public class Config {
         builder.comment("General").push(CATEGORY_GENERAL);
         UPDATE_CHECKER = builder.comment("Activate the Update-Checker").define("update-checker", true);
         SHOW_STICK_TYPE = builder.comment("Shows you the stick type under the tool").define("show_stick_type", true);
+        JEI_DESCRIPTION = builder.comment("Enables the description for the stats of the tools in JEI").define("jei_description", true);
         builder.pop();
 
         CLIENT_CONFIG = builder.build();
