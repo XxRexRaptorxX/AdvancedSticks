@@ -2,13 +2,13 @@
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/e4rqAMfN?label=Modrinth&logo=modrinth&style=for-the-badge)][mr_mod] [![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/e4rqAMfN?label=Available%20for&logo=modrinth&style=for-the-badge)][mr_mod]
 
-# AdvancedTools mod for Minecraft
+# Advanced Tools mod for Minecraft
 
 ![Logo](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/resources/logo.png?raw=true)
 
 ## 📖 Description
 
-Advanced Tools is a mod that lets you combine tools and weapons with many different sticks/rods to gain other stats and properties!
+Advanced Tools (or formerly known as AdvancedSticks) recognizes when other mods add materials such as tin and then automatically generates the rod and all tool combinations of it.
 
 -----
 
