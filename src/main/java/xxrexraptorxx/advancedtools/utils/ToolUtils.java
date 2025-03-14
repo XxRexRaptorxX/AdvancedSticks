@@ -518,10 +518,10 @@ public class ToolUtils {
     @Nullable
     public static MobEffectInstance getHandleMaterialEffect(String material) {
         return switch (material) {
-            case "lumium" -> new MobEffectInstance(MobEffects.GLOWING, 10);
-            case "enchanted" -> new MobEffectInstance(MobEffects.LUCK, 10);
-            case "breeze" -> new MobEffectInstance(MobEffects.WIND_CHARGED, 10);
-            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 10);
+            case "lumium" -> new MobEffectInstance(MobEffects.GLOWING, 30);
+            case "enchanted" -> new MobEffectInstance(MobEffects.LUCK, 30);
+            case "breeze" -> new MobEffectInstance(MobEffects.WIND_CHARGED, 30);
+            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 30);
             default -> null;
         };
     }
