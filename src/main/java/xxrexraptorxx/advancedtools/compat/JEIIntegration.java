@@ -41,7 +41,7 @@ public class JEIIntegration implements IModPlugin {
                 for (String base : ModItems.BASE_MATERIALS) {
                     ToolMaterial material = ToolUtils.getTMfromStrings(handle, base);
 
-                    MutableComponent description = Component.literal("Material Stats").append(textSeparator).withStyle(ChatFormatting.DARK_GRAY);
+                    MutableComponent description = Component.translatable("message." + References.MODID + ".material_stats").append(textSeparator).withStyle(ChatFormatting.DARK_GRAY);
                     description.append(
                             Component.literal(base + " - " + handle).append(lineSeperator + lineSeperator).withStyle(ChatFormatting.WHITE)
                     );
