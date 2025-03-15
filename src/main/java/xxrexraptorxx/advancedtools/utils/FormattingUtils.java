@@ -43,7 +43,7 @@ public class FormattingUtils {
             return Component.literal(effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
         }
 
-        return Component.literal("    /").withStyle(ChatFormatting.RED);
+        return Component.literal("      /").withStyle(ChatFormatting.RED);
     }
 
 
@@ -57,7 +57,7 @@ public class FormattingUtils {
             return Component.literal(effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
         }
 
-        return Component.literal("      /").withStyle(ChatFormatting.RED);
+        return Component.literal("        /").withStyle(ChatFormatting.RED);
     }
 
 

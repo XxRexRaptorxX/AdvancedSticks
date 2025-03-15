@@ -15,6 +15,7 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 
 import javax.annotation.Nullable;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -599,6 +600,7 @@ public class ToolUtils {
 
     public static Component getToolStatDescription(String handle, String base) {
         ToolMaterial material = ToolUtils.getTMfromStrings(handle, base);
+        DecimalFormat df = new DecimalFormat("#.##");
         String textSeparator = ": ";
         String lineSeperator = "\n";
 
@@ -613,23 +615,23 @@ public class ToolUtils {
 
         description.append(Component.literal(lineSeperator + lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("   " + FormattingUtils.getMiningLevel(material.incorrectBlocksForDrops())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
+        description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material.incorrectBlocksForDrops())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
 
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("      "  + material.durability()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
+        description.append(Component.literal("        "  + material.durability()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
 
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".mining_speed.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("  " + material.speed()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_SPEED)));
+        description.append(Component.literal("    " + df.format(material.speed())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_SPEED)));
 
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".damage.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("         " + material.attackDamageBonus()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
+        description.append(Component.literal("           " + df.format(material.attackDamageBonus())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
 
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".enchantability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal(" " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
+        description.append(Component.literal("   " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
 
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".hit_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
