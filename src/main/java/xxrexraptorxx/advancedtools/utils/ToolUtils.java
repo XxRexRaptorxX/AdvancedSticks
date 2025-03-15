@@ -167,6 +167,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("wood_cobalt", ToolMaterials.WOOD_COBALT_TM);
         MATERIAL_MAP.put("wood_titanium", ToolMaterials.WOOD_TITANIUM_TM);
         MATERIAL_MAP.put("wood_zinc", ToolMaterials.WOOD_ZINC_TM);
+        MATERIAL_MAP.put("wood_wood", ToolMaterial.WOOD);
 
         MATERIAL_MAP.put("stone_bone", ToolMaterials.STONE_BONE_TM);
         MATERIAL_MAP.put("stone_copper", ToolMaterials.STONE_COPPER_TM);
@@ -212,6 +213,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("stone_cobalt", ToolMaterials.STONE_COBALT_TM);
         MATERIAL_MAP.put("stone_titanium", ToolMaterials.STONE_TITANIUM_TM);
         MATERIAL_MAP.put("stone_zinc", ToolMaterials.STONE_ZINC_TM);
+        MATERIAL_MAP.put("stone_wood", ToolMaterial.STONE);
 
         MATERIAL_MAP.put("iron_bone", ToolMaterials.IRON_BONE_TM);
         MATERIAL_MAP.put("iron_copper", ToolMaterials.IRON_COPPER_TM);
@@ -257,6 +259,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("iron_cobalt", ToolMaterials.IRON_COBALT_TM);
         MATERIAL_MAP.put("iron_titanium", ToolMaterials.IRON_TITANIUM_TM);
         MATERIAL_MAP.put("iron_zinc", ToolMaterials.IRON_ZINC_TM);
+        MATERIAL_MAP.put("iron_wood", ToolMaterial.IRON);
 
         MATERIAL_MAP.put("gold_bone", ToolMaterials.GOLD_BONE_TM);
         MATERIAL_MAP.put("gold_copper", ToolMaterials.GOLD_COPPER_TM);
@@ -302,6 +305,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("gold_cobalt", ToolMaterials.GOLD_COBALT_TM);
         MATERIAL_MAP.put("gold_titanium", ToolMaterials.GOLD_TITANIUM_TM);
         MATERIAL_MAP.put("gold_zinc", ToolMaterials.GOLD_ZINC_TM);
+        MATERIAL_MAP.put("gold_wood", ToolMaterial.GOLD);
 
         MATERIAL_MAP.put("diamond_bone", ToolMaterials.DIAMOND_BONE_TM);
         MATERIAL_MAP.put("diamond_copper", ToolMaterials.DIAMOND_COPPER_TM);
@@ -347,6 +351,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("diamond_cobalt", ToolMaterials.DIAMOND_COBALT_TM);
         MATERIAL_MAP.put("diamond_titanium", ToolMaterials.DIAMOND_TITANIUM_TM);
         MATERIAL_MAP.put("diamond_zinc", ToolMaterials.DIAMOND_ZINC_TM);
+        MATERIAL_MAP.put("diamond_wood", ToolMaterial.DIAMOND);
 
         MATERIAL_MAP.put("netherite_bone", ToolMaterials.NETHERITE_BONE_TM);
         MATERIAL_MAP.put("netherite_copper", ToolMaterials.NETHERITE_COPPER_TM);
@@ -392,6 +397,7 @@ public class ToolUtils {
         MATERIAL_MAP.put("netherite_cobalt", ToolMaterials.NETHERITE_COBALT_TM);
         MATERIAL_MAP.put("netherite_titanium", ToolMaterials.NETHERITE_TITANIUM_TM);
         MATERIAL_MAP.put("netherite_zinc", ToolMaterials.NETHERITE_ZINC_TM);
+        MATERIAL_MAP.put("netherite_wood", ToolMaterial.NETHERITE);
 
     }
 
@@ -562,12 +568,12 @@ public class ToolUtils {
 
 
 
-    public static Component getItemDescription(String handle, String base) {
+    public static Component getToolStatDescription(String handle, String base) {
         ToolMaterial material = ToolUtils.getTMfromStrings(handle, base);
         String textSeparator = ": ";
         String lineSeperator = "\n";
 
-        MutableComponent description = Component.translatable("message." + References.MODID + ".material_stats").append(textSeparator).withStyle(ChatFormatting.BLUE);
+        MutableComponent description = Component.translatable("message." + References.MODID + ".material_stats").withStyle(ChatFormatting.BLUE);
         description.append(Component.literal(lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".base").withStyle(ChatFormatting.WHITE));
         description.append(Component.literal(" " + FormattingUtils.capitalizeWords(base)).withStyle(ChatFormatting.YELLOW));

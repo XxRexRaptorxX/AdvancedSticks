@@ -31,12 +31,25 @@ public class JEIIntegration implements IModPlugin {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.BASE_MATERIALS) {
 
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword"))), VanillaTypes.ITEM_STACK, ToolUtils.getItemDescription(handle, base));
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe"))), VanillaTypes.ITEM_STACK, ToolUtils.getItemDescription(handle, base));
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe"))), VanillaTypes.ITEM_STACK, ToolUtils.getItemDescription(handle, base));
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel"))), VanillaTypes.ITEM_STACK, ToolUtils.getItemDescription(handle, base));
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe"))), VanillaTypes.ITEM_STACK, ToolUtils.getItemDescription(handle, base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
                 }
+            }
+
+            //VANILLA
+            for (String base : ModItems.BASE_MATERIALS) {
+                if (base.equals("wood") || base.equals("gold")) {
+                    base = base + "en";
+                }
+
+                registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_sword"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
+                registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_axe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
+                registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_pickaxe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
+                registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_shovel"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
+                registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_hoe"))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
             }
         }
    }

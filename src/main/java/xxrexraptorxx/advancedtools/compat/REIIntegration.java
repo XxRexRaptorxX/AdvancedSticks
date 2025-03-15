@@ -7,6 +7,7 @@ import me.shedaniel.rei.forge.REIPluginClient;
 import me.shedaniel.rei.plugin.client.BuiltinClientPlugin;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
@@ -19,30 +20,63 @@ public class REIIntegration implements REIClientPlugin {
     public void registerDisplays(DisplayRegistry registry) {
 
         if (Config.JEI_DESCRIPTION.get()) {
+            BuiltinClientPlugin instance = BuiltinClientPlugin.getInstance();
+
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.BASE_MATERIALS) {
 
-                    BuiltinClientPlugin.getInstance().registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getItemDescription(handle, base));
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword"))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription(handle, base));
                         return list;
                     });
-                    BuiltinClientPlugin.getInstance().registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getItemDescription(handle, base));
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe"))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription(handle, base));
                         return list;
                     });
-                    BuiltinClientPlugin.getInstance().registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getItemDescription(handle, base));
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe"))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription(handle, base));
                         return list;
                     });
-                    BuiltinClientPlugin.getInstance().registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getItemDescription(handle, base));
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel"))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription(handle, base));
                         return list;
                     });
-                    BuiltinClientPlugin.getInstance().registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getItemDescription(handle, base));
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe"))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription(handle, base));
                         return list;
                     });
                 }
+            }
+
+            //VANILLA
+            for (String base : ModItems.BASE_MATERIALS) {
+                String head = base;
+
+                if (base.equals("wood") || base.equals("gold")) {
+                    head = base + "en";
+                }
+
+
+                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_sword"))), Component.empty(), list -> {
+                    list.add(ToolUtils.getToolStatDescription("wood", base));
+                    return list;
+                });
+                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_pickaxe"))), Component.empty(), list -> {
+                    list.add(ToolUtils.getToolStatDescription("wood", base));
+                    return list;
+                });
+                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_axe"))), Component.empty(), list -> {
+                    list.add(ToolUtils.getToolStatDescription("wood", base));
+                    return list;
+                });
+                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_shovel"))), Component.empty(), list -> {
+                    list.add(ToolUtils.getToolStatDescription("wood", base));
+                    return list;
+                });
+                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_hoe"))), Component.empty(), list -> {
+                    list.add(ToolUtils.getToolStatDescription("wood", base));
+                    return list;
+                });
             }
         }
     }
