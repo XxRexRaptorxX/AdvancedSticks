@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
 public class ToolUtils {
 
     /**
-     *  Returns the cleaned name of the handle type from a Tool.
+     *  Returns the cleaned name of the handle type from a tool.
      */
     public static String getStickFromName(Item item) {
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
@@ -38,7 +38,11 @@ public class ToolUtils {
             String handle = Objects.requireNonNull(getHandleAndBaseMaterialFromItem(name))[0];
 
             if (isVanillaRod(handle)) {
-                return Component.translatable("item.minecraft." + handle + "_rod").getString();
+                if(handle.equals("end")) {
+                    return Component.translatable("block.minecraft." + handle + "_rod").getString();
+                } else {
+                    return Component.translatable("item.minecraft." + handle + "_rod").getString();
+                }
 
             } else {
                 return Component.translatable("item." + References.MODID + ".stick_" + handle).getString();
