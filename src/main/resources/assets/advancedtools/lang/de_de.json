@@ -70,8 +70,11 @@
   "message.advancedtools.mining_speed.jei_desc": "Mining Speed",
   "message.advancedtools.damage.jei_desc": "Damage",
   "message.advancedtools.enchantability.jei_desc": "Enchantability",
+  "message.advancedtools.hold_effect.jei_desc": "Halte-Effekt",
+  "message.advancedtools.hit_effect.jei_desc": "Schlag-Effekt",
   "message.advancedtools.handle": "Griff:",
   "message.advancedtools.base": "Kopf:",
+  "message.advancedtools.random": "zufällig",
 
   "item.advancedtools.rod": "Stab",
   "item.advancedtools.branch": "Ast",

@@ -72,8 +72,11 @@
   "message.advancedtools.mining_speed.jei_desc": "Mining Speed",
   "message.advancedtools.damage.jei_desc": "Damage",
   "message.advancedtools.enchantability.jei_desc": "Enchantability",
+  "message.advancedtools.hold_effect.jei_desc": "Hold Effect",
+  "message.advancedtools.hit_effect.jei_desc": "Hit Effect",
   "message.advancedtools.handle": "Handle:",
   "message.advancedtools.base": "Head:",
+  "message.advancedtools.random": "random",
 
   "item.advancedtools.rod": "Rod",
   "item.advancedtools.branch": "树枝",
