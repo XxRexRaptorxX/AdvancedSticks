@@ -10,36 +10,65 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 
 import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ToolUtils {
 
-    /** Returns the cleaned name of the handle type from a AS-Tool.
-     *
-     * @param item AS-Tool
-     * @return name
+    /**
+     *  Returns the cleaned name of the handle type from a Tool.
      */
     public static String getStickFromName(Item item) {
-        String name = BuiltInRegistries.ITEM.getKey(item).toString();
-        int prefix = References.MODID.length() + 1;
+        String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
-        if(name.contains("rod")) {
-            return name.substring(prefix, prefix + 1).toUpperCase() +
-                    name.substring(prefix + 1, name.indexOf("_"));
+        if  (BuiltInRegistries.ITEM.getKey(item).getNamespace().equals(ResourceLocation.DEFAULT_NAMESPACE)) {
+            return Component.translatable("item." + References.MODID + ".stick_wood").getString();
 
-        } else if (name.contains(References.MODID + ":enchanted_stick") || name.contains(References.MODID + ":advanced_stick")){
-            return name.substring(prefix, prefix + 1).toUpperCase() +
-                    name.substring(prefix + 1, name.indexOf("_")) + " " + Component.translatable("item." + ResourceLocation.DEFAULT_NAMESPACE + ".stick").getString();
         } else {
-            return name.substring(prefix, prefix + 1).toUpperCase() +
-                    name.substring(prefix + 1, name.indexOf("_")) + " " + Component.translatable("item." + References.MODID + ".rod").getString();
+            String handle = Objects.requireNonNull(getHandleAndBaseMaterialFromItem(name))[0];
+
+            if (isVanillaRod(handle)) {
+                return Component.translatable("item.minecraft." + handle + "_rod").getString();
+
+            } else {
+                return Component.translatable("item." + References.MODID + ".stick_" + handle).getString();
+            }
         }
+    }
+
+
+    public static String[] getHandleAndBaseMaterialFromItem(String toolName) {
+        Pattern pattern = Pattern.compile("([a-zA-Z0-9]+)_stick_([a-zA-Z0-9]+)_");
+        Matcher matcher = pattern.matcher(toolName);
+        if (matcher.find()) {
+            return new String[]{matcher.group(1), matcher.group(2)};
+        }
+
+        AdvancedTools.LOGGER.error("Invalid input: " + toolName);
+        return null;
+    }
+
+
+    public static String getBaseMaterialFromVanillaItem(String name) {
+        name = name.replace("wooden", "wood").replace("golden", "gold");
+
+        if (name.contains("_sword")) return name.replace("_sword", "");
+        if (name.contains("_pickaxe")) return name.replace("_pickaxe", "");
+        if (name.contains("_axe")) return name.replace("_axe", "");
+        if (name.contains("_shovel")) return name.replace("_shovel", "");
+        if (name.contains("hoe")) return name.replace("_hoe", "");
+
+        AdvancedTools.LOGGER.error("Invalid input: " + name);
+        return null;
     }
 
 

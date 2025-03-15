@@ -3,6 +3,7 @@ package xxrexraptorxx.advancedtools.utils;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,6 +11,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -182,15 +184,29 @@ public class Events {
 
             if (item instanceof PickaxeItem && name.contains("pickaxe") || item instanceof AxeItem && name.contains("axe") || item instanceof SwordItem && name.contains("sword")
                     || item instanceof ShovelItem && name.contains("shovel") || item instanceof HoeItem && name.contains("hoe")) {
-                event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
 
                 if (namespace.equals(References.MODID)) {
-                    event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                    if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                        event.getToolTip().add(2, ToolUtils.getToolStatDescription(ToolUtils.getHandleAndBaseMaterialFromItem(name)[0], ToolUtils.getHandleAndBaseMaterialFromItem(name)[1]));
+                    } else {
+                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                    }
+
+                } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
+                        if(Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                            event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
+                        } else {
+                            event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                        }
 
                 } else if (namespace.equals("bedrockminer")) {
+                    event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
                     event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
 
                 } else {
+                    event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
                     event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                 }
             }
