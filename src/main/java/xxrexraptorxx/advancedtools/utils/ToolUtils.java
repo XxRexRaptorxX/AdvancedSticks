@@ -3,6 +3,7 @@ package xxrexraptorxx.advancedtools.utils;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -539,6 +540,9 @@ public class ToolUtils {
     }
 
 
+    /**
+     *  Converts the mining block tags to the old mining level format
+     */
     public static int getMiningLevel(TagKey<Block> tag) {
         if (tag.equals(BlockTags.INCORRECT_FOR_WOODEN_TOOL) || tag.equals(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
             return 0;
@@ -559,5 +563,119 @@ public class ToolUtils {
             AdvancedTools.LOGGER.error("Unknown 'harvest'- block tag: " + tag);
             return 2;
         }
+    }
+
+
+    /**
+     *   Gives the color for the tool material stats depending on the strength
+     */
+    public static ChatFormatting getToolStatsFormatting(ToolMaterial material, ToolMaterialStatTypes type) {
+        ChatFormatting bad = ChatFormatting.DARK_RED;
+        ChatFormatting okay = ChatFormatting.RED;
+        ChatFormatting normal = ChatFormatting.YELLOW;
+        ChatFormatting good = ChatFormatting.DARK_GREEN;
+        ChatFormatting top = ChatFormatting.GREEN;
+
+        switch (type) {
+            case MINING_LEVEL:
+                if (ToolUtils.getMiningLevel(material.incorrectBlocksForDrops()) <= 0) return bad;
+                if (ToolUtils.getMiningLevel(material.incorrectBlocksForDrops()) == 1) return okay;
+                if (ToolUtils.getMiningLevel(material.incorrectBlocksForDrops()) == 2) return normal;
+                if (ToolUtils.getMiningLevel(material.incorrectBlocksForDrops()) == 3) return good;
+                return top;
+
+            case DURABILITY:
+                if (material.durability() < 200) return bad;
+                if (material.durability() < 600) return okay;
+                if (material.durability() < 2000) return normal;
+                if (material.durability() < 3000) return good;
+                return top;
+
+            case DAMAGE:
+                if (material.attackDamageBonus() < 1.5) return bad;
+                if (material.attackDamageBonus() < 2.5) return okay;
+                if (material.attackDamageBonus() < 3.5) return normal;
+                if (material.attackDamageBonus() < 4.5) return good;
+                return top;
+
+            case MINING_SPEED:
+                if (material.speed() < 2.5) return bad;
+                if (material.speed() < 4.0) return okay;
+                if (material.speed() < 5.5) return normal;
+                if (material.speed() < 7.0) return good;
+                return top;
+
+            case ENCHANTABILITY:
+                if (material.enchantmentValue() < 8) return bad;
+                if (material.enchantmentValue() < 15) return okay;
+                if (material.enchantmentValue() < 25) return normal;
+                if (material.enchantmentValue() < 32) return good;
+                return top;
+
+            case ATTACK_SPEED:
+                AdvancedTools.LOGGER.error("Not yet implemented!");
+                return normal;
+        }
+
+        AdvancedTools.LOGGER.error("Error with material: " + material);
+        return normal;
+    }
+
+
+    public static Component getItemDescription(String handle, String base) {
+        ToolMaterial material = ToolUtils.getTMfromStrings(handle, base);
+        String textSeparator = ": ";
+        String lineSeperator = "\n";
+
+        MutableComponent description = Component.translatable("message." + References.MODID + ".material_stats").append(textSeparator).withStyle(ChatFormatting.WHITE);
+        description.append(Component.literal(lineSeperator + lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".base").withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal(" " + capitalizeWords(base)).withStyle(ChatFormatting.YELLOW));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal(" " + capitalizeWords(handle)).withStyle(ChatFormatting.YELLOW));
+
+        description.append(Component.literal(lineSeperator + lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal("   " + ToolUtils.getMiningLevel(material.incorrectBlocksForDrops())).withStyle(getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal("      "  + material.durability()).withStyle(getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".mining_speed.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal("  " + material.speed()).withStyle(getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_SPEED)));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".damage.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal("         " + material.attackDamageBonus()).withStyle(getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(Component.translatable("message." + References.MODID + ".enchantability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal(" " + material.enchantmentValue()).withStyle(getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
+
+        return description;
+    }
+
+
+    public static String capitalizeWords(String string) {
+        if (string == null || string.isEmpty()) {
+            return string;
+        }
+
+        String[] words = string.split(" ");
+        StringBuilder capitalizedString = new StringBuilder();
+
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                capitalizedString.append(Character.toUpperCase(word.charAt(0)))
+                        .append(word.substring(1).toLowerCase())
+                        .append(" ");
+            }
+        }
+
+        return capitalizedString.toString().trim();
     }
 }

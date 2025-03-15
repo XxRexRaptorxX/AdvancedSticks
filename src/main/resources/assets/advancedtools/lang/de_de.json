@@ -64,13 +64,14 @@
   "advancements.advancedtools.hoe_advanced.title": "Übertrieben?",
   "advancements.advancedtools.hoe_advanced.description": "Crafte eine Diamant Hacke mit verbessertem Stab",
 
-  "message.advancedtools.material_stats": "Material Werte",
+  "message.advancedtools.material_stats": "MATERIAL WERTE",
   "message.advancedtools.mining_level.jei_desc": "Mining Level",
   "message.advancedtools.durability.jei_desc": "Durability",
   "message.advancedtools.mining_speed.jei_desc": "Mining Speed",
   "message.advancedtools.damage.jei_desc": "Damage",
   "message.advancedtools.enchantability.jei_desc": "Enchantability",
   "message.advancedtools.handle": "Griff:",
+  "message.advancedtools.base": "Kopf:",
 
   "item.advancedtools.rod": "Stab",
   "item.advancedtools.branch": "Ast",

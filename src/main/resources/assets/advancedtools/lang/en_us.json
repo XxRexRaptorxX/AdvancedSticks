@@ -64,13 +64,14 @@
   "advancements.advancedtools.hoe_advanced.title": "Over the top?",
   "advancements.advancedtools.hoe_advanced.description": "Craft a diamond hoe with a advanced stick",
 
-  "message.advancedtools.material_stats": "Material Stats",
+  "message.advancedtools.material_stats": "MATERIAL STATS",
   "message.advancedtools.mining_level.jei_desc": "Mining Level",
   "message.advancedtools.durability.jei_desc": "Durability",
   "message.advancedtools.mining_speed.jei_desc": "Mining Speed",
   "message.advancedtools.damage.jei_desc": "Damage",
   "message.advancedtools.enchantability.jei_desc": "Enchantability",
   "message.advancedtools.handle": "Handle:",
+  "message.advancedtools.base": "Head:",
 
   "item.advancedtools.rod": "Rod",
   "item.advancedtools.branch": "Branch",
