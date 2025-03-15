@@ -74,7 +74,7 @@
   "message.advancedtools.hit_effect.jei_desc": "Schlag-Effekt",
   "message.advancedtools.handle": "Griff:",
   "message.advancedtools.base": "Kopf:",
-  "message.advancedtools.random": "zufällig",
+  "message.advancedtools.random": "~",
 
   "item.advancedtools.rod": "Stab",
   "item.advancedtools.branch": "Ast",

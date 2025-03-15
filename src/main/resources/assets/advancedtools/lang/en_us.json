@@ -74,7 +74,7 @@
   "message.advancedtools.hit_effect.jei_desc": "Hit Effect",
   "message.advancedtools.handle": "Handle:",
   "message.advancedtools.base": "Head:",
-  "message.advancedtools.random": "random",
+  "message.advancedtools.random": "~",
 
   "item.advancedtools.rod": "Rod",
   "item.advancedtools.branch": "Branch",
