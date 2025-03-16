@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.items.*;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.ToolMaterials;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 public class ModItems {
@@ -33,6 +34,12 @@ public class ModItems {
             "platinum", "lead", "cobalt", "tin", "zinc", "certusquartz", "breeze", "electrum", "lumium", "constantan", "topaz",
             "peridot", "brass", "bronze", "gold", "blaze", "allthemodium", "signalum", "copper", "cinnabar", "ruby", "fluorite",
             "unobtainium", "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced"
+            //"adamant", "advancedalloy", "antimony", "apatite", "aquite", "atomicalloy", "basalz", "bedrock", "beryllium", "biosteel",
+            //"blastproofalloy", "blitz", "blizz", "cadmium", "wither", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
+            //"darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
+            //"falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
+            //"prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
+            //"superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal"
     };
 
 
@@ -44,11 +51,11 @@ public class ModItems {
             for (String base : BASE_MATERIALS) {
                 //AdvancedSticks.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolUtils.getTMfromStrings(handle, base));
 
-                ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ToolUtils.getTMfromStrings(handle, base), 3, -4.0f + ToolUtils.getSpeed(base, "sword"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_pickaxe", props -> new CustomPickaxeItem(ToolUtils.getTMfromStrings(handle, base), 1, -4.0f + ToolUtils.getSpeed(base, "pickaxe"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_axe", props -> new CustomAxeItem(ToolUtils.getTMfromStrings(handle, base), 6, -4.0f + ToolUtils.getSpeed(base, "axe"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_shovel", props -> new CustomShovelItem(ToolUtils.getTMfromStrings(handle, base), 1.5f, -4.0f + ToolUtils.getSpeed(base, "shovel"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_hoe", props -> new CustomHoeItem(ToolUtils.getTMfromStrings(handle, base), 0, -4.0f + ToolUtils.getSpeed(base, "hoe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ToolMaterials.getMaterial(handle, base), 3, -4.0f + ToolMaterials.getSpeed(base, "sword"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_pickaxe", props -> new CustomPickaxeItem(ToolMaterials.getMaterial(handle, base), 1, -4.0f + ToolMaterials.getSpeed(base, "pickaxe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_axe", props -> new CustomAxeItem(ToolMaterials.getMaterial(handle, base), 6, -4.0f + ToolMaterials.getSpeed(base, "axe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_shovel", props -> new CustomShovelItem(ToolMaterials.getMaterial(handle, base), 1.5f, -4.0f + ToolMaterials.getSpeed(base, "shovel"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_hoe", props -> new CustomHoeItem(ToolMaterials.getMaterial(handle, base), 0, -4.0f + ToolMaterials.getSpeed(base, "hoe"), props));
             }
         }
     }

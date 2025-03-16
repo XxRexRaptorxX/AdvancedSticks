@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import xxrexraptorxx.advancedtools.registry.CreativeModeTabs;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
+import xxrexraptorxx.advancedtools.utils.ToolMaterials;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
@@ -20,6 +21,8 @@ public class AdvancedTools {
 
 
     public AdvancedTools(IEventBus bus, ModContainer container) {
+        ToolMaterials.registerToolMaterials();
+
         Config.init(container);
         ModItems.init(bus);
         CreativeModeTabs.init(bus);
