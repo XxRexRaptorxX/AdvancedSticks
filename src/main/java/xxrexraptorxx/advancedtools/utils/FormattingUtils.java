@@ -94,8 +94,8 @@ public class FormattingUtils {
         ChatFormatting bad = ChatFormatting.DARK_RED;
         ChatFormatting okay = ChatFormatting.RED;
         ChatFormatting normal = ChatFormatting.YELLOW;
-        ChatFormatting good = ChatFormatting.DARK_GREEN;
-        ChatFormatting top = ChatFormatting.GREEN;
+        ChatFormatting good = ChatFormatting.GREEN;
+        ChatFormatting top = ChatFormatting.DARK_GREEN;
 
         switch (type) {
             case MINING_LEVEL:
