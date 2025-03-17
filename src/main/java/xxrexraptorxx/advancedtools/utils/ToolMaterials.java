@@ -452,6 +452,9 @@ public class ToolMaterials {
     }
 
 
+    /**
+     *  Generate the ToolMaterials for each base material
+     */
     public static void addMaterial(String name, int uses, float speed, float damage, int enchantability) {
         addWoodMaterial(name, uses, speed, damage, enchantability);
         addStoneMaterial(name, uses, speed, damage, enchantability);

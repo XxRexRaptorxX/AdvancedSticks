@@ -33,13 +33,16 @@ public class ModItems {
             "netherite", "steel", "iron", "titanium", "iridium", "bone", "invar", "end", "nickel", "quartz", "osmium", "aluminum",
             "platinum", "lead", "cobalt", "tin", "zinc", "certusquartz", "breeze", "electrum", "lumium", "constantan", "topaz",
             "peridot", "brass", "bronze", "gold", "blaze", "allthemodium", "signalum", "copper", "cinnabar", "ruby", "fluorite",
-            "unobtainium", "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced"
-            //"adamant", "advancedalloy", "antimony", "apatite", "aquite", "atomicalloy", "basalz", "bedrock", "beryllium", "biosteel",
-            //"blastproofalloy", "blitz", "blizz", "cadmium", "wither", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
-            //"darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
-            //"falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
-            //"prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
-            //"superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal"
+            "unobtainium", "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced",
+
+            "adamant", "advancedalloy", "antimony", "apatite", "aquite", "atomicalloy", "basalz", "bedrock", "beryllium", "biosteel",
+            "blastproofalloy", "blitz", "blizz", "cadmium", "wither", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
+            "darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
+            "falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
+            "prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
+            "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "bloodiron", "bluronium",
+            "cyanite", "enchantedbloodiron", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
+            "netheritegold", "netheriteiron", "ridiculite", "yellorium"
     };
 
 
