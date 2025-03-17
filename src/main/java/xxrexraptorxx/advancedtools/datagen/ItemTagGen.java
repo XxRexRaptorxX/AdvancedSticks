@@ -26,8 +26,8 @@ public class ItemTagGen extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
-
             TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
             TagKey<Item> stickTag = ModTags.createItemTag("c", "sticks/" + ToolUtils.transformMaterialNames(handle));
 
@@ -37,6 +37,9 @@ public class ItemTagGen extends ItemTagsProvider {
             tag(ModTags.createItemTag("c", "rods")).addTags(rodTag);
             tag(ModTags.createItemTag("c", "sticks")).addTags(stickTag);
 
+            if (handle.contains("gold")) {
+                tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
+            }
 
             //tools
             for (String base : ModItems.BASE_MATERIALS) {
@@ -45,6 +48,15 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.AXES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe")));
                 tag(ItemTags.SHOVELS).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
                 tag(ItemTags.HOES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
+
+
+                if (base.contains("gold") || handle.contains("gold")) {
+                    tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword")));
+                    tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe")));
+                    tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe")));
+                    tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
+                    tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
+                }
             }
         }
 
@@ -65,5 +77,6 @@ public class ItemTagGen extends ItemTagsProvider {
                 ModItems.DIAMOND_BOW.asItem(),
                 ModItems.NETHERITE_BOW.asItem()
         );
+
     }
 }
