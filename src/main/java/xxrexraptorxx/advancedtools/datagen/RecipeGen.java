@@ -15,6 +15,7 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -32,50 +33,10 @@ public class RecipeGen extends RecipeProvider {
         toolRecyclingRecipes("shovel");
         toolRecyclingRecipes("hoe");
 
-        generateToolRecipes(ModTags.BONE_STICKS);
-        generateToolRecipes(ModTags.IRON_STICKS);
-        generateToolRecipes(ModTags.GOLD_STICKS);
-        generateToolRecipes(ModTags.COPPER_STICKS);
-        generateToolRecipes(ModTags.EMERALD_STICKS);
-        generateToolRecipes(ModTags.AMETHYST_STICKS);
-        generateToolRecipes(ModTags.DIAMOND_STICKS);
-        generateToolRecipes(ModTags.NETHERITE_STICKS);
-        generateToolRecipes(ModTags.ENCHANTED_STICKS);
-        generateToolRecipes(ModTags.ADVANCED_STICKS);
-        generateToolRecipes(ModTags.END_STICKS);
-        generateToolRecipes(ModTags.BLAZE_STICKS);
-        generateToolRecipes(ModTags.BREEZE_STICKS);
+        for (String handle : ModItems.HANDLE_MATERIALS) {
+            generateToolRecipes(ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle)));
+        }
 
-        generateToolRecipes(ModTags.ALUMINUM_STICKS);
-        generateToolRecipes(ModTags.ELECTRUM_STICKS);
-        generateToolRecipes(ModTags.TIN_STICKS);
-        generateToolRecipes(ModTags.BRASS_STICKS);
-        generateToolRecipes(ModTags.BRONZE_STICKS);
-        generateToolRecipes(ModTags.CONSTANTAN_STICKS);
-        generateToolRecipes(ModTags.NICKEL_STICKS);
-        generateToolRecipes(ModTags.INVAR_STICKS);
-        generateToolRecipes(ModTags.STEEL_STICKS);
-        generateToolRecipes(ModTags.LUMIUM_STICKS);
-        generateToolRecipes(ModTags.IRIDIUM_STICKS);
-        generateToolRecipes(ModTags.OSMIUM_STICKS);
-        generateToolRecipes(ModTags.PLATINUM_STICKS);
-        generateToolRecipes(ModTags.ENDERIUM_STICKS);
-        generateToolRecipes(ModTags.URANIUM_STICKS);
-        generateToolRecipes(ModTags.SIGNALUM_STICKS);
-        generateToolRecipes(ModTags.LEAD_STICKS);
-        generateToolRecipes(ModTags.RUBY_STICKS);
-        generateToolRecipes(ModTags.SAPPHIRE_STICKS);
-        generateToolRecipes(ModTags.TOPAZ_STICKS);
-        generateToolRecipes(ModTags.PERIDOT_STICKS);
-        generateToolRecipes(ModTags.CINNABAR_STICKS);
-        generateToolRecipes(ModTags.FLUORITE_STICKS);
-        generateToolRecipes(ModTags.VIBRANIUM_STICKS);
-        generateToolRecipes(ModTags.UNOBTAINIUM_STICKS);
-        generateToolRecipes(ModTags.QUARTZ_STICKS);
-        generateToolRecipes(ModTags.CERTUS_QUARTZ_STICKS);
-        generateToolRecipes(ModTags.ALLTHEMODIUM_STICKS);
-        generateToolRecipes(ModTags.COBALT_STICKS);
-        generateToolRecipes(ModTags.TITANIUM_STICKS);
     }
 
     public void generateToolRecipes(TagKey<Item> handle) {

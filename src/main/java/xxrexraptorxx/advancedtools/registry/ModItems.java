@@ -67,4 +67,5 @@ public class ModItems {
     public static ResourceKey<Item> itemId(String name) {
         return ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(References.MODID, name));
     }
+
 }
