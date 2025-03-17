@@ -36,11 +36,11 @@ public class ModItems {
             "unobtainium", "enchanted", "amethyst", "sapphire", "enderium", "diamond", "emerald", "vibranium", "uranium", "advanced",
 
             "adamant", "advancedalloy", "antimony", "apatite", "aquite", "atomicalloy", "basalz", "bedrock", "beryllium", "biosteel",
-            "blastproofalloy", "blitz", "blizz", "cadmium", "wither", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
+            "blastproofalloy", "blitz", "blizz", "cadmium", "witherbone", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
             "darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
             "falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
             "prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
-            "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "bloodiron", "bluronium",
+            "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "bloodiron", "blutonium",
             "cyanite", "enchantedbloodiron", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
             "netheritegold", "netheriteiron", "ridiculite", "yellorium"
     };

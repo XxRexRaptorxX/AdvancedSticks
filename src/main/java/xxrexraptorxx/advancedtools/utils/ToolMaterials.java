@@ -308,10 +308,10 @@ public class ToolMaterials {
     private static final float ENERGITE_DMG    = 2.0f;
     private static final int   ENERGITE_ENCH   = 22;
 
-    private static final int   FLUIX_CRYSTAL_USES = 50;
-    private static final float FLUIX_CRYSTAL_SPEED= 6.0f;
-    private static final float FLUIX_CRYSTAL_DMG  = 0.5f;
-    private static final int   FLUIX_CRYSTAL_ENCH = 30;
+    private static final int   FLUIX_USES = 50;
+    private static final float FLUIX_SPEED= 6.0f;
+    private static final float FLUIX_DMG  = 0.5f;
+    private static final int   FLUIX_ENCH = 30;
 
     private static final int   CARBON_USES     = 1000;
     private static final float CARBON_SPEED    = 5.5f;
@@ -338,10 +338,10 @@ public class ToolMaterials {
     private static final float MANASTEEL_DMG   = 2.0f;
     private static final int   MANASTEEL_ENCH  = 30;
 
-    private static final int   GRAPHIT_USES    = 300;
-    private static final float GRAPHIT_SPEED   = 5.0f;
-    private static final float GRAPHIT_DMG     = 1.8f;
-    private static final int   GRAPHIT_ENCH    = 12;
+    private static final int   GRAPHITE_USES    = 300;
+    private static final float GRAPHITE_SPEED   = 5.0f;
+    private static final float GRAPHITE_DMG     = 1.8f;
+    private static final int   GRAPHITE_ENCH    = 12;
 
     private static final int   HDPE_USES       = 80;
     private static final float HDPE_SPEED      = 6.0f;
@@ -353,6 +353,225 @@ public class ToolMaterials {
     private static final float TUNGSTEN_DMG    = 3.0f;
     private static final int   TUNGSTEN_ENCH   = 5;
 
+    private static final int   ADVANCED_ALLOY_USES  = 800;
+    private static final float ADVANCED_ALLOY_SPEED = 4.0f;
+    private static final float ADVANCED_ALLOY_DMG   = 2.0f;
+    private static final int   ADVANCED_ALLOY_ENCH  = 10;
+
+    private static final int   ATOMIC_ALLOY_USES  = 2000;
+    private static final float ATOMIC_ALLOY_SPEED = 6.0f;
+    private static final float ATOMIC_ALLOY_DMG   = 3.5f;
+    private static final int   ATOMIC_ALLOY_ENCH  = 14;
+
+    private static final int   INFUSED_ALLOY_USES  = 1800;
+    private static final float INFUSED_ALLOY_SPEED = 5.5f;
+    private static final float INFUSED_ALLOY_DMG   = 3.2f;
+    private static final int   INFUSED_ALLOY_ENCH  = 13;
+
+    private static final int   REINFORCED_ALLOY_USES  = 2500;
+    private static final float REINFORCED_ALLOY_SPEED = 5.8f;
+    private static final float REINFORCED_ALLOY_DMG   = 3.7f;
+    private static final int   REINFORCED_ALLOY_ENCH  = 12;
+
+    private static final int   BLASTPROOF_ALLOY_USES  = 3000;
+    private static final float BLASTPROOF_ALLOY_SPEED = 4.5f;
+    private static final float BLASTPROOF_ALLOY_DMG   = 4.0f;
+    private static final int   BLASTPROOF_ALLOY_ENCH  = 8;
+
+    private static final int   SUPERCONDUCTOR_USES  = 1800;
+    private static final float SUPERCONDUCTOR_SPEED = 7.5f;
+    private static final float SUPERCONDUCTOR_DMG   = 2.8f;
+    private static final int   SUPERCONDUCTOR_ENCH  = 25;
+
+    private static final int   ELEMENTIUM_USES  = 900;
+    private static final float ELEMENTIUM_SPEED = 5.0f;
+    private static final float ELEMENTIUM_DMG   = 2.5f;
+    private static final int   ELEMENTIUM_ENCH  = 20;
+
+    private static final int   VENTIUM_USES  = 1200;
+    private static final float VENTIUM_SPEED = 5.6f;
+    private static final float VENTIUM_DMG   = 2.7f;
+    private static final int   VENTIUM_ENCH  = 19;
+
+    private static final int   ZANITE_USES  = 700;
+    private static final float ZANITE_SPEED = 4.5f;
+    private static final float ZANITE_DMG   = 1.8f;
+    private static final int   ZANITE_ENCH  = 15;
+
+    private static final int   ANTIMONY_USES  = 150;
+    private static final float ANTIMONY_SPEED = 3.5f;
+    private static final float ANTIMONY_DMG   = 1.2f;
+    private static final int   ANTIMONY_ENCH  = 7;
+
+    private static final int   BERYLLIUM_USES  = 180;
+    private static final float BERYLLIUM_SPEED = 3.8f;
+    private static final float BERYLLIUM_DMG   = 1.4f;
+    private static final int   BERYLLIUM_ENCH  = 8;
+
+    private static final int   MANGANESE_USES  = 300;
+    private static final float MANGANESE_SPEED = 3.0f;
+    private static final float MANGANESE_DMG   = 1.6f;
+    private static final int   MANGANESE_ENCH  = 6;
+
+    private static final int   CADMIUM_USES  = 220;
+    private static final float CADMIUM_SPEED = 3.2f;
+    private static final float CADMIUM_DMG   = 1.3f;
+    private static final int   CADMIUM_ENCH  = 7;
+
+    private static final int   THORIUM_USES  = 2000;
+    private static final float THORIUM_SPEED = 4.0f;
+    private static final float THORIUM_DMG   = 3.8f;
+    private static final int   THORIUM_ENCH  = 5;
+
+    private static final int   PLUTONIUM_USES  = 2500;
+    private static final float PLUTONIUM_SPEED = 3.5f;
+    private static final float PLUTONIUM_DMG   = 4.5f;
+    private static final int   PLUTONIUM_ENCH  = 3;
+
+    private static final int   CYANITE_USES  = 1500;
+    private static final float CYANITE_SPEED = 4.2f;
+    private static final float CYANITE_DMG   = 2.8f;
+    private static final int   CYANITE_ENCH  = 9;
+
+    private static final int   YELLORIUM_USES  = 1800;
+    private static final float YELLORIUM_SPEED = 4.4f;
+    private static final float YELLORIUM_DMG   = 3.2f;
+    private static final int   YELLORIUM_ENCH  = 8;
+
+    private static final int   LUDICRITE_USES  = 2200;
+    private static final float LUDICRITE_SPEED = 4.8f;
+    private static final float LUDICRITE_DMG   = 3.5f;
+    private static final int   LUDICRITE_ENCH  = 12;
+
+    private static final int   DARKSTEEL_USES  = 1800;
+    private static final float DARKSTEEL_SPEED = 3.5f;
+    private static final float DARKSTEEL_DMG   = 3.0f;
+    private static final int   DARKSTEEL_ENCH  = 10;
+
+    private static final int   ENDSTEEL_USES  = 1700;
+    private static final float ENDSTEEL_SPEED = 4.0f;
+    private static final float ENDSTEEL_DMG   = 3.2f;
+    private static final int   ENDSTEEL_ENCH  = 11;
+
+    private static final int   KANTHAL_USES  = 800;
+    private static final float KANTHAL_SPEED = 5.2f;
+    private static final float KANTHAL_DMG   = 2.2f;
+    private static final int   KANTHAL_ENCH  = 14;
+
+    private static final int   RIDICULITE_USES  = 5000;
+    private static final float RIDICULITE_SPEED = 6.5f;
+    private static final float RIDICULITE_DMG   = 5.0f;
+    private static final int   RIDICULITE_ENCH  = 30;
+
+    private static final int   APATITE_USES  = 500;
+    private static final float APATITE_SPEED = 4.0f;
+    private static final float APATITE_DMG   = 1.5f;
+    private static final int   APATITE_ENCH  = 10;
+
+    private static final int   AQUITE_USES  = 750;
+    private static final float AQUITE_SPEED = 4.5f;
+    private static final float AQUITE_DMG   = 2.0f;
+    private static final int   AQUITE_ENCH  = 12;
+
+    private static final int   BASALZ_USES  = 150;
+    private static final float BASALZ_SPEED = 5.0f;
+    private static final float BASALZ_DMG   = 1.8f;
+    private static final int   BASALZ_ENCH  = 14;
+
+    private static final int   BLITZ_USES  = 160;
+    private static final float BLITZ_SPEED = 5.5f;
+    private static final float BLITZ_DMG   = 1.9f;
+    private static final int   BLITZ_ENCH  = 15;
+
+    private static final int   BLIZZ_USES  = 140;
+    private static final float BLIZZ_SPEED = 5.2f;
+    private static final float BLIZZ_DMG   = 1.7f;
+    private static final int   BLIZZ_ENCH  = 14;
+
+    private static final int   CHAROITE_USES  = 1100;
+    private static final float CHAROITE_SPEED = 4.6f;
+    private static final float CHAROITE_DMG   = 2.3f;
+    private static final int   CHAROITE_ENCH  = 17;
+
+    private static final int   CUPRONICKEL_USES  = 900;
+    private static final float CUPRONICKEL_SPEED = 4.2f;
+    private static final float CUPRONICKEL_DMG   = 2.0f;
+    private static final int   CUPRONICKEL_ENCH  = 10;
+
+    private static final int   DIOPSIDE_USES  = 800;
+    private static final float DIOPSIDE_SPEED = 4.4f;
+    private static final float DIOPSIDE_DMG   = 2.2f;
+    private static final int   DIOPSIDE_ENCH  = 12;
+
+    private static final int   ENERGETIC_ALLOY_USES  = 1300;
+    private static final float ENERGETIC_ALLOY_SPEED = 5.8f;
+    private static final float ENERGETIC_ALLOY_DMG   = 3.0f;
+    private static final int   ENERGETIC_ALLOY_ENCH  = 18;
+
+    private static final int   ENERGIZED_COPPER_USES  = 1400;
+    private static final float ENERGIZED_COPPER_SPEED = 5.5f;
+    private static final float ENERGIZED_COPPER_DMG   = 2.8f;
+    private static final int   ENERGIZED_COPPER_ENCH  = 16;
+
+    private static final int   ENERGIZED_GOLD_USES  = 900;
+    private static final float ENERGIZED_GOLD_SPEED = 6.5f;
+    private static final float ENERGIZED_GOLD_DMG   = 2.5f;
+    private static final int   ENERGIZED_GOLD_ENCH  = 22;
+
+    private static final int   FALSITE_USES  = 3000;
+    private static final float FALSITE_SPEED = 1.0f;
+    private static final float FALSITE_DMG   = 1.0f;
+    private static final int   FALSITE_ENCH  = 14;
+
+    private static final int   PRISMARINE_USES  = 700;
+    private static final float PRISMARINE_SPEED = 4.3f;
+    private static final float PRISMARINE_DMG   = 2.1f;
+    private static final int   PRISMARINE_ENCH  = 13;
+
+    private static final int   SILICON_USES  = 600;
+    private static final float SILICON_SPEED = 3.5f;
+    private static final float SILICON_DMG   = 1.8f;
+    private static final int   SILICON_ENCH  = 20;
+
+    private static final int   SOLARIUM_USES  = 1500;
+    private static final float SOLARIUM_SPEED = 5.6f;
+    private static final float SOLARIUM_DMG   = 3.3f;
+    private static final int   SOLARIUM_ENCH  = 18;
+
+    private static final int   STAINLESS_STEEL_USES  = 1400;
+    private static final float STAINLESS_STEEL_SPEED = 4.6f;
+    private static final float STAINLESS_STEEL_DMG   = 3.0f;
+    private static final int   STAINLESS_STEEL_ENCH  = 12;
+
+    private static final int   VIBRANT_ALLOY_USES  = 1800;
+    private static final float VIBRANT_ALLOY_SPEED = 6.2f;
+    private static final float VIBRANT_ALLOY_DMG   = 3.7f;
+    private static final int   VIBRANT_ALLOY_ENCH  = 22;
+
+    private static final int   OPAL_USES  = 1200;
+    private static final float OPAL_SPEED = 4.5f;
+    private static final float OPAL_DMG   = 2.8f;
+    private static final int   OPAL_ENCH  = 16;
+
+    private static final int   HORIZONITE_USES  = 1400;
+    private static final float HORIZONITE_SPEED = 5.8f;
+    private static final float HORIZONITE_DMG   = 3.4f;
+    private static final int   HORIZONITE_ENCH  = 19;
+
+    private static final int   PULSATING_ALLOY_USES  = 1700;
+    private static final float PULSATING_ALLOY_SPEED = 6.0f;
+    private static final float PULSATING_ALLOY_DMG   = 3.2f;
+    private static final int   PULSATING_ALLOY_ENCH  = 15;
+
+    private static final int   PYROPE_USES  = 900;
+    private static final float PYROPE_SPEED = 5.2f;
+    private static final float PYROPE_DMG   = 2.8f;
+    private static final int   PYROPE_ENCH  = 16;
+
+    private static final int   REDSTONE_USES  = 600;
+    private static final float REDSTONE_SPEED = 7.0f;
+    private static final float REDSTONE_DMG   = 1.5f;
+    private static final int   REDSTONE_ENCH  = 25;
 
     /** SPEED **/
     public static final float WOOD_SWORD_SPEED = 1.6f;
@@ -390,6 +609,66 @@ public class ToolMaterials {
     public static final float NETHERITE_AXE_SPEED = 1;
     public static final float NETHERITE_SHOVEL_SPEED = 1;
     public static final float NETHERITE_HOE_SPEED = 4;
+
+    private static final int   CERTUS_QUARTZ_CRYSTAL_USES  = 500;
+    private static final float CERTUS_QUARTZ_CRYSTAL_SPEED = 4.8f;
+    private static final float CERTUS_QUARTZ_CRYSTAL_DMG   = 1.8f;
+    private static final int   CERTUS_QUARTZ_CRYSTAL_ENCH  = 14;
+
+    private static final int   ANGLESITE_USES  = 850;
+    private static final float ANGLESITE_SPEED = 5.2f;
+    private static final float ANGLESITE_DMG   = 2.6f;
+    private static final int   ANGLESITE_ENCH  = 16;
+
+    private static final int   BENITOITE_USES  = 900;
+    private static final float BENITOITE_SPEED = 5.5f;
+    private static final float BENITOITE_DMG   = 2.9f;
+    private static final int   BENITOITE_ENCH  = 18;
+
+    private static final int   BLOOD_IRON_USES  = 1400;
+    private static final float BLOOD_IRON_SPEED = 4.2f;
+    private static final float BLOOD_IRON_DMG   = 3.0f;
+    private static final int   BLOOD_IRON_ENCH  = 15;
+
+    private static final int   BLUTONIUM_USES  = 2000;
+    private static final float BLUTONIUM_SPEED = 5.8f;
+    private static final float BLUTONIUM_DMG   = 3.4f;
+    private static final int   BLUTONIUM_ENCH  = 19;
+
+    private static final int   ENCHANTED_BLOOD_IRON_USES  = 1800;
+    private static final float ENCHANTED_BLOOD_IRON_SPEED = 5.0f;
+    private static final float ENCHANTED_BLOOD_IRON_DMG   = 3.5f;
+    private static final int   ENCHANTED_BLOOD_IRON_ENCH  = 22;
+
+    private static final int   INSANITE_USES  = 3000;
+    private static final float INSANITE_SPEED = 7.5f;
+    private static final float INSANITE_DMG   = 4.5f;
+    private static final int   INSANITE_ENCH  = 25;
+
+    private static final int   MAGENTITE_USES  = 1600;
+    private static final float MAGENTITE_SPEED = 5.3f;
+    private static final float MAGENTITE_DMG   = 3.2f;
+    private static final int   MAGENTITE_ENCH  = 17;
+
+    private static final int   NETHERITE_DIAMOND_USES  = 3500;
+    private static final float NETHERITE_DIAMOND_SPEED = 5.2f;
+    private static final float NETHERITE_DIAMOND_DMG   = 4.0f;
+    private static final int   NETHERITE_DIAMOND_ENCH  = 10;
+
+    private static final int   NETHERITE_EMERALD_USES  = 3300;
+    private static final float NETHERITE_EMERALD_SPEED = 5.0f;
+    private static final float NETHERITE_EMERALD_DMG   = 3.8f;
+    private static final int   NETHERITE_EMERALD_ENCH  = 12;
+
+    private static final int   NETHERITE_GOLD_USES  = 3100;
+    private static final float NETHERITE_GOLD_SPEED = 6.5f;
+    private static final float NETHERITE_GOLD_DMG   = 3.5f;
+    private static final int   NETHERITE_GOLD_ENCH  = 20;
+
+    private static final int   NETHERITE_IRON_USES  = 3200;
+    private static final float NETHERITE_IRON_SPEED = 5.5f;
+    private static final float NETHERITE_IRON_DMG   = 3.6f;
+    private static final int   NETHERITE_IRON_ENCH  = 15;
 
 
     public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
@@ -449,6 +728,76 @@ public class ToolMaterials {
         addMaterial("cobalt", COBALT_USES, COBALT_SPEED, COBALT_DMG, COBALT_ENCH);
         addMaterial("titanium", TITANIUM_USES, TITANIUM_SPEED, TITANIUM_DMG, TITANIUM_ENCH);
         addMaterial("zinc", ZINC_USES, ZINC_SPEED, ZINC_DMG, ZINC_ENCH);
+        addMaterial("adamant", ADAMANT_USES, ADAMANT_SPEED, ADAMANT_DMG, ADAMANT_ENCH);
+        addMaterial("advancedalloy", ADVANCED_ALLOY_USES, ADVANCED_ALLOY_SPEED, ADVANCED_ALLOY_DMG, ADVANCED_ALLOY_ENCH);
+        addMaterial("antimony", ANTIMONY_USES, ANTIMONY_SPEED, ANTIMONY_DMG, ANTIMONY_ENCH);
+        addMaterial("apatite", APATITE_USES, APATITE_SPEED, APATITE_DMG, APATITE_ENCH);
+        addMaterial("aquite", AQUITE_USES, AQUITE_SPEED, AQUITE_DMG, AQUITE_ENCH);
+        addMaterial("atomicalloy", ATOMIC_ALLOY_USES, ATOMIC_ALLOY_SPEED, ATOMIC_ALLOY_DMG, ATOMIC_ALLOY_ENCH);
+        addMaterial("basalz", BASALZ_USES, BASALZ_SPEED, BASALZ_DMG, BASALZ_ENCH);
+        addMaterial("bedrock", BEDROCK_USES, BEDROCK_SPEED, BEDROCK_DMG, BEDROCK_ENCH);
+        addMaterial("beryllium", BERYLLIUM_USES, BERYLLIUM_SPEED, BERYLLIUM_DMG, BERYLLIUM_ENCH);
+        addMaterial("biosteel", BIOSTEEL_USES, BIOSTEEL_SPEED, BIOSTEEL_DMG, BIOSTEEL_ENCH);
+        addMaterial("blastproofalloy", BLASTPROOF_ALLOY_USES, BLASTPROOF_ALLOY_SPEED, BLASTPROOF_ALLOY_DMG, BLASTPROOF_ALLOY_ENCH);
+        addMaterial("blitz", BLITZ_USES, BLITZ_SPEED, BLITZ_DMG, BLITZ_ENCH);
+        addMaterial("blizz", BLIZZ_USES, BLIZZ_SPEED, BLIZZ_DMG, BLIZZ_ENCH);
+        addMaterial("cadmium", CADMIUM_USES, CADMIUM_SPEED, CADMIUM_DMG, CADMIUM_ENCH);
+        addMaterial("thorium", THORIUM_USES, THORIUM_SPEED, THORIUM_DMG, THORIUM_ENCH);
+        addMaterial("carbon", CARBON_USES, CARBON_SPEED, CARBON_DMG, CARBON_ENCH);
+        addMaterial("certusquartzcrystal", CERTUS_QUARTZ_CRYSTAL_USES, CERTUS_QUARTZ_CRYSTAL_SPEED, CERTUS_QUARTZ_CRYSTAL_DMG, CERTUS_QUARTZ_CRYSTAL_ENCH);
+        addMaterial("charoite", CHAROITE_USES, CHAROITE_SPEED, CHAROITE_DMG, CHAROITE_ENCH);
+        addMaterial("cupronickel", CUPRONICKEL_USES, CUPRONICKEL_SPEED, CUPRONICKEL_DMG, CUPRONICKEL_ENCH);
+        addMaterial("darksteel", DARKSTEEL_USES, DARKSTEEL_SPEED, DARKSTEEL_DMG, DARKSTEEL_ENCH);
+        addMaterial("duratium", DURATIUM_USES, DURATIUM_SPEED, DURATIUM_DMG, DURATIUM_ENCH);
+        addMaterial("diopside", DIOPSIDE_USES, DIOPSIDE_SPEED, DIOPSIDE_DMG, DIOPSIDE_ENCH);
+        addMaterial("elementium", ELEMENTIUM_USES, ELEMENTIUM_SPEED, ELEMENTIUM_DMG, ELEMENTIUM_ENCH);
+        addMaterial("endsteel", ENDSTEEL_USES, ENDSTEEL_SPEED, ENDSTEEL_DMG, ENDSTEEL_ENCH);
+        addMaterial("energeticalloy", ENERGETIC_ALLOY_USES, ENERGETIC_ALLOY_SPEED, ENERGETIC_ALLOY_DMG, ENERGETIC_ALLOY_ENCH);
+        addMaterial("energite", ENERGITE_USES, ENERGITE_SPEED, ENERGITE_DMG, ENERGITE_ENCH);
+        addMaterial("energizedcopper", ENERGIZED_COPPER_USES, ENERGIZED_COPPER_SPEED, ENERGIZED_COPPER_DMG, ENERGIZED_COPPER_ENCH);
+        addMaterial("energizedgold", ENERGIZED_GOLD_USES, ENERGIZED_GOLD_SPEED, ENERGIZED_GOLD_DMG, ENERGIZED_GOLD_ENCH);
+        addMaterial("falsite", FALSITE_USES, FALSITE_SPEED, FALSITE_DMG, FALSITE_ENCH);
+        addMaterial("fluix", FLUIX_USES, FLUIX_SPEED, FLUIX_DMG, FLUIX_ENCH);
+        addMaterial("hdpe", HDPE_USES, HDPE_SPEED, HDPE_DMG, HDPE_ENCH);
+        addMaterial("horizonite", HORIZONITE_USES, HORIZONITE_SPEED, HORIZONITE_DMG, HORIZONITE_ENCH);
+        addMaterial("infusedalloy", INFUSED_ALLOY_USES, INFUSED_ALLOY_SPEED, INFUSED_ALLOY_DMG, INFUSED_ALLOY_ENCH);
+        addMaterial("kanthal", KANTHAL_USES, KANTHAL_SPEED, KANTHAL_DMG, KANTHAL_ENCH);
+        addMaterial("manasteel", MANASTEEL_USES, MANASTEEL_SPEED, MANASTEEL_DMG, MANASTEEL_ENCH);
+        addMaterial("manganese", MANGANESE_USES, MANGANESE_SPEED, MANGANESE_DMG, MANGANESE_ENCH);
+        addMaterial("obsidian", OBSIDIAN_USES, OBSIDIAN_SPEED, OBSIDIAN_DMG, OBSIDIAN_ENCH);
+        addMaterial("plutonium", PLUTONIUM_USES, PLUTONIUM_SPEED, PLUTONIUM_DMG, PLUTONIUM_ENCH);
+        addMaterial("prismarine", PRISMARINE_USES, PRISMARINE_SPEED, PRISMARINE_DMG, PRISMARINE_ENCH);
+        addMaterial("pulsatingalloy", PULSATING_ALLOY_USES, PULSATING_ALLOY_SPEED, PULSATING_ALLOY_DMG, PULSATING_ALLOY_ENCH);
+        addMaterial("pyrope", PYROPE_USES, PYROPE_SPEED, PYROPE_DMG, PYROPE_ENCH);
+        addMaterial("redstone", REDSTONE_USES, REDSTONE_SPEED, REDSTONE_DMG, REDSTONE_ENCH);
+        addMaterial("reinforcedalloy", REINFORCED_ALLOY_USES, REINFORCED_ALLOY_SPEED, REINFORCED_ALLOY_DMG, REINFORCED_ALLOY_ENCH);
+        addMaterial("silicon", SILICON_USES, SILICON_SPEED, SILICON_DMG, SILICON_ENCH);
+        addMaterial("solarium", SOLARIUM_USES, SOLARIUM_SPEED, SOLARIUM_DMG, SOLARIUM_ENCH);
+        addMaterial("stainlesssteel", STAINLESS_STEEL_USES, STAINLESS_STEEL_SPEED, STAINLESS_STEEL_DMG, STAINLESS_STEEL_ENCH);
+        addMaterial("terrasteel", TERRASTEEL_USES, TERRASTEEL_SPEED, TERRASTEEL_DMG, TERRASTEEL_ENCH);
+        addMaterial("superconductor", SUPERCONDUCTOR_USES, SUPERCONDUCTOR_SPEED, SUPERCONDUCTOR_DMG, SUPERCONDUCTOR_ENCH);
+        addMaterial("tungsten", TUNGSTEN_USES, TUNGSTEN_SPEED, TUNGSTEN_DMG, TUNGSTEN_ENCH);
+        addMaterial("ventium", VENTIUM_USES, VENTIUM_SPEED, VENTIUM_DMG, VENTIUM_ENCH);
+        addMaterial("vibrantalloy", VIBRANT_ALLOY_USES, VIBRANT_ALLOY_SPEED, VIBRANT_ALLOY_DMG, VIBRANT_ALLOY_ENCH);
+        addMaterial("zanite", ZANITE_USES, ZANITE_SPEED, ZANITE_DMG, ZANITE_ENCH);
+        addMaterial("opal", OPAL_USES, OPAL_SPEED, OPAL_DMG, OPAL_ENCH);
+        addMaterial("anglesite", ANGLESITE_USES, ANGLESITE_SPEED, ANGLESITE_DMG, ANGLESITE_ENCH);
+        addMaterial("benitoite", BENITOITE_USES, BENITOITE_SPEED, BENITOITE_DMG, BENITOITE_ENCH);
+        addMaterial("bloodiron", BLOOD_IRON_USES, BLOOD_IRON_SPEED, BLOOD_IRON_DMG, BLOOD_IRON_ENCH);
+        addMaterial("blutonium", BLUTONIUM_USES, BLUTONIUM_SPEED, BLUTONIUM_DMG, BLUTONIUM_ENCH);
+        addMaterial("cyanite", CYANITE_USES, CYANITE_SPEED, CYANITE_DMG, CYANITE_ENCH);
+        addMaterial("enchantedbloodiron", ENCHANTED_BLOOD_IRON_USES, ENCHANTED_BLOOD_IRON_SPEED, ENCHANTED_BLOOD_IRON_DMG, ENCHANTED_BLOOD_IRON_ENCH);
+        addMaterial("graphite", GRAPHITE_USES, GRAPHITE_SPEED, GRAPHITE_DMG, GRAPHITE_ENCH);
+        addMaterial("insanite", INSANITE_USES, INSANITE_SPEED, INSANITE_DMG, INSANITE_ENCH);
+        addMaterial("ludicrite", LUDICRITE_USES, LUDICRITE_SPEED, LUDICRITE_DMG, LUDICRITE_ENCH);
+        addMaterial("magentite", MAGENTITE_USES, MAGENTITE_SPEED, MAGENTITE_DMG, MAGENTITE_ENCH);
+        addMaterial("netheritediamond", NETHERITE_DIAMOND_USES, NETHERITE_DIAMOND_SPEED, NETHERITE_DIAMOND_DMG, NETHERITE_DIAMOND_ENCH);
+        addMaterial("netheriteemerald", NETHERITE_EMERALD_USES, NETHERITE_EMERALD_SPEED, NETHERITE_EMERALD_DMG, NETHERITE_EMERALD_ENCH);
+        addMaterial("netheritegold", NETHERITE_GOLD_USES, NETHERITE_GOLD_SPEED, NETHERITE_GOLD_DMG, NETHERITE_GOLD_ENCH);
+        addMaterial("netheriteiron", NETHERITE_IRON_USES, NETHERITE_IRON_SPEED, NETHERITE_IRON_DMG, NETHERITE_IRON_ENCH);
+        addMaterial("ridiculite", RIDICULITE_USES, RIDICULITE_SPEED, RIDICULITE_DMG, RIDICULITE_ENCH);
+        addMaterial("yellorium", YELLORIUM_USES, YELLORIUM_SPEED, YELLORIUM_DMG, YELLORIUM_ENCH);
+        addMaterial("witherbone", WITHER_BONE_USES, WITHER_BONE_SPEED, WITHER_BONE_DMG, WITHER_BONE_ENCH);
     }
 
 
