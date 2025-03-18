@@ -3,15 +3,13 @@
     {
       "value": {
         "type": "neoforge:tag_empty",
-        "tag": "c:sheets/hdpe"
+        "tag": "c:sheets/plastic"
       },
       "type": "neoforge:not"
     },
     {
-      "value": {
-        "type": "neoforge:tag_empty",
-        "tag": "c:pellets/hdpe"
-      }
+      "type": "neoforge:tag_empty",
+      "tag": "c:pellets/plastic"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -25,7 +23,7 @@
   ],
 
   "key": {
-    "#": "#c:sheets/hdpe"
+    "#": "#c:sheets/plastic"
   },
 
   "result": {

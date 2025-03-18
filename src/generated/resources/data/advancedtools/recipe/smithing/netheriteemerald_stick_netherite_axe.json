@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedtools:netheriteemerald_stick_diamond_axe",
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheriteemerald_stick_netherite_axe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "advancednetherite"
+    }
+  ],
+
+  "type": "minecraft:smithing_transform",
+  "addition": "#advancednetherite:upgrade_to_netherite_iron",
+  "base": "#c:rods/netherite",
+  "result": {
+    "count": 1,
+    "id": "advancedtools:stick_netheriteiron"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

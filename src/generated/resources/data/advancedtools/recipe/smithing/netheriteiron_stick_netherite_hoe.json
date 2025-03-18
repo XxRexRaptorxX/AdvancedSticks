@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedtools:netheriteiron_stick_diamond_hoe",
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheriteiron_stick_netherite_hoe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

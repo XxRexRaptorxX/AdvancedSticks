@@ -3,7 +3,7 @@
     {
       "value": {
         "type": "neoforge:tag_empty",
-        "tag": "c:pellet/hdpe"
+        "tag": "c:pellet/plastic"
       },
       "type": "neoforge:not"
     }
@@ -19,7 +19,7 @@
   ],
 
   "key": {
-    "#": "#c:pellet/hdpe"
+    "#": "#c:pellet/plastic"
   },
 
   "result": {

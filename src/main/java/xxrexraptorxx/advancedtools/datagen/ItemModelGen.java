@@ -30,7 +30,7 @@ public class ItemModelGen extends ItemModelGenerators {
         //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
-            if (!ToolUtils.isVanillaRod(handle)) {
+            if (!ToolUtils.isRod(handle)) {
                 AdvancedTools.LOGGER.info("Generate item model of " + handle);
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }

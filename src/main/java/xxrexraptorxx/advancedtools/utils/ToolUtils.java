@@ -35,7 +35,7 @@ public class ToolUtils {
         } else {
             String handle = Objects.requireNonNull(getHandleAndBaseMaterialFromItem(name))[0];
 
-            if (isVanillaRod(handle)) {
+            if (isRod(handle)) {
                 if(handle.equals("end")) {
                     return Component.translatable("block.minecraft." + handle + "_rod").getString();
                 } else {
@@ -172,7 +172,7 @@ public class ToolUtils {
     public static boolean isSpecial(String material) {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
-                 "blizz", "blitz", "carbon", "hdpe", "plastic"
+                 "blizz", "blitz", "carbon", "hdpe"
                     -> true;
 
             default -> false;
@@ -183,9 +183,9 @@ public class ToolUtils {
     /**
      * Tests whether the material belongs to a Vanilla rod item
      */
-    public static boolean isVanillaRod(String material) {
+    public static boolean isRod(String material) {
         return switch (material) {
-            case "end", "blaze", "breeze"
+            case "end", "blaze", "breeze", "basalz", "blizz", "blitz"
                     -> true;
 
             default -> false;
@@ -201,7 +201,7 @@ public class ToolUtils {
             return true;
 
         } else {
-            return ModTags.isTagNotEmpty(material);
+            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagNotEmpty(material);
         }
     }
 
@@ -225,6 +225,7 @@ public class ToolUtils {
         if (material.equals("netheriteemerald")) material = "netherite_emerald";
         if (material.equals("netheritegold")) material = "netherite_gold";
         if (material.equals("netheriteiron")) material = "netherite_iron";
+        if (material.equals("hdpe")) material = "plastic"; //name fix to make HDPE more versatile
 
         if (material.contains("alloy")) material = material.replace("alloy", "_alloy");
 
