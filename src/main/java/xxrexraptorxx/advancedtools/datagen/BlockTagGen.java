@@ -15,6 +15,5 @@ public class BlockTagGen extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
     }
 }

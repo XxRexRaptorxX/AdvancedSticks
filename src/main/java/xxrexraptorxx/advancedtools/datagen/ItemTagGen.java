@@ -79,4 +79,5 @@ public class ItemTagGen extends ItemTagsProvider {
         );
 
     }
+
 }

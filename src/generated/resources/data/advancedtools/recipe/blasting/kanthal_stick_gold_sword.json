@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.1,
+  "ingredient": "advancedtools:kanthal_stick_gold_sword",
+  "result": {
+    "count": 1,
+    "id": "minecraft:gold_nugget"
+  }
+}

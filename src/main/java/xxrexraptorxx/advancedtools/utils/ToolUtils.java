@@ -158,7 +158,7 @@ public class ToolUtils {
         return switch (material) {
             case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz",
                  "fluorite", "cinnabar", "apatite", "aquite", "certusquartzcrystal", "charoite", "diopside",
-                 "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite"
+                 "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite", "zanite"
                     -> true;
 
             default -> false;
@@ -172,8 +172,7 @@ public class ToolUtils {
     public static boolean isSpecial(String material) {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
-                 "blizz", "blitz", "carbon", "hdpe"
-                    //bedrock, obsidian, redstone
+                 "blizz", "blitz", "carbon", "hdpe", "plastic"
                     -> true;
 
             default -> false;
@@ -202,7 +201,7 @@ public class ToolUtils {
             return true;
 
         } else {
-            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagNotEmpty(material);
+            return ModTags.isTagNotEmpty(material);
         }
     }
 

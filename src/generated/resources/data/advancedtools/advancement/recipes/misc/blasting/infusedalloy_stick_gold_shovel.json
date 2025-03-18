@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_infusedalloy_stick_gold_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedtools:infusedalloy_stick_gold_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:blasting/infusedalloy_stick_gold_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_infusedalloy_stick_gold_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:blasting/infusedalloy_stick_gold_shovel"
+    ]
+  }
+}

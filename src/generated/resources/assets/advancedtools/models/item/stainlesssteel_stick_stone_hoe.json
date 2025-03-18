@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/stainlesssteel_tool_base",
+    "layer1": "advancedtools:item/stone_hoe_overlay"
+  }
+}

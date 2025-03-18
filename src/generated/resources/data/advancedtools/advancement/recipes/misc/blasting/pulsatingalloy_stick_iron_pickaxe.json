@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pulsatingalloy_stick_iron_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedtools:pulsatingalloy_stick_iron_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:blasting/pulsatingalloy_stick_iron_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pulsatingalloy_stick_iron_pickaxe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:blasting/pulsatingalloy_stick_iron_pickaxe"
+    ]
+  }
+}

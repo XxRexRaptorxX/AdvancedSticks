@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:gems/diopside"
+      },
+      "type": "neoforge:not"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#c:gems/diopside"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_diopside"
+  }
+}

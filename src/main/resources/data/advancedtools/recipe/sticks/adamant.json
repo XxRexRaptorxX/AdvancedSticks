@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/adamant"
+      },
+      "type": "neoforge:not"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#c:ingots/adamant"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_adamant"
+  }
+}

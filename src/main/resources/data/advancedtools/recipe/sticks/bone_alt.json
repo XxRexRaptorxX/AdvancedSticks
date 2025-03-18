@@ -1,0 +1,27 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:bones/wither"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+  
+    "#",
+    "#"
+  
+  ],
+  
+  "key": {
+    "#": "#c:bones"
+  },
+  
+  "result": {
+    "id": "advancedtools:stick_bone"
+  }
+}

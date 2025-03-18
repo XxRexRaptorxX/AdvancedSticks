@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "advancedtools:redstone_stick_iron_pickaxe",
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_nugget"
+  }
+}

@@ -40,9 +40,9 @@ public class ModItems {
             "darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
             "falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
             "prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
-            "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "bloodiron", "blutonium",
-            "cyanite", "enchantedbloodiron", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
-            "netheritegold", "netheriteiron", "ridiculite", "yellorium"
+            "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "blutonium",
+            "cyanite", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
+            "netheritegold", "netheriteiron", "ridiculite", "yellorium" //"bloodiron", "enchantedbloodiron" TODO
     };
 
 

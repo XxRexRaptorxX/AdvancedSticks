@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/blutonium"
+      },
+      "type": "neoforge:not"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#c:ingots/blutonium"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_blutonium"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": "advancedtools:redstone_stick_gold_hoe",
+  "result": {
+    "count": 1,
+    "id": "minecraft:gold_nugget"
+  }
+}

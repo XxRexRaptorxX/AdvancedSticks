@@ -48,7 +48,7 @@ public class ModTags {
 
         if (ToolUtils.isSpecial(material)) {
             if (material.equals("wither_bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones/wither");
-            if (material.equals("bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones");
+            if (material.equals("bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones/regular");
 
                 return ResourceLocation.fromNamespaceAndPath("c", "rods/" + material); //returns the standard rod tags for materials that do not have normal base materials
         }

@@ -1,0 +1,28 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/cadmium"
+      },
+      "type": "neoforge:not"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#c:ingots/cadmium"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_cadmium"
+  }
+}

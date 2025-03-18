@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:sheets/hdpe"
+      },
+      "type": "neoforge:not"
+    },
+    {
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:pellets/hdpe"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#c:sheets/hdpe"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_hdpe"
+  }
+}
