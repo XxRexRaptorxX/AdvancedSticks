@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "#mekanism:chemical/carbon",
+      "required": false
+    }
+  ]
+}
