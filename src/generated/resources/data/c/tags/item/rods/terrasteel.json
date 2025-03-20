@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_terrasteel",
-    "#c:sticks/terrasteel"
+    {
+      "id": "#c:sticks/terrasteel",
+      "required": false
+    }
   ]
 }

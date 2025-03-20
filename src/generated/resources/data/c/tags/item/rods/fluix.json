@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_fluix",
-    "#c:sticks/fluix"
+    {
+      "id": "#c:sticks/fluix",
+      "required": false
+    }
   ]
 }

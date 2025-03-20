@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_allthemodium",
-    "#c:sticks/allthemodium"
+    {
+      "id": "#c:sticks/allthemodium",
+      "required": false
+    }
   ]
 }

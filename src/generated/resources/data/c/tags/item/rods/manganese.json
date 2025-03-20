@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_manganese",
-    "#c:sticks/manganese"
+    {
+      "id": "#c:sticks/manganese",
+      "required": false
+    }
   ]
 }

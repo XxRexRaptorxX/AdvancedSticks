@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_copper",
-    "#c:sticks/copper"
+    {
+      "id": "#c:sticks/copper",
+      "required": false
+    }
   ]
 }

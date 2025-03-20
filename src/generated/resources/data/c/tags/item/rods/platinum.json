@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_platinum",
-    "#c:sticks/platinum"
+    {
+      "id": "#c:sticks/platinum",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_enchanted",
-    "#c:sticks/enchanted"
+    {
+      "id": "#c:sticks/enchanted",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_diamond",
-    "#c:sticks/diamond"
+    {
+      "id": "#c:sticks/diamond",
+      "required": false
+    }
   ]
 }

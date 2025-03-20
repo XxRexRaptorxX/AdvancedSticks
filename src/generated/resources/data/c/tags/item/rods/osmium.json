@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_osmium",
-    "#c:sticks/osmium"
+    {
+      "id": "#c:sticks/osmium",
+      "required": false
+    }
   ]
 }

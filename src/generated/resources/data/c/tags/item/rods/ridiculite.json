@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_ridiculite",
-    "#c:sticks/ridiculite"
+    {
+      "id": "#c:sticks/ridiculite",
+      "required": false
+    }
   ]
 }

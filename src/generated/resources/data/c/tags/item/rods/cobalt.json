@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_cobalt",
-    "#c:sticks/cobalt"
+    {
+      "id": "#c:sticks/cobalt",
+      "required": false
+    }
   ]
 }

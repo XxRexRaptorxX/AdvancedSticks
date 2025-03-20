@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_bone",
-    "#c:sticks/bone"
+    {
+      "id": "#c:sticks/bone",
+      "required": false
+    }
   ]
 }

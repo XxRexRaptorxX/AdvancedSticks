@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_blutonium",
-    "#c:sticks/blutonium"
+    {
+      "id": "#c:sticks/blutonium",
+      "required": false
+    }
   ]
 }

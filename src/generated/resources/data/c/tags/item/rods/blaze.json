@@ -1,6 +1,9 @@
 {
   "values": [
     "minecraft:air",
-    "#c:sticks/blaze"
+    {
+      "id": "#c:sticks/blaze",
+      "required": false
+    }
   ]
 }

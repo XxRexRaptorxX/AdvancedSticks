@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_elementium",
-    "#c:sticks/elementium"
+    {
+      "id": "#c:sticks/elementium",
+      "required": false
+    }
   ]
 }

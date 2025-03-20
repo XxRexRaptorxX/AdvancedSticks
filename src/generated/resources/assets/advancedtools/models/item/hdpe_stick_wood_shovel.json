@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "advancedtools:item/hdpe_shovel_base",
-    "layer1": "advancedtools:item/wood_shovel_overlay"
-  }
-}

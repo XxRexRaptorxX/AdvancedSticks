@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_iridium",
-    "#c:sticks/iridium"
+    {
+      "id": "#c:sticks/iridium",
+      "required": false
+    }
   ]
 }

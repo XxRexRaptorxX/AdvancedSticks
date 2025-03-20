@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_ludicrite",
-    "#c:sticks/ludicrite"
+    {
+      "id": "#c:sticks/ludicrite",
+      "required": false
+    }
   ]
 }

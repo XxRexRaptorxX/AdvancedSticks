@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_fluorite",
-    "#c:sticks/fluorite"
+    {
+      "id": "#c:sticks/fluorite",
+      "required": false
+    }
   ]
 }

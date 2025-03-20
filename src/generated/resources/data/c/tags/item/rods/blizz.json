@@ -1,6 +1,9 @@
 {
   "values": [
-    "advancedtools:stick_blizz",
-    "#c:sticks/blizz"
+    "minecraft:air",
+    {
+      "id": "#c:sticks/blizz",
+      "required": false
+    }
   ]
 }

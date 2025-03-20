@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_quartz",
-    "#c:sticks/quartz"
+    {
+      "id": "#c:sticks/quartz",
+      "required": false
+    }
   ]
 }

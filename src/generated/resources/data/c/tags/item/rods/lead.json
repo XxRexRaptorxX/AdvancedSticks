@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_lead",
-    "#c:sticks/lead"
+    {
+      "id": "#c:sticks/lead",
+      "required": false
+    }
   ]
 }

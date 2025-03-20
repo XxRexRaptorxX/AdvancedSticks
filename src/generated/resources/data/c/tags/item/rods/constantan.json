@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_constantan",
-    "#c:sticks/constantan"
+    {
+      "id": "#c:sticks/constantan",
+      "required": false
+    }
   ]
 }

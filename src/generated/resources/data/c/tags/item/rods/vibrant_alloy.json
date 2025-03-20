@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_vibrantalloy",
-    "#c:sticks/vibrant_alloy"
+    {
+      "id": "#c:sticks/vibrant_alloy",
+      "required": false
+    }
   ]
 }

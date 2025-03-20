@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_ventium",
-    "#c:sticks/ventium"
+    {
+      "id": "#c:sticks/ventium",
+      "required": false
+    }
   ]
 }

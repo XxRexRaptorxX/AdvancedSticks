@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_magentite",
-    "#c:sticks/magentite"
+    {
+      "id": "#c:sticks/magentite",
+      "required": false
+    }
   ]
 }

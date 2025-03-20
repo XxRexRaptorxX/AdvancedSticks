@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_witherbone",
-    "#c:sticks/wither_bone"
+    {
+      "id": "#c:sticks/wither_bone",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_benitoite",
-    "#c:sticks/benitoite"
+    {
+      "id": "#c:sticks/benitoite",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_stainlesssteel",
-    "#c:sticks/stainless_steel"
+    {
+      "id": "#c:sticks/stainless_steel",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_redstone",
-    "#c:sticks/redstone"
+    {
+      "id": "#c:sticks/redstone",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_manasteel",
-    "#c:sticks/manasteel"
+    {
+      "id": "#c:sticks/manasteel",
+      "required": false
+    }
   ]
 }

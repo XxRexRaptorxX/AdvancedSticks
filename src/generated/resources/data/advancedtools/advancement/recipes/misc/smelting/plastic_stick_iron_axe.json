@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plastic_stick_iron_axe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "advancedtools:plastic_stick_iron_axe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:smelting/plastic_stick_iron_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plastic_stick_iron_axe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:smelting/plastic_stick_iron_axe"
+    ]
+  }
+}

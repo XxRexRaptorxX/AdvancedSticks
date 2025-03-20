@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_titanium",
-    "#c:sticks/titanium"
+    {
+      "id": "#c:sticks/titanium",
+      "required": false
+    }
   ]
 }

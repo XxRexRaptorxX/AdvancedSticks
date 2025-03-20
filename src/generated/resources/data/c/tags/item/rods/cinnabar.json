@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_cinnabar",
-    "#c:sticks/cinnabar"
+    {
+      "id": "#c:sticks/cinnabar",
+      "required": false
+    }
   ]
 }

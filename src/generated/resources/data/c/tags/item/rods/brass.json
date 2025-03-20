@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_brass",
-    "#c:sticks/brass"
+    {
+      "id": "#c:sticks/brass",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_pyrope",
-    "#c:sticks/pyrope"
+    {
+      "id": "#c:sticks/pyrope",
+      "required": false
+    }
   ]
 }

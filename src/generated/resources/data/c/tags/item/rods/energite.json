@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_energite",
-    "#c:sticks/energite"
+    {
+      "id": "#c:sticks/energite",
+      "required": false
+    }
   ]
 }

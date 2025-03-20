@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_zinc",
-    "#c:sticks/zinc"
+    {
+      "id": "#c:sticks/zinc",
+      "required": false
+    }
   ]
 }

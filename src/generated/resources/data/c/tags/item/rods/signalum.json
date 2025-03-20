@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_signalum",
-    "#c:sticks/signalum"
+    {
+      "id": "#c:sticks/signalum",
+      "required": false
+    }
   ]
 }

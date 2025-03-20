@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_electrum",
-    "#c:sticks/electrum"
+    {
+      "id": "#c:sticks/electrum",
+      "required": false
+    }
   ]
 }

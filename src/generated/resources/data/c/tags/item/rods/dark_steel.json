@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_darksteel",
-    "#c:sticks/dark_steel"
+    {
+      "id": "#c:sticks/dark_steel",
+      "required": false
+    }
   ]
 }

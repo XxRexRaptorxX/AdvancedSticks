@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_advancedalloy",
-    "#c:sticks/advanced_alloy"
+    {
+      "id": "#c:sticks/advanced_alloy",
+      "required": false
+    }
   ]
 }

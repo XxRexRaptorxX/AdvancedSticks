@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_thorium",
-    "#c:sticks/thorium"
+    {
+      "id": "#c:sticks/thorium",
+      "required": false
+    }
   ]
 }

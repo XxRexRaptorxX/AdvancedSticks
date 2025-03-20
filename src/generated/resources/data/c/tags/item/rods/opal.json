@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_opal",
-    "#c:sticks/opal"
+    {
+      "id": "#c:sticks/opal",
+      "required": false
+    }
   ]
 }

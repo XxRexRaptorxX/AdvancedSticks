@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_netherite",
-    "#c:sticks/netherite"
+    {
+      "id": "#c:sticks/netherite",
+      "required": false
+    }
   ]
 }

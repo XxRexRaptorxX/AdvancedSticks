@@ -1,6 +1,9 @@
 {
   "values": [
-    "advancedtools:stick_blitz",
-    "#c:sticks/blitz"
+    "minecraft:air",
+    {
+      "id": "#c:sticks/blitz",
+      "required": false
+    }
   ]
 }

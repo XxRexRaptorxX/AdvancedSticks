@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_lumium",
-    "#c:sticks/lumium"
+    {
+      "id": "#c:sticks/lumium",
+      "required": false
+    }
   ]
 }

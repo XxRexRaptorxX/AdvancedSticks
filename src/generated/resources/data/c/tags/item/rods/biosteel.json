@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_biosteel",
-    "#c:sticks/biosteel"
+    {
+      "id": "#c:sticks/biosteel",
+      "required": false
+    }
   ]
 }

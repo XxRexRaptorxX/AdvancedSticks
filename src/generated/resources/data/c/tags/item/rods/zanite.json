@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_zanite",
-    "#c:sticks/zanite"
+    {
+      "id": "#c:sticks/zanite",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_certusquartzcrystal",
-    "#c:sticks/certus_quartz_crystal"
+    {
+      "id": "#c:sticks/certus_quartz_crystal",
+      "required": false
+    }
   ]
 }

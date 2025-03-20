@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_cupronickel",
-    "#c:sticks/cupronickel"
+    {
+      "id": "#c:sticks/cupronickel",
+      "required": false
+    }
   ]
 }

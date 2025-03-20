@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_carbon",
-    "#c:sticks/carbon"
+    {
+      "id": "#c:sticks/carbon",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "minecraft:air",
-    "#c:sticks/end"
+    {
+      "id": "#c:sticks/end",
+      "required": false
+    }
   ]
 }

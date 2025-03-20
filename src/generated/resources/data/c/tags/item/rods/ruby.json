@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_ruby",
-    "#c:sticks/ruby"
+    {
+      "id": "#c:sticks/ruby",
+      "required": false
+    }
   ]
 }

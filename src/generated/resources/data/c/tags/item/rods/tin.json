@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_tin",
-    "#c:sticks/tin"
+    {
+      "id": "#c:sticks/tin",
+      "required": false
+    }
   ]
 }

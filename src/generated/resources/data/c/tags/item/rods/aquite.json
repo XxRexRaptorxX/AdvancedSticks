@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_aquite",
-    "#c:sticks/aquite"
+    {
+      "id": "#c:sticks/aquite",
+      "required": false
+    }
   ]
 }

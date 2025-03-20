@@ -1,6 +1,9 @@
 {
   "values": [
-    "advancedtools:stick_basalz",
-    "#c:sticks/basalz"
+    "minecraft:air",
+    {
+      "id": "#c:sticks/basalz",
+      "required": false
+    }
   ]
 }

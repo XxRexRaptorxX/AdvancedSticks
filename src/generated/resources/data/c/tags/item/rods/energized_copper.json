@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_energizedcopper",
-    "#c:sticks/energized_copper"
+    {
+      "id": "#c:sticks/energized_copper",
+      "required": false
+    }
   ]
 }

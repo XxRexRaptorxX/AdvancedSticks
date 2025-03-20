@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_unobtainium",
-    "#c:sticks/unobtainium"
+    {
+      "id": "#c:sticks/unobtainium",
+      "required": false
+    }
   ]
 }

@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_adamant",
-    "#c:sticks/adamant"
+    {
+      "id": "#c:sticks/adamant",
+      "required": false
+    }
   ]
 }

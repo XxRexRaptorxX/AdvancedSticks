@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_energizedgold",
-    "#c:sticks/energized_gold"
+    {
+      "id": "#c:sticks/energized_gold",
+      "required": false
+    }
   ]
 }

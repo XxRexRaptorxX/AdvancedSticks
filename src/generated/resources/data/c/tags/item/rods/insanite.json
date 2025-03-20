@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_insanite",
-    "#c:sticks/insanite"
+    {
+      "id": "#c:sticks/insanite",
+      "required": false
+    }
   ]
 }

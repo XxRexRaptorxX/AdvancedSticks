@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_sapphire",
-    "#c:sticks/sapphire"
+    {
+      "id": "#c:sticks/sapphire",
+      "required": false
+    }
   ]
 }

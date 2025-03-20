@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_enderium",
-    "#c:sticks/enderium"
+    {
+      "id": "#c:sticks/enderium",
+      "required": false
+    }
   ]
 }

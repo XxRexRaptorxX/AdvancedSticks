@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_diopside",
-    "#c:sticks/diopside"
+    {
+      "id": "#c:sticks/diopside",
+      "required": false
+    }
   ]
 }

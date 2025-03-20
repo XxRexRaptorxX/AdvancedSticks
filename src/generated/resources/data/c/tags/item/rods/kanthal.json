@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_kanthal",
-    "#c:sticks/kanthal"
+    {
+      "id": "#c:sticks/kanthal",
+      "required": false
+    }
   ]
 }

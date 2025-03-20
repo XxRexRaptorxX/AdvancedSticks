@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_obsidian",
-    "#c:sticks/obsidian"
+    {
+      "id": "#c:sticks/obsidian",
+      "required": false
+    }
   ]
 }

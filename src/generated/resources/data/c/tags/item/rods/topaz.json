@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_topaz",
-    "#c:sticks/topaz"
+    {
+      "id": "#c:sticks/topaz",
+      "required": false
+    }
   ]
 }

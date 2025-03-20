@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_aluminum",
-    "#c:sticks/aluminum"
+    {
+      "id": "#c:sticks/aluminum",
+      "required": false
+    }
   ]
 }

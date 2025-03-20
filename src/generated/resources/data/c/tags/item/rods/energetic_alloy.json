@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_energeticalloy",
-    "#c:sticks/energetic_alloy"
+    {
+      "id": "#c:sticks/energetic_alloy",
+      "required": false
+    }
   ]
 }

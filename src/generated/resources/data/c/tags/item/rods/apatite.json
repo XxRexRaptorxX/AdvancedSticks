@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_apatite",
-    "#c:sticks/apatite"
+    {
+      "id": "#c:sticks/apatite",
+      "required": false
+    }
   ]
 }

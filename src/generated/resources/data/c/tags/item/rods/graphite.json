@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_graphite",
-    "#c:sticks/graphite"
+    {
+      "id": "#c:sticks/graphite",
+      "required": false
+    }
   ]
 }

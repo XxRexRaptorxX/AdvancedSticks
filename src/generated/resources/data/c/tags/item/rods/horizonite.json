@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_horizonite",
-    "#c:sticks/horizonite"
+    {
+      "id": "#c:sticks/horizonite",
+      "required": false
+    }
   ]
 }

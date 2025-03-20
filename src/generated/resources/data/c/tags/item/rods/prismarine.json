@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_prismarine",
-    "#c:sticks/prismarine"
+    {
+      "id": "#c:sticks/prismarine",
+      "required": false
+    }
   ]
 }

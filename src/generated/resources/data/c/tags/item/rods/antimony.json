@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_antimony",
-    "#c:sticks/antimony"
+    {
+      "id": "#c:sticks/antimony",
+      "required": false
+    }
   ]
 }

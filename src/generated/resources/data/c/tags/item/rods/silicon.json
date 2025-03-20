@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_silicon",
-    "#c:sticks/silicon"
+    {
+      "id": "#c:sticks/silicon",
+      "required": false
+    }
   ]
 }

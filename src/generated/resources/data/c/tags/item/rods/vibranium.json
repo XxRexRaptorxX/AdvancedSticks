@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_vibranium",
-    "#c:sticks/vibranium"
+    {
+      "id": "#c:sticks/vibranium",
+      "required": false
+    }
   ]
 }

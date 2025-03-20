@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_peridot",
-    "#c:sticks/peridot"
+    {
+      "id": "#c:sticks/peridot",
+      "required": false
+    }
   ]
 }

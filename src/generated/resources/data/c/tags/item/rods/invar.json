@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_invar",
-    "#c:sticks/invar"
+    {
+      "id": "#c:sticks/invar",
+      "required": false
+    }
   ]
 }

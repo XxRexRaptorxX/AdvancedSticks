@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_reinforcedalloy",
-    "#c:sticks/reinforced_alloy"
+    {
+      "id": "#c:sticks/reinforced_alloy",
+      "required": false
+    }
   ]
 }

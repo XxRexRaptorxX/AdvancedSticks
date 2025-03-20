@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_plastic",
+    {
+      "id": "#c:sticks/plastic",
+      "required": false
+    }
+  ]
+}

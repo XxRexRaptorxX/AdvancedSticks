@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_beryllium",
-    "#c:sticks/beryllium"
+    {
+      "id": "#c:sticks/beryllium",
+      "required": false
+    }
   ]
 }

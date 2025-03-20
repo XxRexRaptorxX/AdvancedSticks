@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_amethyst",
-    "#c:sticks/amethyst"
+    {
+      "id": "#c:sticks/amethyst",
+      "required": false
+    }
   ]
 }

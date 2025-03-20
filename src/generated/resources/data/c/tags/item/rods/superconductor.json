@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_superconductor",
-    "#c:sticks/superconductor"
+    {
+      "id": "#c:sticks/superconductor",
+      "required": false
+    }
   ]
 }

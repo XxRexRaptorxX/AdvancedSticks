@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_infusedalloy",
-    "#c:sticks/infused_alloy"
+    {
+      "id": "#c:sticks/infused_alloy",
+      "required": false
+    }
   ]
 }

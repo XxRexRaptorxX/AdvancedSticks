@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_advanced",
-    "#c:sticks/advanced"
+    {
+      "id": "#c:sticks/advanced",
+      "required": false
+    }
   ]
 }

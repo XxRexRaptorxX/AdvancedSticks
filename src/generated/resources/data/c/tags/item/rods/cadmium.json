@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_cadmium",
-    "#c:sticks/cadmium"
+    {
+      "id": "#c:sticks/cadmium",
+      "required": false
+    }
   ]
 }

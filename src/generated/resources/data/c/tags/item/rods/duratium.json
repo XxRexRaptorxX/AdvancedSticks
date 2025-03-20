@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_duratium",
-    "#c:sticks/duratium"
+    {
+      "id": "#c:sticks/duratium",
+      "required": false
+    }
   ]
 }

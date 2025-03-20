@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_charoite",
-    "#c:sticks/charoite"
+    {
+      "id": "#c:sticks/charoite",
+      "required": false
+    }
   ]
 }

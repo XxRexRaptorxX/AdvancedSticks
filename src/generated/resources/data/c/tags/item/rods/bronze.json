@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_bronze",
-    "#c:sticks/bronze"
+    {
+      "id": "#c:sticks/bronze",
+      "required": false
+    }
   ]
 }

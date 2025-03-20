@@ -1,6 +1,9 @@
 {
   "values": [
     "advancedtools:stick_emerald",
-    "#c:sticks/emerald"
+    {
+      "id": "#c:sticks/emerald",
+      "required": false
+    }
   ]
 }
