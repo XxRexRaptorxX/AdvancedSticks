@@ -671,6 +671,12 @@
     "advancedtools:yellorium_stick_iron_hoe",
     "advancedtools:yellorium_stick_gold_hoe",
     "advancedtools:yellorium_stick_diamond_hoe",
-    "advancedtools:yellorium_stick_netherite_hoe"
+    "advancedtools:yellorium_stick_netherite_hoe",
+    "advancedtools:stone_stick_wood_hoe",
+    "advancedtools:stone_stick_stone_hoe",
+    "advancedtools:stone_stick_iron_hoe",
+    "advancedtools:stone_stick_gold_hoe",
+    "advancedtools:stone_stick_diamond_hoe",
+    "advancedtools:stone_stick_netherite_hoe"
   ]
 }

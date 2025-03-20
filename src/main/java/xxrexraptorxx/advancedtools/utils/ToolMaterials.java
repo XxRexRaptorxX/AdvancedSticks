@@ -728,6 +728,7 @@ public class ToolMaterials {
         addMaterial("cobalt", COBALT_USES, COBALT_SPEED, COBALT_DMG, COBALT_ENCH);
         addMaterial("titanium", TITANIUM_USES, TITANIUM_SPEED, TITANIUM_DMG, TITANIUM_ENCH);
         addMaterial("zinc", ZINC_USES, ZINC_SPEED, ZINC_DMG, ZINC_ENCH);
+        addMaterial("stone", STONE_USES, STONE_SPEED, STONE_DMG, STONE_ENCH);
         addMaterial("adamant", ADAMANT_USES, ADAMANT_SPEED, ADAMANT_DMG, ADAMANT_ENCH);
         addMaterial("advancedalloy", ADVANCED_ALLOY_USES, ADVANCED_ALLOY_SPEED, ADVANCED_ALLOY_DMG, ADVANCED_ALLOY_ENCH);
         addMaterial("antimony", ANTIMONY_USES, ANTIMONY_SPEED, ANTIMONY_DMG, ANTIMONY_ENCH);

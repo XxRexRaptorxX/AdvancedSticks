@@ -671,6 +671,12 @@
     "advancedtools:yellorium_stick_iron_axe",
     "advancedtools:yellorium_stick_gold_axe",
     "advancedtools:yellorium_stick_diamond_axe",
-    "advancedtools:yellorium_stick_netherite_axe"
+    "advancedtools:yellorium_stick_netherite_axe",
+    "advancedtools:stone_stick_wood_axe",
+    "advancedtools:stone_stick_stone_axe",
+    "advancedtools:stone_stick_iron_axe",
+    "advancedtools:stone_stick_gold_axe",
+    "advancedtools:stone_stick_diamond_axe",
+    "advancedtools:stone_stick_netherite_axe"
   ]
 }

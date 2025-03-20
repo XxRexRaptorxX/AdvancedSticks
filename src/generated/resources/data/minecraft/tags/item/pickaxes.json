@@ -671,6 +671,12 @@
     "advancedtools:yellorium_stick_iron_pickaxe",
     "advancedtools:yellorium_stick_gold_pickaxe",
     "advancedtools:yellorium_stick_diamond_pickaxe",
-    "advancedtools:yellorium_stick_netherite_pickaxe"
+    "advancedtools:yellorium_stick_netherite_pickaxe",
+    "advancedtools:stone_stick_wood_pickaxe",
+    "advancedtools:stone_stick_stone_pickaxe",
+    "advancedtools:stone_stick_iron_pickaxe",
+    "advancedtools:stone_stick_gold_pickaxe",
+    "advancedtools:stone_stick_diamond_pickaxe",
+    "advancedtools:stone_stick_netherite_pickaxe"
   ]
 }

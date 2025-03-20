@@ -8,9 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.items.*;
-import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
-import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolMaterials;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
@@ -44,7 +42,7 @@ public class ModItems {
             "prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
             "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "blutonium",
             "cyanite", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
-            "netheritegold", "netheriteiron", "ridiculite", "yellorium" //"bloodiron", "enchantedbloodiron" TODO
+            "netheritegold", "netheriteiron", "ridiculite", "yellorium" , "stone" //"bloodiron", "enchantedbloodiron" TODO
     };
 
 

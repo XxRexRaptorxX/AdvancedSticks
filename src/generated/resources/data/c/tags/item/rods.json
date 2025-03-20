@@ -448,6 +448,10 @@
       "id": "#c:rods/yellorium",
       "required": false
     },
+    {
+      "id": "#c:rods/stone",
+      "required": false
+    },
     "#c:rods/end"
   ]
 }

@@ -671,6 +671,12 @@
     "advancedtools:yellorium_stick_iron_sword",
     "advancedtools:yellorium_stick_gold_sword",
     "advancedtools:yellorium_stick_diamond_sword",
-    "advancedtools:yellorium_stick_netherite_sword"
+    "advancedtools:yellorium_stick_netherite_sword",
+    "advancedtools:stone_stick_wood_sword",
+    "advancedtools:stone_stick_stone_sword",
+    "advancedtools:stone_stick_iron_sword",
+    "advancedtools:stone_stick_gold_sword",
+    "advancedtools:stone_stick_diamond_sword",
+    "advancedtools:stone_stick_netherite_sword"
   ]
 }

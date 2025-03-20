@@ -671,6 +671,12 @@
     "advancedtools:yellorium_stick_iron_shovel",
     "advancedtools:yellorium_stick_gold_shovel",
     "advancedtools:yellorium_stick_diamond_shovel",
-    "advancedtools:yellorium_stick_netherite_shovel"
+    "advancedtools:yellorium_stick_netherite_shovel",
+    "advancedtools:stone_stick_wood_shovel",
+    "advancedtools:stone_stick_stone_shovel",
+    "advancedtools:stone_stick_iron_shovel",
+    "advancedtools:stone_stick_gold_shovel",
+    "advancedtools:stone_stick_diamond_shovel",
+    "advancedtools:stone_stick_netherite_shovel"
   ]
 }

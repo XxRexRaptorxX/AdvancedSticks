@@ -448,6 +448,10 @@
       "id": "#c:sticks/yellorium",
       "required": false
     },
+    {
+      "id": "#c:sticks/stone",
+      "required": false
+    },
     "#c:sticks/wood"
   ]
 }

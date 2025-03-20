@@ -5,12 +5,10 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
@@ -72,14 +70,14 @@ public class ModTags {
                             return false;
 
                         } else {
-                            AdvancedTools.LOGGER.info("Item is registered!");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Item is registered!");
                             return true;
                         }
                     }
                 }
             }
         }
-        return false; // Tag existiert nicht oder hat keine Einträge
+        return false;
     }
 
 

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_stone",
+    {
+      "id": "#c:sticks/stone",
+      "required": false
+    }
+  ]
+}

@@ -637,6 +637,11 @@
     "advancedtools:yellorium_stick_gold_pickaxe",
     "advancedtools:yellorium_stick_gold_axe",
     "advancedtools:yellorium_stick_gold_shovel",
-    "advancedtools:yellorium_stick_gold_hoe"
+    "advancedtools:yellorium_stick_gold_hoe",
+    "advancedtools:stone_stick_gold_sword",
+    "advancedtools:stone_stick_gold_pickaxe",
+    "advancedtools:stone_stick_gold_axe",
+    "advancedtools:stone_stick_gold_shovel",
+    "advancedtools:stone_stick_gold_hoe"
   ]
 }
