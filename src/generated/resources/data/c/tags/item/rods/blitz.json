@@ -1,9 +1,0 @@
-{
-  "values": [
-    "minecraft:air",
-    {
-      "id": "#c:sticks/blitz",
-      "required": false
-    }
-  ]
-}

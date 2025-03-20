@@ -172,7 +172,7 @@ public class ToolUtils {
     public static boolean isSpecial(String material) {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
-                 "blizz", "blitz", "carbon", "hdpe"
+                 "blizz", "blitz", "carbon", "plastic"
                     -> true;
 
             default -> false;
@@ -201,7 +201,7 @@ public class ToolUtils {
             return true;
 
         } else {
-            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagNotEmpty(material);
+            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagValidAndHasMatchingItems(material);
         }
     }
 

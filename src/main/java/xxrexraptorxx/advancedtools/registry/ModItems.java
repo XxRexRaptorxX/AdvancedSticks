@@ -8,7 +8,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.items.*;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolMaterials;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
@@ -38,7 +40,7 @@ public class ModItems {
             "adamant", "advancedalloy", "antimony", "apatite", "aquite", "atomicalloy", "basalz", "bedrock", "beryllium", "biosteel",
             "blastproofalloy", "blitz", "blizz", "cadmium", "witherbone", "thorium", "carbon", "certusquartzcrystal", "charoite", "cupronickel",
             "darksteel", "duratium", "diopside", "elementium", "endsteel", "energeticalloy", "energite", "energizedcopper", "energizedgold",
-            "falsite", "fluix", "hdpe", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
+            "falsite", "fluix", "plastic", "horizonite", "infusedalloy", "kanthal", "manasteel", "manganese", "obsidian", "plutonium",
             "prismarine", "pulsatingalloy", "pyrope", "redstone", "reinforcedalloy", "silicon", "solarium", "stainlesssteel", "terrasteel",
             "superconductor", "tungsten", "ventium", "vibrantalloy", "zanite", "opal", "anglesite", "benitoite", "blutonium",
             "cyanite", "graphite", "insanite", "ludicrite", "magentite", "netheritediamond", "netheriteemerald",
@@ -48,11 +50,11 @@ public class ModItems {
 
     static {
         for (String handle : HANDLE_MATERIALS) {
-            if (!ToolUtils.isVanillaRod(handle))
+            if (!ToolUtils.isRod(handle))
                 ITEMS.register("stick_" + handle, () -> new StickItem(new Item.Properties().setId(itemId("stick_" + handle))));
 
             for (String base : BASE_MATERIALS) {
-                //AdvancedSticks.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolUtils.getTMfromStrings(handle, base));
+                //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolMaterials.getMaterial(handle, base));
 
                 ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ToolMaterials.getMaterial(handle, base), 3, -4.0f + ToolMaterials.getSpeed(base, "sword"), props));
                 ITEMS.registerItem(handle + "_stick_" + base + "_pickaxe", props -> new CustomPickaxeItem(ToolMaterials.getMaterial(handle, base), 1, -4.0f + ToolMaterials.getSpeed(base, "pickaxe"), props));

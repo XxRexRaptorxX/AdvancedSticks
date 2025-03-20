@@ -1,5 +1,5 @@
-// 1.21.4	2025-03-20T22:46:31.545628	Tags for minecraft:item mod id advancedtools
-99fbbdcec7057467a6fa4ae8eaaa3389737900ce data/c/tags/item/rods.json
+// 1.21.4	2025-03-21T00:18:58.8958144	Tags for minecraft:item mod id advancedtools
+76b5c531a4149c7a2b746f02dfeb36ef792c4df2 data/c/tags/item/rods.json
 63495f574b72bc8967963a1dfef0e86c48da81fc data/c/tags/item/rods/adamant.json
 9edfadafea3e3a6fab88abbcf64062c4d9ac2af9 data/c/tags/item/rods/advanced.json
 4fbee19056dcf666c33171b7be7714b63bc8ea51 data/c/tags/item/rods/advanced_alloy.json
@@ -11,19 +11,14 @@ b7136129cbf503d1a04ed5ce8513456fe0e9412f data/c/tags/item/rods/antimony.json
 8866d330e31393186a7de69ca4d6f571fc07795d data/c/tags/item/rods/apatite.json
 5c584c693c77b5eee19e942ea6c52695d7ec16c9 data/c/tags/item/rods/aquite.json
 a07b84a334733ccdfb094773a8f6c4302f9db17c data/c/tags/item/rods/atomic_alloy.json
-c3c168eb8dd03722de4a7e9ffa5fc6f74a1712ce data/c/tags/item/rods/basalz.json
 2fb62d37d05cd8370c33d46bcd34906ade2fa363 data/c/tags/item/rods/bedrock.json
 4dcd1417641f718a9498636ebb21e2e43a7d398f data/c/tags/item/rods/benitoite.json
 aff98f6baeba77c3f737a81c7239b0722b1876a4 data/c/tags/item/rods/beryllium.json
 0378b2360a715404bb677bcebc352d6eed38dfc5 data/c/tags/item/rods/biosteel.json
 aa353093331ffbdcf0e16575670a3b039f06b16b data/c/tags/item/rods/blast_proof_alloy.json
-98f8e5c0514c0b32e55014b47cf301ff0bbb1307 data/c/tags/item/rods/blaze.json
-a6b181d070d46e4a35e0d653f445b845b10e1170 data/c/tags/item/rods/blitz.json
-7b1f213a022852bff38c4b91c885798f48d51bd7 data/c/tags/item/rods/blizz.json
 1c1851ba73f9bf8382f537c1e6f418583d09fd9c data/c/tags/item/rods/blutonium.json
 31684084e0e816414a23468bd465ac49bba6d1e2 data/c/tags/item/rods/bone.json
 65c33850c0fd81954cdeaf6dadc23076c05c6092 data/c/tags/item/rods/brass.json
-eedc55b0d875929e24d0265d35124351b166abec data/c/tags/item/rods/breeze.json
 9ddcf37e5f942b47180cdbdf57be4ac7ae56d13d data/c/tags/item/rods/bronze.json
 3c997624f35ed97f5d372250cac9a09e385d86a7 data/c/tags/item/rods/cadmium.json
 ef289109c2f99172ad07ab54470be7cca74cbae2 data/c/tags/item/rods/carbon.json
@@ -44,7 +39,7 @@ ad0ec89fe75a4bb924e35778484a28e6949a82b8 data/c/tags/item/rods/electrum.json
 48f2965f9ce74da1912cf4722f67394d5ebf8d43 data/c/tags/item/rods/elementium.json
 a613de96e9b3c8ad01df8be08d6d0f6bbb2e72a5 data/c/tags/item/rods/emerald.json
 cb9e9c5e29ad25554f53c3bec5c3ecb3e852a307 data/c/tags/item/rods/enchanted.json
-07157477199836749d660c5829eada2455270431 data/c/tags/item/rods/end.json
+1d0cd4208ba35607339e17babec4a2209daae1f3 data/c/tags/item/rods/end.json
 ae3fcb9f8852cd68857f15675c2081659e8cede9 data/c/tags/item/rods/enderium.json
 c15115a25374f400b7e6400cd09a1618750709ad data/c/tags/item/rods/end_steel.json
 58658dc041113096993a7f51bb5e11683a7c6520 data/c/tags/item/rods/energetic_alloy.json
@@ -112,7 +107,7 @@ a62f28a130d920083662784489780c82ed39ce25 data/c/tags/item/rods/wither_bone.json
 57b8f4059978beaf6da8ce13a851ec70aefe03f0 data/c/tags/item/rods/yellorium.json
 3eacfd1bfe300f958cee806ab406e18e45487bb2 data/c/tags/item/rods/zanite.json
 fc51ef6f17c53e45f733bdee0917df269da6e83b data/c/tags/item/rods/zinc.json
-0d940531b127a5c73d51dba3d49e2106555c0780 data/c/tags/item/sticks.json
+fed757fe7b49214e9a8291498d2773dbd1995994 data/c/tags/item/sticks.json
 11e8215dc71926644d8d678a94e21e58356deecf data/c/tags/item/sticks/adamant.json
 72d56c51db4ad98710b103d52c3d9854b60220cd data/c/tags/item/sticks/advanced.json
 f21cba90c045378ed1d3c3368d5ce24b07526c2f data/c/tags/item/sticks/advanced_alloy.json
@@ -124,19 +119,14 @@ e4c8339f094d4e1e56c402d0d7ae1d69f4517831 data/c/tags/item/sticks/anglesite.json
 db1986ebded67681d989cf2bd5d5442f0d4ec4de data/c/tags/item/sticks/apatite.json
 0162fe8338fef18e039f54a6ff923cffde0df3f1 data/c/tags/item/sticks/aquite.json
 d46205f62f74ebaffff71eb0d4d6df80f8a86d7c data/c/tags/item/sticks/atomic_alloy.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/basalz.json
 24ad45a0d9f3205c6a87a21c0d2df83d6d410c68 data/c/tags/item/sticks/bedrock.json
 15329c4e2c11e8ea94f4cbf88f7ee190312ebedf data/c/tags/item/sticks/benitoite.json
 66023dfc04d4012822cb4cf8e4cbebcecbb89037 data/c/tags/item/sticks/beryllium.json
 f2e7f7c8c022c360dbcb817e35cbcad5c85815f0 data/c/tags/item/sticks/biosteel.json
 ea194b4d2dc221b03525ce79d7d8fc9bebc0baa8 data/c/tags/item/sticks/blast_proof_alloy.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/blaze.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/blitz.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/blizz.json
 74fba19c75ad45ae6f2e4073355b89bf7769339f data/c/tags/item/sticks/blutonium.json
 d509d3a4922af7b03aa69e101817a8ffb0ca8421 data/c/tags/item/sticks/bone.json
 8272f9b4e78b5f36722fde4bbc2d4aace5ab0615 data/c/tags/item/sticks/brass.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/breeze.json
 31a84f97acd1c580a262aa3c1edce50a53ae9275 data/c/tags/item/sticks/bronze.json
 8eb2bc6abd54800c13ffa4d3ea6dd8e6f4c68a99 data/c/tags/item/sticks/cadmium.json
 e27980060f8959ca95acfddb8e7307154441413b data/c/tags/item/sticks/carbon.json
@@ -157,7 +147,6 @@ cc5ded17d8aab2943a85a50da1f67041123321dd data/c/tags/item/sticks/electrum.json
 c81c73c726e884a0a1768501abbdd0e2fe4d0117 data/c/tags/item/sticks/elementium.json
 76d75f51dac11c70afb6eb4ecbd3436e0a9c5929 data/c/tags/item/sticks/emerald.json
 6eedf45261c69162474e11e3168b44910493e975 data/c/tags/item/sticks/enchanted.json
-8a3b6c43de5696d22edea798ffefe18769ecd1fb data/c/tags/item/sticks/end.json
 d939005286ea56b531ca91e82959ea73c27ff16b data/c/tags/item/sticks/enderium.json
 b18e77e5b9e622ddc152278929abbaa6ff087c31 data/c/tags/item/sticks/end_steel.json
 34a1d035e877987a8b618f3b85d0cb1517853782 data/c/tags/item/sticks/energetic_alloy.json

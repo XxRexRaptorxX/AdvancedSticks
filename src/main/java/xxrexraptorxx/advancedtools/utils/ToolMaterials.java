@@ -758,7 +758,7 @@ public class ToolMaterials {
         addMaterial("energizedgold", ENERGIZED_GOLD_USES, ENERGIZED_GOLD_SPEED, ENERGIZED_GOLD_DMG, ENERGIZED_GOLD_ENCH);
         addMaterial("falsite", FALSITE_USES, FALSITE_SPEED, FALSITE_DMG, FALSITE_ENCH);
         addMaterial("fluix", FLUIX_USES, FLUIX_SPEED, FLUIX_DMG, FLUIX_ENCH);
-        addMaterial("hdpe", HDPE_USES, HDPE_SPEED, HDPE_DMG, HDPE_ENCH);
+        addMaterial("plastic", HDPE_USES, HDPE_SPEED, HDPE_DMG, HDPE_ENCH);
         addMaterial("horizonite", HORIZONITE_USES, HORIZONITE_SPEED, HORIZONITE_DMG, HORIZONITE_ENCH);
         addMaterial("infusedalloy", INFUSED_ALLOY_USES, INFUSED_ALLOY_SPEED, INFUSED_ALLOY_DMG, INFUSED_ALLOY_ENCH);
         addMaterial("kanthal", KANTHAL_USES, KANTHAL_SPEED, KANTHAL_DMG, KANTHAL_ENCH);

@@ -1,9 +1,5 @@
 {
   "values": [
-    "minecraft:air",
-    {
-      "id": "#c:sticks/end",
-      "required": false
-    }
+    "minecraft:end_rod"
   ]
 }

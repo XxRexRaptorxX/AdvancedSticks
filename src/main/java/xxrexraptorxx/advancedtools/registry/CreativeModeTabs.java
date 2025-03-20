@@ -8,7 +8,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 public class CreativeModeTabs {
@@ -25,21 +27,23 @@ public class CreativeModeTabs {
 
                     //rods
                     for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //AdvancedSticks.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-                        if (!ToolUtils.isVanillaRod(handle) && ToolUtils.isValidMaterialForCreative(handle))
+                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+
+                        if (!ToolUtils.isRod(handle) && ToolUtils.isValidMaterialForCreative(handle))
                             output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
                     }
                     //tools
                     for (String base : ModItems.BASE_MATERIALS) {
                         for (String handle : ModItems.HANDLE_MATERIALS) {
-                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+
                             if (ToolUtils.isValidMaterialForCreative(handle))
                                 output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_sword")));
                         }
                     }
                     for (String base : ModItems.BASE_MATERIALS) {
                         for (String handle : ModItems.HANDLE_MATERIALS) {
-                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
                             if (ToolUtils.isValidMaterialForCreative(handle))
                                 output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_shovel")));
@@ -47,7 +51,7 @@ public class CreativeModeTabs {
                     }
                     for (String base : ModItems.BASE_MATERIALS) {
                         for (String handle : ModItems.HANDLE_MATERIALS) {
-                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
                             if (ToolUtils.isValidMaterialForCreative(handle))
                                 output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_pickaxe")));
@@ -55,7 +59,7 @@ public class CreativeModeTabs {
                     }
                     for (String base : ModItems.BASE_MATERIALS) {
                         for (String handle : ModItems.HANDLE_MATERIALS) {
-                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
                             if (ToolUtils.isValidMaterialForCreative(handle))
                                 output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_axe")));
@@ -63,7 +67,7 @@ public class CreativeModeTabs {
                     }
                     for (String base : ModItems.BASE_MATERIALS) {
                         for (String handle : ModItems.HANDLE_MATERIALS) {
-                            //AdvancedSticks.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
                             if (ToolUtils.isValidMaterialForCreative(handle))
                                 output.accept(BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_" + base + "_hoe")));
