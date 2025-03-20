@@ -23,6 +23,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue FORCE_ALL_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> STICK_MATERIALS;
     public static ModConfigSpec.BooleanValue JEI_DESCRIPTION;
+    public static ModConfigSpec.BooleanValue DEBUG_MODE;
 
 
     public static void init(ModContainer container) {
@@ -56,6 +57,7 @@ public class Config {
         STICK_MATERIALS = builder.comment("Here you can specify which stick materials should be enabled. (The sticks and tools only appear if the basic material is also available in the game)").define("stick_materials",
                 new ArrayList<>(Arrays.asList(ModItems.HANDLE_MATERIALS)));
         FORCE_ALL_MATERIALS = builder.comment("Normally the item variants of a material are only displayed if the basic material is also available in the game (e.g. through other mods), but here you can also activate all of them manually").define("force_all_materials", false);
+        DEBUG_MODE = builder.comment("Only useful for developers").define("debug_mode", false);
         builder.pop();
 
         SERVER_CONFIG = builder.build();
