@@ -259,7 +259,7 @@ public class ToolUtils {
             case "vibranium" -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300);
             case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
             case "blaze", "pyrope" -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300);
-            case "aquite" -> new MobEffectInstance(MobEffects.WATER_BREATHING, 300);
+            case "aquite" -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300);
             case "enchanted" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300);
             default -> null;
         };
@@ -271,8 +271,8 @@ public class ToolUtils {
         Random random = new Random();
 
         return switch (material) {
-            case "uranium", "thorium", "yellorium" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000));
-            case "plutonium", "blutonium" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000), 1);
+            case "uranium", "thorium", "yellorium", "cyanite", "ludicrite" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000));
+            case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000), 1);
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 300));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(100, 300));
             case "terrasteel", "energeticalloy", "fluix" -> new MobEffectInstance(MobEffects.DIG_SPEED, random.nextInt(100, 300));

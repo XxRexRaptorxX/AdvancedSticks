@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "rods",
+  "pattern": [
+
+    "#",
+    "#"
+
+  ],
+
+  "key": {
+    "#": "#minecraft:stone_tool_materials"
+  },
+
+  "result": {
+    "id": "advancedtools:stick_stone"
+  }
+}
