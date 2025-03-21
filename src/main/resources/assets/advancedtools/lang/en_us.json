@@ -151,7 +151,7 @@
   "item.advancedtools.stick_energizedgold":"Energized Gold Rod",
   "item.advancedtools.stick_falsite": "Falsite Rod",
   "item.advancedtools.stick_fluix":"Fluix Rod",
-  "item.advancedtools.stick_hdpe": "HDPE Rod",
+  "item.advancedtools.stick_plastic": "Plastic Rod",
   "item.advancedtools.stick_horizonite":"Horizonite Rod",
   "item.advancedtools.stick_infusedalloy": "Infused Alloy Rod",
   "item.advancedtools.stick_kanthal":"Kanthal Rod",
@@ -191,6 +191,7 @@
   "item.advancedtools.stick_ridiculite":"Ridiculite Rod",
   "item.advancedtools.stick_yellorium": "Yellorium Rod",
   "item.advancedtools.stick_witherbone":"Wither Bone Rod",
+  "item.advancedtools.stick_stone": "Stone Rod",
 
   "item.advancedtools.elemental_stick_air": "Elemental Stick",
   "item.advancedtools.elemental_stick_earth": "Elemental Stick",

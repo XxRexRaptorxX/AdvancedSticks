@@ -13,6 +13,8 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class ModTags {
@@ -24,54 +26,41 @@ public class ModTags {
 
 
     /**
-     * Tests whether an item tag is not empty
-     */
-    public static boolean isTagNotEmpty(String material) {
-        if (Minecraft.getInstance().level != null) {
-
-            HolderLookup.Provider lookupProvider = Minecraft.getInstance().level.registryAccess();
-            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), getTagLocationFromMaterial(material));
-            Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
-
-            return lookup.map(l -> !l.get(tagKey).isEmpty()).orElse(false);
-
-        } else {
-            return false;
-        }
-    }
-
-
-    /**
-     * Tests whether an item tag is not empty and hast an existing item registered
+     * Tests whether an item tag is not empty and has at least one existing item registered.
+     * Supports multiple tags for a single material.
      */
     public static boolean isTagValidAndHasMatchingItems(String material) {
         if (Minecraft.getInstance().level != null) {
             HolderLookup.Provider lookupProvider = Minecraft.getInstance().level.registryAccess();
-            TagKey<Item> tagKey = TagKey.create(BuiltInRegistries.ITEM.key(), getTagLocationFromMaterial(material));
-            Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
+            // Get all possible tags for this material
+            List<TagKey<Item>> tagKeys = getPossibleTagsForMaterial(material);
 
-            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Search for items of material [" + ToolUtils.transformMaterialNames(material) + "] in item tag [" + tagKey.location() + "]");
+            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Searching for items of material [" + ToolUtils.transformMaterialNames(material) + "] in multiple possible tags");
 
-            // check if tag exists and has entries
-            if (lookup.isPresent()) {
-                HolderLookup<Item> holderLookup = lookup.get();
+            // Iterate through all possible tags
+            for (TagKey<Item> tagKey : tagKeys) {
+                Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
 
-                // check if tag is not empty
-                Optional<HolderSet.Named<Item>> tagEntries = holderLookup.get(tagKey);
-                if (tagEntries.isPresent() && tagEntries.get().isBound()) {
-                    //check entries
-                    for (Holder<Item> itemHolder : tagEntries.get()) {
-                        //get resource location of items
-                        ResourceLocation itemName = BuiltInRegistries.ITEM.getKey(itemHolder.value());
-                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Entry found: " + itemName);
+                if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Checking tag [" + tagKey.location() + "]");
 
-                        //check if entry is registered as item ingame
-                        if (!BuiltInRegistries.ITEM.containsKey(itemName)) {
-                            return false;
+                // Check if tag exists and has entries
+                if (lookup.isPresent()) {
+                    HolderLookup<Item> holderLookup = lookup.get();
 
-                        } else {
-                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Item is registered!");
-                            return true;
+                    // Check if tag is not empty
+                    Optional<HolderSet.Named<Item>> tagEntries = holderLookup.get(tagKey);
+                    if (tagEntries.isPresent() && tagEntries.get().isBound()) {
+                        // Check entries
+                        for (Holder<Item> itemHolder : tagEntries.get()) {
+                            // Get resource location of items
+                            ResourceLocation itemName = BuiltInRegistries.ITEM.getKey(itemHolder.value());
+                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Entry found: " + itemName);
+
+                            // Check if entry is registered as item ingame
+                            if (BuiltInRegistries.ITEM.containsKey(itemName)) {
+                                if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Item is registered!");
+                                return true;
+                            }
                         }
                     }
                 }
@@ -82,28 +71,61 @@ public class ModTags {
 
 
     /**
-     * Outputs the resource location of material item tags
+     * Returns a list of possible item tags for a material
      */
-    @Deprecated //Does not work as well as expected with materials that could be addressed by several tags and with modified tags
-    public static ResourceLocation getTagLocationFromMaterial(String material) {
+    public static List<TagKey<Item>> getPossibleTagsForMaterial(String material) {
+        List<TagKey<Item>> tags = new ArrayList<>();
         material = ToolUtils.transformMaterialNames(material);
 
+        // Add special material tags
         if (ToolUtils.isSpecial(material)) {
-            if (material.equals("wither_bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones/wither");
-            if (material.equals("bone")) return ResourceLocation.fromNamespaceAndPath("c", "bones/regular");
-            if (material.equals("carbon")) return ResourceLocation.fromNamespaceAndPath("c", "plates/carbon");
-            if (material.equals("plastic")) return ResourceLocation.fromNamespaceAndPath("c", "pellets/plastic");
-            if (material.equals("silicon")) return ResourceLocation.fromNamespaceAndPath("c", "silicon");
-
-                return ResourceLocation.fromNamespaceAndPath("c", "rods/" + material); //returns the standard rod tags for materials that do not have normal base materials
-        }
-
-        if (ToolUtils.isGem(material)) {
-            return ResourceLocation.fromNamespaceAndPath("c", "gems/" + material);
+            if (material.equals("wither_bone")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/wither")));
+            } else if (material.equals("bone")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/regular")));
+            } else if (material.equals("carbon")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plates/carbon")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/carbon")));
+            } else if (material.equals("plastic")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "pellets/plastic")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plastic_sheets")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plastic")));
+            } else if (material.equals("silicon")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "silicon")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/silicon")));
+            } else if (material.equals("bedrock")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/bedrock")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_bedrock")));
+            } else if (material.equals("redstone")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/redstone")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_redstone")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/redstone_alloy")));
+            } else if (material.equals("glowstone")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/glowstone")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_glowstone")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/glowstone_alloy")));
+            } else if (material.equals("obsidian")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/obsidian")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_obsidian")));
+            } else if (material.equals("superconductor")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor")));
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor_alloy")));
+            } else {
+                // Standard rod tags for materials that do not have normal base materials
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "rods/" + material)));
+            }
 
         } else {
-            return ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material);
+            // Add standard material tags
+            if (ToolUtils.isGem(material)) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "gems/" + material)));
+            } else {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material)));
+            }
+
         }
+
+        return tags;
     }
 
 }

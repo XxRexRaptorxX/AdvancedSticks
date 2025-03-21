@@ -35,7 +35,7 @@ public class ToolUtils {
         } else {
             String handle = Objects.requireNonNull(getHandleAndBaseMaterialFromItem(name))[0];
 
-            if (isRod(handle)) {
+            if (isVanillaRod(handle)) {
                 if(handle.equals("end")) {
                     return Component.translatable("block.minecraft." + handle + "_rod").getString();
                 } else {
@@ -167,12 +167,26 @@ public class ToolUtils {
 
 
     /**
-     * Tests whether the basic raw material of the material is neither a gem nor an ingot
+     * Tests whether the basic raw material of the material is neither a gem nor an ingot or the material has multiple possible item tags
      */
     public static boolean isSpecial(String material) {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
-                 "blizz", "blitz", "carbon", "plastic"
+                 "blizz", "blitz", "carbon", "plastic", "glowstone", "redstone", "superconductor", "obsidian",
+                 "bedrock", "silicon"
+                    -> true;
+
+            default -> false;
+        };
+    }
+
+
+    /**
+     * Tests whether the material belongs to a rod item
+     */
+    public static boolean isRod(String material) {
+        return switch (material) {
+            case "end", "blaze", "breeze", "basalz", "blizz", "blitz"
                     -> true;
 
             default -> false;
@@ -183,9 +197,9 @@ public class ToolUtils {
     /**
      * Tests whether the material belongs to a Vanilla rod item
      */
-    public static boolean isRod(String material) {
+    public static boolean isVanillaRod(String material) {
         return switch (material) {
-            case "end", "blaze", "breeze", "basalz", "blizz", "blitz"
+            case "end", "blaze", "breeze"
                     -> true;
 
             default -> false;
