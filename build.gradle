@@ -123,7 +123,13 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    maven { url "https://maven.shedaniel.me/" } // REI
+    maven { // REI
+        url "https://maven.shedaniel.me/"
+    }
+    maven { // EMI
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 
@@ -136,6 +142,9 @@ dependencies {
     runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}"
+    //EMI
+    //compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
+    //runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
     //JEED
     //runtimeOnly ("curse.maven:jeed-532286:${jeed_version}")
     //JADE
