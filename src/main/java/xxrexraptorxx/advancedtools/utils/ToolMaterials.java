@@ -670,6 +670,38 @@ public class ToolMaterials {
     private static final float NETHERITE_IRON_DMG   = 3.6f;
     private static final int   NETHERITE_IRON_ENCH  = 15;
 
+    private static final int   COMPRESSED_IRON_USES  = 1800;
+    private static final float COMPRESSED_IRON_SPEED = 4.8f;
+    private static final float COMPRESSED_IRON_DMG   = 3.0f;
+    private static final int   COMPRESSED_IRON_ENCH  = 12;
+
+    private static final int   ENDER_CRYSTAL_USES  = 2500;
+    private static final float ENDER_CRYSTAL_SPEED = 6.2f;
+    private static final float ENDER_CRYSTAL_DMG   = 3.8f;
+    private static final int   ENDER_CRYSTAL_ENCH  = 20;
+
+    private static final int   GLOWSTONE_USES  = 100;
+    private static final float GLOWSTONE_SPEED = 7.0f;
+    private static final float GLOWSTONE_DMG   = 1.5f;
+    private static final int   GLOWSTONE_ENCH  = 25;
+
+    private static final int   INANITE_USES  = 3200;
+    private static final float INANITE_SPEED = 7.8f;
+    private static final float INANITE_DMG   = 4.8f;
+    private static final int   INANITE_ENCH  = 28;
+
+    private static final int   PINK_SLIME_USES  = 1400;
+    private static final float PINK_SLIME_SPEED = 5.0f;
+    private static final float PINK_SLIME_DMG   = 2.8f;
+    private static final int   PINK_SLIME_ENCH  = 16;
+
+    private static final int   SOULARIUM_USES  = 1600;
+    private static final float SOULARIUM_SPEED = 5.4f;
+    private static final float SOULARIUM_DMG   = 3.2f;
+    private static final int   SOULARIUM_ENCH  = 18;
+
+
+
 
     public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
     public static final Map<String, Float> SPEED_MAP = new HashMap<>();
@@ -799,6 +831,12 @@ public class ToolMaterials {
         addMaterial("ridiculite", RIDICULITE_USES, RIDICULITE_SPEED, RIDICULITE_DMG, RIDICULITE_ENCH);
         addMaterial("yellorium", YELLORIUM_USES, YELLORIUM_SPEED, YELLORIUM_DMG, YELLORIUM_ENCH);
         addMaterial("witherbone", WITHER_BONE_USES, WITHER_BONE_SPEED, WITHER_BONE_DMG, WITHER_BONE_ENCH);
+        addMaterial("compressediron", COMPRESSED_IRON_USES, COMPRESSED_IRON_SPEED, COMPRESSED_IRON_DMG, COMPRESSED_IRON_ENCH);
+        addMaterial("endercrystal", ENDER_CRYSTAL_USES, ENDER_CRYSTAL_SPEED, ENDER_CRYSTAL_DMG, ENDER_CRYSTAL_ENCH);
+        addMaterial("glowstone", GLOWSTONE_USES, GLOWSTONE_SPEED, GLOWSTONE_DMG, GLOWSTONE_ENCH);
+        addMaterial("inanite", INANITE_USES, INANITE_SPEED, INANITE_DMG, INANITE_ENCH);
+        addMaterial("pinkslime", PINK_SLIME_USES, PINK_SLIME_SPEED, PINK_SLIME_DMG, PINK_SLIME_ENCH);
+        addMaterial("soularium", SOULARIUM_USES, SOULARIUM_SPEED, SOULARIUM_DMG, SOULARIUM_ENCH);
     }
 
 

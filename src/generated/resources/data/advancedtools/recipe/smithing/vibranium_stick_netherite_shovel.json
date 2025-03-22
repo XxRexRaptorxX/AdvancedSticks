@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:vibranium_stick_diamond_shovel",
+  "base": "advancedtools:vibranium_stick_diamond_sword",
   "result": {
     "count": 1,
     "id": "advancedtools:vibranium_stick_netherite_shovel"

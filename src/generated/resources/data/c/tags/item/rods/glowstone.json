@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_glowstone",
+    {
+      "id": "#c:sticks/glowstone",
+      "required": false
+    }
+  ]
+}

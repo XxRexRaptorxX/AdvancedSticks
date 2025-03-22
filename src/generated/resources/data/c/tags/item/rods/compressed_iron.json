@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_compressediron",
+    {
+      "id": "#c:sticks/compressed_iron",
+      "required": false
+    }
+  ]
+}

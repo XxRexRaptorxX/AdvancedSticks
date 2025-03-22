@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:magentite_stick_diamond_axe",
+  "base": "advancedtools:magentite_stick_diamond_sword",
   "result": {
     "count": 1,
     "id": "advancedtools:magentite_stick_netherite_axe"

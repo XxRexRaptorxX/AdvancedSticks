@@ -31,18 +31,18 @@ public class ModItems {
     public static final String[] BASE_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
 
     public static final String[] HANDLE_MATERIALS = {
-            "witherbone", "obsidian", "carbon", "netherite", "blastproofalloy", "darksteel", "duratium", "graphite", "bedrock", "silicon",
-            "steel", "antimony", "stone", "iron", "titanium", "iridium", "quartz", "nickel", "invar", "bone", "plastic", "energizedgold",
-            "electrum", "anglesite", "lumium", "blaze", "allthemodium",  "bronze", "constantan", "brass", "gold", "topaz", "kanthal",
-            "peridot", "yellorium", "cadmium", "advancedalloy", "solarium", "manganese", "cupronickel", "copper", "energizedcopper",
-            "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy", "ventium", "pyrope", "ruby",
-            "plutonium", "tungsten", "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix",
-            "thorium", "zanite", "charoite", "atomicalloy", "ridiculite", "fluorite",  "falsite", "superconductor", "apatite",
-            "certusquartzcrystal", "aquite", "benitoite", "reinforcedalloy", "opal", "breeze", "cyanite", "adamant",  "manasteel", "sapphire",
-            "blutonium", "enderium", "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "insanite", "vibranium", "pulsatingalloy",
-            "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin", "zinc",
-            "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold",  "basalz"
-            //"bloodiron", "enchantedbloodiron" TODO
+            "witherbone", "obsidian", "carbon", "netherite", "blastproofalloy", "darksteel", "duratium", "graphite", "bedrock", "compressediron",
+            "silicon", "steel", "antimony", "iron", "titanium", "stone", "iridium", "quartz", "nickel", "invar", "bone", "plastic", "energizedgold",
+            "electrum", "anglesite", "lumium", "blaze", "allthemodium", "bronze", "constantan", "glowstone", "brass", "gold", "topaz", "kanthal",
+            "peridot", "yellorium", "cadmium", "advancedalloy", "soularium", "solarium", "manganese", "cupronickel", "copper", "energizedcopper",
+            "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy", "ventium", "pyrope", "inanite", "ruby", "plutonium",
+            "tungsten", "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix","thorium", "zanite",
+            "charoite", "atomicalloy", "pinkslime", "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal",
+            "aquite", "benitoite", "reinforcedalloy", "opal", "breeze", "cyanite", "adamant", "manasteel", "sapphire", "blutonium", "enderium",
+            "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy",
+            "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin",
+            "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
+            //TODO: "bloodiron", "enchantedbloodiron"
     };
 
 

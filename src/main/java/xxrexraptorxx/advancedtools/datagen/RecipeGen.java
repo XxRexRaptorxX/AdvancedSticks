@@ -28,7 +28,10 @@ public class RecipeGen extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         for (String handle : ModItems.HANDLE_MATERIALS) {
-            generateToolRecipes(ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle)));
+            TagKey<Item> tag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
+
+            AdvancedTools.LOGGER.info("Generate Recipes for [" + handle + "] of tag [" + tag.location() + "]" );
+            generateToolRecipes(tag);
         }
 
         toolRecyclingRecipes();

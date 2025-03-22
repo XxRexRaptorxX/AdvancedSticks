@@ -158,7 +158,7 @@ public class ToolUtils {
         return switch (material) {
             case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz",
                  "fluorite", "cinnabar", "apatite", "aquite", "certusquartzcrystal", "charoite", "diopside",
-                 "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite", "zanite"
+                 "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite", "zanite", "endercrystal"
                     -> true;
 
             default -> false;
@@ -239,6 +239,9 @@ public class ToolUtils {
         if (material.equals("netheriteemerald")) material = "netherite_emerald";
         if (material.equals("netheritegold")) material = "netherite_gold";
         if (material.equals("netheriteiron")) material = "netherite_iron";
+        if (material.equals("compressediron")) material = "compressed_iron";
+        if (material.equals("pinkslime")) material = "pink_slime";
+        if (material.equals("endercrystal")) material = "ender_crystal";
         if (material.equals("hdpe")) material = "plastic"; //name fix to make HDPE more versatile
 
         if (material.contains("alloy")) material = material.replace("alloy", "_alloy");
@@ -257,10 +260,11 @@ public class ToolUtils {
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 1);
             case "amethyst", "opal" -> new MobEffectInstance(MobEffects.LUCK, 300);
             case "vibranium" -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300);
-            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
+            case "end", "endercrystal" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
             case "blaze", "pyrope" -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300);
             case "aquite" -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300);
             case "enchanted" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300);
+            case "pinkslime" -> new MobEffectInstance(MobEffects.OOZING, 300);
             default -> null;
         };
     }
@@ -285,6 +289,7 @@ public class ToolUtils {
             case "energizedcopper", "energizedgold" -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, random.nextInt(300, 500));
             case "basalz" -> new MobEffectInstance(MobEffects.WEAKNESS, random.nextInt(100, 300));
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 300));
+            case "soularium" -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, random.nextInt(100, 300));
             default -> null;
         };
     }

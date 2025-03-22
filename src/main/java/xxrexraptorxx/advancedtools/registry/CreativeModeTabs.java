@@ -25,16 +25,18 @@ public class CreativeModeTabs {
             .icon(() -> BuiltInRegistries.ITEM.getValue(getItemLoc( "iron_stick_diamond_pickaxe")).getDefaultInstance())
             .displayItems((params, output) -> {
 
+                //rods
+                for (String rod : ModItems.HANDLE_MATERIALS) {
+                    if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + rod + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(rod)));
+
+                    if (!ToolUtils.isRod(rod) && ToolUtils.isValidMaterialForCreative(rod)) {
+                        output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(rod)));
+                    }
+                }
+
+                //tools
                 for (String base : ModItems.BASE_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
-                        //rods
-                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register stick in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-
-                        if (!ToolUtils.isRod(handle) && ToolUtils.isValidMaterialForCreative(handle)) {
-                            output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
-                        }
-
-                        //tools
                         if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 
                         if (ToolUtils.isValidMaterialForCreative(handle)) {

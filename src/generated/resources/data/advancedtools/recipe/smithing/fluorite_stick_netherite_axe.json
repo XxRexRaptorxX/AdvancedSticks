@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:fluorite_stick_diamond_axe",
+  "base": "advancedtools:fluorite_stick_diamond_sword",
   "result": {
     "count": 1,
     "id": "advancedtools:fluorite_stick_netherite_axe"

@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:antimony_stick_diamond_hoe",
+  "base": "advancedtools:antimony_stick_diamond_sword",
   "result": {
     "count": 1,
     "id": "advancedtools:antimony_stick_netherite_hoe"

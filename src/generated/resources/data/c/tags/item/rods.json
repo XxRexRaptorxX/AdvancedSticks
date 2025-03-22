@@ -1,11 +1,55 @@
 {
   "values": [
     {
+      "id": "#c:rods/wither_bone",
+      "required": false
+    },
+    {
+      "id": "#c:rods/obsidian",
+      "required": false
+    },
+    {
+      "id": "#c:rods/carbon",
+      "required": false
+    },
+    {
       "id": "#c:rods/netherite",
       "required": false
     },
     {
+      "id": "#c:rods/blast_proof_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/dark_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/duratium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/graphite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bedrock",
+      "required": false
+    },
+    {
+      "id": "#c:rods/silicon",
+      "required": false
+    },
+    {
       "id": "#c:rods/steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/antimony",
+      "required": false
+    },
+    {
+      "id": "#c:rods/stone",
       "required": false
     },
     {
@@ -21,15 +65,7 @@
       "required": false
     },
     {
-      "id": "#c:rods/bone",
-      "required": false
-    },
-    {
-      "id": "#c:rods/invar",
-      "required": false
-    },
-    {
-      "id": "#c:rods/end",
+      "id": "#c:rods/quartz",
       "required": false
     },
     {
@@ -37,7 +73,315 @@
       "required": false
     },
     {
-      "id": "#c:rods/quartz",
+      "id": "#c:rods/invar",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bone",
+      "required": false
+    },
+    {
+      "id": "#c:rods/plastic",
+      "required": false
+    },
+    {
+      "id": "#c:rods/energized_gold",
+      "required": false
+    },
+    {
+      "id": "#c:rods/electrum",
+      "required": false
+    },
+    {
+      "id": "#c:rods/anglesite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/lumium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/blaze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/allthemodium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bronze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/constantan",
+      "required": false
+    },
+    {
+      "id": "#c:rods/brass",
+      "required": false
+    },
+    {
+      "id": "#c:rods/gold",
+      "required": false
+    },
+    {
+      "id": "#c:rods/topaz",
+      "required": false
+    },
+    {
+      "id": "#c:rods/kanthal",
+      "required": false
+    },
+    {
+      "id": "#c:rods/peridot",
+      "required": false
+    },
+    {
+      "id": "#c:rods/yellorium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/cadmium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/advanced_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/solarium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/manganese",
+      "required": false
+    },
+    {
+      "id": "#c:rods/cupronickel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/copper",
+      "required": false
+    },
+    {
+      "id": "#c:rods/energized_copper",
+      "required": false
+    },
+    {
+      "id": "#c:rods/energetic_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/signalum",
+      "required": false
+    },
+    {
+      "id": "#c:rods/horizonite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/cinnabar",
+      "required": false
+    },
+    {
+      "id": "#c:rods/redstone",
+      "required": false
+    },
+    {
+      "id": "#c:rods/infused_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/ventium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pyrope",
+      "required": false
+    },
+    {
+      "id": "#c:rods/ruby",
+      "required": false
+    },
+    {
+      "id": "#c:rods/plutonium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/tungsten",
+      "required": false
+    },
+    {
+      "id": "#c:rods/amethyst",
+      "required": false
+    },
+    {
+      "id": "#c:rods/ludicrite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/energite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/elementium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/magentite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/enchanted",
+      "required": false
+    },
+    {
+      "id": "#c:rods/unobtainium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/fluix",
+      "required": false
+    },
+    {
+      "id": "#c:rods/thorium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/zanite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/charoite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/atomic_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/ridiculite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/fluorite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/falsite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/superconductor",
+      "required": false
+    },
+    {
+      "id": "#c:rods/apatite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/certus_quartz_crystal",
+      "required": false
+    },
+    {
+      "id": "#c:rods/aquite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/benitoite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/reinforced_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/opal",
+      "required": false
+    },
+    {
+      "id": "#c:rods/breeze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/cyanite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/adamant",
+      "required": false
+    },
+    {
+      "id": "#c:rods/manasteel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/sapphire",
+      "required": false
+    },
+    {
+      "id": "#c:rods/blutonium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/enderium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/diamond",
+      "required": false
+    },
+    {
+      "id": "#c:rods/biosteel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/beryllium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/emerald",
+      "required": false
+    },
+    {
+      "id": "#c:rods/terrasteel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/diopside",
+      "required": false
+    },
+    {
+      "id": "#c:rods/insanite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/vibranium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pulsating_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/prismarine",
+      "required": false
+    },
+    {
+      "id": "#c:rods/uranium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/vibrant_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/end_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/end",
       "required": false
     },
     {
@@ -53,11 +397,15 @@
       "required": false
     },
     {
+      "id": "#c:rods/cobalt",
+      "required": false
+    },
+    {
       "id": "#c:rods/lead",
       "required": false
     },
     {
-      "id": "#c:rods/cobalt",
+      "id": "#c:rods/stainless_steel",
       "required": false
     },
     {
@@ -69,159 +417,11 @@
       "required": false
     },
     {
-      "id": "#c:rods/certus_quartz",
-      "required": false
-    },
-    {
-      "id": "#c:rods/breeze",
-      "required": false
-    },
-    {
-      "id": "#c:rods/electrum",
-      "required": false
-    },
-    {
-      "id": "#c:rods/lumium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/constantan",
-      "required": false
-    },
-    {
-      "id": "#c:rods/topaz",
-      "required": false
-    },
-    {
-      "id": "#c:rods/peridot",
-      "required": false
-    },
-    {
-      "id": "#c:rods/brass",
-      "required": false
-    },
-    {
-      "id": "#c:rods/bronze",
-      "required": false
-    },
-    {
-      "id": "#c:rods/gold",
-      "required": false
-    },
-    {
-      "id": "#c:rods/blaze",
-      "required": false
-    },
-    {
-      "id": "#c:rods/allthemodium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/signalum",
-      "required": false
-    },
-    {
-      "id": "#c:rods/copper",
-      "required": false
-    },
-    {
-      "id": "#c:rods/cinnabar",
-      "required": false
-    },
-    {
-      "id": "#c:rods/ruby",
-      "required": false
-    },
-    {
-      "id": "#c:rods/fluorite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/unobtainium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/enchanted",
-      "required": false
-    },
-    {
-      "id": "#c:rods/amethyst",
-      "required": false
-    },
-    {
-      "id": "#c:rods/sapphire",
-      "required": false
-    },
-    {
-      "id": "#c:rods/enderium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/diamond",
-      "required": false
-    },
-    {
-      "id": "#c:rods/emerald",
-      "required": false
-    },
-    {
-      "id": "#c:rods/vibranium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/uranium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/advanced",
-      "required": false
-    },
-    {
-      "id": "#c:rods/adamant",
-      "required": false
-    },
-    {
-      "id": "#c:rods/advanced_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/antimony",
-      "required": false
-    },
-    {
-      "id": "#c:rods/apatite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/aquite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/atomic_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/basalz",
-      "required": false
-    },
-    {
-      "id": "#c:rods/bedrock",
-      "required": false
-    },
-    {
-      "id": "#c:rods/beryllium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/biosteel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/blast_proof_alloy",
-      "required": false
-    },
-    {
       "id": "#c:rods/blitz",
+      "required": false
+    },
+    {
+      "id": "#c:rods/certus_quartz",
       "required": false
     },
     {
@@ -229,199 +429,11 @@
       "required": false
     },
     {
-      "id": "#c:rods/cadmium",
+      "id": "#c:rods/advanced",
       "required": false
     },
     {
-      "id": "#c:rods/wither_bone",
-      "required": false
-    },
-    {
-      "id": "#c:rods/thorium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/carbon",
-      "required": false
-    },
-    {
-      "id": "#c:rods/certus_quartz_crystal",
-      "required": false
-    },
-    {
-      "id": "#c:rods/charoite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/cupronickel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/dark_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/duratium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/diopside",
-      "required": false
-    },
-    {
-      "id": "#c:rods/elementium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/end_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/energetic_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/energite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/energized_copper",
-      "required": false
-    },
-    {
-      "id": "#c:rods/energized_gold",
-      "required": false
-    },
-    {
-      "id": "#c:rods/falsite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/fluix",
-      "required": false
-    },
-    {
-      "id": "#c:rods/plastic",
-      "required": false
-    },
-    {
-      "id": "#c:rods/horizonite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/infused_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/kanthal",
-      "required": false
-    },
-    {
-      "id": "#c:rods/manasteel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/manganese",
-      "required": false
-    },
-    {
-      "id": "#c:rods/obsidian",
-      "required": false
-    },
-    {
-      "id": "#c:rods/plutonium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/prismarine",
-      "required": false
-    },
-    {
-      "id": "#c:rods/pulsating_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/pyrope",
-      "required": false
-    },
-    {
-      "id": "#c:rods/redstone",
-      "required": false
-    },
-    {
-      "id": "#c:rods/reinforced_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/silicon",
-      "required": false
-    },
-    {
-      "id": "#c:rods/solarium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/stainless_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/terrasteel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/superconductor",
-      "required": false
-    },
-    {
-      "id": "#c:rods/tungsten",
-      "required": false
-    },
-    {
-      "id": "#c:rods/ventium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/vibrant_alloy",
-      "required": false
-    },
-    {
-      "id": "#c:rods/zanite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/opal",
-      "required": false
-    },
-    {
-      "id": "#c:rods/anglesite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/benitoite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/blutonium",
-      "required": false
-    },
-    {
-      "id": "#c:rods/cyanite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/graphite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/insanite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/ludicrite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/magentite",
+      "id": "#c:rods/netherite_iron",
       "required": false
     },
     {
@@ -437,19 +449,31 @@
       "required": false
     },
     {
-      "id": "#c:rods/netherite_iron",
+      "id": "#c:rods/basalz",
       "required": false
     },
     {
-      "id": "#c:rods/ridiculite",
+      "id": "#c:rods/compressed_iron",
       "required": false
     },
     {
-      "id": "#c:rods/yellorium",
+      "id": "#c:rods/ender_crystal",
       "required": false
     },
     {
-      "id": "#c:rods/stone",
+      "id": "#c:rods/glowstone",
+      "required": false
+    },
+    {
+      "id": "#c:rods/inanite",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pink_slime",
+      "required": false
+    },
+    {
+      "id": "#c:rods/soularium",
       "required": false
     },
     "#c:rods/end"

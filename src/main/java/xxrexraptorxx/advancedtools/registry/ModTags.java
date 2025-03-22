@@ -111,7 +111,7 @@ public class ModTags {
                 tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor")));
                 tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor_alloy")));
             } else {
-                // Standard rod tags for materials that do not have normal base materials
+                // Standard rod tags for materials that do not have normal base materials (e.g. enchanted_stick or basalz_rod)
                 tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "rods/" + material)));
             }
 

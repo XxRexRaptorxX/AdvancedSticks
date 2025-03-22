@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:diamond_stick_diamond_hoe",
+  "base": "advancedtools:diamond_stick_diamond_sword",
   "result": {
     "count": 1,
     "id": "advancedtools:diamond_stick_netherite_hoe"

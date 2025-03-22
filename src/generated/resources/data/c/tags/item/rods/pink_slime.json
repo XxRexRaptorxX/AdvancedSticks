@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_pinkslime",
+    {
+      "id": "#c:sticks/pink_slime",
+      "required": false
+    }
+  ]
+}

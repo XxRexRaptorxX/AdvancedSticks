@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_soularium",
+    {
+      "id": "#c:sticks/soularium",
+      "required": false
+    }
+  ]
+}

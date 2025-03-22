@@ -193,6 +193,12 @@
   "item.advancedtools.stick_yellorium": "Yellorium Rod",
   "item.advancedtools.stick_witherbone":"Wither Bone Rod",
   "item.advancedtools.stick_stone": "Stone Rod",
+  "item.advancedtools.stick_compressediron":  "Compressed Iron Rod",
+  "item.advancedtools.stick_endercrystal": "Ender Crystal Rod",
+  "item.advancedtools.stick_glowstone":  "Glowstone Rod",
+  "item.advancedtools.stick_inanite": "Inanite Rod",
+  "item.advancedtools.stick_pinkslime":  "Pink Slime Rod",
+  "item.advancedtools.stick_soularium": "Soularium Rod",
 
   "item.advancedtools.elemental_stick_air": "元素棍",
   "item.advancedtools.elemental_stick_earth": "元素棍",

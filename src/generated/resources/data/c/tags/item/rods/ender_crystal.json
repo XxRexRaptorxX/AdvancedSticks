@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_endercrystal",
+    {
+      "id": "#c:sticks/ender_crystal",
+      "required": false
+    }
+  ]
+}
