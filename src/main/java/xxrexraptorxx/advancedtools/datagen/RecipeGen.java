@@ -168,7 +168,22 @@ public class RecipeGen extends RecipeProvider {
     }
 
 
-    public void netheriteSmithing(Item item, Item result) {
+    //TODO
+    //private void netheriteSmithingANCompat(String handle, String tool) {
+    //    Item result = BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_netherite_" + tool));
+    //    Item input = BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_netherite_" + tool));
+    //
+    //    AdvancedTools.LOGGER.info("Generate AdvancedNetherite smithing recipe for " + getItemName(result));
+    //
+    //        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+    //                    Ingredient.of(item), tag(ModTags.createItemTag("advancednetherite", "upgrade_to_netherite_iron")), RecipeCategory.COMBAT, result)
+    //            .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
+    //            .save(output, References.MODID + ":compat/advanced_netherite/" + getItemName(result));
+    //}
+
+
+
+    private void netheriteSmithing(Item item, Item result) {
         AdvancedTools.LOGGER.info("Generate smithing recipe for " + getItemName(result));
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
@@ -176,6 +191,7 @@ public class RecipeGen extends RecipeProvider {
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
                 .save(output, References.MODID + ":smithing/" + getItemName(result));
     }
+
 
 
     private String getStickName(TagKey<Item> handle) {
