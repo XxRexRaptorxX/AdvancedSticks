@@ -31,7 +31,7 @@ public class ModItems {
     public static final String[] BASE_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
 
     public static final String[] HANDLE_MATERIALS = {
-            "witherbone", "obsidian", "netherite", "blastproofalloy", "carbon", "darksteel", "duratium", "graphite", "bedrock", "silicon",
+            "witherbone", "obsidian", "carbon", "netherite", "blastproofalloy", "darksteel", "duratium", "graphite", "bedrock", "silicon",
             "steel", "antimony", "stone", "iron", "titanium", "iridium", "quartz", "nickel", "invar", "bone", "plastic", "energizedgold",
             "electrum", "anglesite", "lumium", "blaze", "allthemodium",  "bronze", "constantan", "brass", "gold", "topaz", "kanthal",
             "peridot", "yellorium", "cadmium", "advancedalloy", "solarium", "manganese", "cupronickel", "copper", "energizedcopper",
