@@ -18,33 +18,18 @@ public class REIIntegration implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-
         if (Config.JEI_DESCRIPTION.get()) {
             BuiltinClientPlugin instance = BuiltinClientPlugin.getInstance();
 
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.BASE_MATERIALS) {
+                    for (String tool : ModItems.TOOL_TYPES) {
 
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription(handle, base));
-                        return list;
-                    });
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription(handle, base));
-                        return list;
-                    });
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription(handle, base));
-                        return list;
-                    });
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription(handle, base));
-                        return list;
-                    });
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe"))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription(handle, base));
-                        return list;
-                    });
+                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool))), Component.empty(), list -> {
+                            list.add(ToolUtils.getToolStatDescription(handle, base));
+                            return list;
+                        });
+                    }
                 }
             }
 
@@ -56,27 +41,12 @@ public class REIIntegration implements REIClientPlugin {
                     head = base + "en";
                 }
 
-
-                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_sword"))), Component.empty(), list -> {
-                    list.add(ToolUtils.getToolStatDescription("wood", base));
-                    return list;
-                });
-                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_pickaxe"))), Component.empty(), list -> {
-                    list.add(ToolUtils.getToolStatDescription("wood", base));
-                    return list;
-                });
-                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_axe"))), Component.empty(), list -> {
-                    list.add(ToolUtils.getToolStatDescription("wood", base));
-                    return list;
-                });
-                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_shovel"))), Component.empty(), list -> {
-                    list.add(ToolUtils.getToolStatDescription("wood", base));
-                    return list;
-                });
-                instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_hoe"))), Component.empty(), list -> {
-                    list.add(ToolUtils.getToolStatDescription("wood", base));
-                    return list;
-                });
+                for (String tool : ModItems.TOOL_TYPES) {
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_" + tool))), Component.empty(), list -> {
+                        list.add(ToolUtils.getToolStatDescription("wood", base));
+                        return list;
+                    });
+                }
             }
         }
     }

@@ -36,12 +36,10 @@ public class ItemModelGen extends ItemModelGenerators {
             }
             //tools
             for (String base : ModItems.BASE_MATERIALS) {
-                AdvancedTools.LOGGER.info("Generate tool item model of " + base + " head with " + handle + " handle");
-                this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_sword")));
-                this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_pickaxe")));
-                this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_axe")));
-                this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_shovel")));
-                this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_hoe")));
+                for (String tool : ModItems.TOOL_TYPES) {
+                    AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + base + " head with " + handle + " handle");
+                    this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_" + tool)));
+                }
             }
         }
     }

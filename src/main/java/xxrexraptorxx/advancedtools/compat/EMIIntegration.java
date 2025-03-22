@@ -18,14 +18,12 @@ import java.util.List;
 @EmiEntrypoint
 public class EMIIntegration implements EmiPlugin {
 
-    private final String[] toolTypes = {"sword", "pickaxe", "axe", "shovel", "hoe"};
-
     @Override
     public void register(EmiRegistry registry) {
         if (Config.JEI_DESCRIPTION.get()) {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.BASE_MATERIALS) {;
-                    for (String tool : toolTypes) {
+                    for (String tool : ModItems.TOOL_TYPES) {
                         ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool)));
 
                         ResourceLocation recipeId = ItemModelGen.getItemLoc("info/" + handle + "_" + base + "_" + tool);
@@ -36,7 +34,7 @@ public class EMIIntegration implements EmiPlugin {
 
             //VANILLA
             for (String base : ModItems.BASE_MATERIALS) {
-                for (String tool : toolTypes) {
+                for (String tool : ModItems.TOOL_TYPES) {
 
                     if (base.equals("wood") || base.equals("gold")) {
                         base = base + "en";
