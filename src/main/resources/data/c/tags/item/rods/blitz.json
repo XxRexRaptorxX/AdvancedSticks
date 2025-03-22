@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "thermal:blitz_rod",
+      "required": false
+    }
+  ]
+}

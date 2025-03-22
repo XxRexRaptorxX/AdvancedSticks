@@ -1,0 +1,8 @@
+{
+  "values": [
+    {
+      "id": "thermal:basalz_rod",
+      "required": false
+    }
+  ]
+}
