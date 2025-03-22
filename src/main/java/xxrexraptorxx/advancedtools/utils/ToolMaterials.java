@@ -328,11 +328,6 @@ public class ToolMaterials {
     private static final float BEDROCK_DMG     = 2.5f;
     private static final int   BEDROCK_ENCH    = 2;
 
-    private static final int   ELEMENTUM_USES  = 800;
-    private static final float ELEMENTUM_SPEED = 5.0f;
-    private static final float ELEMENTUM_DMG   = 2.2f;
-    private static final int   ELEMENTUM_ENCH  = 16;
-
     private static final int   MANASTEEL_USES  = 700;
     private static final float MANASTEEL_SPEED = 4.8f;
     private static final float MANASTEEL_DMG   = 2.0f;
@@ -573,42 +568,6 @@ public class ToolMaterials {
     private static final float REDSTONE_DMG   = 1.5f;
     private static final int   REDSTONE_ENCH  = 25;
 
-    /** SPEED **/
-    public static final float WOOD_SWORD_SPEED = 1.6f;
-    public static final float WOOD_PICKAXE_SPEED = 1.2f;
-    public static final float WOOD_AXE_SPEED = 0.8f;
-    public static final float WOOD_SHOVEL_SPEED = 1;
-    public static final float WOOD_HOE_SPEED = 1;
-
-    public static final float STONE_SWORD_SPEED = 1.6f;
-    public static final float STONE_PICKAXE_SPEED = 1.2f;
-    public static final float STONE_AXE_SPEED = 0.8f;
-    public static final float STONE_SHOVEL_SPEED = 1;
-    public static final float STONE_HOE_SPEED = 2;
-
-    public static final float IRON_SWORD_SPEED = 1.6f;
-    public static final float IRON_PICKAXE_SPEED = 1.2f;
-    public static final float IRON_AXE_SPEED = 0.9f;
-    public static final float IRON_SHOVEL_SPEED = 1;
-    public static final float IRON_HOE_SPEED = 3;
-
-    public static final float GOLD_SWORD_SPEED = 1.6f;
-    public static final float GOLD_PICKAXE_SPEED = 1.2f;
-    public static final float GOLD_AXE_SPEED = 1;
-    public static final float GOLD_SHOVEL_SPEED = 1;
-    public static final float GOLD_HOE_SPEED = 1;
-
-    public static final float DIAMOND_SWORD_SPEED = 1.6f;
-    public static final float DIAMOND_PICKAXE_SPEED = 1.2f;
-    public static final float DIAMOND_AXE_SPEED = 1;
-    public static final float DIAMOND_SHOVEL_SPEED = 1;
-    public static final float DIAMOND_HOE_SPEED = 4;
-
-    public static final float NETHERITE_SWORD_SPEED = 1.6f;
-    public static final float NETHERITE_PICKAXE_SPEED = 1.2f;
-    public static final float NETHERITE_AXE_SPEED = 1;
-    public static final float NETHERITE_SHOVEL_SPEED = 1;
-    public static final float NETHERITE_HOE_SPEED = 4;
 
     private static final int   CERTUS_QUARTZ_CRYSTAL_USES  = 500;
     private static final float CERTUS_QUARTZ_CRYSTAL_SPEED = 4.8f;
@@ -670,7 +629,7 @@ public class ToolMaterials {
     private static final float NETHERITE_IRON_DMG   = 3.6f;
     private static final int   NETHERITE_IRON_ENCH  = 15;
 
-    private static final int   COMPRESSED_IRON_USES  = 1800;
+    private static final int   COMPRESSED_IRON_USES  = 800;
     private static final float COMPRESSED_IRON_SPEED = 4.8f;
     private static final float COMPRESSED_IRON_DMG   = 3.0f;
     private static final int   COMPRESSED_IRON_ENCH  = 12;
@@ -701,6 +660,42 @@ public class ToolMaterials {
     private static final int   SOULARIUM_ENCH  = 18;
 
 
+    /** SPEED **/
+    public static final float WOOD_SWORD_SPEED = 1.6f;
+    public static final float WOOD_PICKAXE_SPEED = 1.2f;
+    public static final float WOOD_AXE_SPEED = 0.8f;
+    public static final float WOOD_SHOVEL_SPEED = 1;
+    public static final float WOOD_HOE_SPEED = 1;
+
+    public static final float STONE_SWORD_SPEED = 1.6f;
+    public static final float STONE_PICKAXE_SPEED = 1.2f;
+    public static final float STONE_AXE_SPEED = 0.8f;
+    public static final float STONE_SHOVEL_SPEED = 1;
+    public static final float STONE_HOE_SPEED = 2;
+
+    public static final float IRON_SWORD_SPEED = 1.6f;
+    public static final float IRON_PICKAXE_SPEED = 1.2f;
+    public static final float IRON_AXE_SPEED = 0.9f;
+    public static final float IRON_SHOVEL_SPEED = 1;
+    public static final float IRON_HOE_SPEED = 3;
+
+    public static final float GOLD_SWORD_SPEED = 1.6f;
+    public static final float GOLD_PICKAXE_SPEED = 1.2f;
+    public static final float GOLD_AXE_SPEED = 1;
+    public static final float GOLD_SHOVEL_SPEED = 1;
+    public static final float GOLD_HOE_SPEED = 1;
+
+    public static final float DIAMOND_SWORD_SPEED = 1.6f;
+    public static final float DIAMOND_PICKAXE_SPEED = 1.2f;
+    public static final float DIAMOND_AXE_SPEED = 1;
+    public static final float DIAMOND_SHOVEL_SPEED = 1;
+    public static final float DIAMOND_HOE_SPEED = 4;
+
+    public static final float NETHERITE_SWORD_SPEED = 1.6f;
+    public static final float NETHERITE_PICKAXE_SPEED = 1.2f;
+    public static final float NETHERITE_AXE_SPEED = 1;
+    public static final float NETHERITE_SHOVEL_SPEED = 1;
+    public static final float NETHERITE_HOE_SPEED = 4;
 
 
     public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
