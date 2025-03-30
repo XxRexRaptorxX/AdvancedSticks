@@ -2,21 +2,22 @@ package xxrexraptorxx.advancedtools.items;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ToolMaterial;
-import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class CustomSwordItem extends SwordItem {
+public class CustomSwordItem extends Item {
 
     public CustomSwordItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties properties) {
-        super(material.applySwordProperties(properties, attackDamage, attackSpeed));
+        super(properties.sword(material, attackDamage, attackSpeed));
     }
 
 
@@ -27,12 +28,12 @@ public class CustomSwordItem extends SwordItem {
 
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         String name = BuiltInRegistries.ITEM.getKey(this).getPath();
         int index = name.indexOf("_");
         String handle = name.substring(0, index);
 
-        if (isSelected && entity instanceof LivingEntity player && !level.isClientSide) {
+        if (entity instanceof LivingEntity player && player.getMainHandItem().getItem().equals(this) && !level.isClientSide) {
 
             if (ToolUtils.getHandleMaterialEffect(handle) != null) {
                 player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialEffect(handle)));
@@ -42,6 +43,6 @@ public class CustomSwordItem extends SwordItem {
             }
         }
 
-        super.inventoryTick(stack, level, entity, slotId, isSelected);
+        super.inventoryTick(stack, level, entity, slot);
     }
 }

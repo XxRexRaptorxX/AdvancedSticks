@@ -1,12 +1,14 @@
 package xxrexraptorxx.advancedtools.datagen;
 
+import com.google.common.collect.Maps;
 import com.google.gson.JsonElement;
 import net.minecraft.client.data.models.ItemModelOutput;
 import net.minecraft.client.data.models.ModelProvider;
-import net.minecraft.client.data.models.blockstates.BlockStateGenerator;
+import net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelInstance;
 import net.minecraft.client.data.models.model.ModelLocationUtils;
+import net.minecraft.client.renderer.block.model.BlockModelDefinition;
 import net.minecraft.client.renderer.item.ClientItem;
 import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.core.Holder;
@@ -34,6 +36,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
+//code from TofuCraftReloaded (https://github.com/baguchi/TofuCraftReload-Recode/blob/1.21.x/src/main/java/baguchi/tofucraft/data/generator/TofuModelData.java)
 public class ModelDataGen extends ModelProvider {
 
     private final PackOutput.PathProvider blockStatePathProvider;
@@ -58,7 +61,7 @@ public class ModelDataGen extends ModelProvider {
                 }
             }
         };
-        BlockStateGeneratorCollector blockModelOutput = new BlockStateGeneratorCollector(this::getKnownBlocks) {
+        BlockModelDefinitionGeneratorCollector blockModelOutput = new BlockModelDefinitionGeneratorCollector(this::getKnownBlocks) {
             @Override
             public void validate() { //todo temporary
                 try {
@@ -88,19 +91,19 @@ public class ModelDataGen extends ModelProvider {
         }
 
 
-        public void accept(Item p_387063_, ItemModel.Unbaked p_388578_) {
-            this.register(p_387063_, new ClientItem(p_388578_, ClientItem.Properties.DEFAULT));
+        public void accept(Item item, ItemModel.Unbaked model) {
+            this.register(item, new ClientItem(model, ClientItem.Properties.DEFAULT));
         }
 
-        public void register(Item p_388205_, ClientItem p_388233_) {
-            ClientItem clientitem = (ClientItem) this.itemInfos.put(p_388205_, p_388233_);
+        public void register(Item item, ClientItem clientItem) {
+            ClientItem clientitem = (ClientItem) this.itemInfos.put(item, clientItem);
             if (clientitem != null) {
-                throw new IllegalStateException("Duplicate item model definition for " + String.valueOf(p_388205_));
+                throw new IllegalStateException("Duplicate item model definition for " + String.valueOf(item));
             }
         }
 
-        public void copy(Item p_386920_, Item p_386789_) {
-            this.copies.put(p_386789_, p_386920_);
+        public void copy(Item item, Item item2) {
+            this.copies.put(item2, item);
         }
 
         public void finalizeAndValidate() {
@@ -113,13 +116,13 @@ public class ModelDataGen extends ModelProvider {
                 }
 
             });
-            this.copies.forEach((p_386494_, p_386575_) -> {
-                ClientItem clientitem = (ClientItem) this.itemInfos.get(p_386575_);
+            this.copies.forEach((item, item2) -> {
+                ClientItem clientitem = (ClientItem) this.itemInfos.get(item2);
                 if (clientitem == null) {
-                    String var10002 = String.valueOf(p_386575_);
-                    throw new IllegalStateException("Missing donor: " + var10002 + " -> " + String.valueOf(p_386494_));
+                    String var10002 = String.valueOf(item2);
+                    throw new IllegalStateException("Missing donor: " + var10002 + " -> " + String.valueOf(item));
                 } else {
-                    this.register(p_386494_, clientitem);
+                    this.register(item, clientitem);
                 }
             });
             List<ResourceLocation> list = (this.knownItems.get()).filter((p_388636_) -> !this.itemInfos.containsKey(p_388636_.value())).map((p_388278_) -> ((ResourceKey) p_388278_.unwrapKey().orElseThrow()).location()).toList();
@@ -128,8 +131,8 @@ public class ModelDataGen extends ModelProvider {
             }
         }
 
-        public CompletableFuture<?> save(CachedOutput p_387552_, PackOutput.PathProvider p_388501_) {
-            return DataProvider.saveAll(p_387552_, ClientItem.CODEC, (p_388594_) -> p_388501_.json(p_388594_.builtInRegistryHolder().key().location()), this.itemInfos);
+        public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
+            return DataProvider.saveAll(output, ClientItem.CODEC, (p_388594_) -> provider.json(p_388594_.builtInRegistryHolder().key().location()), this.itemInfos);
         }
     }
 
@@ -140,56 +143,56 @@ public class ModelDataGen extends ModelProvider {
         SimpleModelCollector() {
         }
 
-        public void accept(ResourceLocation p_388633_, ModelInstance p_388119_) {
-            Supplier<JsonElement> supplier = (Supplier) this.models.put(p_388633_, p_388119_);
+        public void accept(ResourceLocation location, ModelInstance instance) {
+            Supplier<JsonElement> supplier = (Supplier) this.models.put(location, instance);
             if (supplier != null) {
-                throw new IllegalStateException("Duplicate model definition for " + String.valueOf(p_388633_));
+                throw new IllegalStateException("Duplicate model definition for " + String.valueOf(location));
             }
         }
 
-        public CompletableFuture<?> save(CachedOutput p_386795_, PackOutput.PathProvider p_388673_) {
-            Objects.requireNonNull(p_388673_);
-            return saveAll(p_386795_, p_388673_::json, this.models);
+        public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
+            Objects.requireNonNull(provider);
+            return saveAll(output, provider::json, this.models);
         }
 
-        static <T> CompletableFuture<?> saveAll(CachedOutput p_387084_, Function<T, Path> p_386455_, Map<T, ? extends Supplier<JsonElement>> p_386585_) {
-            return DataProvider.saveAll(p_387084_, Supplier::get, p_386455_, p_386585_);
+        static <T> CompletableFuture<?> saveAll(CachedOutput output, Function<T, Path> pathFunction, Map<T, ? extends Supplier<JsonElement>> supplier) {
+            return DataProvider.saveAll(output, Supplier::get, pathFunction, supplier);
         }
     }
 
     @OnlyIn(Dist.CLIENT)
-    static class BlockStateGeneratorCollector implements Consumer<BlockStateGenerator> {
-        private final Map<Block, BlockStateGenerator> generators;
+    static class BlockModelDefinitionGeneratorCollector implements Consumer<BlockModelDefinitionGenerator> {
+        private final Map<Block, BlockModelDefinitionGenerator> generators;
         private final Supplier<Stream<? extends Holder<Block>>> knownBlocks;
 
-        public BlockStateGeneratorCollector(Supplier<Stream<? extends Holder<Block>>> knownBlocks) {
+        public BlockModelDefinitionGeneratorCollector(Supplier<Stream<? extends Holder<Block>>> knownBlocks) {
             this.generators = new HashMap();
             this.knownBlocks = knownBlocks;
         }
 
 
-        public void accept(BlockStateGenerator p_388748_) {
-            Block block = p_388748_.getBlock();
-            BlockStateGenerator blockstategenerator = (BlockStateGenerator) this.generators.put(block, p_388748_);
-            if (blockstategenerator != null) {
-                throw new IllegalStateException("Duplicate blockstate definition for " + String.valueOf(block));
+        public void accept(BlockModelDefinitionGenerator generator) {
+            Block block = generator.block();
+            BlockModelDefinitionGenerator blockmodeldefinitiongenerator = this.generators.put(block, generator);
+            if (blockmodeldefinitiongenerator != null) {
+                throw new IllegalStateException("Duplicate blockstate definition for " + block);
             }
         }
 
         public void validate() {
-            Stream<? extends Holder<Block>> stream = this.knownBlocks.get();
-            List<ResourceLocation> list = stream.filter((p_386843_) -> !this.generators.containsKey(p_386843_.value())).map((p_386823_) -> ((ResourceKey) p_386823_.unwrapKey().orElseThrow()).location()).toList();
+            Stream<? extends Holder<Block>> stream = knownBlocks.get();
+            List<ResourceLocation> list = stream.filter(p_386843_ -> !this.generators.containsKey(p_386843_.value()))
+                    .map(p_386823_ -> p_386823_.unwrapKey().orElseThrow().location())
+                    .toList();
             if (!list.isEmpty()) {
-                throw new IllegalStateException("Missing blockstate definitions for: " + String.valueOf(list));
+                throw new IllegalStateException("Missing blockstate definitions for: " + list);
             }
         }
 
-        public CompletableFuture<?> save(CachedOutput p_388014_, PackOutput.PathProvider p_388192_) {
-            return saveAll(p_388014_, (p_387598_) -> p_388192_.json(p_387598_.builtInRegistryHolder().key().location()), this.generators);
-        }
-
-        static <T> CompletableFuture<?> saveAll(CachedOutput p_387084_, Function<T, Path> p_386455_, Map<T, ? extends Supplier<JsonElement>> p_386585_) {
-            return DataProvider.saveAll(p_387084_, Supplier::get, p_386455_, p_386585_);
+        public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
+            Map<Block, BlockModelDefinition> map = Maps.transformValues(this.generators, BlockModelDefinitionGenerator::create);
+            Function<Block, Path> function = p_387598_ -> provider.json(p_387598_.builtInRegistryHolder().key().location());
+            return DataProvider.saveAll(output, BlockModelDefinition.CODEC, function, map);
         }
     }
 }

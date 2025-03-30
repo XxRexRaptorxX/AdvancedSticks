@@ -254,12 +254,12 @@ public class ToolUtils {
     public static MobEffectInstance getHandleMaterialEffect(String material) {
         return switch (material) {
             case "lumium", "solarium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 300);
-            case "breeze" -> new MobEffectInstance(MobEffects.JUMP, 300);
+            case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 300);
             case "bloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300);
             case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300, 1);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 1);
             case "amethyst", "opal" -> new MobEffectInstance(MobEffects.LUCK, 300);
-            case "vibranium" -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300);
+            case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 300);
             case "end", "endercrystal" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
             case "blaze", "pyrope" -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300);
             case "aquite" -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300);
@@ -279,17 +279,17 @@ public class ToolUtils {
             case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000), 1);
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 300));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(100, 300));
-            case "terrasteel", "energeticalloy", "fluix" -> new MobEffectInstance(MobEffects.DIG_SPEED, random.nextInt(100, 300));
+            case "terrasteel", "energeticalloy", "fluix" -> new MobEffectInstance(MobEffects.HASTE, random.nextInt(100, 300));
             case "prismarine" -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, random.nextInt(100, 300));
             case "manasteel" -> new MobEffectInstance(MobEffects.LUCK, random.nextInt(100, 300));
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 800));
             case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(100, 300));
             case "enderium" -> new MobEffectInstance(MobEffects.INFESTED, random.nextInt(100, 300));
             case "duratium", "falsite" -> new MobEffectInstance(MobEffects.SATURATION, random.nextInt(100, 500));
-            case "energizedcopper", "energizedgold" -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, random.nextInt(300, 500));
+            case "energizedcopper", "energizedgold" -> new MobEffectInstance(MobEffects.SPEED, random.nextInt(300, 500));
             case "basalz" -> new MobEffectInstance(MobEffects.WEAKNESS, random.nextInt(100, 300));
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 300));
-            case "soularium" -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, random.nextInt(100, 300));
+            case "soularium" -> new MobEffectInstance(MobEffects.STRENGTH, random.nextInt(100, 300));
             default -> null;
         };
     }
@@ -307,7 +307,7 @@ public class ToolUtils {
             case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300, 1);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 1);
             case "amethyst", "opal" -> new MobEffectInstance(MobEffects.LUCK, 300);
-            case "vibranium" -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300);
+            case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 300);
             case "blaze", "pyrope" -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300);
             default -> null;
         };

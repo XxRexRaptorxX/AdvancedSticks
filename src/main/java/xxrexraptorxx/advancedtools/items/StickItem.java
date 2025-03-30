@@ -2,11 +2,13 @@ package xxrexraptorxx.advancedtools.items;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.Nullable;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
@@ -26,20 +28,22 @@ public class StickItem extends Item {
 
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        String name = BuiltInRegistries.ITEM.getKey(this).getPath().replace("stick_", "");
+    public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
+        String name = BuiltInRegistries.ITEM.getKey(this).getPath();
+        int index = name.indexOf("_");
+        String handle = name.substring(0, index);
 
-        if (isSelected && entity instanceof LivingEntity player && !level.isClientSide) {
+        if (entity instanceof LivingEntity player && player.getMainHandItem().getItem().equals(this) && !level.isClientSide) {
 
-            if (ToolUtils.getHandleMaterialEffect(name) != null) {
-                player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialEffect(name)));
+            if (ToolUtils.getHandleMaterialEffect(handle) != null) {
+                player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialEffect(handle)));
             }
-            if (ToolUtils.getHandleMaterialRandomEffect(name) != null && level.random.nextInt(1000) == 1) {
-                player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialRandomEffect(name)));
+            if (ToolUtils.getHandleMaterialRandomEffect(handle) != null && level.random.nextInt(1000) == 1) {
+                player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialRandomEffect(handle)));
             }
         }
 
-        super.inventoryTick(stack, level, entity, slotId, isSelected);
+        super.inventoryTick(stack, level, entity, slot);
     }
 
 }

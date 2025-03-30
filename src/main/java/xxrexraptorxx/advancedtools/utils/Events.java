@@ -17,7 +17,9 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -61,7 +63,7 @@ public class Events {
 
                     if (versionCheckResult.status() == VersionChecker.Status.OUTDATED || versionCheckResult.status() == VersionChecker.Status.BETA_OUTDATED) {
                         MutableComponent url = Component.translatable(ChatFormatting.GREEN + "Click here to update!")
-                                .withStyle(style -> style.withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, References.URL)));
+                                .withStyle(style -> style.withClickEvent(new ClickEvent.OpenUrl(URI.create(References.URL))));
 
                         player.displayClientMessage(Component.literal(ChatFormatting.BLUE + "A newer version of " + ChatFormatting.YELLOW + References.NAME + ChatFormatting.BLUE + " is available!"), false);
                         player.displayClientMessage(url, false);
@@ -181,33 +183,33 @@ public class Events {
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
         if (Config.SHOW_STICK_TYPE.get() && !namespace.equals("tconstruct") && !namespace.equals("silentgems") && !namespace.equals("tetra")) {
+            if (item.components().has(DataComponents.TOOL)) {
+                if (name.contains("pickaxe") || name.contains("axe") || name.contains("sword") || name.contains("shovel") || name.contains("hoe")) {
 
-            if (item instanceof PickaxeItem && name.contains("pickaxe") || item instanceof AxeItem && name.contains("axe") || item instanceof SwordItem && name.contains("sword")
-                    || item instanceof ShovelItem && name.contains("shovel") || item instanceof HoeItem && name.contains("hoe")) {
+                    if (namespace.equals(References.MODID)) {
+                        if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                            event.getToolTip().add(2, ToolUtils.getToolStatDescription(ToolUtils.getHandleAndBaseMaterialFromItem(name)[0], ToolUtils.getHandleAndBaseMaterialFromItem(name)[1]));
+                        } else {
+                            event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                        }
 
-                if (namespace.equals(References.MODID)) {
-                    if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
-                        event.getToolTip().add(2, ToolUtils.getToolStatDescription(ToolUtils.getHandleAndBaseMaterialFromItem(name)[0], ToolUtils.getHandleAndBaseMaterialFromItem(name)[1]));
-                    } else {
-                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                        event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
-                    }
-
-                } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
-                        if(Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                    } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
+                        if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
                             event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
                         } else {
                             event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                         }
 
-                } else if (namespace.equals("bedrockminer")) {
-                    event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                    event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
+                    } else if (namespace.equals("bedrockminer")) {
+                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
 
-                } else {
-                    event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                    event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                    } else {
+                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                    }
                 }
             }
         }

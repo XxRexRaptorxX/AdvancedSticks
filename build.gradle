@@ -1,7 +1,7 @@
 plugins {
     id 'java-library'
     id 'maven-publish'
-    id 'net.neoforged.moddev' version '1.0.23'
+    id 'net.neoforged.moddev' version '2.0.78'
     id 'idea'
 }
 
@@ -132,27 +132,25 @@ repositories {
     }
 }
 
-
 dependencies {
     //JEI
     //compileOnly ("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
     compileOnly("mezz.jei:jei-1.21.1-common-api:${jei_version}")
     compileOnly("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}")
     //REI
-    runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
+    //runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}"
     //EMI
     compileOnly "dev.emi:emi-neoforge:${emi_version}:api"
     //runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
-    //JEED
-    //runtimeOnly ("curse.maven:jeed-532286:${jeed_version}")
     //JADE
-    runtimeOnly ("curse.maven:jade-324717:${jade_version}")
+    runtimeOnly "curse.maven:jade-324717:${jade_version}"
+    //BlockDetective
+    runtimeOnly "curse.maven:blockdetective-662628:${blockdetective_version}"
     //others:
-    runtimeOnly "curse.maven:energized-power-782147:${ep_version}"
+    //runtimeOnly "curse.maven:energized-power-782147:${energized_power_version}"
     //runtimeOnly "curse.maven:mekanism-268560:${mekanism_version}"
-
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -199,7 +197,7 @@ publishing {
 
 //Naming of the built mod jar file
 tasks.named('jar').configure {
-    archiveBaseName.set(mod_name.replace(" " , ""))
+    archiveBaseName.set(mod_name.replace(" " , "").replace("(TowerDefenseBattleMode)", ""))
     archiveVersion.set("${minecraft_version}-(v.${mod_version}-NEO)")
 }
 
