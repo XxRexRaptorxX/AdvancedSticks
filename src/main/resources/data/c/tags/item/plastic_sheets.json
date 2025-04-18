@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "#c:plastic",
+      "required": false
+    },
+    {
       "id": "#pneunmaticcraft:plastic_sheets",
       "required": false
     }
