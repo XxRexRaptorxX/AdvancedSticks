@@ -138,7 +138,7 @@ dependencies {
     compileOnly("mezz.jei:jei-1.21.1-common-api:${jei_version}")
     compileOnly("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}")
     //REI
-    //runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
+    runtimeOnly "me.shedaniel:RoughlyEnoughItems-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-api-neoforge:${rei_version}"
     compileOnly "me.shedaniel:RoughlyEnoughItems-default-plugin-neoforge:${rei_version}"
     //EMI
@@ -146,6 +146,8 @@ dependencies {
     //runtimeOnly "dev.emi:emi-neoforge:${emi_version}"
     //JADE
     runtimeOnly "curse.maven:jade-324717:${jade_version}"
+    //JEED
+    //runtimeOnly "curse.maven:jeed-532286:${jeed_version}"
     //others:
     //runtimeOnly "curse.maven:energized-power-782147:${energized_power_version}"
     //runtimeOnly "curse.maven:mekanism-268560:${mekanism_version}"
