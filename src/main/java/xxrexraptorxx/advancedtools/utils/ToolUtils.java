@@ -1,10 +1,12 @@
 package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
@@ -273,15 +275,20 @@ public class ToolUtils {
             case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 300);
             case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300);
             case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300, 1);
-            case "endsteel", "enchanted" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 1);
-            case "opal", "rosegold", "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 300);
+            case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 1);
+            case "rosegold", "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 300);
             case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 300);
-            case "end", "endercrystal" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
-            case "blaze", "pyrope" -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300);
-            case "aquite" -> new MobEffectInstance(MobEffects.CONDUIT_POWER, 300);
+            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
+            case "blaze", "pyrope" -> getOptionalEffect("warming", 300, 0, MobEffects.FIRE_RESISTANCE);
+            case "aquite" -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300);
             case "prismarine" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300);
             case "pinkslime" -> new MobEffectInstance(MobEffects.OOZING, 300);
-            case "amethyst" -> new MobEffectInstance(MobEffects.LUCK, 300, 1);
+            case "amethyst" -> getOptionalEffect("magic_resistance", 300, 0, MobEffects.LUCK);
+            case "superconductor", "electrum" -> getOptionalEffect("conductive", 300, 0, null);
+            case "opal" -> getOptionalEffect("nullifier", 300, 0, MobEffects.LUCK);
+            case "magnetite" -> getOptionalEffect("magnetic", 300, 0, null);
+            case "enchanted" -> getOptionalEffect("water_walk", 300, 0, MobEffects.SLOW_FALLING);
+            case "blastproofalloy" -> getOptionalEffect("explosion_resistance", 300, 0, null);
             default -> null;
         };
     }
@@ -292,8 +299,8 @@ public class ToolUtils {
         Random random = new Random();
 
         return switch (material) {
-            case "uranium", "thorium", "yellorium", "cyanite", "ludicrite" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000));
-            case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> new MobEffectInstance(MobEffects.POISON, random.nextInt(100, 1000), 1);
+            case "uranium", "thorium", "yellorium", "cyanite", "ludicrite" -> getOptionalEffect("radiation", random.nextInt(100, 1000), 0, MobEffects.POISON);
+            case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> getOptionalEffect("radiation", random.nextInt(100, 1000), 1, MobEffects.POISON);
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 300));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(100, 300));
             case "terrasteel", "energeticalloy", "fluix" -> new MobEffectInstance(MobEffects.HASTE, random.nextInt(100, 300));
@@ -301,12 +308,14 @@ public class ToolUtils {
             case "manasteel" -> new MobEffectInstance(MobEffects.LUCK, random.nextInt(100, 300));
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 800));
             case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(100, 300));
-            case "enderium" -> new MobEffectInstance(MobEffects.INFESTED, random.nextInt(100, 300));
+            case "enderium" -> getOptionalEffect("teleportation", random.nextInt(100, 300), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.SATURATION, random.nextInt(100, 500));
-            case "energizedcopper", "energizedgold" -> new MobEffectInstance(MobEffects.SPEED, random.nextInt(300, 500));
+            case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", random.nextInt(300, 500), 0, MobEffects.SPEED);
             case "basalz" -> new MobEffectInstance(MobEffects.WEAKNESS, random.nextInt(100, 300));
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 300));
-            case "allthemodium", "vibranium", "unobtainium" -> new MobEffectInstance(MobEffects.STRENGTH, random.nextInt(100, 300));
+            case "blizz" -> getOptionalEffect("freezing", random.nextInt(100, 300), 0, null);
+            case "allthemodium", "unobtainium" -> new MobEffectInstance(MobEffects.STRENGTH, random.nextInt(100, 300));
+            case "endercrystal" -> getOptionalEffect("air_swim", random.nextInt(100, 300), 0, MobEffects.NIGHT_VISION);
             default -> null;
         };
     }
@@ -395,5 +404,22 @@ public class ToolUtils {
     }
 
 
+    public static MobEffectInstance getOptionalEffect(String effectId, int duration, int amplifier, @Nullable Holder<MobEffect> alternativeEffect) {
+        if (effectId == null) return null;
+
+        for (MobEffect effect : BuiltInRegistries.MOB_EFFECT) {
+            ResourceLocation key = BuiltInRegistries.MOB_EFFECT.getKey(effect);
+
+            if (key != null && key.getPath().equals(effectId)) {
+                return new MobEffectInstance(BuiltInRegistries.MOB_EFFECT.wrapAsHolder(effect), duration, amplifier);
+            }
+        }
+
+        if (alternativeEffect == null) {
+            return null;
+        } else {
+            return new MobEffectInstance(alternativeEffect, duration, amplifier);
+        }
+    }
 
 }
