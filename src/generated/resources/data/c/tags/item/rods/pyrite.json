@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_pyrite",
+    {
+      "id": "#c:sticks/pyrite",
+      "required": false
+    }
+  ]
+}

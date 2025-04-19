@@ -659,6 +659,96 @@ public class ToolMaterials {
     private static final float SOULARIUM_DMG   = 3.2f;
     private static final int   SOULARIUM_ENCH  = 18;
 
+    private static final int   BLUE_STEEL_USES  = 400;
+    private static final float BLUE_STEEL_SPEED = 3.4f;
+    private static final float BLUE_STEEL_DMG   = 1.9f;
+    private static final int   BLUE_STEEL_ENCH  = 11;
+
+    private static final int   HIGH_CARBON_BLUE_STEEL_USES  = 500;
+    private static final float HIGH_CARBON_BLUE_STEEL_SPEED = 3.6f;
+    private static final float HIGH_CARBON_BLUE_STEEL_DMG   = 2.1f;
+    private static final int   HIGH_CARBON_BLUE_STEEL_ENCH  = 11;
+
+    private static final int   WEAK_BLUE_STEEL_USES   = 350;
+    private static final float WEAK_BLUE_STEEL_SPEED  = 3.2f;
+    private static final float WEAK_BLUE_STEEL_DMG    = 1.7f;
+    private static final int   WEAK_BLUE_STEEL_ENCH   = 10;
+
+    private static final int   WROUGHT_IRON_USES      = 130;
+    private static final float WROUGHT_IRON_SPEED     = 2.7f;
+    private static final float WROUGHT_IRON_DMG       = 1.3f;
+    private static final int   WROUGHT_IRON_ENCH      = 7;
+
+    private static final int   PIG_IRON_USES          = 200;
+    private static final float PIG_IRON_SPEED         = 2.8f;
+    private static final float PIG_IRON_DMG           = 1.5f;
+    private static final int   PIG_IRON_ENCH          = 8;
+
+    private static final int   WEAK_STEEL_USES        = 250;
+    private static final float WEAK_STEEL_SPEED       = 3.0f;
+    private static final float WEAK_STEEL_DMG         = 1.6f;
+    private static final int   WEAK_STEEL_ENCH        = 9;
+
+    private static final int   HIGH_CARBON_STEEL_USES  = 350;
+    private static final float HIGH_CARBON_STEEL_SPEED = 3.5f;
+    private static final float HIGH_CARBON_STEEL_DMG   = 2.0f;
+    private static final int   HIGH_CARBON_STEEL_ENCH  = 9;
+
+    private static final int   BLACK_STEEL_USES        = 1000;
+    private static final float BLACK_STEEL_SPEED       = 3.5f;
+    private static final float BLACK_STEEL_DMG         = 2.2f;
+    private static final int   BLACK_STEEL_ENCH        = 10;
+
+    private static final int   HIGH_CARBON_BLACK_STEEL_USES  = 1200;
+    private static final float HIGH_CARBON_BLACK_STEEL_SPEED = 3.7f;
+    private static final float HIGH_CARBON_BLACK_STEEL_DMG   = 2.4f;
+    private static final int   HIGH_CARBON_BLACK_STEEL_ENCH  = 10;
+
+    private static final int   BLACK_BRONZE_USES    = 180;
+    private static final float BLACK_BRONZE_SPEED   = 3.6f;
+    private static final float BLACK_BRONZE_DMG     = 1.7f;
+    private static final int   BLACK_BRONZE_ENCH    = 8;
+
+    private static final int   BISMUTH_BRONZE_USES  = 170;
+    private static final float BISMUTH_BRONZE_SPEED = 3.7f;
+    private static final float BISMUTH_BRONZE_DMG   = 1.6f;
+    private static final int   BISMUTH_BRONZE_ENCH  = 9;
+
+    private static final int   RED_STEEL_USES       = 450;
+    private static final float RED_STEEL_SPEED      = 3.4f;
+    private static final float RED_STEEL_DMG        = 1.95f;
+    private static final int   RED_STEEL_ENCH       = 12;
+
+    private static final int   HIGH_CARBON_RED_STEEL_USES   = 550;
+    private static final float HIGH_CARBON_RED_STEEL_SPEED  = 3.6f;
+    private static final float HIGH_CARBON_RED_STEEL_DMG    = 2.15f;
+    private static final int   HIGH_CARBON_RED_STEEL_ENCH   = 12;
+
+    private static final int   WEAK_RED_STEEL_USES  = 350;
+    private static final float WEAK_RED_STEEL_SPEED = 3.2f;
+    private static final float WEAK_RED_STEEL_DMG   = 1.75f;
+    private static final int   WEAK_RED_STEEL_ENCH  = 11;
+
+    private static final int   ROSE_GOLD_USES       = 25;
+    private static final float ROSE_GOLD_SPEED      = 6.4f;
+    private static final float ROSE_GOLD_DMG        = 0.0f;
+    private static final int   ROSE_GOLD_ENCH       = 15;
+
+    private static final int   STERLING_SILVER_USES  = 270;
+    private static final float STERLING_SILVER_SPEED = 5.2f;
+    private static final float STERLING_SILVER_DMG   = 1.6f;
+    private static final int   STERLING_SILVER_ENCH  = 24;
+
+    private static final int   PYRITE_USES          = 120;
+    private static final float PYRITE_SPEED         = 2.5f;
+    private static final float PYRITE_DMG           = 1.0f;
+    private static final int   PYRITE_ENCH          = 6;
+
+    private static final int   BISMUTH_USES         = 180;
+    private static final float BISMUTH_SPEED        = 3.4f;
+    private static final float BISMUTH_DMG          = 1.3f;
+    private static final int   BISMUTH_ENCH         = 9;
+
 
     /** SPEED **/
     public static final float WOOD_SWORD_SPEED = 1.6f;
@@ -832,6 +922,24 @@ public class ToolMaterials {
         addMaterial("inanite", INANITE_USES, INANITE_SPEED, INANITE_DMG, INANITE_ENCH);
         addMaterial("pinkslime", PINK_SLIME_USES, PINK_SLIME_SPEED, PINK_SLIME_DMG, PINK_SLIME_ENCH);
         addMaterial("soularium", SOULARIUM_USES, SOULARIUM_SPEED, SOULARIUM_DMG, SOULARIUM_ENCH);
+        addMaterial("bluesteel", BLUE_STEEL_USES, BLUE_STEEL_SPEED, BLUE_STEEL_DMG, BLUE_STEEL_ENCH);
+        addMaterial("highcarbonbluesteel", HIGH_CARBON_BLUE_STEEL_USES, HIGH_CARBON_BLUE_STEEL_SPEED, HIGH_CARBON_BLUE_STEEL_DMG, HIGH_CARBON_BLUE_STEEL_ENCH);
+        addMaterial("pyrite", PYRITE_USES, PYRITE_SPEED, PYRITE_DMG, PYRITE_ENCH);
+        addMaterial("wroughtiron", WROUGHT_IRON_USES, WROUGHT_IRON_SPEED, WROUGHT_IRON_DMG, WROUGHT_IRON_ENCH);
+        addMaterial("weaksteel", WEAK_STEEL_USES, WEAK_STEEL_SPEED, WEAK_STEEL_DMG, WEAK_STEEL_ENCH);
+        addMaterial("highcarbonblacksteel", HIGH_CARBON_BLACK_STEEL_USES, HIGH_CARBON_BLACK_STEEL_SPEED, HIGH_CARBON_BLACK_STEEL_DMG, HIGH_CARBON_BLACK_STEEL_ENCH);
+        addMaterial("blackbronze", BLACK_BRONZE_USES, BLACK_BRONZE_SPEED, BLACK_BRONZE_DMG, BLACK_BRONZE_ENCH);
+        addMaterial("bismuthbronze", BISMUTH_BRONZE_USES, BISMUTH_BRONZE_SPEED, BISMUTH_BRONZE_DMG, BISMUTH_BRONZE_ENCH);
+        addMaterial("highcarbonredsteel", HIGH_CARBON_RED_STEEL_USES, HIGH_CARBON_RED_STEEL_SPEED, HIGH_CARBON_RED_STEEL_DMG, HIGH_CARBON_RED_STEEL_ENCH);
+        addMaterial("redsteel", RED_STEEL_USES, RED_STEEL_SPEED, RED_STEEL_DMG, RED_STEEL_ENCH);
+        addMaterial("highcarbonsteel", HIGH_CARBON_STEEL_USES, HIGH_CARBON_STEEL_SPEED, HIGH_CARBON_STEEL_DMG, HIGH_CARBON_STEEL_ENCH);
+        addMaterial("rosegold", ROSE_GOLD_USES, ROSE_GOLD_SPEED, ROSE_GOLD_DMG, ROSE_GOLD_ENCH);
+        addMaterial("weakredsteel", WEAK_RED_STEEL_USES, WEAK_RED_STEEL_SPEED, WEAK_RED_STEEL_DMG, WEAK_RED_STEEL_ENCH);
+        addMaterial("bismuth", BISMUTH_USES, BISMUTH_SPEED, BISMUTH_DMG, BISMUTH_ENCH);
+        addMaterial("pigiron", PIG_IRON_USES, PIG_IRON_SPEED, PIG_IRON_DMG, PIG_IRON_ENCH);
+        addMaterial("weakbluesteel", WEAK_BLUE_STEEL_USES, WEAK_BLUE_STEEL_SPEED, WEAK_BLUE_STEEL_DMG, WEAK_BLUE_STEEL_ENCH);
+        addMaterial("sterlingsilver", STERLING_SILVER_USES, STERLING_SILVER_SPEED, STERLING_SILVER_DMG, STERLING_SILVER_ENCH);
+        addMaterial("blacksteel", BLACK_STEEL_USES, BLACK_STEEL_SPEED, BLACK_STEEL_DMG, BLACK_STEEL_ENCH);
     }
 
 

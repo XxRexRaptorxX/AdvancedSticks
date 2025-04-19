@@ -36,12 +36,31 @@ public class ModItems {
             "electrum", "anglesite", "lumium", "blaze", "allthemodium", "bronze", "constantan", "glowstone", "brass", "gold", "topaz", "kanthal",
             "peridot", "yellorium", "cadmium", "advancedalloy", "soularium", "solarium", "manganese", "cupronickel", "copper", "energizedcopper",
             "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy", "ventium", "pyrope", "inanite", "ruby", "plutonium",
-            "tungsten", "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix","thorium", "zanite",
+            "tungsten", "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix", "thorium", "zanite",
             "charoite", "atomicalloy", "pinkslime", "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal",
             "aquite", "benitoite", "reinforcedalloy", "opal", "breeze", "cyanite", "adamant", "manasteel", "sapphire", "blutonium", "enderium",
             "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy",
             "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin",
             "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
+
+            "bluesteel",
+            "highcarbonbluesteel",
+            "pyrite",
+            "wroughtiron",
+            "weaksteel",
+            "highcarbonblacksteel",
+            "blackbronze",
+            "bismuthbronze",
+            "highcarbonredsteel",
+            "redsteel",
+            "highcarbonsteel",
+            "rosegold",
+            "weakredsteel",
+            "bismuth",
+            "pigiron",
+            "weakbluesteel",
+            "sterlingsilver",
+            "blacksteel"
             //TODO: "bloodiron", "enchantedbloodiron"
     };
 

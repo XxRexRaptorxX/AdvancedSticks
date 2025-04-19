@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_blackbronze",
+    {
+      "id": "#c:sticks/black_bronze",
+      "required": false
+    }
+  ]
+}

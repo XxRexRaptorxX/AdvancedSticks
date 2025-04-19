@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_highcarbonblacksteel",
+    {
+      "id": "#c:sticks/high_carbon_black_steel",
+      "required": false
+    }
+  ]
+}

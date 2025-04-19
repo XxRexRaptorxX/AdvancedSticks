@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_bismuth",
+    {
+      "id": "#c:sticks/bismuth",
+      "required": false
+    }
+  ]
+}

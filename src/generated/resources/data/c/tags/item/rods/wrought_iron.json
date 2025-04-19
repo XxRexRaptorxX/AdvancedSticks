@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_wroughtiron",
+    {
+      "id": "#c:sticks/wrought_iron",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_rosegold",
+    {
+      "id": "#c:sticks/rose_gold",
+      "required": false
+    }
+  ]
+}

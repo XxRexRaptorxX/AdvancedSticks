@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_weaksteel",
+    {
+      "id": "#c:sticks/weak_steel",
+      "required": false
+    }
+  ]
+}

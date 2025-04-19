@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_weakbluesteel",
+    {
+      "id": "#c:sticks/weak_blue_steel",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_bluesteel",
+    {
+      "id": "#c:sticks/blue_steel",
+      "required": false
+    }
+  ]
+}

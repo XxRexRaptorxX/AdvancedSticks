@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedtools:weakredsteel_stick_diamond_sword",
+  "result": {
+    "id": "advancedtools:weakredsteel_stick_netherite_hoe"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_sterlingsilver",
+    {
+      "id": "#c:sticks/sterling_silver",
+      "required": false
+    }
+  ]
+}

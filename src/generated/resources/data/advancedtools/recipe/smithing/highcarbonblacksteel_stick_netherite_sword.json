@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "minecraft:netherite_ingot",
+  "base": "advancedtools:highcarbonblacksteel_stick_diamond_sword",
+  "result": {
+    "id": "advancedtools:highcarbonblacksteel_stick_netherite_sword"
+  },
+  "template": "minecraft:netherite_upgrade_smithing_template"
+}

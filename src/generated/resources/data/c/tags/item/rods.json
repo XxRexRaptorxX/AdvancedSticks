@@ -37,6 +37,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/compressed_iron",
+      "required": false
+    },
+    {
       "id": "#c:rods/silicon",
       "required": false
     },
@@ -49,15 +53,15 @@
       "required": false
     },
     {
-      "id": "#c:rods/stone",
-      "required": false
-    },
-    {
       "id": "#c:rods/iron",
       "required": false
     },
     {
       "id": "#c:rods/titanium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/stone",
       "required": false
     },
     {
@@ -117,6 +121,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/glowstone",
+      "required": false
+    },
+    {
       "id": "#c:rods/brass",
       "required": false
     },
@@ -146,6 +154,10 @@
     },
     {
       "id": "#c:rods/advanced_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/soularium",
       "required": false
     },
     {
@@ -198,6 +210,10 @@
     },
     {
       "id": "#c:rods/pyrope",
+      "required": false
+    },
+    {
+      "id": "#c:rods/inanite",
       "required": false
     },
     {
@@ -258,6 +274,10 @@
     },
     {
       "id": "#c:rods/atomic_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pink_slime",
       "required": false
     },
     {
@@ -350,6 +370,10 @@
     },
     {
       "id": "#c:rods/diopside",
+      "required": false
+    },
+    {
+      "id": "#c:rods/ender_crystal",
       "required": false
     },
     {
@@ -453,27 +477,75 @@
       "required": false
     },
     {
-      "id": "#c:rods/compressed_iron",
+      "id": "#c:rods/blue_steel",
       "required": false
     },
     {
-      "id": "#c:rods/ender_crystal",
+      "id": "#c:rods/high_carbon_blue_steel",
       "required": false
     },
     {
-      "id": "#c:rods/glowstone",
+      "id": "#c:rods/pyrite",
       "required": false
     },
     {
-      "id": "#c:rods/inanite",
+      "id": "#c:rods/wrought_iron",
       "required": false
     },
     {
-      "id": "#c:rods/pink_slime",
+      "id": "#c:rods/weak_steel",
       "required": false
     },
     {
-      "id": "#c:rods/soularium",
+      "id": "#c:rods/high_carbon_black_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/black_bronze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bismuth_bronze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/high_carbon_red_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/red_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/high_carbon_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/rose_gold",
+      "required": false
+    },
+    {
+      "id": "#c:rods/weak_red_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bismuth",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pig_iron",
+      "required": false
+    },
+    {
+      "id": "#c:rods/weak_blue_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/sterling_silver",
+      "required": false
+    },
+    {
+      "id": "#c:rods/black_steel",
       "required": false
     },
     "#c:rods/end"

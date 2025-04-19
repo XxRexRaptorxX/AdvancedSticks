@@ -3,7 +3,6 @@
   "addition": "minecraft:netherite_ingot",
   "base": "advancedtools:steel_stick_diamond_sword",
   "result": {
-    "count": 1,
     "id": "advancedtools:steel_stick_netherite_hoe"
   },
   "template": "minecraft:netherite_upgrade_smithing_template"

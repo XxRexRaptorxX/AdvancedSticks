@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_pigiron",
+    {
+      "id": "#c:sticks/pig_iron",
+      "required": false
+    }
+  ]
+}
