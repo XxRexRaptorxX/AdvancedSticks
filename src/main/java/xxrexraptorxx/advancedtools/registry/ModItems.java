@@ -31,36 +31,18 @@ public class ModItems {
     public static final String[] BASE_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
 
     public static final String[] HANDLE_MATERIALS = {
-            "witherbone", "obsidian", "carbon", "netherite", "blastproofalloy", "darksteel", "duratium", "graphite", "bedrock", "compressediron",
-            "silicon", "steel", "antimony", "iron", "titanium", "stone", "iridium", "quartz", "nickel", "invar", "bone", "plastic", "energizedgold",
-            "electrum", "anglesite", "lumium", "blaze", "allthemodium", "bronze", "constantan", "glowstone", "brass", "gold", "topaz", "kanthal",
-            "peridot", "yellorium", "cadmium", "advancedalloy", "soularium", "solarium", "manganese", "cupronickel", "copper", "energizedcopper",
-            "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy", "ventium", "pyrope", "inanite", "ruby", "plutonium",
-            "tungsten", "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix", "thorium", "zanite",
-            "charoite", "atomicalloy", "pinkslime", "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal",
-            "aquite", "benitoite", "reinforcedalloy", "opal", "breeze", "cyanite", "adamant", "manasteel", "sapphire", "blutonium", "enderium",
-            "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy",
-            "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin",
+            "witherbone", "obsidian", "highcarbonblacksteel", "blacksteel", "carbon", "netherite", "blastproofalloy", "darksteel", "weaksteel", "graphite",
+            "bedrock", "compressediron", "pigiron", "silicon", "steel", "antimony", "iron", "wroughtiron", "titanium", "stone", "iridium", "quartz",
+            "sterlingsilver", "nickel", "invar", "bone", "plastic", "energizedgold", "electrum", "anglesite", "lumium", "blaze", "allthemodium", "bronze",
+            "constantan", "glowstone", "brass", "gold", "topaz", "pyrite", "kanthal", "peridot", "yellorium", "cadmium", "advancedalloy", "soularium", "solarium",
+            "manganese", "cupronickel", "copper", "energizedcopper", "rosegold", "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy",
+            "ventium", "pyrope", "weakredsteel", "highcarbonredsteel", "redsteel", "inanite", "ruby", "plutonium", "tungsten", "duratium", "blackbronze", "amethyst",
+            "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix", "thorium", "zanite", "charoite", "atomicalloy", "pinkslime",
+            "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal", "cyanite", "benitoite", "reinforcedalloy", "opal", "breeze",
+            "aquite", "adamant", "manasteel", "sapphire", "blutonium", "highcarbonbluesteel", "bluesteel", "weakbluesteel", "highcarbonsteel", "enderium",
+            "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy", "bismuthbronze",
+            "bismuth", "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin",
             "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
-
-            "bluesteel",
-            "highcarbonbluesteel",
-            "pyrite",
-            "wroughtiron",
-            "weaksteel",
-            "highcarbonblacksteel",
-            "blackbronze",
-            "bismuthbronze",
-            "highcarbonredsteel",
-            "redsteel",
-            "highcarbonsteel",
-            "rosegold",
-            "weakredsteel",
-            "bismuth",
-            "pigiron",
-            "weakbluesteel",
-            "sterlingsilver",
-            "blacksteel"
             //TODO: "bloodiron", "enchantedbloodiron"
     };
 
