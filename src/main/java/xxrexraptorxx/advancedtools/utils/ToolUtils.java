@@ -313,17 +313,17 @@ public class ToolUtils {
             case "energeticalloy", "fluix" -> getOptionalEffect("hyperactive", random.nextInt(100, 300), 0, MobEffects.HASTE);
             case "terrasteel" -> getOptionalEffect("ore_sense", random.nextInt(100, 500), 0, MobEffects.HASTE);
             case "prismarine" -> getOptionalEffect("swimspeed", random.nextInt(100, 300), 0, MobEffects.DOLPHINS_GRACE);
-            case "manasteel", "certusquartz" -> getOptionalEffect("mana", random.nextInt(100, 500), 0, MobEffects.LUCK);
+            case "manasteel", "certusquartz" -> getOptionalEffect("mana", "manafruit", random.nextInt(100, 500), 0, MobEffects.LUCK);
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 800));
             case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(100, 300));
-            case "enderium" -> getOptionalEffect("teleportation", random.nextInt(100, 300), 0, MobEffects.INFESTED);
+            case "enderium" -> getOptionalEffect("teleportation", "enderlock", random.nextInt(100, 300), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.SATURATION, random.nextInt(100, 500));
             case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", "hyperactive", random.nextInt(300, 500), 0, MobEffects.SPEED);
             case "basalz" -> new MobEffectInstance(MobEffects.WEAKNESS, random.nextInt(100, 300));
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 300));
             case "blizz" -> getOptionalEffect("freezing", random.nextInt(100, 300), 0, null);
             case "allthemodium", "unobtainium" -> new MobEffectInstance(MobEffects.STRENGTH, random.nextInt(100, 300));
-            case "endercrystal" -> getOptionalEffect("air_swim", random.nextInt(100, 300), 0, MobEffects.NIGHT_VISION);
+            case "endercrystal" -> getOptionalEffect("enderlock", "air_swim", random.nextInt(100, 300), 0, MobEffects.NIGHT_VISION);
             default -> null;
         };
     }
@@ -338,7 +338,8 @@ public class ToolUtils {
         return switch (material) {
             case "lumium", "solarium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, random.nextInt(50, 100));
             case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, random.nextInt(50, 100));
-            case "bloodiron", "soularium" -> getOptionalEffect("fear", random.nextInt(50, 300), 0, MobEffects.BAD_OMEN);
+            case "bloodiron" -> getOptionalEffect("fear", random.nextInt(50, 300), 0, MobEffects.BAD_OMEN);
+            case "soularium" -> getOptionalEffect("soulpierced", "fear", random.nextInt(50, 300), 0, MobEffects.BAD_OMEN);
             case "enchantedbloodiron" -> getOptionalEffect("fear", random.nextInt(100, 300), 1, MobEffects.BAD_OMEN);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, random.nextInt(50, 100));
             case "rosegold", "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, random.nextInt(50, 100));
@@ -349,7 +350,7 @@ public class ToolUtils {
             case "superconductor", "electrum" -> getOptionalEffect("conductive", random.nextInt(50, 100), 0, null);
             case "opal" -> getOptionalEffect("curing", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
             case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", random.nextInt(50, 100), 0, null);
-            case "enchanted" -> getOptionalEffect("slippery", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
+            case "enchanted" -> getOptionalEffect("slippery", "weakened_soul", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
             case "terrasteel" -> getOptionalEffect("gravity", "concrete_feet", random.nextInt(50, 100), 0, MobEffects.SLOWNESS);
             default -> null;
         };
@@ -368,9 +369,9 @@ public class ToolUtils {
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(50, 100));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(50, 100));
             case "energeticalloy", "fluix" -> getOptionalEffect("explosive", "explosion", random.nextInt(50, 100), 0, MobEffects.HASTE);
-            case "manasteel" -> getOptionalEffect("mana", random.nextInt(100, 500), 0, MobEffects.UNLUCK);
+            case "manasteel" -> getOptionalEffect("mana_impedance", "mana", random.nextInt(100, 500), 0, MobEffects.UNLUCK);
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 300));
-            case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(50, 100));
+            case "atomicalloy" -> getOptionalEffect("bleeding", random.nextInt(50, 100), 0, MobEffects.WEAKNESS);
             case "enderium" -> getOptionalEffect("teleportation", random.nextInt(50, 100), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.HUNGER, random.nextInt(50, 120));
             case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", "hyperactive", random.nextInt(50, 100), 0, MobEffects.SPEED);
