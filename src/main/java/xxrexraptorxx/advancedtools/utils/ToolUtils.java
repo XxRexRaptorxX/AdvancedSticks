@@ -344,6 +344,7 @@ public class ToolUtils {
             case "opal" -> getOptionalEffect("curing", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
             case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", random.nextInt(50, 100), 0, null);
             case "enchanted" -> getOptionalEffect("slippery", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
+            case "terrasteel" -> getOptionalEffect("gravity", "concrete_feet", random.nextInt(50, 100), 0, MobEffects.SLOWNESS);
             default -> null;
         };
     }
@@ -358,7 +359,6 @@ public class ToolUtils {
             case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> getOptionalEffect("radiation", random.nextInt(100, 150), 1, MobEffects.POISON);
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(50, 100));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(50, 100));
-            case "terrasteel" -> new MobEffectInstance(MobEffects.HASTE, random.nextInt(50, 200));
             case "energeticalloy", "fluix" -> getOptionalEffect("explosive", "explosion", random.nextInt(50, 100), 0, MobEffects.HASTE);
             case "manasteel" -> getOptionalEffect("mana", random.nextInt(100, 500), 0, MobEffects.UNLUCK);
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 300));
