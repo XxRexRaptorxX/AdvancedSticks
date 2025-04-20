@@ -271,24 +271,27 @@ public class ToolUtils {
     @Nullable
     public static MobEffectInstance getHandleMaterialEffect(String material) {
         return switch (material) {
-            case "lumium", "solarium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 300);
+            case "lumium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 300);
             case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 300);
             case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300);
             case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300, 1);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300);
-            case "rosegold", "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 300);
+            case "rosegold" -> getOptionalEffect("love", 300, 0 , MobEffects.LUCK);
+            case "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 300);
             case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 300);
             case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
             case "blaze", "pyrope" -> getOptionalEffect("warming", 300, 0, MobEffects.FIRE_RESISTANCE);
+            case "solarium", "elementium" -> getOptionalEffect("photosynthesis", 300, 0, MobEffects.GLOWING);
             case "aquite", "prismarine" -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300);
             case "pinkslime" -> new MobEffectInstance(MobEffects.OOZING, 300);
             case "emerald" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300);
             case "amethyst" -> getOptionalEffect("magic_resistance", 300, 0, MobEffects.LUCK);
             case "superconductor", "electrum" -> getOptionalEffect("conductive", 300, 0, null);
-            case "opal" -> getOptionalEffect("nullifier", 300, 0, MobEffects.LUCK);
-            case "magnetite" -> getOptionalEffect("magnetic", 300, 0, null);
+            case "opal" -> getOptionalEffect("nullifier", "remove_effects", 300, 0, MobEffects.LUCK);
+            case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", 300, 0, null);
             case "enchanted" -> getOptionalEffect("water_walk", 300, 0, MobEffects.SLOW_FALLING);
             case "blastproofalloy" -> getOptionalEffect("explosion_resistance", 300, 0, null);
+            case "horizonite" -> getOptionalEffect("spiderclimb", "spider_climb", 300, 0, null);
             default -> null;
         };
     }
@@ -303,14 +306,15 @@ public class ToolUtils {
             case "plutonium", "blutonium", "magentite", "ridiculite", "inanite", "insanite" -> getOptionalEffect("radiation", random.nextInt(100, 1000), 1, MobEffects.POISON);
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(100, 300));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(100, 300));
-            case "terrasteel", "energeticalloy", "fluix" -> new MobEffectInstance(MobEffects.HASTE, random.nextInt(100, 300));
+            case "energeticalloy", "fluix" -> getOptionalEffect("hyperactive", random.nextInt(100, 300), 0, MobEffects.HASTE);
+            case "terrasteel" -> getOptionalEffect("ore_sense", random.nextInt(100, 500), 0, MobEffects.HASTE);
             case "prismarine" -> getOptionalEffect("swimspeed", random.nextInt(100, 300), 0, MobEffects.DOLPHINS_GRACE);
-            case "manasteel" -> new MobEffectInstance(MobEffects.LUCK, random.nextInt(100, 300));
+            case "manasteel", "certusquartz" -> getOptionalEffect("mana", random.nextInt(100, 500), 0, MobEffects.LUCK);
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 800));
             case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(100, 300));
             case "enderium" -> getOptionalEffect("teleportation", random.nextInt(100, 300), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.SATURATION, random.nextInt(100, 500));
-            case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", random.nextInt(300, 500), 0, MobEffects.SPEED);
+            case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", "hyperactive", random.nextInt(300, 500), 0, MobEffects.SPEED);
             case "basalz" -> new MobEffectInstance(MobEffects.WEAKNESS, random.nextInt(100, 300));
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 300));
             case "blizz" -> getOptionalEffect("freezing", random.nextInt(100, 300), 0, null);
@@ -328,17 +332,17 @@ public class ToolUtils {
         return switch (material) {
             case "lumium", "solarium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, random.nextInt(50, 100));
             case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, random.nextInt(50, 100));
-            case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, random.nextInt(50, 300));
-            case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, random.nextInt(100, 300), 1);
+            case "bloodiron", "soularium" -> getOptionalEffect("fear", random.nextInt(50, 300), 0, MobEffects.BAD_OMEN);
+            case "enchantedbloodiron" -> getOptionalEffect("fear", random.nextInt(100, 300), 1, MobEffects.BAD_OMEN);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, random.nextInt(50, 100));
             case "rosegold", "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, random.nextInt(50, 100));
             case "end" -> getOptionalEffect("flashed", random.nextInt(50, 80), 0, MobEffects.NIGHT_VISION);
             case "blaze", "pyrope" -> getOptionalEffect("burning", random.nextInt(50, 100), 0, MobEffects.FIRE_RESISTANCE);
             case "pinkslime" -> getOptionalEffect("sticky", random.nextInt(50, 200), 0, MobEffects.OOZING);
-            case "amethyst" -> getOptionalEffect("nullifier", random.nextInt(50, 100), 0, MobEffects.LUCK);
+            case "amethyst" -> getOptionalEffect("nullifier", "remove_effects", random.nextInt(50, 100), 0, MobEffects.LUCK);
             case "superconductor", "electrum" -> getOptionalEffect("conductive", random.nextInt(50, 100), 0, null);
             case "opal" -> getOptionalEffect("curing", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
-            case "magnetite" -> getOptionalEffect("magnetic", random.nextInt(50, 100), 0, null);
+            case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", random.nextInt(50, 100), 0, null);
             case "enchanted" -> getOptionalEffect("slippery", random.nextInt(50, 100), 0, MobEffects.UNLUCK);
             default -> null;
         };
@@ -355,18 +359,18 @@ public class ToolUtils {
             case "witherbone" -> new MobEffectInstance(MobEffects.WITHER, random.nextInt(50, 100));
             case "darksteel" -> new MobEffectInstance(MobEffects.DARKNESS, random.nextInt(50, 100));
             case "terrasteel" -> new MobEffectInstance(MobEffects.HASTE, random.nextInt(50, 200));
-            case "energeticalloy", "fluix" -> getOptionalEffect("explosive", random.nextInt(50, 100), 0, MobEffects.HASTE);
-            case "manasteel" -> new MobEffectInstance(MobEffects.UNLUCK, random.nextInt(100, 500));
+            case "energeticalloy", "fluix" -> getOptionalEffect("explosive", "explosion", random.nextInt(50, 100), 0, MobEffects.HASTE);
+            case "manasteel" -> getOptionalEffect("mana", random.nextInt(100, 500), 0, MobEffects.UNLUCK);
             case "pulsatingalloy" -> new MobEffectInstance(MobEffects.NIGHT_VISION, random.nextInt(100, 300));
             case "atomicalloy" -> new MobEffectInstance(MobEffects.REGENERATION, random.nextInt(50, 100));
             case "enderium" -> getOptionalEffect("teleportation", random.nextInt(50, 100), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.HUNGER, random.nextInt(50, 120));
-            case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", random.nextInt(50, 100), 0, MobEffects.SPEED);
-            case "basalz" -> getOptionalEffect("concrete_feet", random.nextInt(50, 100), 0 , MobEffects.WEAKNESS);
+            case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", "hyperactive", random.nextInt(50, 100), 0, MobEffects.SPEED);
+            case "basalz" -> getOptionalEffect("concrete_feet", "fear", random.nextInt(50, 100), 0 , MobEffects.WEAKNESS);
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 500));
             case "infusedalloy" -> getOptionalEffect("corrosive", random.nextInt(50, 100), 0, null);
             case "blizz" -> getOptionalEffect("freezing", random.nextInt(50, 100), 0, null);
-            case "bedrock" -> getOptionalEffect("stun", random.nextInt(10, 80), 0, null);
+            case "bedrock" -> getOptionalEffect("stunned", "stun", random.nextInt(10, 80), 0, null);
             case "endercrystal" -> getOptionalEffect("teleportation", random.nextInt(50, 100), 0, MobEffects.LEVITATION);
             default -> null;
         };
@@ -425,6 +429,7 @@ public class ToolUtils {
     }
 
 
+    @Nullable
     public static MobEffectInstance getOptionalEffect(String effectId, int duration, int amplifier, @Nullable Holder<MobEffect> alternativeEffect) {
         if (effectId == null) return null;
 
@@ -440,6 +445,29 @@ public class ToolUtils {
             return null;
         } else {
             return new MobEffectInstance(alternativeEffect, duration, amplifier);
+        }
+    }
+
+
+    @Nullable
+    public static MobEffectInstance getOptionalEffect(String effectId, String alternativeEffectId, int duration, int amplifier, @Nullable Holder<MobEffect> fallbackEffect) {
+        if (effectId == null && alternativeEffectId == null) return null;
+
+        for (MobEffect effect : BuiltInRegistries.MOB_EFFECT) {
+            ResourceLocation key = BuiltInRegistries.MOB_EFFECT.getKey(effect);
+
+            if (key != null && key.getPath().equals(effectId)) {
+                return new MobEffectInstance(BuiltInRegistries.MOB_EFFECT.wrapAsHolder(effect), duration, amplifier);
+            }
+            if (key != null && key.getPath().equals(alternativeEffectId)) {
+                return new MobEffectInstance(BuiltInRegistries.MOB_EFFECT.wrapAsHolder(effect), duration, amplifier);
+            }
+        }
+
+        if (fallbackEffect == null) {
+            return null;
+        } else {
+            return new MobEffectInstance(fallbackEffect, duration, amplifier);
         }
     }
 
