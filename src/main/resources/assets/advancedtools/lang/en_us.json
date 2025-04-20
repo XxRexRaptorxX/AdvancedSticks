@@ -76,7 +76,7 @@
   "message.advancedtools.base": "Head:",
   "message.advancedtools.random": "~",
 
-  "material.advancedtools.wood": "Wooden",
+  "material.advancedtools.wood": "Wood",
   "material.advancedtools.iron": "Iron",
   "material.advancedtools.gold": "Gold",
   "material.advancedtools.diamond": "Diamond",
@@ -86,6 +86,8 @@
   "material.advancedtools.copper": "Copper",
   "material.advancedtools.netherite": "Netherite",
   "material.advancedtools.end": "End",
+  "material.advancedtools.blaze": "Blaze",
+  "material.advancedtools.breeze": "Breeze",
   "material.advancedtools.steel": "Steel",
   "material.advancedtools.amethyst": "Amethyst",
   "material.advancedtools.bone": "Bone",

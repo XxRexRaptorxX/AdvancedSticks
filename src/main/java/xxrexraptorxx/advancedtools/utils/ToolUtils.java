@@ -399,12 +399,12 @@ public class ToolUtils {
 
         MutableComponent description = Component.translatable("message." + References.MODID + ".material_stats").withStyle(ChatFormatting.BLUE);
         description.append(Component.literal(lineSeperator));
-        description.append(Component.translatable("message." + References.MODID + ".base").withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal(" " + FormattingUtils.capitalizeWords(base)).withStyle(ChatFormatting.YELLOW));
+        description.append(Component.translatable("message." + References.MODID + ".base").withStyle(ChatFormatting.WHITE).append(" "));
+        description.append(Component.translatable("material." + References.MODID + "." + base).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator));
-        description.append(Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal(" " + FormattingUtils.capitalizeWords(handle)).withStyle(ChatFormatting.YELLOW));
+        description.append(Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.WHITE).append(" "));
+        description.append(Component.translatable("material." + References.MODID + "." + handle).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator + lineSeperator));
         description.append(Component.translatable("message." + References.MODID + ".mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
