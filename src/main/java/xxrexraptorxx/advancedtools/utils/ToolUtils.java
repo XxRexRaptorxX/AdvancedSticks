@@ -270,6 +270,8 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHandleMaterialEffect(String material) {
+        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+
         return switch (material) {
             case "lumium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 300);
             case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 300);
@@ -299,6 +301,8 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHandleMaterialRandomEffect(String material) {
+        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+
         Random random = new Random();
 
         return switch (material) {
@@ -327,6 +331,8 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHeadMaterialEffect(String material) {
+        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+
         Random random = new Random();
 
         return switch (material) {
@@ -352,6 +358,8 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHeadMaterialRandomEffect(String material) {
+        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+
         Random random = new Random();
 
         return switch (material) {

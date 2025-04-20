@@ -12,6 +12,7 @@ import java.util.List;
 public class Config {
 
     public static final String CATEGORY_GENERAL = "general";
+    public static final String CATEGORY_MATERIALS = "materials";
 
     public static ModConfigSpec SERVER_CONFIG;
     public static ModConfigSpec CLIENT_CONFIG;
@@ -22,6 +23,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
     public static ModConfigSpec.BooleanValue FORCE_ALL_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> STICK_MATERIALS;
+    public static ModConfigSpec.ConfigValue<List<String>> DISABLED_MATERIAL_EFFECTS;
     public static ModConfigSpec.BooleanValue JEI_DESCRIPTION;
     public static ModConfigSpec.BooleanValue DEBUG_MODE;
 
@@ -54,10 +56,15 @@ public class Config {
 
         builder.comment("General").push(CATEGORY_GENERAL);
         PATREON_REWARDS = builder.comment("Enables ingame rewards on first spawn for Patreons").define("patreon_rewards", true);
+        DEBUG_MODE = builder.comment("Only useful for developers").define("debug_mode", false);
+        builder.pop();
+
+        builder.comment("Materials").push(CATEGORY_MATERIALS);
         STICK_MATERIALS = builder.comment("Here you can specify which stick materials should be enabled. (The sticks and tools only appear if the basic material is also available in the game)").define("stick_materials",
                 new ArrayList<>(Arrays.asList(ModItems.HANDLE_MATERIALS)));
         FORCE_ALL_MATERIALS = builder.comment("Normally the item variants of a material are only displayed if the basic material is also available in the game (e.g. through other mods), but here you can also activate all of them manually").define("force_all_materials", false);
-        DEBUG_MODE = builder.comment("Only useful for developers").define("debug_mode", false);
+        DISABLED_MATERIAL_EFFECTS = builder.comment("Here you can specify which materials should their effects be disabled.").define("disabled_material_effects",
+                new ArrayList<>());
         builder.pop();
 
         SERVER_CONFIG = builder.build();
