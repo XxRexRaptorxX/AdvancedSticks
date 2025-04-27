@@ -82,6 +82,8 @@ public class ItemTagGen extends ItemTagsProvider {
 
 
                         TagKey<Item> craftingMaterialTag = ModTags.createItemTag(References.MODID, ToolUtils.transformMaterialNames(base) + "_tools_materials");
+                        if (base)
+                        tag(craftingMaterialTag).addOptionalTags(rodTag);
                     }
                 }
             }
