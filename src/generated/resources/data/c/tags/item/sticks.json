@@ -493,6 +493,10 @@
       "required": false
     },
     {
+      "id": "#c:sticks/silver",
+      "required": false
+    },
+    {
       "id": "#c:sticks/cobalt",
       "required": false
     },
@@ -546,10 +550,6 @@
     },
     {
       "id": "#c:sticks/basalz",
-      "required": false
-    },
-    {
-      "id": "#c:sticks/silver",
       "required": false
     },
     "#c:sticks/wood"

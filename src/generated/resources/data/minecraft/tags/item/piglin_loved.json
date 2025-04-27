@@ -693,6 +693,11 @@
     "advancedtools:platinum_stick_gold_axe",
     "advancedtools:platinum_stick_gold_shovel",
     "advancedtools:platinum_stick_gold_hoe",
+    "advancedtools:silver_stick_gold_sword",
+    "advancedtools:silver_stick_gold_pickaxe",
+    "advancedtools:silver_stick_gold_axe",
+    "advancedtools:silver_stick_gold_shovel",
+    "advancedtools:silver_stick_gold_hoe",
     "advancedtools:cobalt_stick_gold_sword",
     "advancedtools:cobalt_stick_gold_pickaxe",
     "advancedtools:cobalt_stick_gold_axe",
@@ -788,11 +793,6 @@
     "advancedtools:basalz_stick_gold_pickaxe",
     "advancedtools:basalz_stick_gold_axe",
     "advancedtools:basalz_stick_gold_shovel",
-    "advancedtools:basalz_stick_gold_hoe",
-    "advancedtools:silver_stick_gold_sword",
-    "advancedtools:silver_stick_gold_pickaxe",
-    "advancedtools:silver_stick_gold_axe",
-    "advancedtools:silver_stick_gold_shovel",
-    "advancedtools:silver_stick_gold_hoe"
+    "advancedtools:basalz_stick_gold_hoe"
   ]
 }

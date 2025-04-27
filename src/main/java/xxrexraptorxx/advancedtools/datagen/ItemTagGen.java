@@ -37,6 +37,7 @@ public class ItemTagGen extends ItemTagsProvider {
 
             TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
             TagKey<Item> stickTag = ModTags.createItemTag("c", "sticks/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> toolTag = ModTags.createItemTag(References.MODID, ToolUtils.transformMaterialNames(handle) + "_tools");
 
             if (rodItem != Items.AIR) {
                 tag(rodTag).add(rodItem).addOptionalTag(stickTag);
@@ -58,6 +59,11 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.SHOVELS).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
                 tag(ItemTags.HOES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
 
+                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword")));
+                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe")));
+                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe")));
+                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
+                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
 
                 if (base.contains("gold") || handle.contains("gold")) {
                     for (String tool : ModItems.TOOL_TYPES) {

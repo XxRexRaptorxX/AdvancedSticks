@@ -738,6 +738,12 @@
     "advancedtools:platinum_stick_gold_hoe",
     "advancedtools:platinum_stick_diamond_hoe",
     "advancedtools:platinum_stick_netherite_hoe",
+    "advancedtools:silver_stick_wood_hoe",
+    "advancedtools:silver_stick_stone_hoe",
+    "advancedtools:silver_stick_iron_hoe",
+    "advancedtools:silver_stick_gold_hoe",
+    "advancedtools:silver_stick_diamond_hoe",
+    "advancedtools:silver_stick_netherite_hoe",
     "advancedtools:cobalt_stick_wood_hoe",
     "advancedtools:cobalt_stick_stone_hoe",
     "advancedtools:cobalt_stick_iron_hoe",
@@ -821,12 +827,6 @@
     "advancedtools:basalz_stick_iron_hoe",
     "advancedtools:basalz_stick_gold_hoe",
     "advancedtools:basalz_stick_diamond_hoe",
-    "advancedtools:basalz_stick_netherite_hoe",
-    "advancedtools:silver_stick_wood_hoe",
-    "advancedtools:silver_stick_stone_hoe",
-    "advancedtools:silver_stick_iron_hoe",
-    "advancedtools:silver_stick_gold_hoe",
-    "advancedtools:silver_stick_diamond_hoe",
-    "advancedtools:silver_stick_netherite_hoe"
+    "advancedtools:basalz_stick_netherite_hoe"
   ]
 }

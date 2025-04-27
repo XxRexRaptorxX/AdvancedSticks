@@ -738,6 +738,12 @@
     "advancedtools:platinum_stick_gold_shovel",
     "advancedtools:platinum_stick_diamond_shovel",
     "advancedtools:platinum_stick_netherite_shovel",
+    "advancedtools:silver_stick_wood_shovel",
+    "advancedtools:silver_stick_stone_shovel",
+    "advancedtools:silver_stick_iron_shovel",
+    "advancedtools:silver_stick_gold_shovel",
+    "advancedtools:silver_stick_diamond_shovel",
+    "advancedtools:silver_stick_netherite_shovel",
     "advancedtools:cobalt_stick_wood_shovel",
     "advancedtools:cobalt_stick_stone_shovel",
     "advancedtools:cobalt_stick_iron_shovel",
@@ -821,12 +827,6 @@
     "advancedtools:basalz_stick_iron_shovel",
     "advancedtools:basalz_stick_gold_shovel",
     "advancedtools:basalz_stick_diamond_shovel",
-    "advancedtools:basalz_stick_netherite_shovel",
-    "advancedtools:silver_stick_wood_shovel",
-    "advancedtools:silver_stick_stone_shovel",
-    "advancedtools:silver_stick_iron_shovel",
-    "advancedtools:silver_stick_gold_shovel",
-    "advancedtools:silver_stick_diamond_shovel",
-    "advancedtools:silver_stick_netherite_shovel"
+    "advancedtools:basalz_stick_netherite_shovel"
   ]
 }

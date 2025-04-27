@@ -738,6 +738,12 @@
     "advancedtools:platinum_stick_gold_sword",
     "advancedtools:platinum_stick_diamond_sword",
     "advancedtools:platinum_stick_netherite_sword",
+    "advancedtools:silver_stick_wood_sword",
+    "advancedtools:silver_stick_stone_sword",
+    "advancedtools:silver_stick_iron_sword",
+    "advancedtools:silver_stick_gold_sword",
+    "advancedtools:silver_stick_diamond_sword",
+    "advancedtools:silver_stick_netherite_sword",
     "advancedtools:cobalt_stick_wood_sword",
     "advancedtools:cobalt_stick_stone_sword",
     "advancedtools:cobalt_stick_iron_sword",
@@ -821,12 +827,6 @@
     "advancedtools:basalz_stick_iron_sword",
     "advancedtools:basalz_stick_gold_sword",
     "advancedtools:basalz_stick_diamond_sword",
-    "advancedtools:basalz_stick_netherite_sword",
-    "advancedtools:silver_stick_wood_sword",
-    "advancedtools:silver_stick_stone_sword",
-    "advancedtools:silver_stick_iron_sword",
-    "advancedtools:silver_stick_gold_sword",
-    "advancedtools:silver_stick_diamond_sword",
-    "advancedtools:silver_stick_netherite_sword"
+    "advancedtools:basalz_stick_netherite_sword"
   ]
 }

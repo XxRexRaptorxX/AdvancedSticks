@@ -493,6 +493,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/silver",
+      "required": false
+    },
+    {
       "id": "#c:rods/cobalt",
       "required": false
     },
@@ -546,10 +550,6 @@
     },
     {
       "id": "#c:rods/basalz",
-      "required": false
-    },
-    {
-      "id": "#c:rods/silver",
       "required": false
     },
     "#c:rods/end"
