@@ -14,9 +14,9 @@ import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class StickItem extends Item {
+public class RodItem extends Item {
 
-    public StickItem(Properties properties) {
+    public RodItem(Properties properties) {
         super(properties);
     }
 
