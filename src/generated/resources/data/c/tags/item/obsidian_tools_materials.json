@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ingots/obsidian",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/refined_obsidian",
+      "required": false
+    }
+  ]
+}

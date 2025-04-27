@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ingots/glowstone",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/refined_glowstone",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/glowstone_alloy",
+      "required": false
+    }
+  ]
+}

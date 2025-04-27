@@ -1,6 +1,7 @@
 package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.world.item.ToolMaterial;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 
@@ -185,7 +186,12 @@ public class ToolMaterials {
 
     public static float getSpeed(String baseMaterial, String toolType) {
         String key = baseMaterial.toLowerCase() + "_" + toolType.toLowerCase();
-        return SPEED_MAP.getOrDefault(key, 1.0f);
+        Float speed = SPEED_MAP.get(key);
+
+        if (speed == null) {
+            AdvancedTools.LOGGER.error("No speed value set for " + key);
+        }
+        return speed;
     }
 }
 

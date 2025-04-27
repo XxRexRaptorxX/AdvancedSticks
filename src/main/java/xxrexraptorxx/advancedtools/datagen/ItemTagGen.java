@@ -18,6 +18,7 @@ import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
 
 public class ItemTagGen extends ItemTagsProvider {
@@ -79,12 +80,19 @@ public class ItemTagGen extends ItemTagsProvider {
                                 }
                             }
                         }
-
-
-                        TagKey<Item> craftingMaterialTag = ModTags.createItemTag(References.MODID, ToolUtils.transformMaterialNames(base) + "_tools_materials");
-                        if (base)
-                        tag(craftingMaterialTag).addOptionalTags(rodTag);
                     }
+                }
+            }
+        }
+
+
+        for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+            if (!Arrays.asList(ModItems.VANILLA_MATERIALS).contains(base)) {
+                AdvancedTools.LOGGER.info("Generate crafting materials tag for " + base);
+                TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(base) + "_tools_materials");
+
+                for (TagKey<Item> key : ModTags.getPossibleTagsForMaterial(base)) {
+                    tag(craftingMaterialTag).addOptionalTag(key);
                 }
             }
         }

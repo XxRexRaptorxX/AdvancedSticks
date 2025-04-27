@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#c:ingots/bedrock",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/refined_bedrock",
+      "required": false
+    }
+  ]
+}

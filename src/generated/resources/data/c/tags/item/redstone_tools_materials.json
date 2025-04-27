@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "#c:ingots/redstone",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/refined_redstone",
+      "required": false
+    },
+    {
+      "id": "#c:ingots/redstone_alloy",
+      "required": false
+    }
+  ]
+}
