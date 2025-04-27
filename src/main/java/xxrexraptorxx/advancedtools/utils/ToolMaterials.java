@@ -158,6 +158,11 @@ public class ToolMaterials {
     private static final float NICKEL_DMG     = 1.5f;
     private static final int   NICKEL_ENCH    = 9;
 
+    private static final int   SILVER_USES  = 100;
+    private static final float SILVER_SPEED = 5.0f;
+    private static final float SILVER_DMG   = 0.8f;
+    private static final int   SILVER_ENCH  = 18;
+
     private static final int   INVAR_USES     = 200;
     private static final float INVAR_SPEED    = 3.0f;
     private static final float INVAR_DMG      = 1.7f;
@@ -818,6 +823,7 @@ public class ToolMaterials {
         addMaterial("electrum", ELECTRUM_USES, ELECTRUM_SPEED, ELECTRUM_DMG, ELECTRUM_ENCH);
         addMaterial("tin", TIN_USES, TIN_SPEED, TIN_DMG, TIN_ENCH);
         addMaterial("brass", BRASS_USES, BRASS_SPEED, BRASS_DMG, BRASS_ENCH);
+        addMaterial("silver", SILVER_USES, SILVER_SPEED, SILVER_DMG, SILVER_ENCH);
         addMaterial("bronze", BRONZE_USES, BRONZE_SPEED, BRONZE_DMG, BRONZE_ENCH);
         addMaterial("constantan", CONSTANTAN_USES, CONSTANTAN_SPEED, CONSTANTAN_DMG, CONSTANTAN_ENCH);
         addMaterial("nickel", NICKEL_USES, NICKEL_SPEED, NICKEL_DMG, NICKEL_ENCH);

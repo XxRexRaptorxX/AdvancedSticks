@@ -22,7 +22,8 @@ public class Config {
     public static ModConfigSpec.BooleanValue SHOW_MATERIAL_STATS;
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
     public static ModConfigSpec.BooleanValue FORCE_ALL_MATERIALS;
-    public static ModConfigSpec.ConfigValue<List<String>> STICK_MATERIALS;
+    public static ModConfigSpec.ConfigValue<List<String>> HANDLE_MATERIALS;
+    public static ModConfigSpec.ConfigValue<List<String>> TOOL_HEAD_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> DISABLED_MATERIAL_EFFECTS;
     public static ModConfigSpec.BooleanValue JEI_DESCRIPTION;
     public static ModConfigSpec.BooleanValue DEBUG_MODE;
@@ -60,8 +61,10 @@ public class Config {
         builder.pop();
 
         builder.comment("Materials").push(CATEGORY_MATERIALS);
-        STICK_MATERIALS = builder.comment("Here you can specify which stick materials should be enabled. (The sticks and tools only appear if the basic material is also available in the game)").define("stick_materials",
+        HANDLE_MATERIALS = builder.comment("Here you can specify which handle materials should be enabled. (The rods and tools only appear if the basic material is also available in the game)").define("handle_materials",
                 new ArrayList<>(Arrays.asList(ModItems.HANDLE_MATERIALS)));
+        TOOL_HEAD_MATERIALS = builder.comment("Here you can specify which tool head materials should be enabled. (The tools only appear if the basic material is also available in the game)").define("tool_head_materials",
+                new ArrayList<>(Arrays.asList(ModItems.TOOL_HEAD_MATERIALS)));
         FORCE_ALL_MATERIALS = builder.comment("Normally the item variants of a material are only displayed if the basic material is also available in the game (e.g. through other mods), but here you can also activate all of them manually").define("force_all_materials", false);
         DISABLED_MATERIAL_EFFECTS = builder.comment("Here you can specify which materials should their effects be disabled.").define("disabled_material_effects",
                 new ArrayList<>());

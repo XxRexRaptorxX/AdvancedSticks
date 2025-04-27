@@ -217,7 +217,7 @@ public class ToolUtils {
             return true;
 
         } else {
-            return Config.STICK_MATERIALS.get().contains(material) && ModTags.isTagValidAndHasMatchingItems(material);
+            return Config.HANDLE_MATERIALS.get().contains(material) && ModTags.isTagValidAndHasMatchingItems(material);
         }
     }
 

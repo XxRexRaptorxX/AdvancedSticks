@@ -41,9 +41,15 @@ public class ModItems {
             "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal", "cyanite", "benitoite", "reinforcedalloy", "opal", "breeze",
             "aquite", "adamant", "manasteel", "sapphire", "blutonium", "highcarbonbluesteel", "bluesteel", "weakbluesteel", "highcarbonsteel", "enderium",
             "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy", "bismuthbronze",
-            "bismuth", "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "cobalt", "lead", "stainlesssteel", "tin",
-            "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
+            "bismuth", "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "stainlesssteel",
+            "tin", "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
             //TODO: "bloodiron", "enchantedbloodiron"
+    };
+
+    public static final String[] TOOL_HEAD_MATERIALS = {
+            "wood", "stone", "iron", "gold", "diamond", "netherite", "obsidian", "bedrock", "steel", "titanium", "quartz", "nickel", "invar", "bone", "electrum",
+            "lumium", "bronze", "constantan", "glowstone", "brass", "peridot", "copper", "signalum", "cinnabar", "redstone", "ruby", "amethyst", "fluorite",
+            "sapphire", "enderium", "emerald", "prismarine", "uranium", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "tin", "zinc"
     };
 
 
