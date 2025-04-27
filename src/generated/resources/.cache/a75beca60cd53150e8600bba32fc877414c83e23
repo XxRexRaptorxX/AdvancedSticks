@@ -1,5 +1,5 @@
-// 1.21.5	2025-04-19T03:02:00.3073009	Tags for minecraft:item mod id advancedtools
-766f378553919d19ae6fb33c7b17336089d06d01 data/c/tags/item/rods.json
+// 1.21.5	2025-04-27T20:05:43.2726576	Tags for minecraft:item mod id advancedtools
+89a70873b11542bde44409e3b856f8098728b831 data/c/tags/item/rods.json
 63495f574b72bc8967963a1dfef0e86c48da81fc data/c/tags/item/rods/adamant.json
 9edfadafea3e3a6fab88abbcf64062c4d9ac2af9 data/c/tags/item/rods/advanced.json
 4fbee19056dcf666c33171b7be7714b63bc8ea51 data/c/tags/item/rods/advanced_alloy.json
@@ -106,6 +106,7 @@ b766137bdaf21f57d5611451a08bbb328352e2b7 data/c/tags/item/rods/rose_gold.json
 e8ff623ed2ec4b6175ef1997fa716ccf0e0a55da data/c/tags/item/rods/sapphire.json
 1a8788182b7d578f98aca68cd654427da81b8a90 data/c/tags/item/rods/signalum.json
 99ab1535c9bb6536fdb49bb4c429fdadf3e90f47 data/c/tags/item/rods/silicon.json
+8202ef998498356796b1e3cdb4a0a6de0c1b2bb7 data/c/tags/item/rods/silver.json
 b95ebb1c650cf056a0ed077f96658efc52742c1f data/c/tags/item/rods/solarium.json
 d6d7dc956f555c6c9259f8bb779464f6c14c269c data/c/tags/item/rods/soularium.json
 5e1ccd631e1fb69a4e790a2298ac4f13c7b8bd99 data/c/tags/item/rods/stainless_steel.json
@@ -132,7 +133,7 @@ a62f28a130d920083662784489780c82ed39ce25 data/c/tags/item/rods/wither_bone.json
 57b8f4059978beaf6da8ce13a851ec70aefe03f0 data/c/tags/item/rods/yellorium.json
 3eacfd1bfe300f958cee806ab406e18e45487bb2 data/c/tags/item/rods/zanite.json
 fc51ef6f17c53e45f733bdee0917df269da6e83b data/c/tags/item/rods/zinc.json
-7e4d5b55dc4bc43872274eef7a760784dde35803 data/c/tags/item/sticks.json
+9d7b53c59db55a98dd15b5f1a85874592f802900 data/c/tags/item/sticks.json
 11e8215dc71926644d8d678a94e21e58356deecf data/c/tags/item/sticks/adamant.json
 72d56c51db4ad98710b103d52c3d9854b60220cd data/c/tags/item/sticks/advanced.json
 f21cba90c045378ed1d3c3368d5ce24b07526c2f data/c/tags/item/sticks/advanced_alloy.json
@@ -238,6 +239,7 @@ ef7f3491f2ed1f78f18e6c44294430d1f4ec3ff8 data/c/tags/item/sticks/rose_gold.json
 74e75614beb6fd7eb3b2a0c453a341fb979f1cf6 data/c/tags/item/sticks/sapphire.json
 25d84af4fc678adc43934f95ed858ae2a96d437d data/c/tags/item/sticks/signalum.json
 e282ac70dafd34626995fae6283e279eb4a8443a data/c/tags/item/sticks/silicon.json
+f9fa683c764f21f1b3d612adc4391a2ad815b105 data/c/tags/item/sticks/silver.json
 c596860fb425baf64910eca3fd8a289af21e9159 data/c/tags/item/sticks/solarium.json
 2ef0d7b9fa9d2afd7824e71f01d17c9bc7be4f8b data/c/tags/item/sticks/soularium.json
 9e744548521a48be888481db0dd9e24a791c0b5d data/c/tags/item/sticks/stainless_steel.json
@@ -266,10 +268,10 @@ eb72874e94fc108f8c87718e5ae191a268b325b5 data/c/tags/item/sticks/yellorium.json
 82b4ea508b9d545203188abbb2bcc3abd5dc1cd0 data/c/tags/item/sticks/zanite.json
 310411b3829de492132a3664afb47bf3caebb803 data/c/tags/item/sticks/zinc.json
 b7b3e71150d9622d1bf82f7cdce128d98a104c17 data/c/tags/item/tools/bow.json
-8dd0672eb65ce39afdf60a1aac40de08c8feac9e data/minecraft/tags/item/axes.json
+ab8b73c3cbd9893cb01e012e7c2694d89d0899c2 data/minecraft/tags/item/axes.json
 b7b3e71150d9622d1bf82f7cdce128d98a104c17 data/minecraft/tags/item/enchantable/bow.json
-5b20ae105b4f903f406fce8eeb7453d11d2a6250 data/minecraft/tags/item/hoes.json
-ad1bf77f0eb97ae1e47f3f70f5054ca2a47f952c data/minecraft/tags/item/pickaxes.json
-4a02f2ae26ab43e2480c96183b9be1e97568c42f data/minecraft/tags/item/piglin_loved.json
-1d3f1825eed1c168beef75349a6a847bee62a2d5 data/minecraft/tags/item/shovels.json
-49db713f9cbd93e6d1791f2176ba0d032e558f87 data/minecraft/tags/item/swords.json
+4d6d16914d65162d32a97e6bd6bf0983704c9888 data/minecraft/tags/item/hoes.json
+381a9203d47af9773b64a2b0c2db3ddfe327338c data/minecraft/tags/item/pickaxes.json
+b1d38338f705d139fc1e6dd630fc834887fb83b0 data/minecraft/tags/item/piglin_loved.json
+bead575768bb7585f9936571886c1351da289a9e data/minecraft/tags/item/shovels.json
+4d795b10b35ce6d0e5e6cf52d866909f6f4ce2f3 data/minecraft/tags/item/swords.json

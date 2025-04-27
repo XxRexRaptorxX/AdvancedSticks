@@ -1,0 +1,9 @@
+{
+  "values": [
+    "advancedtools:stick_silver",
+    {
+      "id": "#c:sticks/silver",
+      "required": false
+    }
+  ]
+}

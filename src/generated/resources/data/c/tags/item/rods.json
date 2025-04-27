@@ -9,6 +9,14 @@
       "required": false
     },
     {
+      "id": "#c:rods/high_carbon_black_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/black_steel",
+      "required": false
+    },
+    {
       "id": "#c:rods/carbon",
       "required": false
     },
@@ -25,7 +33,7 @@
       "required": false
     },
     {
-      "id": "#c:rods/duratium",
+      "id": "#c:rods/weak_steel",
       "required": false
     },
     {
@@ -38,6 +46,10 @@
     },
     {
       "id": "#c:rods/compressed_iron",
+      "required": false
+    },
+    {
+      "id": "#c:rods/pig_iron",
       "required": false
     },
     {
@@ -57,6 +69,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/wrought_iron",
+      "required": false
+    },
+    {
       "id": "#c:rods/titanium",
       "required": false
     },
@@ -70,6 +86,10 @@
     },
     {
       "id": "#c:rods/quartz",
+      "required": false
+    },
+    {
+      "id": "#c:rods/sterling_silver",
       "required": false
     },
     {
@@ -137,6 +157,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/pyrite",
+      "required": false
+    },
+    {
       "id": "#c:rods/kanthal",
       "required": false
     },
@@ -181,6 +205,10 @@
       "required": false
     },
     {
+      "id": "#c:rods/rose_gold",
+      "required": false
+    },
+    {
       "id": "#c:rods/energetic_alloy",
       "required": false
     },
@@ -213,6 +241,18 @@
       "required": false
     },
     {
+      "id": "#c:rods/weak_red_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/high_carbon_red_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/red_steel",
+      "required": false
+    },
+    {
       "id": "#c:rods/inanite",
       "required": false
     },
@@ -226,6 +266,14 @@
     },
     {
       "id": "#c:rods/tungsten",
+      "required": false
+    },
+    {
+      "id": "#c:rods/duratium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/black_bronze",
       "required": false
     },
     {
@@ -305,7 +353,7 @@
       "required": false
     },
     {
-      "id": "#c:rods/aquite",
+      "id": "#c:rods/cyanite",
       "required": false
     },
     {
@@ -325,7 +373,7 @@
       "required": false
     },
     {
-      "id": "#c:rods/cyanite",
+      "id": "#c:rods/aquite",
       "required": false
     },
     {
@@ -342,6 +390,22 @@
     },
     {
       "id": "#c:rods/blutonium",
+      "required": false
+    },
+    {
+      "id": "#c:rods/high_carbon_blue_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/blue_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/weak_blue_steel",
+      "required": false
+    },
+    {
+      "id": "#c:rods/high_carbon_steel",
       "required": false
     },
     {
@@ -386,6 +450,14 @@
     },
     {
       "id": "#c:rods/pulsating_alloy",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bismuth_bronze",
+      "required": false
+    },
+    {
+      "id": "#c:rods/bismuth",
       "required": false
     },
     {
@@ -477,75 +549,7 @@
       "required": false
     },
     {
-      "id": "#c:rods/blue_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/high_carbon_blue_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/pyrite",
-      "required": false
-    },
-    {
-      "id": "#c:rods/wrought_iron",
-      "required": false
-    },
-    {
-      "id": "#c:rods/weak_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/high_carbon_black_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/black_bronze",
-      "required": false
-    },
-    {
-      "id": "#c:rods/bismuth_bronze",
-      "required": false
-    },
-    {
-      "id": "#c:rods/high_carbon_red_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/red_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/high_carbon_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/rose_gold",
-      "required": false
-    },
-    {
-      "id": "#c:rods/weak_red_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/bismuth",
-      "required": false
-    },
-    {
-      "id": "#c:rods/pig_iron",
-      "required": false
-    },
-    {
-      "id": "#c:rods/weak_blue_steel",
-      "required": false
-    },
-    {
-      "id": "#c:rods/sterling_silver",
-      "required": false
-    },
-    {
-      "id": "#c:rods/black_steel",
+      "id": "#c:rods/silver",
       "required": false
     },
     "#c:rods/end"
