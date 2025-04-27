@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/emerald_axe_base",
+    "layer1": "advancedtools:item/glowstone_axe_overlay"
+  }
+}

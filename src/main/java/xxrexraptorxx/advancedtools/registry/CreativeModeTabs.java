@@ -35,7 +35,7 @@ public class CreativeModeTabs {
                 }
 
                 //tools
-                for (String base : ModItems.BASE_MATERIALS) {
+                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String handle : ModItems.HANDLE_MATERIALS) {
                         if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
 

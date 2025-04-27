@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/nickel_tool_base",
+    "layer1": "advancedtools:item/quartz_pickaxe_overlay"
+  }
+}

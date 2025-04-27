@@ -34,7 +34,7 @@ public class RecipeGen extends RecipeProvider {
             generateToolRecipes(tag);
         }
 
-        toolRecyclingRecipes();
+        //toolRecyclingRecipes();
     }
 
     public void generateToolRecipes(TagKey<Item> handle) {
@@ -145,6 +145,7 @@ public class RecipeGen extends RecipeProvider {
     }
 
 
+    @Deprecated
     public void toolRecyclingRecipes() {
         for (String handle : ModItems.HANDLE_MATERIALS) {
             for (String tool : ModItems.TOOL_TYPES) {

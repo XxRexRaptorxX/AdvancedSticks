@@ -29,7 +29,7 @@ public class JEIIntegration implements IModPlugin {
     public void registerRecipes(@NotNull IRecipeRegistration registry) {
         if (Config.JEI_DESCRIPTION.get()) {
             for (String handle : ModItems.HANDLE_MATERIALS) {
-                for (String base : ModItems.BASE_MATERIALS) {
+                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
                         registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
                     }
@@ -37,7 +37,7 @@ public class JEIIntegration implements IModPlugin {
             }
 
             //VANILLA
-            for (String base : ModItems.BASE_MATERIALS) {
+            for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 if (base.equals("wood") || base.equals("gold")) {
                     base = base + "en";
                 }

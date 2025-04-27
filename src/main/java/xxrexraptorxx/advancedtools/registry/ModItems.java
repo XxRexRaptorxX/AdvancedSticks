@@ -28,7 +28,11 @@ public class ModItems {
 
     public static final String[] TOOL_TYPES = { "sword", "pickaxe", "axe", "shovel", "hoe" };
 
-    public static final String[] BASE_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
+    public static final String[] TOOL_HEAD_MATERIALS = {
+            "wood", "stone", "iron", "gold", "diamond", "netherite", "obsidian", "bedrock", "steel", "titanium", "quartz", "nickel", "invar", "bone", "electrum",
+            "lumium", "bronze", "constantan", "glowstone", "brass", "peridot", "copper", "signalum", "cinnabar", "redstone", "ruby", "amethyst", "fluorite",
+            "sapphire", "enderium", "emerald", "prismarine", "uranium", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "tin", "zinc"
+    };
 
     public static final String[] HANDLE_MATERIALS = {
             "witherbone", "obsidian", "highcarbonblacksteel", "blacksteel", "carbon", "netherite", "blastproofalloy", "darksteel", "weaksteel", "graphite",
@@ -46,19 +50,13 @@ public class ModItems {
             //TODO: "bloodiron", "enchantedbloodiron"
     };
 
-    public static final String[] TOOL_HEAD_MATERIALS = {
-            "wood", "stone", "iron", "gold", "diamond", "netherite", "obsidian", "bedrock", "steel", "titanium", "quartz", "nickel", "invar", "bone", "electrum",
-            "lumium", "bronze", "constantan", "glowstone", "brass", "peridot", "copper", "signalum", "cinnabar", "redstone", "ruby", "amethyst", "fluorite",
-            "sapphire", "enderium", "emerald", "prismarine", "uranium", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "tin", "zinc"
-    };
-
 
     static {
         for (String handle : HANDLE_MATERIALS) {
             if (!ToolUtils.isRod(handle))
                 ITEMS.register("stick_" + handle, () -> new StickItem(new Item.Properties().setId(itemId("stick_" + handle))));
 
-            for (String base : BASE_MATERIALS) {
+            for (String base : TOOL_HEAD_MATERIALS) {
                 //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolMaterials.getMaterial(handle, base));
 
                 ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ToolMaterials.getMaterial(handle, base), 3, -4.0f + ToolMaterials.getSpeed(base, "sword"), props));

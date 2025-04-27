@@ -22,7 +22,7 @@ public class REIIntegration implements REIClientPlugin {
             BuiltinClientPlugin instance = BuiltinClientPlugin.getInstance();
 
             for (String handle : ModItems.HANDLE_MATERIALS) {
-                for (String base : ModItems.BASE_MATERIALS) {
+                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
 
                         instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool))), Component.empty(), list -> {
@@ -34,7 +34,7 @@ public class REIIntegration implements REIClientPlugin {
             }
 
             //VANILLA
-            for (String base : ModItems.BASE_MATERIALS) {
+            for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 String head = base;
 
                 if (base.equals("wood") || base.equals("gold")) {

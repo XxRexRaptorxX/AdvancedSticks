@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/diamond_tool_base",
+    "layer1": "advancedtools:item/prismarine_pickaxe_overlay"
+  }
+}

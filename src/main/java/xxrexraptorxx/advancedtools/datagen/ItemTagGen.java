@@ -4,6 +4,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -51,28 +52,41 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
             }
 
-            //tools
-            for (String base : ModItems.BASE_MATERIALS) {
-                tag(ItemTags.SWORDS).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword")));
-                tag(ItemTags.PICKAXES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe")));
-                tag(ItemTags.AXES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe")));
-                tag(ItemTags.SHOVELS).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
-                tag(ItemTags.HOES).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
-
-                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_sword")));
-                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_pickaxe")));
-                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_axe")));
-                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_shovel")));
-                tag(toolTag).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_hoe")));
-
-                if (base.contains("gold") || handle.contains("gold")) {
+            // tools
+            for (String otherHandle : ModItems.HANDLE_MATERIALS) {
+                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
-                        tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool)));
+                        ResourceLocation loc = ItemModelGen.getItemLoc(otherHandle + "_stick_" + base + "_" + tool);
+                        Item item = BuiltInRegistries.ITEM.getValue(loc);
+
+                        if (item != Items.AIR) {
+                            // Nur Items hinzufügen, wenn:
+                            // - handle == aktueller handle
+                            // - oder base == aktueller handle
+                            if (otherHandle.equals(handle) || base.equals(handle)) {
+                                tag(toolTag).add(item);
+
+                                switch (tool) {
+                                    case "sword" -> tag(ItemTags.SWORDS).add(item);
+                                    case "pickaxe" -> tag(ItemTags.PICKAXES).add(item);
+                                    case "axe" -> tag(ItemTags.AXES).add(item);
+                                    case "shovel" -> tag(ItemTags.SHOVELS).add(item);
+                                    case "hoe" -> tag(ItemTags.HOES).add(item);
+                                }
+
+                                if (base.contains("gold") || handle.contains("gold")) {
+                                    tag(ItemTags.PIGLIN_LOVED).add(item);
+                                }
+                            }
+                        }
+
+
+                        TagKey<Item> craftingMaterialTag = ModTags.createItemTag(References.MODID, ToolUtils.transformMaterialNames(base) + "_tools_materials");
                     }
                 }
             }
-
         }
+
 
         //vanilla
         TagKey<Item> woodStick = ModTags.createItemTag("c", "sticks/wood");

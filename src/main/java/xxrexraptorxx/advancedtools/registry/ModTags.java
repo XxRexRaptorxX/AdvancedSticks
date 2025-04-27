@@ -6,9 +6,11 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
@@ -22,6 +24,11 @@ public class ModTags {
 
     public static TagKey<Item> createItemTag(String id, String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
+    }
+
+
+    public static TagKey<Block> createBlockTag(String id, String name) {
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
     }
 
 

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/benitoite_tool_base",
+    "layer1": "advancedtools:item/cinnabar_hoe_overlay"
+  }
+}

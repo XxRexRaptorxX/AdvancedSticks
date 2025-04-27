@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/aluminum_tool_base",
+    "layer1": "advancedtools:item/copper_hoe_overlay"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/lumium_axe_base",
+    "layer1": "advancedtools:item/enderium_axe_overlay"
+  }
+}

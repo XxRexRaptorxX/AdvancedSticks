@@ -35,7 +35,7 @@ public class ItemModelGen extends ItemModelGenerators {
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
             //tools
-            for (String base : ModItems.BASE_MATERIALS) {
+            for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
                     AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + base + " head with " + handle + " handle");
                     this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_" + tool)));
