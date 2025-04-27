@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/blutonium_axe_base",
+    "layer1": "advancedtools:item/peridot_axe_overlay"
+  }
+}

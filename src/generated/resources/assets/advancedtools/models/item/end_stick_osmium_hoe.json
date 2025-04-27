@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/end_tool_base",
+    "layer1": "advancedtools:item/osmium_hoe_overlay"
+  }
+}

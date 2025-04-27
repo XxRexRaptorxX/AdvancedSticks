@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/elementium_sword_base",
+    "layer1": "advancedtools:item/bone_sword_overlay"
+  }
+}

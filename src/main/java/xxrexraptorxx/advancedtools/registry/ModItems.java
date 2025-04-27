@@ -28,6 +28,8 @@ public class ModItems {
 
     public static final String[] TOOL_TYPES = { "sword", "pickaxe", "axe", "shovel", "hoe" };
 
+    public static final String[] VANILLA_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
+
     public static final String[] TOOL_HEAD_MATERIALS = {
             "wood", "stone", "iron", "gold", "diamond", "netherite", "obsidian", "bedrock", "steel", "titanium", "quartz", "nickel", "invar", "bone", "electrum",
             "lumium", "bronze", "constantan", "glowstone", "brass", "peridot", "copper", "signalum", "cinnabar", "redstone", "ruby", "amethyst", "fluorite",
@@ -54,7 +56,7 @@ public class ModItems {
     static {
         for (String handle : HANDLE_MATERIALS) {
             if (!ToolUtils.isRod(handle))
-                ITEMS.register("stick_" + handle, () -> new StickItem(new Item.Properties().setId(itemId("stick_" + handle))));
+                ITEMS.register("stick_" + handle, () -> new RodItem(new Item.Properties().setId(itemId("stick_" + handle))));
 
             for (String base : TOOL_HEAD_MATERIALS) {
                 //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolMaterials.getMaterial(handle, base));

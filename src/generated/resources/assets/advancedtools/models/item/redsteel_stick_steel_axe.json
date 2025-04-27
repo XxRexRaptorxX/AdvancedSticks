@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/redsteel_axe_base",
+    "layer1": "advancedtools:item/steel_axe_overlay"
+  }
+}

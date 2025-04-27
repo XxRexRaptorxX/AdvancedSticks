@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/plutonium_tool_base",
+    "layer1": "advancedtools:item/lumium_hoe_overlay"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/cobalt_tool_base",
+    "layer1": "advancedtools:item/bronze_hoe_overlay"
+  }
+}

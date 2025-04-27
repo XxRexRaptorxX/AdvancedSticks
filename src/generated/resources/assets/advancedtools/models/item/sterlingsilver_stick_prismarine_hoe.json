@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/sterlingsilver_tool_base",
+    "layer1": "advancedtools:item/prismarine_hoe_overlay"
+  }
+}

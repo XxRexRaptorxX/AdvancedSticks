@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/manganese_axe_base",
+    "layer1": "advancedtools:item/copper_axe_overlay"
+  }
+}

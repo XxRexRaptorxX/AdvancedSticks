@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/thorium_shovel_base",
+    "layer1": "advancedtools:item/quartz_shovel_overlay"
+  }
+}

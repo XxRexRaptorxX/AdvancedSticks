@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/darksteel_sword_base",
+    "layer1": "advancedtools:item/bronze_sword_overlay"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "advancedtools:item/energeticalloy_sword_base",
+    "layer1": "advancedtools:item/peridot_sword_overlay"
+  }
+}
