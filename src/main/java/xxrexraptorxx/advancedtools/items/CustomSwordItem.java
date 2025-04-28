@@ -23,7 +23,7 @@ public class CustomSwordItem extends Item {
 
     @Override
     public Component getName(ItemStack stack) {
-        return ToolUtils.getVanillaToolTranslationKey(this);
+        return ToolUtils.getToolTranslationKey(this);
     }
 
 

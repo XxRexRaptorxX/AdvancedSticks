@@ -191,7 +191,7 @@ public class ToolMaterials {
         if (speed == null) {
             AdvancedTools.LOGGER.error("No speed value set for " + key);
         }
-        return speed;
+        return 1.0f;
     }
 }
 

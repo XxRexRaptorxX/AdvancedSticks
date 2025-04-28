@@ -78,6 +78,12 @@
   "message.advancedtools.base": "Head:",
   "message.advancedtools.random": "~",
 
+  "tooltype.advancedtools.pickaxe": "Pickaxe",
+  "tooltype.advancedtools.axe": "Axe",
+  "tooltype.advancedtools.shovel": "Shovel",
+  "tooltype.advancedtools.hoe": "Hoe",
+  "tooltype.advancedtools.sword": "Sword",
+
   "material.advancedtools.wood": "Wood",
   "material.advancedtools.iron": "Iron",
   "material.advancedtools.gold": "Gold",

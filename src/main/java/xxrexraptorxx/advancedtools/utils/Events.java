@@ -46,6 +46,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
 
 @EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.GAME)
@@ -194,7 +195,7 @@ public class Events {
 
                     if (namespace.equals(References.MODID)) {
                         if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
-                            event.getToolTip().add(2, ToolUtils.getToolStatDescription(ToolUtils.getHandleAndBaseMaterialFromItem(name)[0], ToolUtils.getHandleAndBaseMaterialFromItem(name)[1]));
+                            event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
                         } else {
                             event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));

@@ -35,7 +35,7 @@ public class ToolUtils {
             return Component.translatable("item." + References.MODID + ".stick_wood").getString();
 
         } else {
-            String handle = Objects.requireNonNull(getHandleAndBaseMaterialFromItem(name))[0];
+            String handle = Objects.requireNonNull(getPartsFromTool(name))[0];
 
             if (isVanillaRod(handle)) {
                 if(handle.equals("end")) {
@@ -51,11 +51,30 @@ public class ToolUtils {
     }
 
 
-    public static String[] getHandleAndBaseMaterialFromItem(String toolName) {
-        Pattern pattern = Pattern.compile("([a-zA-Z0-9]+)_stick_([a-zA-Z0-9]+)_");
-        Matcher matcher = pattern.matcher(toolName);
-        if (matcher.find()) {
-            return new String[]{matcher.group(1), matcher.group(2)};
+    private static final Pattern MODDED_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_stick_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
+    private static final Pattern VANILLA_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
+
+    /**
+     * Extracts handleMaterial, headMaterial and toolType from the item name.
+     * Supports both mod tools and vanilla tools.
+     *
+     * @param toolName The registry name of the tool (e.g. "wood_stick_iron_pickaxe" or "iron_pickaxe")
+     * @return A string array {handleMaterial, headMaterial, toolType} or null on error
+     */
+    public static String[] getPartsFromTool(String toolName) {
+        Matcher modMatcher = MODDED_NAME_PATTERN.matcher(toolName);
+
+        // MODDED SCHEME
+        if (modMatcher.matches()) {
+            return new String[]{modMatcher.group(1), modMatcher.group(2), modMatcher.group(3)};
+        }
+
+        // VANILLA SCHEME
+        Matcher vanillaMatcher = VANILLA_NAME_PATTERN.matcher(toolName);
+        if (vanillaMatcher.matches()) {
+            String headMaterial = vanillaMatcher.group(1);
+            String toolType = vanillaMatcher.group(2);
+            return new String[]{"wood", headMaterial, toolType};
         }
 
         AdvancedTools.LOGGER.error("Invalid input: " + toolName);
@@ -80,76 +99,35 @@ public class ToolUtils {
     /**
      * Converts the names of the AS-tools into the names of the Vanilla base tools via the translation keys
      */
-    public static Component getVanillaToolTranslationKey(Item item) {
-        if (item.getDescriptionId().contains("wood_axe")) {
-            return Component.translatable(Items.WOODEN_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("wood_pickaxe")) {
-            return Component.translatable(Items.WOODEN_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("wood_sword")) {
-            return Component.translatable(Items.WOODEN_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("wood_shovel")) {
-            return Component.translatable(Items.WOODEN_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("wood_hoe")) {
-            return Component.translatable(Items.WOODEN_HOE.getName().getString());
+    public static Component getToolTranslationKey(Item item) {
+        String itemName = BuiltInRegistries.ITEM.getKey(item).getPath();
+        String handleMaterial = Objects.requireNonNull(getPartsFromTool(itemName))[0];
+        String headMaterial = Objects.requireNonNull(getPartsFromTool(itemName))[1];
+        String toolType = Objects.requireNonNull(getPartsFromTool(itemName))[2];
+        String translationKey;
 
-        } else if (item.getDescriptionId().contains("stone_axe")) {
-            return Component.translatable(Items.STONE_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("stone_pickaxe")) {
-            return Component.translatable(Items.STONE_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("stone_sword")) {
-            return Component.translatable(Items.STONE_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("stone_shovel")) {
-            return Component.translatable(Items.STONE_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("stone_hoe")) {
-            return Component.translatable(Items.STONE_HOE.getName().getString());
+        //VANILLA
+        if (handleMaterial.equals("wood")) {
+            //name fix
+            if (headMaterial.equals("wood")) {
+                headMaterial = "wooden";
+            } else if (headMaterial.equals("gold")) {
+                headMaterial = "golden";
+            }
 
-        } else if (item.getDescriptionId().contains("iron_axe")) {
-            return Component.translatable(Items.IRON_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("iron_pickaxe")) {
-            return Component.translatable(Items.IRON_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("iron_sword")) {
-            return Component.translatable(Items.IRON_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("iron_shovel")) {
-            return Component.translatable(Items.IRON_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("iron_hoe")) {
-            return Component.translatable(Items.IRON_HOE.getName().getString());
+            String vanillaItemName = headMaterial + "_" + toolType;
+            Item vanillaItem = BuiltInRegistries.ITEM.getOptional(ResourceLocation.withDefaultNamespace(vanillaItemName)).orElse(Items.AIR);
 
-        } else if (item.getDescriptionId().contains("gold_axe")) {
-            return Component.translatable(Items.GOLDEN_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("gold_pickaxe")) {
-            return Component.translatable(Items.GOLDEN_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("gold_sword")) {
-            return Component.translatable(Items.GOLDEN_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("gold_shovel")) {
-            return Component.translatable(Items.GOLDEN_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("gold_hoe")) {
-            return Component.translatable(Items.GOLDEN_HOE.getName().getString());
+            return Component.translatable(vanillaItem.getDescriptionId());
 
-        } else if (item.getDescriptionId().contains("diamond_axe")) {
-            return Component.translatable(Items.DIAMOND_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("diamond_pickaxe")) {
-            return Component.translatable(Items.DIAMOND_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("diamond_sword")) {
-            return Component.translatable(Items.DIAMOND_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("diamond_shovel")) {
-            return Component.translatable(Items.DIAMOND_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("diamond_hoe")) {
-            return Component.translatable(Items.DIAMOND_HOE.getName().getString());
-
-        } else if (item.getDescriptionId().contains("netherite_axe")) {
-            return Component.translatable(Items.NETHERITE_AXE.getName().getString());
-        } else if (item.getDescriptionId().contains("netherite_pickaxe")) {
-            return Component.translatable(Items.NETHERITE_PICKAXE.getName().getString());
-        } else if (item.getDescriptionId().contains("netherite_sword")) {
-            return Component.translatable(Items.NETHERITE_SWORD.getName().getString());
-        } else if (item.getDescriptionId().contains("netherite_shovel")) {
-            return Component.translatable(Items.NETHERITE_SHOVEL.getName().getString());
-        } else if (item.getDescriptionId().contains("netherite_hoe")) {
-            return Component.translatable(Items.NETHERITE_HOE.getName().getString());
-
+        //MODDED
         } else {
-            return Component.literal("ERROR!").withStyle(ChatFormatting.DARK_RED);
+            translationKey = headMaterial + "_" + toolType;
+
+            return Component.translatable("material." + References.MODID + "." + headMaterial).append(" ")
+                    .append(Component.translatable("tooltype." + References.MODID + "." + toolType));
         }
+
     }
 
 

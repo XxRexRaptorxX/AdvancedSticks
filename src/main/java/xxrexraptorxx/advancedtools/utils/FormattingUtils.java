@@ -155,4 +155,14 @@ public class FormattingUtils {
         }
     }
 
+
+    public static String setLangTagPrefix(String prefix) {
+        return prefix + "." + References.MODID + ".";
+    }
+
+
+    public static String setLangTag(String prefix, String suffix) {
+        return prefix + "." + References.MODID + "." + suffix;
+    }
+
 }

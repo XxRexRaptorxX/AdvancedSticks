@@ -76,6 +76,12 @@
   "message.advancedtools.base": "Kopf:",
   "message.advancedtools.random": "~",
 
+  "tooltype.advancedtools.pickaxe": "Spitzhacke",
+  "tooltype.advancedtools.axe": "Axt",
+  "tooltype.advancedtools.shovel": "Schaufel",
+  "tooltype.advancedtools.hoe": "Hacke",
+  "tooltype.advancedtools.sword": "Schwert",
+
   "material.advancedtools.wood": "Holz",
   "material.advancedtools.iron": "Eisen",
   "material.advancedtools.gold": "Gold",
