@@ -2,6 +2,7 @@ package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffect;
@@ -36,7 +37,7 @@ public class FormattingUtils {
     public static Component getHandleEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHandleMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialRandomEffect(material).getEffect().value();
-            return Component.translatable("message." + References.MODID + ".random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingUtils.setModLangComponent("message","random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHandleMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialEffect(material).getEffect().value();
@@ -50,7 +51,7 @@ public class FormattingUtils {
     public static Component getHeadEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHeadMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialRandomEffect(material).getEffect().value();
-            return Component.translatable("message." + References.MODID + ".random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingUtils.setModLangComponent("message", "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHeadMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialEffect(material).getEffect().value();
@@ -163,6 +164,11 @@ public class FormattingUtils {
 
     public static String setLangTag(String prefix, String suffix) {
         return prefix + "." + References.MODID + "." + suffix;
+    }
+
+
+    public static MutableComponent setModLangComponent(String prefix, String suffix) {
+        return Component.translatable(setLangTag(prefix, suffix));
     }
 
 }

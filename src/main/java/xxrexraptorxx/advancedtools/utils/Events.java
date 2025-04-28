@@ -197,7 +197,7 @@ public class Events {
                         if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
                             event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
                         } else {
-                            event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
                         }
 
@@ -205,17 +205,17 @@ public class Events {
                         if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
                             event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
                         } else {
-                            event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                            event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                         }
 
                     } else if (namespace.equals("bedrockminer")) {
-                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                        event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
+                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
 
                     } else {
-                        event.getToolTip().add(1, Component.translatable("message." + References.MODID + ".handle").withStyle(ChatFormatting.GRAY));
-                        event.getToolTip().add(2, Component.literal(" ").append(Component.translatable("item." + References.MODID + ".stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                     }
                 }
             }
@@ -294,13 +294,13 @@ public class Events {
                 String launcher = FMLLoader.getLauncherInfo().toLowerCase();
 
                 if (!launcher.contains("curseforge") || !launcher.contains("modrinth") || !launcher.contains("prism")) {
-                    player.sendSystemMessage(Component.literal("Important Information about mod reposts:\n").withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.DARK_RED));
+                    player.sendSystemMessage(Component.literal("Important information about mod reposts:\n").withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.DARK_RED));
                     player.sendSystemMessage(Component.literal("Sites like 9minecraft.net, mc-mod.net, etc. are known for reuploading mod files without permissions. \nThese sites will also contain a bunch of ads, to try to make money from mods they did not create.\n").withStyle(ChatFormatting.RED));
                     player.sendSystemMessage(Component.literal("For you, this can mean any of the following:").withStyle(ChatFormatting.UNDERLINE).withStyle(ChatFormatting.RED));
-                    player.sendSystemMessage(Component.literal("- Modified versions of mods, which may contain malware & viruses").withStyle(ChatFormatting.RED));
-                    player.sendSystemMessage(Component.literal("- Having your information stolen from malicious ads").withStyle(ChatFormatting.RED));
-                    player.sendSystemMessage(Component.literal("- Old and broken mod versions that can corrupt your world").withStyle(ChatFormatting.RED));
-                    player.sendSystemMessage(Component.literal("- Taking money and views away from the real authors, which may cause them to stop making mods").withStyle(ChatFormatting.RED));
+                    player.sendSystemMessage(Component.literal("- Modified versions of mods, which may contain malware & viruses").withStyle(ChatFormatting.YELLOW));
+                    player.sendSystemMessage(Component.literal("- Having your information stolen from malicious ads").withStyle(ChatFormatting.YELLOW));
+                    player.sendSystemMessage(Component.literal("- Old and broken mod versions that can corrupt your world").withStyle(ChatFormatting.YELLOW));
+                    player.sendSystemMessage(Component.literal("- Taking money and views away from the real authors, which may cause them to stop making mods").withStyle(ChatFormatting.YELLOW));
 
                     MutableComponent url = Component.translatable(ChatFormatting.GOLD + "* Click here for more information *")
                             .withStyle(style -> style.withClickEvent(new ClickEvent.OpenUrl(URI.create("https://vazkii.net/repost/"))));
