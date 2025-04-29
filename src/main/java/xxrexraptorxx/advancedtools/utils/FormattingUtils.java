@@ -15,6 +15,9 @@ import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 public class FormattingUtils {
 
+    public static final String AT_INFIX = "_stick_";
+
+
     public static String capitalizeWords(String string) {
         if (string == null || string.isEmpty()) {
             return string;

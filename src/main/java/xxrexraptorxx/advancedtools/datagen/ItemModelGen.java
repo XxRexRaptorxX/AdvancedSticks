@@ -9,6 +9,7 @@ import net.minecraft.world.item.Item;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.function.BiConsumer;
@@ -38,7 +39,7 @@ public class ItemModelGen extends ItemModelGenerators {
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
                     AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + base + " head with " + handle + " handle");
-                    this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_" + tool)));
+                    this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + base + "_" + tool)));
                 }
             }
         }

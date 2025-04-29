@@ -2,6 +2,7 @@ package xxrexraptorxx.advancedtools.registry;
 
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
 
@@ -10,44 +11,13 @@ import java.util.Map;
 
 public class ModToolMaterials {
 
-    /**            lvl|uses|speed|damage|enchant
-     *    WOOD       0, 59,   2.0,  0.0,  15
-     *    STONE      1, 131,  4.0,  1.0,  5
-     *    IRON       2, 250,  6.0,  2.0,  14
-     *    DIAMOND    3, 1561, 8.0,  3.0,  10
-     *    GOLD       0, 32,   12.0, 0.0,  22
-     *    NETHERITE  4, 2031, 9.0,  4.0,  15
-     */
-    private static final int   WOOD_BASE_USES = 59;
-    private static final float WOOD_BASE_SPEED = 2.0f;
-    private static final float WOOD_BASE_DMG = 0.0f;
-    private static final int   WOOD_BASE_ENCH = 15;
-
-    private static final int   STONE_BASE_USES = 131 - WOOD_BASE_USES;
-    private static final float STONE_BASE_SPEED = 4.0f - WOOD_BASE_SPEED;
-    private static final float STONE_BASE_DMG = 1.0f;
-    private static final int   STONE_BASE_ENCH = 5;
-
-    private static final int   IRON_BASE_USES = 250 - WOOD_BASE_USES;
-    private static final float IRON_BASE_SPEED = 6.0f - WOOD_BASE_SPEED;
-    private static final float IRON_BASE_DMG = 2.0f;
-    private static final int   IRON_BASE_ENCH = 14;
-
-    private static final int   GOLD_BASE_USES = 32;
-    private static final float GOLD_BASE_SPEED = 12.0f - WOOD_BASE_SPEED;
-    private static final float GOLD_BASE_DMG = 0.0f;
-    private static final int   GOLD_BASE_ENCH = 22;
-
-    private static final int   DIAMOND_BASE_USES = 1561 - WOOD_BASE_USES;
-    private static final float DIAMOND_BASE_SPEED = 8.0f - WOOD_BASE_SPEED;
-    private static final float DIAMOND_BASE_DMG = 3.0f;
-    private static final int   DIAMOND_BASE_ENCH = 10;
-
-    private static final int   NETHERITE_BASE_USES = 2031 - WOOD_BASE_USES;
-    private static final float NETHERITE_BASE_SPEED = 9.0f - WOOD_BASE_SPEED;
-    private static final float NETHERITE_BASE_DMG = 4.0f;
-    private static final int   NETHERITE_BASE_ENCH = 15;
-
+    public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
+    public static final Map<String, Float> SPEED_MAP = new HashMap<>();
+    public static final float SWORD_ATK_SPEED_RESET   = -4.0f +  0.6f;
+    public static final float PICKAXE_ATK_SPEED_RESET = -4.0f +  0.2f;
+    public static final float AXE_ATK_SPEED_RESET     = -4.0f + -0.2f;
+    public static final float SHOVEL_ATK_SPEED_RESET  = -4.0f +  0.0f;
+    public static final float HOE_ATK_SPEED_RESET     = -4.0f +  0.0f;
 
     /** SPEED **/
     public static final float WOOD_SWORD_SPEED = 1.6f;
@@ -85,10 +55,6 @@ public class ModToolMaterials {
     public static final float NETHERITE_AXE_SPEED = 1;
     public static final float NETHERITE_SHOVEL_SPEED = 1;
     public static final float NETHERITE_HOE_SPEED = 4;
-
-
-    public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
-    public static final Map<String, Float> SPEED_MAP = new HashMap<>();
 
 
     public static void registerToolMaterials() {
@@ -145,42 +111,71 @@ public class ModToolMaterials {
     }
 
 
+    /**
+     *  Register tool attack speed
+     */
     static {
-        SPEED_MAP.put("wood_sword", ModToolMaterials.WOOD_SWORD_SPEED);
-        SPEED_MAP.put("wood_pickaxe", ModToolMaterials.WOOD_PICKAXE_SPEED);
-        SPEED_MAP.put("wood_axe", ModToolMaterials.WOOD_AXE_SPEED);
-        SPEED_MAP.put("wood_shovel", ModToolMaterials.WOOD_SHOVEL_SPEED);
-        SPEED_MAP.put("wood_hoe", ModToolMaterials.WOOD_HOE_SPEED);
+        // UNUSED FOR NOW
+        //for (String handle : ModItems.HANDLE_MATERIALS) {
+        //    for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+        //        for (String tool : ModItems.TOOL_TYPES) {
+        //            Materials handleMaterial = Materials.fromName(handle).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + handle));
+        //            Materials baseMaterial = Materials.fromName(base).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + base));
+        //
+        //            SPEED_MAP.put(handle + FormattingUtils.AT_INFIX +  base + "_" + tool, baseMaterial.getAttackSpeed() * 3 + handleMaterial.getAttackSpeed() * 2);
+        //        }
+        //    }
+        //}
 
-        SPEED_MAP.put("stone_sword", ModToolMaterials.STONE_SWORD_SPEED);
-        SPEED_MAP.put("stone_pickaxe", ModToolMaterials.STONE_PICKAXE_SPEED);
-        SPEED_MAP.put("stone_axe", ModToolMaterials.STONE_AXE_SPEED);
-        SPEED_MAP.put("stone_shovel", ModToolMaterials.STONE_SHOVEL_SPEED);
-        SPEED_MAP.put("stone_hoe", ModToolMaterials.STONE_HOE_SPEED);
+        SPEED_MAP.put("wood_sword", WOOD_SWORD_SPEED);
+        SPEED_MAP.put("wood_pickaxe", WOOD_PICKAXE_SPEED);
+        SPEED_MAP.put("wood_axe", WOOD_AXE_SPEED);
+        SPEED_MAP.put("wood_shovel", WOOD_SHOVEL_SPEED);
+        SPEED_MAP.put("wood_hoe", WOOD_HOE_SPEED);
 
-        SPEED_MAP.put("iron_sword", ModToolMaterials.IRON_SWORD_SPEED);
-        SPEED_MAP.put("iron_pickaxe", ModToolMaterials.IRON_PICKAXE_SPEED);
-        SPEED_MAP.put("iron_axe", ModToolMaterials.IRON_AXE_SPEED);
-        SPEED_MAP.put("iron_shovel", ModToolMaterials.IRON_SHOVEL_SPEED);
-        SPEED_MAP.put("iron_hoe", ModToolMaterials.IRON_HOE_SPEED);
+        SPEED_MAP.put("stone_sword", STONE_SWORD_SPEED);
+        SPEED_MAP.put("stone_pickaxe", STONE_PICKAXE_SPEED);
+        SPEED_MAP.put("stone_axe", STONE_AXE_SPEED);
+        SPEED_MAP.put("stone_shovel", STONE_SHOVEL_SPEED);
+        SPEED_MAP.put("stone_hoe", STONE_HOE_SPEED);
 
-        SPEED_MAP.put("gold_sword", ModToolMaterials.GOLD_SWORD_SPEED);
-        SPEED_MAP.put("gold_pickaxe", ModToolMaterials.GOLD_PICKAXE_SPEED);
-        SPEED_MAP.put("gold_axe", ModToolMaterials.GOLD_AXE_SPEED);
-        SPEED_MAP.put("gold_shovel", ModToolMaterials.GOLD_SHOVEL_SPEED);
-        SPEED_MAP.put("gold_hoe", ModToolMaterials.GOLD_HOE_SPEED);
+        SPEED_MAP.put("iron_sword", IRON_SWORD_SPEED);
+        SPEED_MAP.put("iron_pickaxe", IRON_PICKAXE_SPEED);
+        SPEED_MAP.put("iron_axe", IRON_AXE_SPEED);
+        SPEED_MAP.put("iron_shovel", IRON_SHOVEL_SPEED);
+        SPEED_MAP.put("iron_hoe", IRON_HOE_SPEED);
 
-        SPEED_MAP.put("diamond_sword", ModToolMaterials.DIAMOND_SWORD_SPEED);
-        SPEED_MAP.put("diamond_pickaxe", ModToolMaterials.DIAMOND_PICKAXE_SPEED);
-        SPEED_MAP.put("diamond_axe", ModToolMaterials.DIAMOND_AXE_SPEED);
-        SPEED_MAP.put("diamond_shovel", ModToolMaterials.DIAMOND_SHOVEL_SPEED);
-        SPEED_MAP.put("diamond_hoe", ModToolMaterials.DIAMOND_HOE_SPEED);
+        SPEED_MAP.put("gold_sword", GOLD_SWORD_SPEED);
+        SPEED_MAP.put("gold_pickaxe", GOLD_PICKAXE_SPEED);
+        SPEED_MAP.put("gold_axe", GOLD_AXE_SPEED);
+        SPEED_MAP.put("gold_shovel", GOLD_SHOVEL_SPEED);
+        SPEED_MAP.put("gold_hoe", GOLD_HOE_SPEED);
 
-        SPEED_MAP.put("netherite_sword", ModToolMaterials.NETHERITE_SWORD_SPEED);
-        SPEED_MAP.put("netherite_pickaxe", ModToolMaterials.NETHERITE_PICKAXE_SPEED);
-        SPEED_MAP.put("netherite_axe", ModToolMaterials.NETHERITE_AXE_SPEED);
-        SPEED_MAP.put("netherite_shovel", ModToolMaterials.NETHERITE_SHOVEL_SPEED);
-        SPEED_MAP.put("netherite_hoe", ModToolMaterials.NETHERITE_HOE_SPEED);
+        SPEED_MAP.put("diamond_sword", DIAMOND_SWORD_SPEED);
+        SPEED_MAP.put("diamond_pickaxe", DIAMOND_PICKAXE_SPEED);
+        SPEED_MAP.put("diamond_axe", DIAMOND_AXE_SPEED);
+        SPEED_MAP.put("diamond_shovel", DIAMOND_SHOVEL_SPEED);
+        SPEED_MAP.put("diamond_hoe", DIAMOND_HOE_SPEED);
+
+        SPEED_MAP.put("netherite_sword", NETHERITE_SWORD_SPEED);
+        SPEED_MAP.put("netherite_pickaxe", NETHERITE_PICKAXE_SPEED);
+        SPEED_MAP.put("netherite_axe", NETHERITE_AXE_SPEED);
+        SPEED_MAP.put("netherite_shovel", NETHERITE_SHOVEL_SPEED);
+        SPEED_MAP.put("netherite_hoe", NETHERITE_HOE_SPEED);
+    }
+
+
+    //UNUSED FOR NOW!
+    @Deprecated
+    public static float getSpeed(String handleMaterial, String baseMaterial, String toolType) {
+        String key = handleMaterial.toLowerCase() + FormattingUtils.AT_INFIX + baseMaterial.toLowerCase() + "_" + toolType.toLowerCase();
+        Float speed = SPEED_MAP.get(key);
+
+        if (speed == null) {
+            AdvancedTools.LOGGER.error("No speed value set for " + key);
+        }
+
+        return SPEED_MAP.getOrDefault(key, 2.0f);
     }
 
 
@@ -189,9 +184,24 @@ public class ModToolMaterials {
         Float speed = SPEED_MAP.get(key);
 
         if (speed == null) {
-            AdvancedTools.LOGGER.error("No speed value set for " + key);
+            String lowerKey = key.toLowerCase();
+            if (lowerKey.contains("sword")) {
+                return IRON_SWORD_SPEED;
+            } else if (lowerKey.contains("pickaxe")) {
+                return IRON_PICKAXE_SPEED;
+            } else if (lowerKey.contains("hoe")) {
+                return IRON_HOE_SPEED;
+            } else if (lowerKey.contains("axe")) {
+                return IRON_AXE_SPEED;
+            } else if (lowerKey.contains("shovel")) {
+                return IRON_SHOVEL_SPEED;
+            } else {
+                AdvancedTools.LOGGER.error("No speed value set for " + key);
+                return 2.0f;
+            }
         }
-        return 1.0f;
+
+        return speed;
     }
 }
 

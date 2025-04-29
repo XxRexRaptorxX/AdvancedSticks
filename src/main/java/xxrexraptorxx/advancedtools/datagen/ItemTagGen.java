@@ -16,6 +16,7 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Arrays;
@@ -57,7 +58,7 @@ public class ItemTagGen extends ItemTagsProvider {
             for (String otherHandle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
-                        ResourceLocation loc = ItemModelGen.getItemLoc(otherHandle + "_stick_" + base + "_" + tool);
+                        ResourceLocation loc = ItemModelGen.getItemLoc(otherHandle + FormattingUtils.AT_INFIX + base + "_" + tool);
                         Item item = BuiltInRegistries.ITEM.getValue(loc);
 
                         if (item != Items.AIR) {
