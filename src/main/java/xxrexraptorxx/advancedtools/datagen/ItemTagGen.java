@@ -38,8 +38,8 @@ public class ItemTagGen extends ItemTagsProvider {
             Item rodItem = BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle));
             if (rodItem == Items.AIR) AdvancedTools.LOGGER.error("Invalid item!!! [" + handle + "]");
 
-            TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
-            TagKey<Item> stickTag = ModTags.createItemTag("c", "sticks/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> rodTag = ModTags.createCItemTag("rods/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> stickTag = ModTags.createCItemTag("sticks/" + ToolUtils.transformMaterialNames(handle));
             TagKey<Item> toolTag = ModTags.createItemTag(References.MODID, ToolUtils.transformMaterialNames(handle) + "_tools");
 
             if (rodItem != Items.AIR) {
@@ -47,8 +47,8 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(stickTag).add(rodItem);
             }
 
-            tag(ModTags.createItemTag("c", "rods")).addOptionalTags(rodTag);
-            tag(ModTags.createItemTag("c", "sticks")).addOptionalTags(stickTag);
+            tag(ModTags.createCItemTag("rods")).addOptionalTags(rodTag);
+            tag(ModTags.createCItemTag("sticks")).addOptionalTags(stickTag);
 
             if (handle.contains("gold")) {
                 tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
@@ -90,7 +90,7 @@ public class ItemTagGen extends ItemTagsProvider {
         for (String base : ModItems.TOOL_HEAD_MATERIALS) {
             if (!Arrays.asList(ModItems.VANILLA_MATERIALS).contains(base)) {
                 AdvancedTools.LOGGER.info("Generate crafting materials tag for " + base);
-                TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(base) + "_tools_materials");
+                TagKey<Item> craftingMaterialTag = ModTags.createCItemTag(ToolUtils.transformMaterialNames(base) + "_tool_materials");
 
                 for (TagKey<Item> key : ModTags.getPossibleTagsForMaterial(base)) {
                     tag(craftingMaterialTag).addOptionalTag(key);
@@ -102,11 +102,11 @@ public class ItemTagGen extends ItemTagsProvider {
         //vanilla
         TagKey<Item> woodStick = ModTags.createItemTag("c", "sticks/wood");
         tag(woodStick).add(Items.STICK);
-        tag(ModTags.createItemTag("c", "sticks")).addTags(woodStick);
+        tag(ModTags.createCItemTag("sticks")).addTags(woodStick);
 
-        TagKey<Item> endRod = ModTags.createItemTag("c", "rods/end");
+        TagKey<Item> endRod = ModTags.createCItemTag("rods/end");
         tag(endRod).add(Blocks.END_ROD.asItem());
-        tag(ModTags.createItemTag("c", "rods")).addTags(endRod);
+        tag(ModTags.createCItemTag( "rods")).addTags(endRod);
 
         //bows
         tag(Tags.Items.TOOLS_BOW).add(

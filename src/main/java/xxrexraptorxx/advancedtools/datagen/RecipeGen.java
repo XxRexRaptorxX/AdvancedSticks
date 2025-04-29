@@ -5,16 +5,15 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.Tags;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.concurrent.CompletableFuture;
@@ -28,50 +27,28 @@ public class RecipeGen extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         for (String handle : ModItems.HANDLE_MATERIALS) {
-            TagKey<Item> tag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
+            TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
+            AdvancedTools.LOGGER.info("Generate Recipes with " + handle + "-handle of tag [" + rodTag.location() + "]");
 
-            AdvancedTools.LOGGER.info("Generate Recipes for [" + handle + "] of tag [" + tag.location() + "]" );
-            generateToolRecipes(tag);
-        }
+            //RODS
+            for (String tool : ModItems.TOOL_TYPES) {
+                netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_diamond_sword")), BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_netherite_" + tool)));
+            }
 
-        //toolRecyclingRecipes();
-    }
+            //TOOLS
+            for (String head : ModItems.TOOL_HEAD_MATERIALS) {
+                TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(head) + "_tool_materials");
+                AdvancedTools.LOGGER.info("Generate Recipes with " + head + "-head of tag [" + craftingMaterialTag.location() + "]");
 
-    public void generateToolRecipes(TagKey<Item> handle) {
-        swordRecipe(handle, ItemTags.WOODEN_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_wood_sword")));
-        axeRecipe(handle, ItemTags.WOODEN_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_wood_axe")));
-        pickaxeRecipe(handle, ItemTags.WOODEN_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_wood_pickaxe")));
-        shovelRecipe(handle, ItemTags.WOODEN_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_wood_shovel")));
-        hoeRecipe(handle, ItemTags.WOODEN_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_wood_hoe")));
-
-        swordRecipe(handle, ItemTags.STONE_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_stone_sword")));
-        axeRecipe(handle, ItemTags.STONE_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_stone_axe")));
-        pickaxeRecipe(handle, ItemTags.STONE_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_stone_pickaxe")));
-        shovelRecipe(handle, ItemTags.STONE_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_stone_shovel")));
-        hoeRecipe(handle, ItemTags.STONE_TOOL_MATERIALS, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_stone_hoe")));
-
-        swordRecipe(handle, Tags.Items.INGOTS_IRON, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_iron_sword")));
-        axeRecipe(handle, Tags.Items.INGOTS_IRON, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_iron_axe")));
-        pickaxeRecipe(handle, Tags.Items.INGOTS_IRON, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_iron_pickaxe")));
-        shovelRecipe(handle, Tags.Items.INGOTS_IRON, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_iron_shovel")));
-        hoeRecipe(handle, Tags.Items.INGOTS_IRON, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_iron_hoe")));
-
-        swordRecipe(handle, Tags.Items.INGOTS_GOLD, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_gold_sword")));
-        axeRecipe(handle, Tags.Items.INGOTS_GOLD, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_gold_axe")));
-        pickaxeRecipe(handle, Tags.Items.INGOTS_GOLD, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_gold_pickaxe")));
-        shovelRecipe(handle, Tags.Items.INGOTS_GOLD, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_gold_shovel")));
-        hoeRecipe(handle, Tags.Items.INGOTS_GOLD, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_gold_hoe")));
-
-        swordRecipe(handle, Tags.Items.GEMS_DIAMOND, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_sword")));
-        axeRecipe(handle, Tags.Items.GEMS_DIAMOND, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_axe")));
-        pickaxeRecipe(handle, Tags.Items.GEMS_DIAMOND, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_pickaxe")));
-        shovelRecipe(handle, Tags.Items.GEMS_DIAMOND, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_shovel")));
-        hoeRecipe(handle, Tags.Items.GEMS_DIAMOND, BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_hoe")));
-
-        for (String tool : ModItems.TOOL_TYPES) {
-            netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(getStickName(handle) + "_diamond_sword")), BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, getStickName(handle) + "_netherite_" + tool)));
+                swordRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_sword")));
+                axeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_axe")));
+                pickaxeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_pickaxe")));
+                shovelRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
+                hoeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
+            }
         }
     }
+
 
 
 

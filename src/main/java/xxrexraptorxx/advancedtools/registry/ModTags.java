@@ -26,9 +26,16 @@ public class ModTags {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
     }
 
+    public static TagKey<Item> createCItemTag(String name) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
+    }
 
     public static TagKey<Block> createBlockTag(String id, String name) {
         return BlockTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
+    }
+
+    public static TagKey<Block> createCBlockTag(String name) {
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
     }
 
 
@@ -87,47 +94,67 @@ public class ModTags {
         // Add special material tags
         if (ToolUtils.isSpecial(material)) {
             if (material.equals("wither_bone")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/wither")));
+                tags.add(createCItemTag("bones/wither"));
             } else if (material.equals("bone")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/regular")));
+                tags.add(createCItemTag("bones/regular"));
             } else if (material.equals("carbon")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plates/carbon")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/carbon")));
+                tags.add(createCItemTag("plates/carbon"));
+                tags.add(createCItemTag("ingots/carbon"));
             } else if (material.equals("plastic")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "pellets/plastic")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plastic_sheets")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "plastic")));
+                tags.add(createCItemTag("pellets/plastic"));
+                tags.add(createCItemTag("plastic_sheets"));
+                tags.add(createCItemTag("plastic"));
             } else if (material.equals("silicon")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "silicon")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/silicon")));
+                tags.add(createCItemTag("silicon"));
+                tags.add(createCItemTag("ingots/silicon"));
             } else if (material.equals("bedrock")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/bedrock")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_bedrock")));
+                tags.add(createCItemTag("ingots/bedrock"));
+                tags.add(createCItemTag("ingots/refined_bedrock"));
             } else if (material.equals("redstone")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/redstone")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_redstone")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/redstone_alloy")));
+                tags.add(createCItemTag("ingots/redstone"));
+                tags.add(createCItemTag("ingots/refined_redstone"));
+                tags.add(createCItemTag("ingots/redstone_alloy"));
             } else if (material.equals("glowstone")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/glowstone")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_glowstone")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/glowstone_alloy")));
+                tags.add(createCItemTag("ingots/glowstone"));
+                tags.add(createCItemTag("ingots/refined_glowstone"));
+                tags.add(createCItemTag("ingots/glowstone_alloy"));
             } else if (material.equals("obsidian")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/obsidian")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/refined_obsidian")));
+                tags.add(createCItemTag("ingots/obsidian"));
+                tags.add(createCItemTag("ingots/refined_obsidian"));
             } else if (material.equals("superconductor")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor")));
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/superconductor_alloy")));
+                tags.add(createCItemTag("ingots/superconductor"));
+                tags.add(createCItemTag("ingots/superconductor_alloy"));
             } else {
                 // Standard rod tags for materials that do not have normal base materials (e.g. enchanted_stick or basalz_rod)
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "rods/" + material)));
+                tags.add(createCItemTag( "rods/" + material));
             }
 
         } else {
             // Add standard material tags
             if (ToolUtils.isGem(material)) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "gems/" + material)));
+                tags.add(createCItemTag("gems/" + material));
             } else {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "ingots/" + material)));
+                tags.add(createCItemTag( "ingots/" + material));
+            }
+
+        }
+
+        return tags;
+    }
+
+
+
+    /**
+     * Returns a list of possible 'incorrect_for_tool'-block tags for a material
+     */
+    public static List<TagKey<Block>> getPossibleIncorrectForToolTags(String material) {
+        List<TagKey<Block>> tags = new ArrayList<>();
+        material = ToolUtils.transformMaterialNames(material);
+
+        // Add special material tags
+        if (ToolUtils.isGem(material)) {
+            if (material.equals("wither_bone")) {
+                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/wither")));
             }
 
         }
