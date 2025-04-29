@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class EMIIntegration implements EmiPlugin {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {;
                     for (String tool : ModItems.TOOL_TYPES) {
-                        ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool)));
+                        ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + FormattingUtils.AT_INFIX + base + "_" + tool)));
 
                         ResourceLocation recipeId = ItemModelGen.getItemLoc("info/" + handle + "_" + base + "_" + tool);
                         registry.addRecipe(new EmiInfoRecipe(List.of(EmiStack.of(stack)), List.of(ToolUtils.getToolStatDescription(handle, base)), recipeId));

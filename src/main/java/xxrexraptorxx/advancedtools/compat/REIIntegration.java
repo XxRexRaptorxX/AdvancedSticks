@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 @REIPluginClient
@@ -25,7 +26,7 @@ public class REIIntegration implements REIClientPlugin {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
 
-                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + "_stick_" + base + "_" + tool))), Component.empty(), list -> {
+                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + FormattingUtils.AT_INFIX + base + "_" + tool))), Component.empty(), list -> {
                             list.add(ToolUtils.getToolStatDescription(handle, base));
                             return list;
                         });
