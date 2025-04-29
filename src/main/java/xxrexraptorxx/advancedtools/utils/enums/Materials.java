@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public enum Materials {
 
-//   name |  durability | mining_speed | attack_damage | enchantability | attack_speed (unused)
+//   name | durability | mining_speed | attack_damage | enchantability | attack_speed (unused)
     ADAMANT(600, 1.33f, 1.07f, 2, 1.20f),
     ADVANCED(118, 0.592f, 0.296f, 1, 1.00f),
     ADVANCED_ALLOY(266, 1.33f, 0.67f, 3, 0.90f),
