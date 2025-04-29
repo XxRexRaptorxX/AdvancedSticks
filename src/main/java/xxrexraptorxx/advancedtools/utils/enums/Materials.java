@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public enum Materials {
 
-//   name |  durability | mining_speed | attack_damage | enchantability | attack_speed
+//   name |  durability | mining_speed | attack_damage | enchantability | attack_speed (unused)
     ADAMANT(600, 1.33f, 1.07f, 2, 1.20f),
     ADVANCED(118, 0.592f, 0.296f, 1, 1.00f),
     ADVANCED_ALLOY(266, 1.33f, 0.67f, 3, 0.90f),
@@ -71,7 +71,7 @@ public enum Materials {
     FLUIX(16, 2.0f, 0.17f, 10, 1.05f),
     FLUORITE(16, 2.5f, 0.0f, 7, 1.05f),
     GLOWSTONE(33, 2.33f, 0.5f, 8, 0.60f),
-    GOLD(10, 3.333f, 0.0f, 7, 3.333f),
+    GOLD(10, 3.333f, 0.0f, 7, 0.2f),
     GRAPHITE(100, 1.67f, 0.6f, 4, 0.75f),
     PLASTIC(26, 2.0f, 0.17f, 1, 0.25f),
     HIGH_CARBON_BLACK_STEEL(400, 1.23f, 0.8f, 3, 0.90f),
@@ -84,7 +84,7 @@ public enum Materials {
     INSANITE(1000, 2.5f, 1.5f, 8, 1.10f),
     INVAR(66, 1.0f, 0.57f, 3, 0.83f),
     IRIDIUM(533, 1.67f, 1.0f, 4, 1.10f),
-    IRON(63, 1.333f, 0.666f, 4, 0.866666f),
+    IRON(63, 1.333f, 0.666f, 4, 0.866f),
     KANTHAL(266, 1.73f, 0.73f, 4, 0.70f),
     LEAD(15, 0.67f, 0.27f, 2, 0.70f),
     LUDICRITE(733, 1.6f, 1.17f, 4, 1.15f),
@@ -124,9 +124,9 @@ public enum Materials {
     SOLARIUM(500, 1.87f, 1.1f, 6, 1.05f),
     SOULARIUM(533, 1.8f, 1.07f, 6, 0.85f),
     STAINLESS_STEEL(466, 1.53f, 1.0f, 4, 0.90f),
-    STEEL(100, 1.07f, 0.6f, 3, 0.866666f),
+    STEEL(100, 1.07f, 0.6f, 3, 0.866f),
     STERLING_SILVER(90, 1.73f, 0.53f, 8, 0.70f),
-    STONE(24, 0.666f, 0.333f, 1, 0.666f),
+    STONE(24, 0.666f, 0.333f, 1, 0.533f),
     STONE_BASE(72, 2.0f, 1.0f, 5, 2.0f),
     SUPERCONDUCTOR(600, 2.5f, 0.93f, 8, 1.10f),
     TERRASTEEL(500, 1.73f, 0.9f, 4, 1.10f),
@@ -144,7 +144,7 @@ public enum Materials {
     WEAK_RED_STEEL(116, 1.07f, 0.58f, 3, 0.80f),
     WEAK_STEEL(83, 1.0f, 0.53f, 3, 0.80f),
     WITHER_BONE(26, 1.5f, 0.67f, 4, 1.15f),
-    WOOD(19, 0.666f, 0.0f, 5, 0.666f),
+    WOOD(19, 0.666f, 0.0f, 5, 0.2f),
     WROUGHT_IRON(43, 0.9f, 0.43f, 2, 0.85f),
     YELLORIUM(600, 1.47f, 1.07f, 2, 1.10f),
     ZANITE(233, 1.5f, 0.6f, 5, 1.05f),
