@@ -150,6 +150,8 @@ public enum Materials {
     ZANITE(233, 1.5f, 0.6f, 5, 1.05f),
     ZINC(36, 1.33f, 0.33f, 2, 0.75f);
 
+    //Tool value calculation:   handle_material_value * 2 + head_material_value * 3 = final tool value
+
 
     private final int   uses;
     private final float speed;
