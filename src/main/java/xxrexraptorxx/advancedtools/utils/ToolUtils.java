@@ -249,27 +249,27 @@ public class ToolUtils {
         if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
 
         return switch (material) {
-            case "lumium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 300);
-            case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 300);
-            case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300);
-            case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 300, 1);
-            case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 300);
-            case "rosegold" -> getOptionalEffect("love", 300, 0 , MobEffects.LUCK);
-            case "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 300);
-            case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 300);
-            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 300);
-            case "blaze", "pyrope" -> getOptionalEffect("warming", 300, 0, MobEffects.FIRE_RESISTANCE);
-            case "solarium", "elementium" -> getOptionalEffect("photosynthesis", 300, 0, MobEffects.GLOWING);
-            case "aquite", "prismarine" -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 300);
-            case "pinkslime" -> new MobEffectInstance(MobEffects.OOZING, 300);
-            case "emerald" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 300);
-            case "amethyst" -> getOptionalEffect("magic_resistance", 300, 0, MobEffects.LUCK);
-            case "superconductor", "electrum" -> getOptionalEffect("conductive", 300, 0, null);
-            case "opal" -> getOptionalEffect("nullifier", "remove_effects", 300, 0, MobEffects.LUCK);
-            case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", 300, 0, null);
-            case "enchanted" -> getOptionalEffect("water_walk", 300, 0, MobEffects.SLOW_FALLING);
-            case "blastproofalloy" -> getOptionalEffect("explosion_resistance", 300, 0, null);
-            case "horizonite" -> getOptionalEffect("spiderclimb", "spider_climb", 300, 0, null);
+            case "lumium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 30);
+            case "breeze" -> new MobEffectInstance(MobEffects.JUMP_BOOST, 30);
+            case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, 30);
+            case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 30, 1);
+            case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 30);
+            case "rosegold" -> getOptionalEffect("love", 30, 0 , MobEffects.LUCK);
+            case "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 30);
+            case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 30);
+            case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 30);
+            case "blaze", "pyrope" -> getOptionalEffect("warming", 30, 0, MobEffects.FIRE_RESISTANCE);
+            case "solarium", "elementium" -> getOptionalEffect("photosynthesis", 30, 0, MobEffects.GLOWING);
+            case "aquite", "prismarine" -> new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 30);
+            case "pinkslime" -> new MobEffectInstance(MobEffects.OOZING, 30);
+            case "emerald" -> new MobEffectInstance(MobEffects.HERO_OF_THE_VILLAGE, 30);
+            case "amethyst" -> getOptionalEffect("magic_resistance", 30, 0, MobEffects.LUCK);
+            case "superconductor", "electrum" -> getOptionalEffect("conductive", 30, 0, null);
+            case "opal" -> getOptionalEffect("nullifier", "remove_effects", 30, 0, MobEffects.LUCK);
+            case "magnetite" -> getOptionalEffect("magnetizing", "magnetic", 30, 0, null);
+            case "enchanted" -> getOptionalEffect("water_walk", 30, 0, MobEffects.SLOW_FALLING);
+            case "blastproofalloy" -> getOptionalEffect("explosion_resistance", 30, 0, null);
+            case "horizonite" -> getOptionalEffect("spiderclimb", "spider_climb", 30, 0, null);
             default -> null;
         };
     }
