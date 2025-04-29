@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/end",
+    "X": "#c:fluorite_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "#X",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:end_stick_fluorite_axe"
+  }
+}

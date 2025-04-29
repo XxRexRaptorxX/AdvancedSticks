@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/ventium",
+    "X": "#c:quartz_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:ventium_stick_quartz_shovel"
+  }
+}

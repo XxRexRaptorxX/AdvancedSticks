@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/energetic_alloy",
+    "X": "#c:amethyst_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "# ",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:energeticalloy_stick_amethyst_hoe"
+  }
+}

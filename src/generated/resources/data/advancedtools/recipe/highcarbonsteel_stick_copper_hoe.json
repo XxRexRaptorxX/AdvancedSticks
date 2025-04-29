@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/high_carbon_steel",
+    "X": "#c:copper_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "# ",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:highcarbonsteel_stick_copper_hoe"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/wrought_iron",
+    "X": "#c:amethyst_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:wroughtiron_stick_amethyst_shovel"
+  }
+}

@@ -7,11 +7,11 @@
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_wooden_tool_materials": {
+    "has_wood_tool_materials": {
       "conditions": {
         "items": [
           {
-            "items": "#minecraft:wooden_tool_materials"
+            "items": "#c:wood_tool_materials"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_wooden_tool_materials"
+      "has_wood_tool_materials"
     ]
   ],
   "rewards": {

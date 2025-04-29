@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/netherite_iron",
+    "X": "#c:bedrock_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "# ",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheriteiron_stick_bedrock_hoe"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/netherite_emerald",
+    "X": "#c:emerald_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheriteemerald_stick_emerald_sword"
+  }
+}

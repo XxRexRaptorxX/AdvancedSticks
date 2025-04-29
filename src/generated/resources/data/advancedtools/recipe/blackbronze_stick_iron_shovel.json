@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/black_bronze",
-    "X": "#c:ingots/iron"
+    "X": "#c:iron_tool_materials"
   },
   "pattern": [
     "X",

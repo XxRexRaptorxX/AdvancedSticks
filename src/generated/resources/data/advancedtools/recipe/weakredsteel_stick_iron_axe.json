@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/weak_red_steel",
-    "X": "#c:ingots/iron"
+    "X": "#c:iron_tool_materials"
   },
   "pattern": [
     "XX",

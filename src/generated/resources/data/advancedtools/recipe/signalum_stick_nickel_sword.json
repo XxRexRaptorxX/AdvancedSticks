@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/signalum",
+    "X": "#c:nickel_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:signalum_stick_nickel_sword"
+  }
+}

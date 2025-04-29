@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/netherite_gold",
+    "X": "#c:platinum_tool_materials"
+  },
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheritegold_stick_platinum_sword"
+  }
+}

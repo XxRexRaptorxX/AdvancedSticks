@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/benitoite",
+    "X": "#c:aluminum_tool_materials"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:benitoite_stick_aluminum_pickaxe"
+  }
+}

@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/reinforced_alloy",
-    "X": "#minecraft:stone_tool_materials"
+    "X": "#c:stone_tool_materials"
   },
   "pattern": [
     "X",

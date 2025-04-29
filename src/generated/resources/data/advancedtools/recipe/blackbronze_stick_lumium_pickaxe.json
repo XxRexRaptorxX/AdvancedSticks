@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/black_bronze",
+    "X": "#c:lumium_tool_materials"
+  },
+  "pattern": [
+    "XXX",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:blackbronze_stick_lumium_pickaxe"
+  }
+}

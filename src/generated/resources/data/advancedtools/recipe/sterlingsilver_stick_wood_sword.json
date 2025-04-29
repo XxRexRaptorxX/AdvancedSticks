@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/sterling_silver",
-    "X": "#minecraft:wooden_tool_materials"
+    "X": "#c:wood_tool_materials"
   },
   "pattern": [
     "X",

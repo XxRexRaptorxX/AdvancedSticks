@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "#c:rods/netherite_emerald",
+    "X": "#c:quartz_tool_materials"
+  },
+  "pattern": [
+    "XX",
+    "#X",
+    "# "
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:netheriteemerald_stick_quartz_axe"
+  }
+}

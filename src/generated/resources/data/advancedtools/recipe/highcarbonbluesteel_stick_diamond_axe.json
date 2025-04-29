@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/high_carbon_blue_steel",
-    "X": "#c:gems/diamond"
+    "X": "#c:diamond_tool_materials"
   },
   "pattern": [
     "XX",

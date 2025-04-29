@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_emerald_tool_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:emerald_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:obsidian_stick_emerald_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_emerald_tool_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:obsidian_stick_emerald_sword"
+    ]
+  }
+}

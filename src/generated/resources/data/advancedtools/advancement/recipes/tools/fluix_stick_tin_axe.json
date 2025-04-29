@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:fluix_stick_tin_axe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_tool_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:tin_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tin_tool_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:fluix_stick_tin_axe"
+    ]
+  }
+}

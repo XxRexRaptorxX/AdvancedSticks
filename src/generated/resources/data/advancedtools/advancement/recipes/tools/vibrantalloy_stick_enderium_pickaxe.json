@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_tool_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:enderium_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:vibrantalloy_stick_enderium_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_tool_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:vibrantalloy_stick_enderium_pickaxe"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_steel_tool_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:steel_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:unobtainium_stick_steel_sword"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_steel_tool_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:unobtainium_stick_steel_sword"
+    ]
+  }
+}

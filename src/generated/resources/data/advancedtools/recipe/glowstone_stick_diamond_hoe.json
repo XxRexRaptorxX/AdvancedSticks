@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/glowstone",
-    "X": "#c:gems/diamond"
+    "X": "#c:diamond_tool_materials"
   },
   "pattern": [
     "XX",

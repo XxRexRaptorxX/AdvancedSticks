@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "advancedtools:stainlesssteel_stick_zinc_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_zinc_tool_materials": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:zinc_tool_materials"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_zinc_tool_materials"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "advancedtools:stainlesssteel_stick_zinc_shovel"
+    ]
+  }
+}

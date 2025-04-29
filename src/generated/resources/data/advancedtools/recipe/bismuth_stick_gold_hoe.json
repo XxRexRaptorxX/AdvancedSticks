@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/bismuth",
-    "X": "#c:ingots/gold"
+    "X": "#c:gold_tool_materials"
   },
   "pattern": [
     "XX",

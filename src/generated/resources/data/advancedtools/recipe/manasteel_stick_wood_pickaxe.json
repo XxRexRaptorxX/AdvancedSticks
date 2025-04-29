@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/manasteel",
-    "X": "#minecraft:wooden_tool_materials"
+    "X": "#c:wood_tool_materials"
   },
   "pattern": [
     "XXX",

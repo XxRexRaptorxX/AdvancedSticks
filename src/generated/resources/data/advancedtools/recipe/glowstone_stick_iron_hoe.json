@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "#c:rods/glowstone",
-    "X": "#c:ingots/iron"
+    "X": "#c:iron_tool_materials"
   },
   "pattern": [
     "XX",
