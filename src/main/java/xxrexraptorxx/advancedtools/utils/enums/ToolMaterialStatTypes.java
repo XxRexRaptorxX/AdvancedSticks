@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedtools.utils;
+package xxrexraptorxx.advancedtools.utils.enums;
 
 public enum ToolMaterialStatTypes {
 

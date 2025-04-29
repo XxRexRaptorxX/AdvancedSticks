@@ -11,6 +11,7 @@ import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 public class FormattingUtils {
 

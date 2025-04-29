@@ -14,6 +14,8 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.registry.ModTags;
+import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
+import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 import javax.annotation.Nullable;
 import java.text.DecimalFormat;
@@ -365,7 +367,7 @@ public class ToolUtils {
         DecimalFormat df = new DecimalFormat("#.##");
         String textSeparator = ": ";
         String lineSeperator = "\n";
-        ToolMaterial material = ToolMaterials.getMaterial(handle, base);
+        ToolMaterial material = ModToolMaterials.getMaterial(handle, base);
 
         if (material == null) {
             throw new NullPointerException("Material is null: " + base + "_" + handle);

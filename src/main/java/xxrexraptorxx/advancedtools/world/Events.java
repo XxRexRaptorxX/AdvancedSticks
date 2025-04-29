@@ -1,4 +1,4 @@
-package xxrexraptorxx.advancedtools.utils;
+package xxrexraptorxx.advancedtools.world;
 
 import com.mojang.authlib.GameProfile;
 import net.minecraft.ChatFormatting;
@@ -36,6 +36,9 @@ import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.Config;
+import xxrexraptorxx.advancedtools.utils.FormattingUtils;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.io.IOException;
 import java.net.URI;

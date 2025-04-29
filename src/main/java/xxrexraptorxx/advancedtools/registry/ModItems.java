@@ -9,7 +9,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.items.*;
 import xxrexraptorxx.advancedtools.main.References;
-import xxrexraptorxx.advancedtools.utils.ToolMaterials;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 public class ModItems {
@@ -61,11 +60,11 @@ public class ModItems {
             for (String base : TOOL_HEAD_MATERIALS) {
                 //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolMaterials.getMaterial(handle, base));
 
-                ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ToolMaterials.getMaterial(handle, base), 3, -4.0f + ToolMaterials.getSpeed(base, "sword"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_pickaxe", props -> new CustomPickaxeItem(ToolMaterials.getMaterial(handle, base), 1, -4.0f + ToolMaterials.getSpeed(base, "pickaxe"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_axe", props -> new CustomAxeItem(ToolMaterials.getMaterial(handle, base), 6, -4.0f + ToolMaterials.getSpeed(base, "axe"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_shovel", props -> new CustomShovelItem(ToolMaterials.getMaterial(handle, base), 1.5f, -4.0f + ToolMaterials.getSpeed(base, "shovel"), props));
-                ITEMS.registerItem(handle + "_stick_" + base + "_hoe", props -> new CustomHoeItem(ToolMaterials.getMaterial(handle, base), 0, -4.0f + ToolMaterials.getSpeed(base, "hoe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_sword", props -> new CustomSwordItem(ModToolMaterials.getMaterial(handle, base), 3, -4.0f + ModToolMaterials.getSpeed(base, "sword"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_pickaxe", props -> new CustomPickaxeItem(ModToolMaterials.getMaterial(handle, base), 1, -4.0f + ModToolMaterials.getSpeed(base, "pickaxe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_axe", props -> new CustomAxeItem(ModToolMaterials.getMaterial(handle, base), 6, -4.0f + ModToolMaterials.getSpeed(base, "axe"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_shovel", props -> new CustomShovelItem(ModToolMaterials.getMaterial(handle, base), 1.5f, -4.0f + ModToolMaterials.getSpeed(base, "shovel"), props));
+                ITEMS.registerItem(handle + "_stick_" + base + "_hoe", props -> new CustomHoeItem(ModToolMaterials.getMaterial(handle, base), 0, -4.0f + ModToolMaterials.getSpeed(base, "hoe"), props));
             }
         }
     }

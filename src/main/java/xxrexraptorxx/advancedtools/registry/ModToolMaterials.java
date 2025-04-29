@@ -1,14 +1,14 @@
-package xxrexraptorxx.advancedtools.utils;
+package xxrexraptorxx.advancedtools.registry;
 
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
-import xxrexraptorxx.advancedtools.registry.ModItems;
-import xxrexraptorxx.advancedtools.registry.ModTags;
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.enums.Materials;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ToolMaterials {
+public class ModToolMaterials {
 
     /**            lvl|uses|speed|damage|enchant
      *    WOOD       0, 59,   2.0,  0.0,  15
@@ -146,41 +146,41 @@ public class ToolMaterials {
 
 
     static {
-        SPEED_MAP.put("wood_sword", ToolMaterials.WOOD_SWORD_SPEED);
-        SPEED_MAP.put("wood_pickaxe", ToolMaterials.WOOD_PICKAXE_SPEED);
-        SPEED_MAP.put("wood_axe", ToolMaterials.WOOD_AXE_SPEED);
-        SPEED_MAP.put("wood_shovel", ToolMaterials.WOOD_SHOVEL_SPEED);
-        SPEED_MAP.put("wood_hoe", ToolMaterials.WOOD_HOE_SPEED);
+        SPEED_MAP.put("wood_sword", ModToolMaterials.WOOD_SWORD_SPEED);
+        SPEED_MAP.put("wood_pickaxe", ModToolMaterials.WOOD_PICKAXE_SPEED);
+        SPEED_MAP.put("wood_axe", ModToolMaterials.WOOD_AXE_SPEED);
+        SPEED_MAP.put("wood_shovel", ModToolMaterials.WOOD_SHOVEL_SPEED);
+        SPEED_MAP.put("wood_hoe", ModToolMaterials.WOOD_HOE_SPEED);
 
-        SPEED_MAP.put("stone_sword", ToolMaterials.STONE_SWORD_SPEED);
-        SPEED_MAP.put("stone_pickaxe", ToolMaterials.STONE_PICKAXE_SPEED);
-        SPEED_MAP.put("stone_axe", ToolMaterials.STONE_AXE_SPEED);
-        SPEED_MAP.put("stone_shovel", ToolMaterials.STONE_SHOVEL_SPEED);
-        SPEED_MAP.put("stone_hoe", ToolMaterials.STONE_HOE_SPEED);
+        SPEED_MAP.put("stone_sword", ModToolMaterials.STONE_SWORD_SPEED);
+        SPEED_MAP.put("stone_pickaxe", ModToolMaterials.STONE_PICKAXE_SPEED);
+        SPEED_MAP.put("stone_axe", ModToolMaterials.STONE_AXE_SPEED);
+        SPEED_MAP.put("stone_shovel", ModToolMaterials.STONE_SHOVEL_SPEED);
+        SPEED_MAP.put("stone_hoe", ModToolMaterials.STONE_HOE_SPEED);
 
-        SPEED_MAP.put("iron_sword", ToolMaterials.IRON_SWORD_SPEED);
-        SPEED_MAP.put("iron_pickaxe", ToolMaterials.IRON_PICKAXE_SPEED);
-        SPEED_MAP.put("iron_axe", ToolMaterials.IRON_AXE_SPEED);
-        SPEED_MAP.put("iron_shovel", ToolMaterials.IRON_SHOVEL_SPEED);
-        SPEED_MAP.put("iron_hoe", ToolMaterials.IRON_HOE_SPEED);
+        SPEED_MAP.put("iron_sword", ModToolMaterials.IRON_SWORD_SPEED);
+        SPEED_MAP.put("iron_pickaxe", ModToolMaterials.IRON_PICKAXE_SPEED);
+        SPEED_MAP.put("iron_axe", ModToolMaterials.IRON_AXE_SPEED);
+        SPEED_MAP.put("iron_shovel", ModToolMaterials.IRON_SHOVEL_SPEED);
+        SPEED_MAP.put("iron_hoe", ModToolMaterials.IRON_HOE_SPEED);
 
-        SPEED_MAP.put("gold_sword", ToolMaterials.GOLD_SWORD_SPEED);
-        SPEED_MAP.put("gold_pickaxe", ToolMaterials.GOLD_PICKAXE_SPEED);
-        SPEED_MAP.put("gold_axe", ToolMaterials.GOLD_AXE_SPEED);
-        SPEED_MAP.put("gold_shovel", ToolMaterials.GOLD_SHOVEL_SPEED);
-        SPEED_MAP.put("gold_hoe", ToolMaterials.GOLD_HOE_SPEED);
+        SPEED_MAP.put("gold_sword", ModToolMaterials.GOLD_SWORD_SPEED);
+        SPEED_MAP.put("gold_pickaxe", ModToolMaterials.GOLD_PICKAXE_SPEED);
+        SPEED_MAP.put("gold_axe", ModToolMaterials.GOLD_AXE_SPEED);
+        SPEED_MAP.put("gold_shovel", ModToolMaterials.GOLD_SHOVEL_SPEED);
+        SPEED_MAP.put("gold_hoe", ModToolMaterials.GOLD_HOE_SPEED);
 
-        SPEED_MAP.put("diamond_sword", ToolMaterials.DIAMOND_SWORD_SPEED);
-        SPEED_MAP.put("diamond_pickaxe", ToolMaterials.DIAMOND_PICKAXE_SPEED);
-        SPEED_MAP.put("diamond_axe", ToolMaterials.DIAMOND_AXE_SPEED);
-        SPEED_MAP.put("diamond_shovel", ToolMaterials.DIAMOND_SHOVEL_SPEED);
-        SPEED_MAP.put("diamond_hoe", ToolMaterials.DIAMOND_HOE_SPEED);
+        SPEED_MAP.put("diamond_sword", ModToolMaterials.DIAMOND_SWORD_SPEED);
+        SPEED_MAP.put("diamond_pickaxe", ModToolMaterials.DIAMOND_PICKAXE_SPEED);
+        SPEED_MAP.put("diamond_axe", ModToolMaterials.DIAMOND_AXE_SPEED);
+        SPEED_MAP.put("diamond_shovel", ModToolMaterials.DIAMOND_SHOVEL_SPEED);
+        SPEED_MAP.put("diamond_hoe", ModToolMaterials.DIAMOND_HOE_SPEED);
 
-        SPEED_MAP.put("netherite_sword", ToolMaterials.NETHERITE_SWORD_SPEED);
-        SPEED_MAP.put("netherite_pickaxe", ToolMaterials.NETHERITE_PICKAXE_SPEED);
-        SPEED_MAP.put("netherite_axe", ToolMaterials.NETHERITE_AXE_SPEED);
-        SPEED_MAP.put("netherite_shovel", ToolMaterials.NETHERITE_SHOVEL_SPEED);
-        SPEED_MAP.put("netherite_hoe", ToolMaterials.NETHERITE_HOE_SPEED);
+        SPEED_MAP.put("netherite_sword", ModToolMaterials.NETHERITE_SWORD_SPEED);
+        SPEED_MAP.put("netherite_pickaxe", ModToolMaterials.NETHERITE_PICKAXE_SPEED);
+        SPEED_MAP.put("netherite_axe", ModToolMaterials.NETHERITE_AXE_SPEED);
+        SPEED_MAP.put("netherite_shovel", ModToolMaterials.NETHERITE_SHOVEL_SPEED);
+        SPEED_MAP.put("netherite_hoe", ModToolMaterials.NETHERITE_HOE_SPEED);
     }
 
 

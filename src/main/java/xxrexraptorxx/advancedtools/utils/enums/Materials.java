@@ -1,4 +1,6 @@
-package xxrexraptorxx.advancedtools.utils;
+package xxrexraptorxx.advancedtools.utils.enums;
+
+import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Optional;
 
