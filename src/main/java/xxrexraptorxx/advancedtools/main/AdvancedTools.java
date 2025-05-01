@@ -1,14 +1,21 @@
 package xxrexraptorxx.advancedtools.main;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.AddPackFindersEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
 import xxrexraptorxx.advancedtools.registry.CreativeModeTabs;
 import xxrexraptorxx.advancedtools.registry.ModItems;
-import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
+import xxrexraptorxx.advancedtools.utils.Config;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
@@ -26,5 +33,27 @@ public class AdvancedTools {
         Config.init(container);
         ModItems.init(bus);
         CreativeModeTabs.init(bus);
+
+        bus.addListener(AdvancedTools::packSetup);
+    }
+
+
+    public static void packSetup(@NotNull AddPackFindersEvent event) {
+        event.addPackFinders(
+                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_vanilla_materials"),
+                PackType.SERVER_DATA,
+                Component.literal("Only Vanilla Materials"),
+                PackSource.DEFAULT,
+                false,
+                Pack.Position.TOP
+        );
+        event.addPackFinders(
+                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_common_materials"),
+                PackType.SERVER_DATA,
+                Component.literal("Only Common Materials"),
+                PackSource.DEFAULT,
+                false,
+                Pack.Position.TOP
+        );
     }
 }
