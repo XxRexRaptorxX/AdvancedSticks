@@ -5,6 +5,11 @@ plugins {
     id 'idea'
 }
 
+//fix for more than 65535 entries
+tasks.withType(Zip).configureEach {
+    zip64 = true
+}
+
 tasks.named('wrapper', Wrapper).configure {
     // Define wrapper values here so as to not have to always do so when updating gradlew.properties.
     // Switching this to Wrapper.DistributionType.ALL will download the full gradle sources that comes with
