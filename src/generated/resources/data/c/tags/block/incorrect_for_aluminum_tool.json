@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_aluminum_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_gold_tool"
+  ]
+}

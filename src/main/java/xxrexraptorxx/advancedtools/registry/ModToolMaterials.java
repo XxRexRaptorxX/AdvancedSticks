@@ -1,5 +1,6 @@
 package xxrexraptorxx.advancedtools.registry;
 
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
@@ -13,11 +14,7 @@ public class ModToolMaterials {
 
     public static final Map<String, ToolMaterial> TOOL_MATERIALS = new HashMap<>();
     public static final Map<String, Float> SPEED_MAP = new HashMap<>();
-    public static final float SWORD_ATK_SPEED_RESET   = -4.0f +  0.6f;
-    public static final float PICKAXE_ATK_SPEED_RESET = -4.0f +  0.2f;
-    public static final float AXE_ATK_SPEED_RESET     = -4.0f + -0.2f;
-    public static final float SHOVEL_ATK_SPEED_RESET  = -4.0f +  0.0f;
-    public static final float HOE_ATK_SPEED_RESET     = -4.0f +  0.0f;
+    public static final Map<ToolMaterial, String> MATERIAL_KEYS = new HashMap<>();
 
     /** SPEED **/
     public static final float WOOD_SWORD_SPEED = 1.6f;
@@ -81,6 +78,8 @@ public class ModToolMaterials {
                 );
             }
         }
+
+        TOOL_MATERIALS.forEach((key, mat) -> MATERIAL_KEYS.put(mat, key));
     }
 
 
@@ -202,6 +201,20 @@ public class ModToolMaterials {
         }
 
         return speed;
+    }
+
+
+    /**
+     * Extracts handleMaterial and headMaterial from the toolmaterial.
+     *
+     * @param material The registry name of the toolmaterial
+     * @return A string array {headMaterial, handleMaterial} or null on error
+     */
+    public static Pair<String, String> getPartsFromToolMaterial(ToolMaterial material) {
+        String key = MATERIAL_KEYS.get(material);
+        if (key == null) throw new IllegalArgumentException("Unknown material: " + material);
+        String[] parts = key.split("_", 2);
+        return Pair.of(parts[0], parts[1]);
     }
 }
 

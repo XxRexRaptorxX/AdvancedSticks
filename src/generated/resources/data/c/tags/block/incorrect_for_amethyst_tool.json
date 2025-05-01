@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_amethyst_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

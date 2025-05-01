@@ -10,6 +10,7 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.enums.Materials;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -24,10 +25,11 @@ public class BlockTagGen extends BlockTagsProvider {
         for (String head : ModItems.TOOL_HEAD_MATERIALS) {
             AdvancedTools.LOGGER.info("Generate block tags for " + head);
 
-            TagKey<Block> needsTag = ModTags.createBlockTag("c", "needs_" + ToolUtils.transformMaterialNames(head) + "_tool");
-            TagKey<Block> incorrectTag = ModTags.createBlockTag("c", "incorrect_for_" + ToolUtils.transformMaterialNames(head) + "_tool");
+            Materials headMaterial = Materials.fromName(head).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + head));
+            TagKey<Block> needsTag = ModTags.createCBlockTag("needs_" + ToolUtils.transformMaterialNames(head) + "_tool");
+            TagKey<Block> incorrectTag = ModTags.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(head) + "_tool");
 
-            tag(incorrectTag).remove(needsTag);
+            tag(incorrectTag).addTags(headMaterial.getIncorrectForMaterialKey()).remove(needsTag);
         }
     }
 }

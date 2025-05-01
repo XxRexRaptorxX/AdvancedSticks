@@ -11,6 +11,8 @@ import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
+import xxrexraptorxx.advancedtools.utils.enums.Materials;
 import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 public class FormattingUtils {
@@ -69,24 +71,28 @@ public class FormattingUtils {
     /**
      *  Converts the mining block tags to the old mining level format
      */
-    public static int getMiningLevel(TagKey<Block> tag) {
-        if (tag.equals(BlockTags.INCORRECT_FOR_WOODEN_TOOL) || tag.equals(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
-            return 0;
+    public static int getMiningLevel(ToolMaterial material) {
+        String name = ModToolMaterials.getPartsFromToolMaterial(material).getFirst();
+        Materials headMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
+        TagKey<Block> tag = headMaterial.getIncorrectForMaterialKey();
 
-        } else if (tag.equals(BlockTags.INCORRECT_FOR_STONE_TOOL)) {
-            return 1;
-
-        } else if (tag.equals(BlockTags.INCORRECT_FOR_IRON_TOOL)) {
-            return 2;
+        if (tag.equals(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)) {
+            return 4;
 
         } else if (tag.equals(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)) {
             return 3;
 
-        } else if (tag.equals(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)) {
-            return 4;
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_IRON_TOOL)) {
+            return 2;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_STONE_TOOL)) {
+            return 1;
+
+        } else if (tag.equals(BlockTags.INCORRECT_FOR_WOODEN_TOOL) || tag.equals(BlockTags.INCORRECT_FOR_GOLD_TOOL)) {
+            return 0;
 
         } else {
-            AdvancedTools.LOGGER.error("Unknown 'harvest'- block tag: " + tag);
+            AdvancedTools.LOGGER.error("Unknown 'harvest'- block tag: " + tag.location());
             return 2;
         }
     }
@@ -104,10 +110,10 @@ public class FormattingUtils {
 
         switch (type) {
             case MINING_LEVEL:
-                if (getMiningLevel(material.incorrectBlocksForDrops()) <= 0) return bad;
-                if (getMiningLevel(material.incorrectBlocksForDrops()) == 1) return okay;
-                if (getMiningLevel(material.incorrectBlocksForDrops()) == 2) return normal;
-                if (getMiningLevel(material.incorrectBlocksForDrops()) == 3) return good;
+                if (getMiningLevel(material) <= 0) return bad;
+                if (getMiningLevel(material) == 1) return okay;
+                if (getMiningLevel(material) == 2) return normal;
+                if (getMiningLevel(material) == 3) return good;
                 return top;
 
             case DURABILITY:

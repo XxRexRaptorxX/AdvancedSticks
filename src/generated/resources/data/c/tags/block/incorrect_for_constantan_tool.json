@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_constantan_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

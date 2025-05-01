@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_gold_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_gold_tool"
+  ]
+}

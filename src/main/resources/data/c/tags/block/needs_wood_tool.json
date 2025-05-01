@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#minecraft:needs_wooden_tool",
+      "required": false
+    },
+    {
+      "id": "#minecraft:needs_wood_tool",
+      "required": false
+    }
+  ]
+}

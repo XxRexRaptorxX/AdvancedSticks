@@ -5,6 +5,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
@@ -20,6 +21,13 @@ import java.util.List;
 import java.util.Optional;
 
 public class ModTags {
+
+    public static final TagKey<Block> woodTag = createCBlockTag("incorrect_for_wood_tool");
+    public static final TagKey<Block> stoneTag = createCBlockTag("incorrect_for_stone_tool");
+    public static final TagKey<Block> ironTag = createCBlockTag("incorrect_for_iron_tool");
+    public static final TagKey<Block> goldTag = createCBlockTag("incorrect_for_gold_tool");
+    public static final TagKey<Block> diamondTag = createCBlockTag("incorrect_for_diamond_tool");
+    public static final TagKey<Block> netheriteTag = createCBlockTag("incorrect_for_netherite_tool");
 
 
     public static TagKey<Item> createItemTag(String id, String name) {
@@ -84,6 +92,24 @@ public class ModTags {
     }
 
 
+    @Deprecated
+    public static boolean isTagContainedInAnother(TagKey<Block> innerTag, TagKey<Block> outerTag) {
+        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Compare if block tag [" + innerTag.location() + "] is in [" + outerTag.location() + "]");
+
+        if (Minecraft.getInstance().level != null) {
+            HolderLookup<Block> blockLookup = Minecraft.getInstance().level.registryAccess().lookupOrThrow(Registries.BLOCK);
+
+            HolderSet.Named<Block> innerSet = blockLookup.getOrThrow(innerTag);
+            HolderSet.Named<Block> outerSet = blockLookup.getOrThrow(outerTag);
+
+            return innerSet.stream().anyMatch(outerSet::contains);
+
+        } else {
+            return false;
+        }
+    }
+
+
     /**
      * Returns a list of possible item tags for a material
      */
@@ -135,26 +161,6 @@ public class ModTags {
                 tags.add(createCItemTag("gems/" + material));
             } else {
                 tags.add(createCItemTag( "ingots/" + material));
-            }
-
-        }
-
-        return tags;
-    }
-
-
-
-    /**
-     * Returns a list of possible 'incorrect_for_tool'-block tags for a material
-     */
-    public static List<TagKey<Block>> getPossibleIncorrectForToolTags(String material) {
-        List<TagKey<Block>> tags = new ArrayList<>();
-        material = ToolUtils.transformMaterialNames(material);
-
-        // Add special material tags
-        if (ToolUtils.isGem(material)) {
-            if (material.equals("wither_bone")) {
-                tags.add(TagKey.create(BuiltInRegistries.ITEM.key(), ResourceLocation.fromNamespaceAndPath("c", "bones/wither")));
             }
 
         }

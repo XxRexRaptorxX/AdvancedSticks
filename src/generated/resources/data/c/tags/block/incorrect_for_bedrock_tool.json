@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_bedrock_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_netherite_tool"
+  ]
+}

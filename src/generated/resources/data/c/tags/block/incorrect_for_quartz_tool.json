@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_quartz_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

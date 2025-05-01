@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_lead_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_stone_tool"
+  ]
+}

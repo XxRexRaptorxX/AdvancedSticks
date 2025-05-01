@@ -54,6 +54,7 @@ public class ToolUtils {
 
     private static final Pattern MODDED_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_stick_([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
     private static final Pattern VANILLA_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
+    private static final Pattern TM_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
 
     /**
      * Extracts handleMaterial, headMaterial and toolType from the item name.
@@ -384,7 +385,7 @@ public class ToolUtils {
 
         description.append(Component.literal(lineSeperator + lineSeperator));
         description.append(FormattingUtils.setModLangComponent("message","mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material.incorrectBlocksForDrops())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
+        description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material)).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingUtils.setModLangComponent("message","durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));

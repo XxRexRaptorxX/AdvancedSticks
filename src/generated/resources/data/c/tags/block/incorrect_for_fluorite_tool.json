@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#c:needs_fluorite_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_stone_tool"
+  ]
+}
