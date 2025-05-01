@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/wrought_iron"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:wroughtiron_stick_diamond_sword",
+  "base": "advancedtools:wroughtiron_stick_diamond_axe",
   "result": {
     "id": "advancedtools:wroughtiron_stick_netherite_axe"
   },

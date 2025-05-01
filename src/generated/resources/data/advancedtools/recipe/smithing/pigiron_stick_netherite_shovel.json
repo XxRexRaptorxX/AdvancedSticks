@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/pig_iron"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:pigiron_stick_diamond_sword",
+  "base": "advancedtools:pigiron_stick_diamond_shovel",
   "result": {
     "id": "advancedtools:pigiron_stick_netherite_shovel"
   },

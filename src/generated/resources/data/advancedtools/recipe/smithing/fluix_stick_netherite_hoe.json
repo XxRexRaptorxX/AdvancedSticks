@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/fluix"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:fluix_stick_diamond_sword",
+  "base": "advancedtools:fluix_stick_diamond_hoe",
   "result": {
     "id": "advancedtools:fluix_stick_netherite_hoe"
   },

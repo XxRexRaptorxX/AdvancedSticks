@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/high_carbon_blue_steel"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:highcarbonbluesteel_stick_diamond_sword",
+  "base": "advancedtools:highcarbonbluesteel_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:highcarbonbluesteel_stick_netherite_pickaxe"
   },

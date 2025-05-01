@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/blast_proof_alloy"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:blastproofalloy_stick_diamond_sword",
+  "base": "advancedtools:blastproofalloy_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:blastproofalloy_stick_netherite_pickaxe"
   },

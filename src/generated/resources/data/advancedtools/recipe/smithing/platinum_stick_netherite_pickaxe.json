@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/platinum"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:platinum_stick_diamond_sword",
+  "base": "advancedtools:platinum_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:platinum_stick_netherite_pickaxe"
   },

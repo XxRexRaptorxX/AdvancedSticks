@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/gold"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:gold_stick_diamond_sword",
+  "base": "advancedtools:gold_stick_diamond_hoe",
   "result": {
     "id": "advancedtools:gold_stick_netherite_hoe"
   },

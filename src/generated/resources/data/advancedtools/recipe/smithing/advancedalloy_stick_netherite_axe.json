@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/advanced_alloy"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:advancedalloy_stick_diamond_sword",
+  "base": "advancedtools:advancedalloy_stick_diamond_axe",
   "result": {
     "id": "advancedtools:advancedalloy_stick_netherite_axe"
   },

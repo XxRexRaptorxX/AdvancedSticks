@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/infused_alloy"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:infusedalloy_stick_diamond_sword",
+  "base": "advancedtools:infusedalloy_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:infusedalloy_stick_netherite_pickaxe"
   },

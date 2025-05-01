@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/cadmium"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:cadmium_stick_diamond_sword",
+  "base": "advancedtools:cadmium_stick_diamond_shovel",
   "result": {
     "id": "advancedtools:cadmium_stick_netherite_shovel"
   },

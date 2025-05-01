@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/black_steel"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:blacksteel_stick_diamond_sword",
+  "base": "advancedtools:blacksteel_stick_diamond_axe",
   "result": {
     "id": "advancedtools:blacksteel_stick_netherite_axe"
   },

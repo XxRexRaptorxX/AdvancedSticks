@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/invar"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:invar_stick_diamond_sword",
+  "base": "advancedtools:invar_stick_diamond_shovel",
   "result": {
     "id": "advancedtools:invar_stick_netherite_shovel"
   },

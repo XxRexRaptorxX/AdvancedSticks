@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/emerald"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:emerald_stick_diamond_sword",
+  "base": "advancedtools:emerald_stick_diamond_hoe",
   "result": {
     "id": "advancedtools:emerald_stick_netherite_hoe"
   },

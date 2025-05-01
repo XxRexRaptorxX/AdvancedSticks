@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/pink_slime"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:pinkslime_stick_diamond_sword",
+  "base": "advancedtools:pinkslime_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:pinkslime_stick_netherite_pickaxe"
   },

@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/adamant"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:adamant_stick_diamond_sword",
+  "base": "advancedtools:adamant_stick_diamond_axe",
   "result": {
     "id": "advancedtools:adamant_stick_netherite_axe"
   },

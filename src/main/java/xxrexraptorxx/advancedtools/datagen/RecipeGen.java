@@ -9,6 +9,9 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.neoforged.neoforge.common.conditions.AndCondition;
+import net.neoforged.neoforge.common.conditions.NotCondition;
+import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
@@ -16,6 +19,7 @@ import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class RecipeGen extends RecipeProvider {
@@ -30,9 +34,8 @@ public class RecipeGen extends RecipeProvider {
             TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
             AdvancedTools.LOGGER.info("Generate Recipes with " + handle + "-handle of tag [" + rodTag.location() + "]");
 
-            //RODS
             for (String tool : ModItems.TOOL_TYPES) {
-                netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_diamond_sword")), BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_netherite_" + tool)));
+                netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_diamond_" + tool)), BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_netherite_" + tool)), rodTag);
             }
 
             //TOOLS
@@ -50,8 +53,6 @@ public class RecipeGen extends RecipeProvider {
     }
 
 
-
-
     public void swordRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
@@ -62,7 +63,7 @@ public class RecipeGen extends RecipeProvider {
                 .pattern("X")
                 .pattern("#")
                 .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output);
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
     }
 
 
@@ -76,7 +77,7 @@ public class RecipeGen extends RecipeProvider {
                 .pattern(" # ")
                 .pattern(" # ")
                 .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output);
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
     }
 
 
@@ -90,7 +91,7 @@ public class RecipeGen extends RecipeProvider {
                 .pattern("#X")
                 .pattern("# ")
                 .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output);
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
     }
 
 
@@ -104,7 +105,7 @@ public class RecipeGen extends RecipeProvider {
                 .pattern("#")
                 .pattern("#")
                 .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output);
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
     }
 
 
@@ -118,7 +119,7 @@ public class RecipeGen extends RecipeProvider {
                 .pattern("# ")
                 .pattern("# ")
                 .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output);
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
     }
 
 
@@ -149,7 +150,6 @@ public class RecipeGen extends RecipeProvider {
     }
 
 
-    //TODO
     //private void netheriteSmithingANCompat(String handle, String tool) {
     //    Item result = BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_netherite_" + tool));
     //    Item input = BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_netherite_" + tool));
@@ -157,28 +157,19 @@ public class RecipeGen extends RecipeProvider {
     //    AdvancedTools.LOGGER.info("Generate AdvancedNetherite smithing recipe for " + getItemName(result));
     //
     //        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-    //                    Ingredient.of(item), tag(ModTags.createItemTag("advancednetherite", "upgrade_to_netherite_iron")), RecipeCategory.COMBAT, result)
+    //                    Ingredient.of(input), tag(ModTags.createItemTag("advancednetherite", "upgrade_to_netherite_iron")), RecipeCategory.COMBAT, result)
     //            .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
     //            .save(output, References.MODID + ":compat/advanced_netherite/" + getItemName(result));
     //}
 
 
-
-    private void netheriteSmithing(Item item, Item result) {
+    private void netheriteSmithing(Item item, Item result, TagKey<Item> conditionalTag) {
         AdvancedTools.LOGGER.info("Generate smithing recipe for " + getItemName(result));
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, result)
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
-                .save(output, References.MODID + ":smithing/" + getItemName(result));
-    }
-
-
-
-    private String getStickName(TagKey<Item> handle) {
-        String stick = handle.location().getPath().replace("rods/", "").replace("_", "");
-
-        return stick + "_stick";
+                .save(output.withConditions(new NotCondition(new TagEmptyCondition<>(conditionalTag))), References.MODID + ":smithing/" + getItemName(result));
     }
 
 

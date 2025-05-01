@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/lead"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:lead_stick_diamond_sword",
+  "base": "advancedtools:lead_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:lead_stick_netherite_pickaxe"
   },

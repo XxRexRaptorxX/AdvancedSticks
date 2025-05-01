@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/terrasteel"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:terrasteel_stick_diamond_sword",
+  "base": "advancedtools:terrasteel_stick_diamond_hoe",
   "result": {
     "id": "advancedtools:terrasteel_stick_netherite_hoe"
   },

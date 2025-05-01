@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/beryllium"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:beryllium_stick_diamond_sword",
+  "base": "advancedtools:beryllium_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:beryllium_stick_netherite_pickaxe"
   },

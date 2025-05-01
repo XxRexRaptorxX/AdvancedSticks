@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/graphite"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:graphite_stick_diamond_sword",
+  "base": "advancedtools:graphite_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:graphite_stick_netherite_pickaxe"
   },

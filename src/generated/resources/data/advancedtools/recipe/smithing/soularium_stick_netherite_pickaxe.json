@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/soularium"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:soularium_stick_diamond_sword",
+  "base": "advancedtools:soularium_stick_diamond_pickaxe",
   "result": {
     "id": "advancedtools:soularium_stick_netherite_pickaxe"
   },

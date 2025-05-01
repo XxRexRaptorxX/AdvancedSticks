@@ -1,7 +1,16 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:rods/diamond"
+      }
+    }
+  ],
   "type": "minecraft:smithing_transform",
   "addition": "minecraft:netherite_ingot",
-  "base": "advancedtools:diamond_stick_diamond_sword",
+  "base": "advancedtools:diamond_stick_diamond_hoe",
   "result": {
     "id": "advancedtools:diamond_stick_netherite_hoe"
   },
