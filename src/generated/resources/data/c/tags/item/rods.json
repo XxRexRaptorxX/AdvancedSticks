@@ -552,6 +552,10 @@
       "id": "#c:rods/basalz",
       "required": false
     },
+    {
+      "id": "#c:rods/wood",
+      "required": false
+    },
     "#c:rods/end"
   ]
 }

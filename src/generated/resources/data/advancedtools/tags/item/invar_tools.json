@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_invar_pickaxe",
     "advancedtools:basalz_stick_invar_axe",
     "advancedtools:basalz_stick_invar_shovel",
-    "advancedtools:basalz_stick_invar_hoe"
+    "advancedtools:basalz_stick_invar_hoe",
+    "advancedtools:wood_stick_invar_sword",
+    "advancedtools:wood_stick_invar_pickaxe",
+    "advancedtools:wood_stick_invar_axe",
+    "advancedtools:wood_stick_invar_shovel",
+    "advancedtools:wood_stick_invar_hoe"
   ]
 }

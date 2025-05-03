@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_copper_pickaxe",
     "advancedtools:basalz_stick_copper_axe",
     "advancedtools:basalz_stick_copper_shovel",
-    "advancedtools:basalz_stick_copper_hoe"
+    "advancedtools:basalz_stick_copper_hoe",
+    "advancedtools:wood_stick_copper_sword",
+    "advancedtools:wood_stick_copper_pickaxe",
+    "advancedtools:wood_stick_copper_axe",
+    "advancedtools:wood_stick_copper_shovel",
+    "advancedtools:wood_stick_copper_hoe"
   ]
 }

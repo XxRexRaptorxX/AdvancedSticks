@@ -12,6 +12,8 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.Arrays;
+
 public class ModItems {
 
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(References.MODID);
@@ -28,7 +30,7 @@ public class ModItems {
 
     public static final String[] TOOL_TYPES = { "sword", "pickaxe", "axe", "shovel", "hoe" };
 
-    public static final String[] VANILLA_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
+    public static final String[] VANILLA_HEAD_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
 
     public static final String[] TOOL_HEAD_MATERIALS = {
             "wood", "stone", "iron", "gold", "diamond", "netherite", "obsidian", "bedrock", "steel", "titanium", "quartz", "nickel", "invar", "bone", "electrum",
@@ -48,33 +50,37 @@ public class ModItems {
             "aquite", "adamant", "manasteel", "sapphire", "blutonium", "highcarbonbluesteel", "bluesteel", "weakbluesteel", "highcarbonsteel", "enderium",
             "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy", "bismuthbronze",
             "bismuth", "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "stainlesssteel",
-            "tin", "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz",
+            "tin", "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz", "wood"
             //TODO: "bloodiron", "enchantedbloodiron"
     };
 
 
     static {
         for (String handle : HANDLE_MATERIALS) {
-            if (!ToolUtils.isRod(handle))
+            if (!ToolUtils.isRod(handle) && !handle.equals("wood")) {
+
                 ITEMS.register("stick_" + handle, () -> new RodItem(new Item.Properties().setId(itemId("stick_" + handle))));
+            }
 
-            for (String base : TOOL_HEAD_MATERIALS) {
-                //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + base + " head. " + ToolMaterials.getMaterial(handle, base));
+            for (String head : TOOL_HEAD_MATERIALS) {
+                if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
+                    //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + head + " head. " + ToolMaterials.getMaterial(handle, head));
 
-                ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + base + "_sword", props -> new CustomSwordItem(ModToolMaterials.getMaterial(handle, base),
-                        3, -4.0f + ModToolMaterials.getSpeed(base, "sword"), props));
+                    ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_sword", props -> new CustomSwordItem(ModToolMaterials.getMaterial(handle, head),
+                            3, -4.0f + ModToolMaterials.getSpeed(head, "sword"), props));
 
-                ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + base + "_pickaxe", props -> new CustomPickaxeItem(ModToolMaterials.getMaterial(handle, base),
-                        1, -4.0f + ModToolMaterials.getSpeed(base, "pickaxe"), props));
+                    ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_pickaxe", props -> new CustomPickaxeItem(ModToolMaterials.getMaterial(handle, head),
+                            1, -4.0f + ModToolMaterials.getSpeed(head, "pickaxe"), props));
 
-                ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + base + "_axe", props -> new CustomAxeItem(ModToolMaterials.getMaterial(handle, base),
-                        6, -4.0f + ModToolMaterials.getSpeed(base, "axe"), props));
+                    ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_axe", props -> new CustomAxeItem(ModToolMaterials.getMaterial(handle, head),
+                            6, -4.0f + ModToolMaterials.getSpeed(head, "axe"), props));
 
-                ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + base + "_shovel", props -> new CustomShovelItem(ModToolMaterials.getMaterial(handle, base),
-                        1.5f, -4.0f + ModToolMaterials.getSpeed(base, "shovel"), props));
+                    ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_shovel", props -> new CustomShovelItem(ModToolMaterials.getMaterial(handle, head),
+                            1.5f, -4.0f + ModToolMaterials.getSpeed(head, "shovel"), props));
 
-                ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + base + "_hoe", props -> new CustomHoeItem(ModToolMaterials.getMaterial(handle, base),
-                        0, -4.0f + ModToolMaterials.getSpeed(base, "hoe"), props));
+                    ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_hoe", props -> new CustomHoeItem(ModToolMaterials.getMaterial(handle, head),
+                            0, -4.0f + ModToolMaterials.getSpeed(head, "hoe"), props));
+                }
             }
         }
     }

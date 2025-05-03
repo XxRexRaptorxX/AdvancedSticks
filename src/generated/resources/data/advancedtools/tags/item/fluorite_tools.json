@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_fluorite_pickaxe",
     "advancedtools:basalz_stick_fluorite_axe",
     "advancedtools:basalz_stick_fluorite_shovel",
-    "advancedtools:basalz_stick_fluorite_hoe"
+    "advancedtools:basalz_stick_fluorite_hoe",
+    "advancedtools:wood_stick_fluorite_sword",
+    "advancedtools:wood_stick_fluorite_pickaxe",
+    "advancedtools:wood_stick_fluorite_axe",
+    "advancedtools:wood_stick_fluorite_shovel",
+    "advancedtools:wood_stick_fluorite_hoe"
   ]
 }

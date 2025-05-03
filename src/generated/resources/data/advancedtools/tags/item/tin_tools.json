@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_tin_pickaxe",
     "advancedtools:basalz_stick_tin_axe",
     "advancedtools:basalz_stick_tin_shovel",
-    "advancedtools:basalz_stick_tin_hoe"
+    "advancedtools:basalz_stick_tin_hoe",
+    "advancedtools:wood_stick_tin_sword",
+    "advancedtools:wood_stick_tin_pickaxe",
+    "advancedtools:wood_stick_tin_axe",
+    "advancedtools:wood_stick_tin_shovel",
+    "advancedtools:wood_stick_tin_hoe"
   ]
 }

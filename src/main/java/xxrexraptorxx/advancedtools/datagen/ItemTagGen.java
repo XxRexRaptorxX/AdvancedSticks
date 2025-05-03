@@ -56,28 +56,31 @@ public class ItemTagGen extends ItemTagsProvider {
 
             // tools
             for (String otherHandle : ModItems.HANDLE_MATERIALS) {
-                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+                for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
-                        ResourceLocation loc = ItemModelGen.getItemLoc(otherHandle + FormattingUtils.AT_INFIX + base + "_" + tool);
-                        Item item = BuiltInRegistries.ITEM.getValue(loc);
+                        if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
 
-                        if (item != Items.AIR) {
-                            // Nur Items hinzufügen, wenn:
-                            // - handle == aktueller handle
-                            // - oder base == aktueller handle
-                            if (otherHandle.equals(handle) || base.equals(handle)) {
-                                tag(toolTag).add(item);
+                            ResourceLocation loc = ItemModelGen.getItemLoc(otherHandle + FormattingUtils.AT_INFIX + head + "_" + tool);
+                            Item item = BuiltInRegistries.ITEM.getValue(loc);
 
-                                switch (tool) {
-                                    case "sword" -> tag(ItemTags.SWORDS).add(item);
-                                    case "pickaxe" -> tag(ItemTags.PICKAXES).add(item);
-                                    case "axe" -> tag(ItemTags.AXES).add(item);
-                                    case "shovel" -> tag(ItemTags.SHOVELS).add(item);
-                                    case "hoe" -> tag(ItemTags.HOES).add(item);
-                                }
+                            if (item != Items.AIR) {
+                                // Nur Items hinzufügen, wenn:
+                                // - handle == aktueller handle
+                                // - oder head == aktueller handle
+                                if (otherHandle.equals(handle) || head.equals(handle)) {
+                                    tag(toolTag).add(item);
 
-                                if (base.contains("gold") || handle.contains("gold")) {
-                                    tag(ItemTags.PIGLIN_LOVED).add(item);
+                                    switch (tool) {
+                                        case "sword" -> tag(ItemTags.SWORDS).add(item);
+                                        case "pickaxe" -> tag(ItemTags.PICKAXES).add(item);
+                                        case "axe" -> tag(ItemTags.AXES).add(item);
+                                        case "shovel" -> tag(ItemTags.SHOVELS).add(item);
+                                        case "hoe" -> tag(ItemTags.HOES).add(item);
+                                    }
+
+                                    if (head.contains("gold") || handle.contains("gold")) {
+                                        tag(ItemTags.PIGLIN_LOVED).add(item);
+                                    }
                                 }
                             }
                         }
@@ -87,12 +90,13 @@ public class ItemTagGen extends ItemTagsProvider {
         }
 
 
-        for (String base : ModItems.TOOL_HEAD_MATERIALS) {
-            if (!Arrays.asList(ModItems.VANILLA_MATERIALS).contains(base)) {
-                AdvancedTools.LOGGER.info("Generate crafting materials tag for " + base);
-                TagKey<Item> craftingMaterialTag = ModTags.createCItemTag(ToolUtils.transformMaterialNames(base) + "_tool_materials");
+        for (String head : ModItems.TOOL_HEAD_MATERIALS) {
+            if (!Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head)) {
+                AdvancedTools.LOGGER.info("Generate crafting materials tag for " + head);
 
-                for (TagKey<Item> key : ModTags.getPossibleTagsForMaterial(base)) {
+                TagKey<Item> craftingMaterialTag = ModTags.createCItemTag(ToolUtils.transformMaterialNames(head) + "_tool_materials");
+
+                for (TagKey<Item> key : ModTags.getPossibleTagsForMaterial(head)) {
                     tag(craftingMaterialTag).addOptionalTag(key);
                 }
             }

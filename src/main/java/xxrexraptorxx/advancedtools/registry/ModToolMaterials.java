@@ -103,8 +103,8 @@ public class ModToolMaterials {
     }
 
 
-    public static ToolMaterial getMaterial(String handleMaterial, String baseMaterial) {
-        String toolMaterial = baseMaterial + "_" + handleMaterial;
+    public static ToolMaterial getMaterial(String handleMaterial, String headMaterial) {
+        String toolMaterial = headMaterial + "_" + handleMaterial;
 
         return TOOL_MATERIALS.get(toolMaterial);
     }

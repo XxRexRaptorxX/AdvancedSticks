@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_redstone_pickaxe",
     "advancedtools:basalz_stick_redstone_axe",
     "advancedtools:basalz_stick_redstone_shovel",
-    "advancedtools:basalz_stick_redstone_hoe"
+    "advancedtools:basalz_stick_redstone_hoe",
+    "advancedtools:wood_stick_redstone_sword",
+    "advancedtools:wood_stick_redstone_pickaxe",
+    "advancedtools:wood_stick_redstone_axe",
+    "advancedtools:wood_stick_redstone_shovel",
+    "advancedtools:wood_stick_redstone_hoe"
   ]
 }

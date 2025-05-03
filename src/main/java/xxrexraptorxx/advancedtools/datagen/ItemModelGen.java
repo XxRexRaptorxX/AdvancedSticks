@@ -12,6 +12,7 @@ import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.Arrays;
 import java.util.function.BiConsumer;
 
 public class ItemModelGen extends ItemModelGenerators {
@@ -31,15 +32,21 @@ public class ItemModelGen extends ItemModelGenerators {
         //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
-            if (!ToolUtils.isRod(handle)) {
+            if (!ToolUtils.isRod(handle) && !handle.equals("wood")) {
                 AdvancedTools.LOGGER.info("Generate item model of " + handle);
+
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
+
             //tools
-            for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+            for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
-                    AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + base + " head with " + handle + " handle");
-                    this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + base + "_" + tool)));
+
+                    if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
+                        AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + head + " head with " + handle + " handle");
+
+                        this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_" + tool)));
+                    }
                 }
             }
         }

@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_obsidian_pickaxe",
     "advancedtools:basalz_stick_obsidian_axe",
     "advancedtools:basalz_stick_obsidian_shovel",
-    "advancedtools:basalz_stick_obsidian_hoe"
+    "advancedtools:basalz_stick_obsidian_hoe",
+    "advancedtools:wood_stick_obsidian_sword",
+    "advancedtools:wood_stick_obsidian_pickaxe",
+    "advancedtools:wood_stick_obsidian_axe",
+    "advancedtools:wood_stick_obsidian_shovel",
+    "advancedtools:wood_stick_obsidian_hoe"
   ]
 }

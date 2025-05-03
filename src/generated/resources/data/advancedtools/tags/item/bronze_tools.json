@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_bronze_pickaxe",
     "advancedtools:basalz_stick_bronze_axe",
     "advancedtools:basalz_stick_bronze_shovel",
-    "advancedtools:basalz_stick_bronze_hoe"
+    "advancedtools:basalz_stick_bronze_hoe",
+    "advancedtools:wood_stick_bronze_sword",
+    "advancedtools:wood_stick_bronze_pickaxe",
+    "advancedtools:wood_stick_bronze_axe",
+    "advancedtools:wood_stick_bronze_shovel",
+    "advancedtools:wood_stick_bronze_hoe"
   ]
 }

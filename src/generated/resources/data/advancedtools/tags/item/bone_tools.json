@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_bone_pickaxe",
     "advancedtools:basalz_stick_bone_axe",
     "advancedtools:basalz_stick_bone_shovel",
-    "advancedtools:basalz_stick_bone_hoe"
+    "advancedtools:basalz_stick_bone_hoe",
+    "advancedtools:wood_stick_bone_sword",
+    "advancedtools:wood_stick_bone_pickaxe",
+    "advancedtools:wood_stick_bone_axe",
+    "advancedtools:wood_stick_bone_shovel",
+    "advancedtools:wood_stick_bone_hoe"
   ]
 }

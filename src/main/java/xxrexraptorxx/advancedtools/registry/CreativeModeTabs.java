@@ -25,23 +25,19 @@ public class CreativeModeTabs {
             .icon(() -> BuiltInRegistries.ITEM.getValue(getItemLoc( "iron_stick_diamond_pickaxe")).getDefaultInstance())
             .displayItems((params, output) -> {
 
-                //rods
-                for (String rod : ModItems.HANDLE_MATERIALS) {
-                    if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + rod + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(rod)));
+                for (String handle : ModItems.HANDLE_MATERIALS) {
+                    if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
 
-                    if (!ToolUtils.isRod(rod) && ToolUtils.isValidMaterialForCreative(rod)) {
-                        output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(rod)));
+                    if (!ToolUtils.isRod(handle) && ToolUtils.isValidRodForCreative(handle)) {
+                        output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
                     }
-                }
 
-                //tools
-                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
-                    for (String handle : ModItems.HANDLE_MATERIALS) {
-                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + base + " head.");
+                    for (String head : ModItems.TOOL_HEAD_MATERIALS) {
+                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + head + " head.");
 
-                        if (ToolUtils.isValidMaterialForCreative(handle)) {
+                        if (ToolUtils.isValidForCreative(head, handle)) {
                             for (String tool : ModItems.TOOL_TYPES) {
-                                output.accept(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + base + "_" + tool)));
+                                output.accept(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + head + "_" + tool)));
                             }
                         }
                     }

@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_amethyst_pickaxe",
     "advancedtools:basalz_stick_amethyst_axe",
     "advancedtools:basalz_stick_amethyst_shovel",
-    "advancedtools:basalz_stick_amethyst_hoe"
+    "advancedtools:basalz_stick_amethyst_hoe",
+    "advancedtools:wood_stick_amethyst_sword",
+    "advancedtools:wood_stick_amethyst_pickaxe",
+    "advancedtools:wood_stick_amethyst_axe",
+    "advancedtools:wood_stick_amethyst_shovel",
+    "advancedtools:wood_stick_amethyst_hoe"
   ]
 }

@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_silver_pickaxe",
     "advancedtools:basalz_stick_silver_axe",
     "advancedtools:basalz_stick_silver_shovel",
-    "advancedtools:basalz_stick_silver_hoe"
+    "advancedtools:basalz_stick_silver_hoe",
+    "advancedtools:wood_stick_silver_sword",
+    "advancedtools:wood_stick_silver_pickaxe",
+    "advancedtools:wood_stick_silver_axe",
+    "advancedtools:wood_stick_silver_shovel",
+    "advancedtools:wood_stick_silver_hoe"
   ]
 }

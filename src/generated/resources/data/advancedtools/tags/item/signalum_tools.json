@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_signalum_pickaxe",
     "advancedtools:basalz_stick_signalum_axe",
     "advancedtools:basalz_stick_signalum_shovel",
-    "advancedtools:basalz_stick_signalum_hoe"
+    "advancedtools:basalz_stick_signalum_hoe",
+    "advancedtools:wood_stick_signalum_sword",
+    "advancedtools:wood_stick_signalum_pickaxe",
+    "advancedtools:wood_stick_signalum_axe",
+    "advancedtools:wood_stick_signalum_shovel",
+    "advancedtools:wood_stick_signalum_hoe"
   ]
 }

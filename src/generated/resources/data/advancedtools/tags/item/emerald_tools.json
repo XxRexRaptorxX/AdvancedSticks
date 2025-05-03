@@ -889,6 +889,11 @@
     "advancedtools:basalz_stick_emerald_pickaxe",
     "advancedtools:basalz_stick_emerald_axe",
     "advancedtools:basalz_stick_emerald_shovel",
-    "advancedtools:basalz_stick_emerald_hoe"
+    "advancedtools:basalz_stick_emerald_hoe",
+    "advancedtools:wood_stick_emerald_sword",
+    "advancedtools:wood_stick_emerald_pickaxe",
+    "advancedtools:wood_stick_emerald_axe",
+    "advancedtools:wood_stick_emerald_shovel",
+    "advancedtools:wood_stick_emerald_hoe"
   ]
 }

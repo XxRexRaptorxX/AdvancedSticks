@@ -187,14 +187,28 @@ public class ToolUtils {
 
 
     /**
-     * Tests whether the material fulfills all criteria to appear in the creative tab
+     * Tests whether the rod fulfills all criteria to appear in the creative tab
      */
-    public static boolean isValidMaterialForCreative(String material) {
+    public static boolean isValidRodForCreative(String rod) {
         if (Config.FORCE_ALL_MATERIALS.get()) {
             return true;
 
         } else {
-            return Config.HANDLE_MATERIALS.get().contains(material) && ModTags.isTagValidAndHasMatchingItems(material);
+            return Config.HANDLE_MATERIALS.get().contains(rod) && ModTags.isTagValidAndHasMatchingItems(rod);
+        }
+    }
+
+
+    /**
+     * Tests whether the item fulfills all criteria to appear in the creative tab
+     */
+    public static boolean isValidForCreative(String head, String handle) {
+        if (Config.FORCE_ALL_MATERIALS.get()) {
+            return true;
+
+        } else {
+            return Config.HANDLE_MATERIALS.get().contains(handle) && Config.TOOL_HEAD_MATERIALS.get().contains(head) &&
+                    ModTags.isTagValidAndHasMatchingItems(handle) && ModTags.isTagValidAndHasMatchingItems(head);
         }
     }
 

@@ -19,6 +19,7 @@ import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
@@ -31,23 +32,31 @@ public class RecipeGen extends RecipeProvider {
     @Override
     protected void buildRecipes() {
         for (String handle : ModItems.HANDLE_MATERIALS) {
+
             TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
             AdvancedTools.LOGGER.info("Generate Recipes with " + handle + "-handle of tag [" + rodTag.location() + "]");
 
             for (String tool : ModItems.TOOL_TYPES) {
-                netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_diamond_" + tool)), BuiltInRegistries.ITEM.getValue(ResourceLocation.fromNamespaceAndPath(References.MODID, handle + "_stick_netherite_" + tool)), rodTag);
+                if (!handle.equals("wood")) {
+                    AdvancedTools.LOGGER.info("Try smithing for [" + handle + "_stick_netherite_" + tool + "]");
+
+                    netheriteSmithing(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_diamond_" + tool)), BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_netherite_" + tool)), handle);
+                }
             }
 
             //TOOLS
             for (String head : ModItems.TOOL_HEAD_MATERIALS) {
-                TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(head) + "_tool_materials");
-                AdvancedTools.LOGGER.info("Generate Recipes with " + head + "-head of tag [" + craftingMaterialTag.location() + "]");
+                if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
 
-                swordRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_sword")));
-                axeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_axe")));
-                pickaxeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_pickaxe")));
-                shovelRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
-                hoeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
+                    TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(head) + "_tool_materials");
+                    AdvancedTools.LOGGER.info("Generate Recipes with " + head + "-head of tag [" + craftingMaterialTag.location() + "]");
+
+                    swordRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_sword")));
+                    axeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_axe")));
+                    pickaxeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_pickaxe")));
+                    shovelRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
+                    hoeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
+                }
             }
         }
     }
@@ -163,13 +172,17 @@ public class RecipeGen extends RecipeProvider {
     //}
 
 
-    private void netheriteSmithing(Item item, Item result, TagKey<Item> conditionalTag) {
-        AdvancedTools.LOGGER.info("Generate smithing recipe for " + getItemName(result));
+    private void netheriteSmithing(Item item, Item result, String conditionalMaterial) {
+        AdvancedTools.LOGGER.info("Generate smithing recipe for " + getItemName(result) + " from " + item);
+
+        TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(conditionalMaterial));
+        TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(conditionalMaterial) + "_tool_materials");
 
         SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                         Ingredient.of(item), Ingredient.of(Items.NETHERITE_INGOT), RecipeCategory.COMBAT, result)
                 .unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT))
-                .save(output.withConditions(new NotCondition(new TagEmptyCondition<>(conditionalTag))), References.MODID + ":smithing/" + getItemName(result));
+                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(rodTag)),
+                        new NotCondition(new TagEmptyCondition<>(craftingMaterialTag))))), References.MODID + ":smithing/" + getItemName(result));
     }
 
 
