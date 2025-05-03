@@ -22,14 +22,6 @@ import java.util.Optional;
 
 public class ModTags {
 
-    public static final TagKey<Block> woodTag = createCBlockTag("incorrect_for_wood_tool");
-    public static final TagKey<Block> stoneTag = createCBlockTag("incorrect_for_stone_tool");
-    public static final TagKey<Block> ironTag = createCBlockTag("incorrect_for_iron_tool");
-    public static final TagKey<Block> goldTag = createCBlockTag("incorrect_for_gold_tool");
-    public static final TagKey<Block> diamondTag = createCBlockTag("incorrect_for_diamond_tool");
-    public static final TagKey<Block> netheriteTag = createCBlockTag("incorrect_for_netherite_tool");
-
-
     public static TagKey<Item> createItemTag(String id, String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
     }
