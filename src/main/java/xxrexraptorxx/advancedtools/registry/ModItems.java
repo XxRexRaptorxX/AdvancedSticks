@@ -42,15 +42,15 @@ public class ModItems {
             "witherbone", "obsidian", "highcarbonblacksteel", "blacksteel", "carbon", "netherite", "blastproofalloy", "darksteel", "weaksteel", "graphite",
             "bedrock", "compressediron", "pigiron", "silicon", "steel", "antimony", "iron", "wroughtiron", "titanium", "stone", "iridium", "quartz",
             "sterlingsilver", "nickel", "invar", "bone", "plastic", "energizedgold", "electrum", "anglesite", "lumium", "blaze", "allthemodium", "bronze",
-            "constantan", "glowstone", "brass", "gold", "topaz", "pyrite", "kanthal", "peridot", "yellorium", "cadmium", "advancedalloy", "soularium", "solarium",
-            "manganese", "cupronickel", "copper", "energizedcopper", "rosegold", "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone", "infusedalloy",
-            "ventium", "pyrope", "weakredsteel", "highcarbonredsteel", "redsteel", "inanite", "ruby", "plutonium", "tungsten", "duratium", "blackbronze", "amethyst",
-            "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix", "thorium", "zanite", "charoite", "atomicalloy", "pinkslime",
-            "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal", "cyanite", "benitoite", "reinforcedalloy", "opal", "breeze",
-            "aquite", "adamant", "manasteel", "sapphire", "blutonium", "highcarbonbluesteel", "bluesteel", "weakbluesteel", "highcarbonsteel", "enderium",
+            "constantan", "glowstone", "brass", "gold", "topaz", "pyrite", "kanthal", "peridot", "yellorium", "cadmium", "wood", "advancedalloy", "soularium",
+            "solarium", "manganese", "cupronickel", "copper", "energizedcopper", "rosegold", "energeticalloy", "signalum", "horizonite", "cinnabar", "redstone",
+            "infusedalloy", "ventium", "pyrope", "weakredsteel", "highcarbonredsteel", "redsteel", "inanite", "ruby", "plutonium", "tungsten", "duratium", "blackbronze",
+            "amethyst", "ludicrite", "energite", "elementium", "magentite", "enchanted", "unobtainium", "fluix", "thorium", "zanite", "charoite", "atomicalloy",
+            "pinkslime", "ridiculite", "fluorite", "falsite", "superconductor", "apatite", "certusquartzcrystal", "cyanite", "benitoite", "reinforcedalloy", "opal",
+            "breeze", "aquite", "adamant", "manasteel", "sapphire", "blutonium", "highcarbonbluesteel", "bluesteel", "weakbluesteel", "highcarbonsteel", "enderium",
             "diamond", "biosteel", "beryllium", "emerald", "terrasteel", "diopside", "endercrystal", "insanite", "vibranium", "pulsatingalloy", "bismuthbronze",
             "bismuth", "prismarine", "uranium", "vibrantalloy", "endsteel", "end", "osmium", "aluminum", "platinum", "silver", "cobalt", "lead", "stainlesssteel",
-            "tin", "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz", "wood"
+            "tin", "zinc", "blitz", "certusquartz", "blizz", "advanced", "netheriteiron", "netheritediamond", "netheriteemerald", "netheritegold", "basalz"
             //TODO: "bloodiron", "enchantedbloodiron"
     };
 
