@@ -13,12 +13,14 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
 import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 import javax.annotation.Nullable;
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Random;
 import java.util.regex.Matcher;
@@ -108,7 +110,7 @@ public class ToolUtils {
         String toolType = Objects.requireNonNull(getPartsFromTool(itemName))[2];
 
         //VANILLA
-        if (handleMaterial.equals("wood")) {
+        if (Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(headMaterial) && handleMaterial.equals("wood")) {
             //name fix
             if (headMaterial.equals("wood")) {
                 headMaterial = "wooden";
@@ -118,6 +120,8 @@ public class ToolUtils {
 
             String vanillaItemName = headMaterial + "_" + toolType;
             Item vanillaItem = BuiltInRegistries.ITEM.getOptional(ResourceLocation.withDefaultNamespace(vanillaItemName)).orElse(Items.AIR);
+
+            if (vanillaItem == Items.AIR) AdvancedTools.LOGGER.error("Invalid item! [" + item + "]");
 
             return Component.translatable(vanillaItem.getDescriptionId());
 
