@@ -191,6 +191,19 @@ public class ToolUtils {
 
 
     /**
+     * Tests whether the material is fire & lava safe
+     */
+    public static boolean isFireResistant(String material) {
+        return switch (material) {
+            case "netherite", "netheriteiron", "netheritegold", "netheritediamond", "netheriteemerald", "bedrock", "obsidian"
+                    -> true;
+
+            default -> false;
+        };
+    }
+
+
+    /**
      * Tests whether the rod fulfills all criteria to appear in the creative tab
      */
     public static boolean isValidRodForCreative(String rod) {

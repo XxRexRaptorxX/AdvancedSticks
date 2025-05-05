@@ -90,4 +90,9 @@ public class ModItems {
         return ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(References.MODID, name));
     }
 
+
+    public static ResourceLocation getItemLoc(String name){
+        return ResourceLocation.fromNamespaceAndPath(References.MODID, name);
+    }
+
 }
