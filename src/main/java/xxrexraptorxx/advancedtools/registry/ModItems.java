@@ -57,7 +57,7 @@ public class ModItems {
 
     static {
         for (String handle : HANDLE_MATERIALS) {
-            if (!ToolUtils.isRod(handle) && !handle.equals("wood")) {
+            if (!ToolUtils.isRod(handle)) {
 
                 ITEMS.register("stick_" + handle, () -> new RodItem(new Item.Properties().setId(itemId("stick_" + handle))));
             }

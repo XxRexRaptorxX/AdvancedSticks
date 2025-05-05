@@ -169,7 +169,7 @@ public class ToolUtils {
      */
     public static boolean isRod(String material) {
         return switch (material) {
-            case "end", "blaze", "breeze", "basalz", "blizz", "blitz"
+            case "end", "blaze", "breeze", "basalz", "blizz", "blitz", "wood", "stick"
                     -> true;
 
             default -> false;
