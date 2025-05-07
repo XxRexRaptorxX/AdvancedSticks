@@ -195,7 +195,7 @@ public class ToolUtils {
      */
     public static boolean isFireResistant(String material) {
         return switch (material) {
-            case "netherite", "netheriteiron", "netheritegold", "netheritediamond", "netheriteemerald", "bedrock", "obsidian"
+            case "netherite", "netheriteiron", "netheritegold", "netheritediamond", "netheriteemerald", "bedrock", "obsidian", "allthemodium", "vibranium", "unobtainium"
                     -> true;
 
             default -> false;
