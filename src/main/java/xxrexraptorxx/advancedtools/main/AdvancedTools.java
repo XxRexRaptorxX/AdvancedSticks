@@ -55,5 +55,13 @@ public class AdvancedTools {
                 false,
                 Pack.Position.TOP
         );
+        event.addPackFinders(
+                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_expanded_common_materials"),
+                PackType.SERVER_DATA,
+                Component.literal("Only Uncommon-, Common-modded & Vanilla Materials"),
+                PackSource.DEFAULT,
+                false,
+                Pack.Position.TOP
+        );
     }
 }
