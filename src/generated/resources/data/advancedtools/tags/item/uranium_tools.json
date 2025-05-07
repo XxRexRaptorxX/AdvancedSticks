@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_uranium_axe",
     "advancedtools:cadmium_stick_uranium_shovel",
     "advancedtools:cadmium_stick_uranium_hoe",
+    "advancedtools:wood_stick_uranium_sword",
+    "advancedtools:wood_stick_uranium_pickaxe",
+    "advancedtools:wood_stick_uranium_axe",
+    "advancedtools:wood_stick_uranium_shovel",
+    "advancedtools:wood_stick_uranium_hoe",
     "advancedtools:advancedalloy_stick_uranium_sword",
     "advancedtools:advancedalloy_stick_uranium_pickaxe",
     "advancedtools:advancedalloy_stick_uranium_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_uranium_pickaxe",
     "advancedtools:basalz_stick_uranium_axe",
     "advancedtools:basalz_stick_uranium_shovel",
-    "advancedtools:basalz_stick_uranium_hoe",
-    "advancedtools:wood_stick_uranium_sword",
-    "advancedtools:wood_stick_uranium_pickaxe",
-    "advancedtools:wood_stick_uranium_axe",
-    "advancedtools:wood_stick_uranium_shovel",
-    "advancedtools:wood_stick_uranium_hoe"
+    "advancedtools:basalz_stick_uranium_hoe"
   ]
 }

@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "#c:ingots/obsidian_alloy",
+      "required": false
+    },
+    {
       "id": "#c:ingots/refined_obsidian",
       "required": false
     }

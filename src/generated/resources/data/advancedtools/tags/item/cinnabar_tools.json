@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_cinnabar_axe",
     "advancedtools:cadmium_stick_cinnabar_shovel",
     "advancedtools:cadmium_stick_cinnabar_hoe",
+    "advancedtools:wood_stick_cinnabar_sword",
+    "advancedtools:wood_stick_cinnabar_pickaxe",
+    "advancedtools:wood_stick_cinnabar_axe",
+    "advancedtools:wood_stick_cinnabar_shovel",
+    "advancedtools:wood_stick_cinnabar_hoe",
     "advancedtools:advancedalloy_stick_cinnabar_sword",
     "advancedtools:advancedalloy_stick_cinnabar_pickaxe",
     "advancedtools:advancedalloy_stick_cinnabar_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_cinnabar_pickaxe",
     "advancedtools:basalz_stick_cinnabar_axe",
     "advancedtools:basalz_stick_cinnabar_shovel",
-    "advancedtools:basalz_stick_cinnabar_hoe",
-    "advancedtools:wood_stick_cinnabar_sword",
-    "advancedtools:wood_stick_cinnabar_pickaxe",
-    "advancedtools:wood_stick_cinnabar_axe",
-    "advancedtools:wood_stick_cinnabar_shovel",
-    "advancedtools:wood_stick_cinnabar_hoe"
+    "advancedtools:basalz_stick_cinnabar_hoe"
   ]
 }

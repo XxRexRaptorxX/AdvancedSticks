@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_peridot_axe",
     "advancedtools:cadmium_stick_peridot_shovel",
     "advancedtools:cadmium_stick_peridot_hoe",
+    "advancedtools:wood_stick_peridot_sword",
+    "advancedtools:wood_stick_peridot_pickaxe",
+    "advancedtools:wood_stick_peridot_axe",
+    "advancedtools:wood_stick_peridot_shovel",
+    "advancedtools:wood_stick_peridot_hoe",
     "advancedtools:advancedalloy_stick_peridot_sword",
     "advancedtools:advancedalloy_stick_peridot_pickaxe",
     "advancedtools:advancedalloy_stick_peridot_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_peridot_pickaxe",
     "advancedtools:basalz_stick_peridot_axe",
     "advancedtools:basalz_stick_peridot_shovel",
-    "advancedtools:basalz_stick_peridot_hoe",
-    "advancedtools:wood_stick_peridot_sword",
-    "advancedtools:wood_stick_peridot_pickaxe",
-    "advancedtools:wood_stick_peridot_axe",
-    "advancedtools:wood_stick_peridot_shovel",
-    "advancedtools:wood_stick_peridot_hoe"
+    "advancedtools:basalz_stick_peridot_hoe"
   ]
 }

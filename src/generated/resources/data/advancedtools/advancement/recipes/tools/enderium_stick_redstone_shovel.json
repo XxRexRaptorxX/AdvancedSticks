@@ -7,15 +7,41 @@
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:rods/enderium"
+            "tag": "c:redstone_tool_materials"
           }
         },
         {
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:redstone_tool_materials"
+            "tag": "c:rods/enderium"
           }
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/redstone"
+              }
+            },
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/refined_redstone"
+              }
+            },
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/redstone_alloy"
+              }
+            }
+          ]
         }
       ]
     }

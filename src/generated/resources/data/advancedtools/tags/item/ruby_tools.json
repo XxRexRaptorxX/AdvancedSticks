@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_ruby_axe",
     "advancedtools:cadmium_stick_ruby_shovel",
     "advancedtools:cadmium_stick_ruby_hoe",
+    "advancedtools:wood_stick_ruby_sword",
+    "advancedtools:wood_stick_ruby_pickaxe",
+    "advancedtools:wood_stick_ruby_axe",
+    "advancedtools:wood_stick_ruby_shovel",
+    "advancedtools:wood_stick_ruby_hoe",
     "advancedtools:advancedalloy_stick_ruby_sword",
     "advancedtools:advancedalloy_stick_ruby_pickaxe",
     "advancedtools:advancedalloy_stick_ruby_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_ruby_pickaxe",
     "advancedtools:basalz_stick_ruby_axe",
     "advancedtools:basalz_stick_ruby_shovel",
-    "advancedtools:basalz_stick_ruby_hoe",
-    "advancedtools:wood_stick_ruby_sword",
-    "advancedtools:wood_stick_ruby_pickaxe",
-    "advancedtools:wood_stick_ruby_axe",
-    "advancedtools:wood_stick_ruby_shovel",
-    "advancedtools:wood_stick_ruby_hoe"
+    "advancedtools:basalz_stick_ruby_hoe"
   ]
 }

@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_osmium_axe",
     "advancedtools:cadmium_stick_osmium_shovel",
     "advancedtools:cadmium_stick_osmium_hoe",
+    "advancedtools:wood_stick_osmium_sword",
+    "advancedtools:wood_stick_osmium_pickaxe",
+    "advancedtools:wood_stick_osmium_axe",
+    "advancedtools:wood_stick_osmium_shovel",
+    "advancedtools:wood_stick_osmium_hoe",
     "advancedtools:advancedalloy_stick_osmium_sword",
     "advancedtools:advancedalloy_stick_osmium_pickaxe",
     "advancedtools:advancedalloy_stick_osmium_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_osmium_pickaxe",
     "advancedtools:basalz_stick_osmium_axe",
     "advancedtools:basalz_stick_osmium_shovel",
-    "advancedtools:basalz_stick_osmium_hoe",
-    "advancedtools:wood_stick_osmium_sword",
-    "advancedtools:wood_stick_osmium_pickaxe",
-    "advancedtools:wood_stick_osmium_axe",
-    "advancedtools:wood_stick_osmium_shovel",
-    "advancedtools:wood_stick_osmium_hoe"
+    "advancedtools:basalz_stick_osmium_hoe"
   ]
 }

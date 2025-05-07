@@ -7,15 +7,41 @@
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:rods/gold"
+            "tag": "c:obsidian_tool_materials"
           }
         },
         {
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:obsidian_tool_materials"
+            "tag": "c:rods/gold"
           }
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/obsidian"
+              }
+            },
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/obsidian_alloy"
+              }
+            },
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/refined_obsidian"
+              }
+            }
+          ]
         }
       ]
     }

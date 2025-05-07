@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_lead_axe",
     "advancedtools:cadmium_stick_lead_shovel",
     "advancedtools:cadmium_stick_lead_hoe",
+    "advancedtools:wood_stick_lead_sword",
+    "advancedtools:wood_stick_lead_pickaxe",
+    "advancedtools:wood_stick_lead_axe",
+    "advancedtools:wood_stick_lead_shovel",
+    "advancedtools:wood_stick_lead_hoe",
     "advancedtools:advancedalloy_stick_lead_sword",
     "advancedtools:advancedalloy_stick_lead_pickaxe",
     "advancedtools:advancedalloy_stick_lead_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_lead_pickaxe",
     "advancedtools:basalz_stick_lead_axe",
     "advancedtools:basalz_stick_lead_shovel",
-    "advancedtools:basalz_stick_lead_hoe",
-    "advancedtools:wood_stick_lead_sword",
-    "advancedtools:wood_stick_lead_pickaxe",
-    "advancedtools:wood_stick_lead_axe",
-    "advancedtools:wood_stick_lead_shovel",
-    "advancedtools:wood_stick_lead_hoe"
+    "advancedtools:basalz_stick_lead_hoe"
   ]
 }

@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_titanium_axe",
     "advancedtools:cadmium_stick_titanium_shovel",
     "advancedtools:cadmium_stick_titanium_hoe",
+    "advancedtools:wood_stick_titanium_sword",
+    "advancedtools:wood_stick_titanium_pickaxe",
+    "advancedtools:wood_stick_titanium_axe",
+    "advancedtools:wood_stick_titanium_shovel",
+    "advancedtools:wood_stick_titanium_hoe",
     "advancedtools:advancedalloy_stick_titanium_sword",
     "advancedtools:advancedalloy_stick_titanium_pickaxe",
     "advancedtools:advancedalloy_stick_titanium_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_titanium_pickaxe",
     "advancedtools:basalz_stick_titanium_axe",
     "advancedtools:basalz_stick_titanium_shovel",
-    "advancedtools:basalz_stick_titanium_hoe",
-    "advancedtools:wood_stick_titanium_sword",
-    "advancedtools:wood_stick_titanium_pickaxe",
-    "advancedtools:wood_stick_titanium_axe",
-    "advancedtools:wood_stick_titanium_shovel",
-    "advancedtools:wood_stick_titanium_hoe"
+    "advancedtools:basalz_stick_titanium_hoe"
   ]
 }

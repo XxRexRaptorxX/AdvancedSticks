@@ -7,15 +7,27 @@
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:rods/pig_iron"
+            "tag": "c:signalum_tool_materials"
           }
         },
         {
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:signalum_tool_materials"
+            "tag": "c:rods/pig_iron"
           }
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/signalum"
+              }
+            }
+          ]
         }
       ]
     }

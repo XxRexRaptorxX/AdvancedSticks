@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_nickel_axe",
     "advancedtools:cadmium_stick_nickel_shovel",
     "advancedtools:cadmium_stick_nickel_hoe",
+    "advancedtools:wood_stick_nickel_sword",
+    "advancedtools:wood_stick_nickel_pickaxe",
+    "advancedtools:wood_stick_nickel_axe",
+    "advancedtools:wood_stick_nickel_shovel",
+    "advancedtools:wood_stick_nickel_hoe",
     "advancedtools:advancedalloy_stick_nickel_sword",
     "advancedtools:advancedalloy_stick_nickel_pickaxe",
     "advancedtools:advancedalloy_stick_nickel_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_nickel_pickaxe",
     "advancedtools:basalz_stick_nickel_axe",
     "advancedtools:basalz_stick_nickel_shovel",
-    "advancedtools:basalz_stick_nickel_hoe",
-    "advancedtools:wood_stick_nickel_sword",
-    "advancedtools:wood_stick_nickel_pickaxe",
-    "advancedtools:wood_stick_nickel_axe",
-    "advancedtools:wood_stick_nickel_shovel",
-    "advancedtools:wood_stick_nickel_hoe"
+    "advancedtools:basalz_stick_nickel_hoe"
   ]
 }

@@ -7,15 +7,27 @@
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:rods/inanite"
+            "tag": "c:constantan_tool_materials"
           }
         },
         {
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:constantan_tool_materials"
+            "tag": "c:rods/inanite"
           }
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/constantan"
+              }
+            }
+          ]
         }
       ]
     }

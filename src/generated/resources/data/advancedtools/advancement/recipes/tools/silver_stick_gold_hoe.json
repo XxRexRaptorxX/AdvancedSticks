@@ -7,15 +7,27 @@
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:rods/silver"
+            "tag": "c:gold_tool_materials"
           }
         },
         {
           "type": "neoforge:not",
           "value": {
             "type": "neoforge:tag_empty",
-            "tag": "c:gold_tool_materials"
+            "tag": "c:rods/silver"
           }
+        },
+        {
+          "type": "neoforge:or",
+          "values": [
+            {
+              "type": "neoforge:not",
+              "value": {
+                "type": "neoforge:tag_empty",
+                "tag": "c:ingots/gold"
+              }
+            }
+          ]
         }
       ]
     }

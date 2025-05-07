@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_prismarine_axe",
     "advancedtools:cadmium_stick_prismarine_shovel",
     "advancedtools:cadmium_stick_prismarine_hoe",
+    "advancedtools:wood_stick_prismarine_sword",
+    "advancedtools:wood_stick_prismarine_pickaxe",
+    "advancedtools:wood_stick_prismarine_axe",
+    "advancedtools:wood_stick_prismarine_shovel",
+    "advancedtools:wood_stick_prismarine_hoe",
     "advancedtools:advancedalloy_stick_prismarine_sword",
     "advancedtools:advancedalloy_stick_prismarine_pickaxe",
     "advancedtools:advancedalloy_stick_prismarine_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_prismarine_pickaxe",
     "advancedtools:basalz_stick_prismarine_axe",
     "advancedtools:basalz_stick_prismarine_shovel",
-    "advancedtools:basalz_stick_prismarine_hoe",
-    "advancedtools:wood_stick_prismarine_sword",
-    "advancedtools:wood_stick_prismarine_pickaxe",
-    "advancedtools:wood_stick_prismarine_axe",
-    "advancedtools:wood_stick_prismarine_shovel",
-    "advancedtools:wood_stick_prismarine_hoe"
+    "advancedtools:basalz_stick_prismarine_hoe"
   ]
 }

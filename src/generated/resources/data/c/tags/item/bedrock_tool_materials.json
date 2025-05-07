@@ -5,6 +5,10 @@
       "required": false
     },
     {
+      "id": "#c:ingots/bedrock_alloy",
+      "required": false
+    },
+    {
       "id": "#c:ingots/refined_bedrock",
       "required": false
     }

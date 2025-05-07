@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_glowstone_axe",
     "advancedtools:cadmium_stick_glowstone_shovel",
     "advancedtools:cadmium_stick_glowstone_hoe",
+    "advancedtools:wood_stick_glowstone_sword",
+    "advancedtools:wood_stick_glowstone_pickaxe",
+    "advancedtools:wood_stick_glowstone_axe",
+    "advancedtools:wood_stick_glowstone_shovel",
+    "advancedtools:wood_stick_glowstone_hoe",
     "advancedtools:advancedalloy_stick_glowstone_sword",
     "advancedtools:advancedalloy_stick_glowstone_pickaxe",
     "advancedtools:advancedalloy_stick_glowstone_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_glowstone_pickaxe",
     "advancedtools:basalz_stick_glowstone_axe",
     "advancedtools:basalz_stick_glowstone_shovel",
-    "advancedtools:basalz_stick_glowstone_hoe",
-    "advancedtools:wood_stick_glowstone_sword",
-    "advancedtools:wood_stick_glowstone_pickaxe",
-    "advancedtools:wood_stick_glowstone_axe",
-    "advancedtools:wood_stick_glowstone_shovel",
-    "advancedtools:wood_stick_glowstone_hoe"
+    "advancedtools:basalz_stick_glowstone_hoe"
   ]
 }

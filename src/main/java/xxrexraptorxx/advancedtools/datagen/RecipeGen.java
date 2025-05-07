@@ -9,9 +9,8 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.neoforged.neoforge.common.conditions.AndCondition;
-import net.neoforged.neoforge.common.conditions.NotCondition;
-import net.neoforged.neoforge.common.conditions.TagEmptyCondition;
+import net.neoforged.neoforge.common.conditions.*;
+import org.jetbrains.annotations.NotNull;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
@@ -19,6 +18,8 @@ import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
+import javax.annotation.Nullable;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -51,84 +52,84 @@ public class RecipeGen extends RecipeProvider {
                     TagKey<Item> craftingMaterialTag = ModTags.createItemTag("c", ToolUtils.transformMaterialNames(head) + "_tool_materials");
                     AdvancedTools.LOGGER.info("Generate Recipes with " + head + "-head of tag [" + craftingMaterialTag.location() + "]");
 
-                    swordRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_sword")));
-                    axeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_axe")));
-                    pickaxeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_pickaxe")));
-                    shovelRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
-                    hoeRecipe(rodTag, craftingMaterialTag, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
+                    swordRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_sword")));
+                    axeRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_axe")));
+                    pickaxeRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_pickaxe")));
+                    shovelRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
+                    hoeRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
                 }
             }
         }
     }
 
 
-    public void swordRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
+    public void swordRecipe(TagKey<Item> handleTag, TagKey<Item> headTag, String headMaterial, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
-                .define('#', handle)
-                .define('X', material)
+                .define('#', handleTag)
+                .define('X', headTag)
                 .pattern("X")
                 .pattern("X")
                 .pattern("#")
-                .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
+                .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
+                .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
     }
 
 
-    public void pickaxeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
+    public void pickaxeRecipe(TagKey<Item> handleTag, TagKey<Item> headTag, String headMaterial, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
-                .define('#', handle)
-                .define('X', material)
+                .define('#', handleTag)
+                .define('X', headTag)
                 .pattern("XXX")
                 .pattern(" # ")
                 .pattern(" # ")
-                .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
+                .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
+                .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
     }
 
 
-    public void axeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
+    public void axeRecipe(TagKey<Item> handleTag, TagKey<Item> headTag, String headMaterial, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
-                .define('#', handle)
-                .define('X', material)
+                .define('#', handleTag)
+                .define('X', headTag)
                 .pattern("XX")
                 .pattern("#X")
                 .pattern("# ")
-                .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
+                .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
+                .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
     }
 
 
-    public void shovelRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
+    public void shovelRecipe(TagKey<Item> handleTag, TagKey<Item> headTag, String headMaterial, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
-                .define('#', handle)
-                .define('X', material)
+                .define('#', handleTag)
+                .define('X', headTag)
                 .pattern("X")
                 .pattern("#")
                 .pattern("#")
-                .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
+                .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
+                .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
     }
 
 
-    public void hoeRecipe(TagKey<Item> handle, TagKey<Item> material, Item result) {
+    public void hoeRecipe(TagKey<Item> handleTag, TagKey<Item> headTag, String headMaterial, Item result) {
         AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
 
         shaped(RecipeCategory.TOOLS, result)
-                .define('#', handle)
-                .define('X', material)
+                .define('#', handleTag)
+                .define('X', headTag)
                 .pattern("XX")
                 .pattern("# ")
                 .pattern("# ")
-                .unlockedBy("has_" + material.location().getPath(), has(material))
-                .save(output.withConditions(new AndCondition(List.of(new NotCondition(new TagEmptyCondition<>(handle)), new NotCondition(new TagEmptyCondition<>(material))))));
+                .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
+                .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
     }
 
 
@@ -206,4 +207,29 @@ public class RecipeGen extends RecipeProvider {
             return References.MODID + "_recipes";
         }
     }
+
+
+    private @NotNull ICondition createTagNotEmptyConditions(TagKey<Item> mainTag, String baseMaterialName, @Nullable TagKey<Item> optionalTag) {
+        List<ICondition> andConditions = new ArrayList<>();
+
+        andConditions.add(new NotCondition(new TagEmptyCondition<>(mainTag)));
+
+        if (optionalTag != null) {
+            andConditions.add(new NotCondition(new TagEmptyCondition<>(optionalTag)));
+        }
+
+        List<TagKey<Item>> materialTags = ModTags.getPossibleTagsForMaterial(baseMaterialName);
+        List<ICondition> materialTagConditions = new ArrayList<>();
+        for (TagKey<Item> tag : materialTags) {
+            materialTagConditions.add(new NotCondition(new TagEmptyCondition<>(tag)));
+        }
+
+        if (!materialTagConditions.isEmpty()) {
+            andConditions.add(new OrCondition(materialTagConditions));
+        }
+
+        return new AndCondition(andConditions);
+    }
+
+
 }

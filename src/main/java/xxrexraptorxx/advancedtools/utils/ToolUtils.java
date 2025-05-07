@@ -156,7 +156,7 @@ public class ToolUtils {
         return switch (material) {
             case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
                  "blizz", "blitz", "carbon", "plastic", "glowstone", "redstone", "superconductor", "obsidian",
-                 "bedrock", "silicon"
+                 "bedrock", "silicon", "wood", "wooden", "stone"
                     -> true;
 
             default -> false;

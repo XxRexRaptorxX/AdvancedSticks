@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_zinc_axe",
     "advancedtools:cadmium_stick_zinc_shovel",
     "advancedtools:cadmium_stick_zinc_hoe",
+    "advancedtools:wood_stick_zinc_sword",
+    "advancedtools:wood_stick_zinc_pickaxe",
+    "advancedtools:wood_stick_zinc_axe",
+    "advancedtools:wood_stick_zinc_shovel",
+    "advancedtools:wood_stick_zinc_hoe",
     "advancedtools:advancedalloy_stick_zinc_sword",
     "advancedtools:advancedalloy_stick_zinc_pickaxe",
     "advancedtools:advancedalloy_stick_zinc_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_zinc_pickaxe",
     "advancedtools:basalz_stick_zinc_axe",
     "advancedtools:basalz_stick_zinc_shovel",
-    "advancedtools:basalz_stick_zinc_hoe",
-    "advancedtools:wood_stick_zinc_sword",
-    "advancedtools:wood_stick_zinc_pickaxe",
-    "advancedtools:wood_stick_zinc_axe",
-    "advancedtools:wood_stick_zinc_shovel",
-    "advancedtools:wood_stick_zinc_hoe"
+    "advancedtools:basalz_stick_zinc_hoe"
   ]
 }

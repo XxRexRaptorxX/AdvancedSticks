@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_aluminum_axe",
     "advancedtools:cadmium_stick_aluminum_shovel",
     "advancedtools:cadmium_stick_aluminum_hoe",
+    "advancedtools:wood_stick_aluminum_sword",
+    "advancedtools:wood_stick_aluminum_pickaxe",
+    "advancedtools:wood_stick_aluminum_axe",
+    "advancedtools:wood_stick_aluminum_shovel",
+    "advancedtools:wood_stick_aluminum_hoe",
     "advancedtools:advancedalloy_stick_aluminum_sword",
     "advancedtools:advancedalloy_stick_aluminum_pickaxe",
     "advancedtools:advancedalloy_stick_aluminum_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_aluminum_pickaxe",
     "advancedtools:basalz_stick_aluminum_axe",
     "advancedtools:basalz_stick_aluminum_shovel",
-    "advancedtools:basalz_stick_aluminum_hoe",
-    "advancedtools:wood_stick_aluminum_sword",
-    "advancedtools:wood_stick_aluminum_pickaxe",
-    "advancedtools:wood_stick_aluminum_axe",
-    "advancedtools:wood_stick_aluminum_shovel",
-    "advancedtools:wood_stick_aluminum_hoe"
+    "advancedtools:basalz_stick_aluminum_hoe"
   ]
 }

@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_sapphire_axe",
     "advancedtools:cadmium_stick_sapphire_shovel",
     "advancedtools:cadmium_stick_sapphire_hoe",
+    "advancedtools:wood_stick_sapphire_sword",
+    "advancedtools:wood_stick_sapphire_pickaxe",
+    "advancedtools:wood_stick_sapphire_axe",
+    "advancedtools:wood_stick_sapphire_shovel",
+    "advancedtools:wood_stick_sapphire_hoe",
     "advancedtools:advancedalloy_stick_sapphire_sword",
     "advancedtools:advancedalloy_stick_sapphire_pickaxe",
     "advancedtools:advancedalloy_stick_sapphire_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_sapphire_pickaxe",
     "advancedtools:basalz_stick_sapphire_axe",
     "advancedtools:basalz_stick_sapphire_shovel",
-    "advancedtools:basalz_stick_sapphire_hoe",
-    "advancedtools:wood_stick_sapphire_sword",
-    "advancedtools:wood_stick_sapphire_pickaxe",
-    "advancedtools:wood_stick_sapphire_axe",
-    "advancedtools:wood_stick_sapphire_shovel",
-    "advancedtools:wood_stick_sapphire_hoe"
+    "advancedtools:basalz_stick_sapphire_hoe"
   ]
 }

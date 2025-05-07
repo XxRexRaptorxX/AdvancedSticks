@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_cobalt_axe",
     "advancedtools:cadmium_stick_cobalt_shovel",
     "advancedtools:cadmium_stick_cobalt_hoe",
+    "advancedtools:wood_stick_cobalt_sword",
+    "advancedtools:wood_stick_cobalt_pickaxe",
+    "advancedtools:wood_stick_cobalt_axe",
+    "advancedtools:wood_stick_cobalt_shovel",
+    "advancedtools:wood_stick_cobalt_hoe",
     "advancedtools:advancedalloy_stick_cobalt_sword",
     "advancedtools:advancedalloy_stick_cobalt_pickaxe",
     "advancedtools:advancedalloy_stick_cobalt_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_cobalt_pickaxe",
     "advancedtools:basalz_stick_cobalt_axe",
     "advancedtools:basalz_stick_cobalt_shovel",
-    "advancedtools:basalz_stick_cobalt_hoe",
-    "advancedtools:wood_stick_cobalt_sword",
-    "advancedtools:wood_stick_cobalt_pickaxe",
-    "advancedtools:wood_stick_cobalt_axe",
-    "advancedtools:wood_stick_cobalt_shovel",
-    "advancedtools:wood_stick_cobalt_hoe"
+    "advancedtools:basalz_stick_cobalt_hoe"
   ]
 }

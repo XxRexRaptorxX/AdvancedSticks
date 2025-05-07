@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_steel_axe",
     "advancedtools:cadmium_stick_steel_shovel",
     "advancedtools:cadmium_stick_steel_hoe",
+    "advancedtools:wood_stick_steel_sword",
+    "advancedtools:wood_stick_steel_pickaxe",
+    "advancedtools:wood_stick_steel_axe",
+    "advancedtools:wood_stick_steel_shovel",
+    "advancedtools:wood_stick_steel_hoe",
     "advancedtools:advancedalloy_stick_steel_sword",
     "advancedtools:advancedalloy_stick_steel_pickaxe",
     "advancedtools:advancedalloy_stick_steel_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_steel_pickaxe",
     "advancedtools:basalz_stick_steel_axe",
     "advancedtools:basalz_stick_steel_shovel",
-    "advancedtools:basalz_stick_steel_hoe",
-    "advancedtools:wood_stick_steel_sword",
-    "advancedtools:wood_stick_steel_pickaxe",
-    "advancedtools:wood_stick_steel_axe",
-    "advancedtools:wood_stick_steel_shovel",
-    "advancedtools:wood_stick_steel_hoe"
+    "advancedtools:basalz_stick_steel_hoe"
   ]
 }

@@ -220,6 +220,11 @@
     "advancedtools:cadmium_stick_enderium_axe",
     "advancedtools:cadmium_stick_enderium_shovel",
     "advancedtools:cadmium_stick_enderium_hoe",
+    "advancedtools:wood_stick_enderium_sword",
+    "advancedtools:wood_stick_enderium_pickaxe",
+    "advancedtools:wood_stick_enderium_axe",
+    "advancedtools:wood_stick_enderium_shovel",
+    "advancedtools:wood_stick_enderium_hoe",
     "advancedtools:advancedalloy_stick_enderium_sword",
     "advancedtools:advancedalloy_stick_enderium_pickaxe",
     "advancedtools:advancedalloy_stick_enderium_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_enderium_pickaxe",
     "advancedtools:basalz_stick_enderium_axe",
     "advancedtools:basalz_stick_enderium_shovel",
-    "advancedtools:basalz_stick_enderium_hoe",
-    "advancedtools:wood_stick_enderium_sword",
-    "advancedtools:wood_stick_enderium_pickaxe",
-    "advancedtools:wood_stick_enderium_axe",
-    "advancedtools:wood_stick_enderium_shovel",
-    "advancedtools:wood_stick_enderium_hoe"
+    "advancedtools:basalz_stick_enderium_hoe"
   ]
 }

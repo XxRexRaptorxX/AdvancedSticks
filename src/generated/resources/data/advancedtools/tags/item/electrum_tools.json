@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_electrum_axe",
     "advancedtools:cadmium_stick_electrum_shovel",
     "advancedtools:cadmium_stick_electrum_hoe",
+    "advancedtools:wood_stick_electrum_sword",
+    "advancedtools:wood_stick_electrum_pickaxe",
+    "advancedtools:wood_stick_electrum_axe",
+    "advancedtools:wood_stick_electrum_shovel",
+    "advancedtools:wood_stick_electrum_hoe",
     "advancedtools:advancedalloy_stick_electrum_sword",
     "advancedtools:advancedalloy_stick_electrum_pickaxe",
     "advancedtools:advancedalloy_stick_electrum_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_electrum_pickaxe",
     "advancedtools:basalz_stick_electrum_axe",
     "advancedtools:basalz_stick_electrum_shovel",
-    "advancedtools:basalz_stick_electrum_hoe",
-    "advancedtools:wood_stick_electrum_sword",
-    "advancedtools:wood_stick_electrum_pickaxe",
-    "advancedtools:wood_stick_electrum_axe",
-    "advancedtools:wood_stick_electrum_shovel",
-    "advancedtools:wood_stick_electrum_hoe"
+    "advancedtools:basalz_stick_electrum_hoe"
   ]
 }

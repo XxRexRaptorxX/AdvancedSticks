@@ -177,6 +177,10 @@
       "required": false
     },
     {
+      "id": "#c:sticks/wood",
+      "required": false
+    },
+    {
       "id": "#c:sticks/advanced_alloy",
       "required": false
     },
@@ -550,10 +554,6 @@
     },
     {
       "id": "#c:sticks/basalz",
-      "required": false
-    },
-    {
-      "id": "#c:sticks/wood",
       "required": false
     },
     "#c:sticks/wood"

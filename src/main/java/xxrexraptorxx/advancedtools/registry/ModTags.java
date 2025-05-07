@@ -127,6 +127,7 @@ public class ModTags {
                 tags.add(createCItemTag("ingots/silicon"));
             } else if (material.equals("bedrock")) {
                 tags.add(createCItemTag("ingots/bedrock"));
+                tags.add(createCItemTag("ingots/bedrock_alloy"));
                 tags.add(createCItemTag("ingots/refined_bedrock"));
             } else if (material.equals("redstone")) {
                 tags.add(createCItemTag("ingots/redstone"));
@@ -138,10 +139,15 @@ public class ModTags {
                 tags.add(createCItemTag("ingots/glowstone_alloy"));
             } else if (material.equals("obsidian")) {
                 tags.add(createCItemTag("ingots/obsidian"));
+                tags.add(createCItemTag("ingots/obsidian_alloy"));
                 tags.add(createCItemTag("ingots/refined_obsidian"));
             } else if (material.equals("superconductor")) {
                 tags.add(createCItemTag("ingots/superconductor"));
                 tags.add(createCItemTag("ingots/superconductor_alloy"));
+            } else if (material.equals("wood") || material.equals("wooden"))  {
+                tags.add(createCItemTag("wooden_tool_materials"));
+            } else if (material.equals("stone")) {
+                tags.add(createCItemTag("stone_tool_materials"));
             } else {
                 // Standard rod tags for materials that do not have normal base materials (e.g. enchanted_stick or basalz_rod)
                 tags.add(createCItemTag( "rods/" + material));

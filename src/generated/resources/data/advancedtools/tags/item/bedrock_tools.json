@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_bedrock_axe",
     "advancedtools:cadmium_stick_bedrock_shovel",
     "advancedtools:cadmium_stick_bedrock_hoe",
+    "advancedtools:wood_stick_bedrock_sword",
+    "advancedtools:wood_stick_bedrock_pickaxe",
+    "advancedtools:wood_stick_bedrock_axe",
+    "advancedtools:wood_stick_bedrock_shovel",
+    "advancedtools:wood_stick_bedrock_hoe",
     "advancedtools:advancedalloy_stick_bedrock_sword",
     "advancedtools:advancedalloy_stick_bedrock_pickaxe",
     "advancedtools:advancedalloy_stick_bedrock_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_bedrock_pickaxe",
     "advancedtools:basalz_stick_bedrock_axe",
     "advancedtools:basalz_stick_bedrock_shovel",
-    "advancedtools:basalz_stick_bedrock_hoe",
-    "advancedtools:wood_stick_bedrock_sword",
-    "advancedtools:wood_stick_bedrock_pickaxe",
-    "advancedtools:wood_stick_bedrock_axe",
-    "advancedtools:wood_stick_bedrock_shovel",
-    "advancedtools:wood_stick_bedrock_hoe"
+    "advancedtools:basalz_stick_bedrock_hoe"
   ]
 }

@@ -420,6 +420,11 @@
     "advancedtools:cadmium_stick_quartz_axe",
     "advancedtools:cadmium_stick_quartz_shovel",
     "advancedtools:cadmium_stick_quartz_hoe",
+    "advancedtools:wood_stick_quartz_sword",
+    "advancedtools:wood_stick_quartz_pickaxe",
+    "advancedtools:wood_stick_quartz_axe",
+    "advancedtools:wood_stick_quartz_shovel",
+    "advancedtools:wood_stick_quartz_hoe",
     "advancedtools:advancedalloy_stick_quartz_sword",
     "advancedtools:advancedalloy_stick_quartz_pickaxe",
     "advancedtools:advancedalloy_stick_quartz_axe",
@@ -889,11 +894,6 @@
     "advancedtools:basalz_stick_quartz_pickaxe",
     "advancedtools:basalz_stick_quartz_axe",
     "advancedtools:basalz_stick_quartz_shovel",
-    "advancedtools:basalz_stick_quartz_hoe",
-    "advancedtools:wood_stick_quartz_sword",
-    "advancedtools:wood_stick_quartz_pickaxe",
-    "advancedtools:wood_stick_quartz_axe",
-    "advancedtools:wood_stick_quartz_shovel",
-    "advancedtools:wood_stick_quartz_hoe"
+    "advancedtools:basalz_stick_quartz_hoe"
   ]
 }
