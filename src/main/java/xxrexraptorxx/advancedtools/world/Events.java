@@ -106,7 +106,7 @@ public class Events {
         Player player = event.getEntity();
         Level level = player.level();
 
-        if (Config.PATREON_REWARDS.get()) {
+        if (Config.PATREON_REWARDS != null && Config.PATREON_REWARDS.get()) {
             // Check if the player already has rewards
             if (!player.getInventory().contains(new ItemStack(Items.PAPER))) {
                 if (player instanceof ServerPlayer serverPlayer) { // Ensure the player is a ServerPlayer
