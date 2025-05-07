@@ -13,7 +13,7 @@ displayURL="https://www.curseforge.com/minecraft/mc-mods/advanced-sticks"
 logoFile="logo.png"
 #credits=""
 authors="${mod_authors}"
-description='''Advanced Tools is a mod that adds new sticks to modify the default weapons and tools! Every Stick has other values that adds to the normal tool.'''
+description='''Lets you build tools and weapons from components of many different materials with different stats, properties and effects!'''
 
 
 [[dependencies.${mod_id}]]
