@@ -75,6 +75,7 @@
   "message.advancedtools.handle": "Griff:",
   "message.advancedtools.base": "Kopf:",
   "message.advancedtools.random": "~",
+  "message.advancedtools.sockets": "Sockel:",
 
   "tooltype.advancedtools.pickaxe": "Spitzhacke",
   "tooltype.advancedtools.axe": "Axt",

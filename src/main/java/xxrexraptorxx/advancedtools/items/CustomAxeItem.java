@@ -46,4 +46,8 @@ public class CustomAxeItem extends AxeItem {
 
         super.inventoryTick(stack, level, entity, slot);
     }
+
+    public int getSocketCount() {
+        return 3;
+    }
 }

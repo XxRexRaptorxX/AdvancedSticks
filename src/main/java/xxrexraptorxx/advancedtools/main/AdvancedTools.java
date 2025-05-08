@@ -13,6 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import xxrexraptorxx.advancedtools.registry.CreativeModeTabs;
+import xxrexraptorxx.advancedtools.registry.ModComponents;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
 import xxrexraptorxx.advancedtools.utils.Config;
@@ -32,6 +33,7 @@ public class AdvancedTools {
 
         Config.init(container);
         ModItems.init(bus);
+        ModComponents.init(bus);
         CreativeModeTabs.init(bus);
 
         bus.addListener(AdvancedTools::packSetup);

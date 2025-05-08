@@ -1,6 +1,7 @@
 package xxrexraptorxx.advancedtools.world;
 
 import com.mojang.authlib.GameProfile;
+import com.mojang.datafixers.util.Either;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -16,12 +17,11 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.component.ResolvableProfile;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -34,16 +34,18 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import xxrexraptorxx.advancedtools.items.CustomAxeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
-import xxrexraptorxx.advancedtools.registry.ModItems;
+import xxrexraptorxx.advancedtools.registry.ModComponents;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.sockets.SocketTooltipComponent;
 
 import java.io.IOException;
 import java.net.URI;
@@ -53,7 +55,7 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -228,6 +230,43 @@ public class Events {
                     }
                 }
             }
+        }
+    }
+
+
+
+    @SubscribeEvent
+    public static void onGatherComponents(RenderTooltipEvent.GatherComponents event) {
+        ItemStack stack = event.getItemStack();
+        if (stack.getItem() instanceof CustomAxeItem) {
+            var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
+            var sockets = data.sockets();
+            event.getTooltipElements().add(Either.right(new SocketTooltipComponent(sockets)));
+        }
+    }
+
+
+    @SubscribeEvent
+    public static void onRightClick(PlayerInteractEvent.RightClickItem evt) {
+        ItemStack tool = evt.getItemStack();      // das Tool im Haupt-Handslot
+        ItemStack held = new ItemStack(Items.DIAMOND); // Item, das eingesetzt werden soll
+
+        // Prüfe, ob es dein Tool ist und ob noch Platz ist:
+        if (tool.getItem() instanceof CustomAxeItem) {
+            tool.update(
+                    ModComponents.SOCKET_COMPONENT.get(),
+                    ModComponents.SocketData.EMPTY,
+                    old -> {
+                        if (old.sockets().size() < ((CustomAxeItem)tool.getItem()).getSocketCount()) {
+                            var list = new ArrayList<>(old.sockets());
+                            list.add(held.split(1));
+                            return new ModComponents.SocketData(List.copyOf(list));
+                        }
+                        return old; // kein Platz
+                    }
+            );
+            evt.setCancellationResult(InteractionResult.SUCCESS);
+            evt.setCanceled(true);
         }
     }
 
