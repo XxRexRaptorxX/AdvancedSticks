@@ -20,6 +20,7 @@ import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -60,6 +61,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.atomic.AtomicInteger;
 
 @EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class Events {
@@ -212,6 +214,7 @@ public class Events {
                         if (Config.SHOW_STICK_TYPE.get()) {
                             event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                            event.getToolTip().add(3, Component.empty());
                         }
                     }
 
@@ -224,6 +227,7 @@ public class Events {
                         if (Config.SHOW_STICK_TYPE.get()) {
                             event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                            event.getToolTip().add(3, Component.empty());
                         }
                     }
 
@@ -247,36 +251,12 @@ public class Events {
     @SubscribeEvent
     public static void onGatherComponents(RenderTooltipEvent.GatherComponents event) {
         ItemStack stack = event.getItemStack();
+        if (stack.getItem() instanceof CustomAxeItem toolItem) {
+            var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
+            var sockets = data.sockets();
+            int maxSockets = toolItem.getSocketCount();
 
-        // dieselben Bedingungen wie in deinem ItemTooltipEvent
-        Item item = stack.getItem();
-        String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
-        String name      = BuiltInRegistries.ITEM.getKey(item).getPath();
-
-        if (Config.SHOW_STICK_TYPE.get() && item.components().has(DataComponents.TOOL) && !namespace.equals("tconstruct")
-                && ToolUtils.isToolType(name)) {
-
-            if (stack.getItem() instanceof CustomAxeItem tool) {
-                var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
-                var sockets = data.sockets();
-                int maxSockets = tool.getSocketCount();
-
-                TooltipComponent socketComp = new SocketTooltipComponent(maxSockets, sockets);
-
-                // Finde den Index des ersten vorhandenen TooltipComponent-Eintrags
-                var elements = event.getTooltipElements(); // List<Either<FormattedCharSequence, TooltipComponent>>
-                int insertIndex = elements.size();          // default ans Ende
-                for (int i = 0; i < elements.size(); i++) {
-                    boolean isComponent = elements.get(i).map(left -> false, right -> true);
-                    if (isComponent) {
-                        insertIndex = i;
-                        break;
-                    }
-                }
-
-                // Füge direkt *vor* den Standard-Komponenten ein
-                elements.add(insertIndex, Either.right(socketComp));
-            }
+            event.getTooltipElements().add(4, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
         }
     }
 

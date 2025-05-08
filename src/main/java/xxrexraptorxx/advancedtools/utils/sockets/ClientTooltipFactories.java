@@ -3,6 +3,7 @@ package xxrexraptorxx.advancedtools.utils.sockets;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.network.chat.Component;
@@ -49,9 +50,11 @@ public class ClientTooltipFactories {
 
             @Override
             public void renderText(Font font, int x, int y, Matrix4f matrix, MultiBufferSource.BufferSource buffers) {
-                Component title = Component.translatable(FormattingUtils.setLangTag("message", "sockets")).withStyle(ChatFormatting.GRAY);
+                if (!Screen.hasShiftDown()) {
+                    Component title = Component.translatable(FormattingUtils.setLangTag("message", "sockets")).withStyle(ChatFormatting.GRAY);
 
-                font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
+                    font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
+                }
             }
 
 

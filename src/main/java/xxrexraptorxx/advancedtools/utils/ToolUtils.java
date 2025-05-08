@@ -448,16 +448,16 @@ public class ToolUtils {
         description.append(Component.literal("   " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
 
         description.append(Component.literal(lineSeperator));
+        description.append(FormattingUtils.setModLangComponent("message","sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(Component.literal("  " + String.valueOf((baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots()))).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS)));
+
+        description.append(Component.literal(lineSeperator));
         description.append(FormattingUtils.setModLangComponent("message","hit_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(FormattingUtils.getHeadEffectNamesFromMaterial(base));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingUtils.setModLangComponent("message","hold_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(FormattingUtils.getHandleEffectNamesFromMaterial(handle));
-
-        description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(String.valueOf(baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS));
 
         return description;
     }
