@@ -10,11 +10,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class CustomPickaxeItem extends Item {
+public class CustomPickaxeItem extends Item implements ISocketTool {
 
     public CustomPickaxeItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties properties) {
         super(properties.pickaxe(material, attackDamage, attackSpeed));
@@ -45,4 +46,5 @@ public class CustomPickaxeItem extends Item {
 
         super.inventoryTick(stack, level, entity, slot);
     }
+
 }

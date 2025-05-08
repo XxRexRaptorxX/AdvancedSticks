@@ -216,5 +216,15 @@ public class ModToolMaterials {
         String[] parts = key.split("_", 2);
         return Pair.of(parts[0], parts[1]);
     }
+
+
+    public static String getHeadFromToolMaterial(ToolMaterial material) {
+        return getPartsFromToolMaterial(material).getFirst();
+    }
+
+
+    public static String getHandleFromToolMaterial(ToolMaterial material) {
+        return getPartsFromToolMaterial(material).getSecond();
+    }
 }
 

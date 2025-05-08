@@ -22,6 +22,7 @@ public class Config {
     public static ModConfigSpec.BooleanValue SHOW_MATERIAL_STATS;
     public static ModConfigSpec.BooleanValue PATREON_REWARDS;
     public static ModConfigSpec.BooleanValue FORCE_ALL_MATERIALS;
+    public static ModConfigSpec.BooleanValue HIDE_UPGADE_SLOTS;
     public static ModConfigSpec.ConfigValue<List<String>> HANDLE_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> TOOL_HEAD_MATERIALS;
     public static ModConfigSpec.ConfigValue<List<String>> DISABLED_MATERIAL_EFFECTS;
@@ -44,9 +45,14 @@ public class Config {
         builder.comment("General").push(CATEGORY_GENERAL);
         UPDATE_CHECKER = builder.comment("Activate the Update-Checker").define("update-checker", true);
         SHOW_STICK_TYPE = builder.comment("Shows you the stick type under the tool").define("show_stick_type", true);
-        SHOW_MATERIAL_STATS = builder.comment("Shows you the stats of the item as tooltips when you press 'shift' over the tool").define("show_material_stats", true);
+        SHOW_MATERIAL_STATS = builder.comment("Shows you the stats of the item as tooltips when you press 'SHIFT' over the tool").define("show_material_stats", true);
         JEI_DESCRIPTION = builder.comment("Enables the description for the stats of the tools in JEI or REI").define("jei_description", true);
         builder.pop();
+
+        builder.comment("Materials").push(CATEGORY_MATERIALS);
+        HIDE_UPGADE_SLOTS = builder.comment("If you activate this, the upgrade slots are only displayed in the tooltip when you press 'SHIFT'").define("hide_upgrade_slots", false);
+        builder.pop();
+
 
         CLIENT_CONFIG = builder.build();
     }

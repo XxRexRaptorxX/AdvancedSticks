@@ -504,5 +504,4 @@ public class ToolUtils {
             return new MobEffectInstance(fallbackEffect, duration, amplifier);
         }
     }
-
 }

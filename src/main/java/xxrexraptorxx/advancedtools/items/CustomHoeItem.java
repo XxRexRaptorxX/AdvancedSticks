@@ -11,11 +11,12 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class CustomHoeItem extends HoeItem {
+public class CustomHoeItem extends HoeItem implements ISocketTool {
 
     public CustomHoeItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties properties) {
         super(material, attackDamage, attackSpeed, properties);
@@ -46,4 +47,5 @@ public class CustomHoeItem extends HoeItem {
 
         super.inventoryTick(stack, level, entity, slot);
     }
+
 }

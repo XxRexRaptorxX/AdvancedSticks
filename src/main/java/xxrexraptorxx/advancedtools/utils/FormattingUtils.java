@@ -72,8 +72,8 @@ public class FormattingUtils {
      *  Converts the mining block tags to the old mining level format
      */
     public static int getMiningLevel(ToolMaterial material) {
-        String name = ModToolMaterials.getPartsFromToolMaterial(material).getFirst();
-        Materials headMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
+        Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
+
         TagKey<Block> tag = headMaterial.getIncorrectForMaterialKey();
 
         if (tag.equals(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)) {
@@ -145,9 +145,8 @@ public class FormattingUtils {
                 return top;
 
             case SOCKETS:
-                String name = ModToolMaterials.getPartsFromToolMaterial(material).getFirst();
-                Materials headMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
-                Materials handleMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
+                Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
+                Materials handleMaterial = Materials.fromName(ModToolMaterials.getHandleFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
 
                 if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 2) return bad;
                 if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 3) return okay;

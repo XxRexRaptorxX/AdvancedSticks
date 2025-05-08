@@ -10,11 +10,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class CustomShovelItem extends ShovelItem {
+public class CustomShovelItem extends ShovelItem implements ISocketTool {
 
     public CustomShovelItem(ToolMaterial material, float attackDamage, float attackSpeed, Properties properties) {
         super(material, attackDamage, attackSpeed, properties);
@@ -45,4 +46,5 @@ public class CustomShovelItem extends ShovelItem {
 
         super.inventoryTick(stack, level, entity, slot);
     }
+
 }

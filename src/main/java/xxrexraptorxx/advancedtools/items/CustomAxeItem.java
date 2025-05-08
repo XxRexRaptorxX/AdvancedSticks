@@ -11,11 +11,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Objects;
 
-public class CustomAxeItem extends AxeItem {
+public class CustomAxeItem extends AxeItem implements ISocketTool {
+
 
     public CustomAxeItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Properties properties) {
         super(material, attackDamage, attackSpeed, properties);
@@ -26,7 +28,6 @@ public class CustomAxeItem extends AxeItem {
     public Component getName(ItemStack stack) {
         return ToolUtils.getToolTranslationKey(this);
     }
-
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
@@ -47,7 +48,4 @@ public class CustomAxeItem extends AxeItem {
         super.inventoryTick(stack, level, entity, slot);
     }
 
-    public int getSocketCount() {
-        return 3;
-    }
 }

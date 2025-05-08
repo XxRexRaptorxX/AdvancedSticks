@@ -19,8 +19,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.tooltip.TooltipComponent;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -46,7 +44,9 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModComponents;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
+import xxrexraptorxx.advancedtools.utils.SocketUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.sockets.SocketTooltipComponent;
 
 import java.io.IOException;
@@ -61,7 +61,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.atomic.AtomicInteger;
 
 @EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class Events {
@@ -208,7 +207,6 @@ public class Events {
                 if (namespace.equals(References.MODID)) {
                     if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
                         event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
-                        event.getToolTip().add(3, Component.empty());
 
                     } else {
                         if (Config.SHOW_STICK_TYPE.get()) {
@@ -221,7 +219,6 @@ public class Events {
                 } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
                     if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
                         event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
-                        event.getToolTip().add(3, Component.empty());
 
                     } else {
                         if (Config.SHOW_STICK_TYPE.get()) {
@@ -251,12 +248,21 @@ public class Events {
     @SubscribeEvent
     public static void onGatherComponents(RenderTooltipEvent.GatherComponents event) {
         ItemStack stack = event.getItemStack();
-        if (stack.getItem() instanceof CustomAxeItem toolItem) {
+        Item item = stack.getItem();
+
+        if (SocketUtils.hasSockets(stack) && (!Config.HIDE_UPGADE_SLOTS.get() && SocketUtils.hasEmptySockets(stack) || (Config.HIDE_UPGADE_SLOTS.get() && Screen.hasShiftDown()))) {
             var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
             var sockets = data.sockets();
-            int maxSockets = toolItem.getSocketCount();
+            int maxSockets = ISocketTool.getSocketCount(item);
+            int lineIndex;
 
-            event.getTooltipElements().add(4, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
+            if (Screen.hasShiftDown()) {
+                lineIndex = 4;
+            } else {
+                lineIndex = 5;
+            }
+
+            event.getTooltipElements().add(lineIndex, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
         }
     }
 
@@ -272,7 +278,7 @@ public class Events {
                     ModComponents.SOCKET_COMPONENT.get(),
                     ModComponents.SocketData.EMPTY,
                     old -> {
-                        if (old.sockets().size() < ((CustomAxeItem)tool.getItem()).getSocketCount()) {
+                        if (old.sockets().size() < ISocketTool.getSocketCount(tool.getItem())) {
                             var list = new ArrayList<>(old.sockets());
                             list.add(held.split(1));
                             return new ModComponents.SocketData(List.copyOf(list));
