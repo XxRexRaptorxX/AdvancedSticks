@@ -144,6 +144,17 @@ public class FormattingUtils {
                 if (material.enchantmentValue() < 32) return good;
                 return top;
 
+            case SOCKETS:
+                String name = ModToolMaterials.getPartsFromToolMaterial(material).getFirst();
+                Materials headMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
+                Materials handleMaterial = Materials.fromName(name).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
+
+                if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 2) return bad;
+                if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 3) return okay;
+                if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 4) return normal;
+                if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 6) return good;
+                return top;
+
             case ATTACK_SPEED:
                 AdvancedTools.LOGGER.error("Not yet implemented!");
                 return normal;

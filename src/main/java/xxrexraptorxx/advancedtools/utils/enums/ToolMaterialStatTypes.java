@@ -7,5 +7,6 @@ public enum ToolMaterialStatTypes {
     MINING_SPEED,
     DAMAGE,
     ENCHANTABILITY,
-    ATTACK_SPEED
+    ATTACK_SPEED,
+    SOCKETS
 }

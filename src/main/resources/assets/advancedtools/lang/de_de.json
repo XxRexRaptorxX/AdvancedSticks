@@ -72,10 +72,11 @@
   "message.advancedtools.enchantability.jei_desc": "Enchantability",
   "message.advancedtools.hold_effect.jei_desc": "Halte-Effekt",
   "message.advancedtools.hit_effect.jei_desc": "Schlag-Effekt",
+  "message.advancedtools.sockets.jei_desc": "Upgradeslots",
   "message.advancedtools.handle": "Griff:",
   "message.advancedtools.base": "Kopf:",
   "message.advancedtools.random": "~",
-  "message.advancedtools.sockets": "Sockel:",
+  "message.advancedtools.sockets": "Upgradeslots:",
 
   "tooltype.advancedtools.pickaxe": "Spitzhacke",
   "tooltype.advancedtools.axe": "Axt",

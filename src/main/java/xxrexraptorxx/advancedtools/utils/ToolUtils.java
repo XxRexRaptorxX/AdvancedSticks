@@ -16,6 +16,7 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
+import xxrexraptorxx.advancedtools.utils.enums.Materials;
 import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
 
 import javax.annotation.Nullable;
@@ -230,6 +231,16 @@ public class ToolUtils {
     }
 
 
+    public static boolean isToolType(String path) {
+        return path.contains("pickaxe") || path.contains("axe") || path.contains("sword") || path.contains("shovel") || path.contains("hoe");
+    }
+
+
+    public static boolean excludedMods(String namespace) {
+        return namespace.equals("tconstruct") || namespace.equals("silentgems") || namespace.equals("tetra");
+    }
+
+
     /**
      * Transforms compressed material names into the correct ones
      */
@@ -400,6 +411,8 @@ public class ToolUtils {
         String textSeparator = ": ";
         String lineSeperator = "\n";
         ToolMaterial material = ModToolMaterials.getMaterial(handle, base);
+        Materials handleMaterial = Materials.fromName(handle).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + handle));
+        Materials baseMaterial = Materials.fromName(base).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + base));
 
         if (material == null) {
             throw new NullPointerException("Material is null: " + base + "_" + handle);
@@ -441,6 +454,10 @@ public class ToolUtils {
         description.append(Component.literal(lineSeperator));
         description.append(FormattingUtils.setModLangComponent("message","hold_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(FormattingUtils.getHandleEffectNamesFromMaterial(handle));
+
+        description.append(Component.literal(lineSeperator));
+        description.append(FormattingUtils.setModLangComponent("message","sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(String.valueOf(baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS));
 
         return description;
     }

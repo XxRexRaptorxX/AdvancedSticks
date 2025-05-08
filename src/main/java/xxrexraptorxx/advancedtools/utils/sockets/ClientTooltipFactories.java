@@ -23,17 +23,23 @@ public class ClientTooltipFactories {
     @SubscribeEvent
     public static void registerFactories(RegisterClientTooltipComponentFactoriesEvent event) {
         event.register(SocketTooltipComponent.class, data -> new ClientTooltipComponent() {
+
+            private final int maxSlots = data.maxSockets();
             private final List<ItemStack> sockets = ((SocketTooltipComponent) data).sockets();
+            private static final int FRAME_COLOR = 0xFF555555;
+            private static final int SLOT_COLOR = 0x55333333;
 
             @Override
             public int getWidth(Font font) {
-                return sockets.size() * 18 + 2;
+                return maxSlots * 18 + 2;
             }
+
 
             @Override
             public int getHeight(Font font) {
-                return 18;
+                return font.lineHeight + 2 + 18;
             }
+
 
             @Override
             public boolean showTooltipWithItemInHand() {
@@ -42,19 +48,37 @@ public class ClientTooltipFactories {
 
 
             @Override
-            public void renderText(Font font, int x, int y, Matrix4f pose, MultiBufferSource.BufferSource buffers) {
-                font.drawInBatch(Component.translatable(FormattingUtils.setLangTag("message", "sockets")).withStyle(ChatFormatting.GRAY),
-                        x, y + 2, -1, true, pose, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
+            public void renderText(Font font, int x, int y, Matrix4f matrix, MultiBufferSource.BufferSource buffers) {
+                Component title = Component.translatable(FormattingUtils.setLangTag("message", "sockets")).withStyle(ChatFormatting.GRAY);
+
+                font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
             }
 
 
             @Override
             public void renderImage(Font font, int x, int y, int width, int height, GuiGraphics graphics) {
-                for (int i = 0; i < sockets.size(); i++) {
-                    ItemStack stack = sockets.get(i);
+                // y-offset for title
+                int slotY = y + font.lineHeight + 2;
 
-                    if (!stack.isEmpty()) {
-                        graphics.renderItem(stack, x + 1 + i * 18, y);
+                //draw slots
+                for (int i = 0; i < maxSlots; i++) {
+                    int slotX = x + 4 + i * 18;
+
+                    //inner part
+                    graphics.fill(slotX, slotY, slotX + 16, slotY + 16, SLOT_COLOR);
+                    //frames
+                    graphics.fill(slotX + 1, slotY,     slotX + 15, slotY + 1, FRAME_COLOR);
+                    graphics.fill(slotX + 1, slotY + 15, slotX + 15, slotY + 16, FRAME_COLOR);
+                    graphics.fill(slotX,     slotY + 1,  slotX + 1,  slotY + 15, FRAME_COLOR);
+                    graphics.fill(slotX + 15,slotY + 1,  slotX + 16, slotY + 15, FRAME_COLOR);
+
+                    //draw items
+                    if (i < sockets.size()) {
+                        ItemStack stack = sockets.get(i);
+
+                        if (!stack.isEmpty()) {
+                            graphics.renderItem(stack, slotX, slotY);
+                        }
                     }
                 }
             }

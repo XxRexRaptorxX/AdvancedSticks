@@ -5,5 +5,5 @@ import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
 
-public record SocketTooltipComponent(List<ItemStack> sockets) implements TooltipComponent {
+public record SocketTooltipComponent(int maxSockets, List<ItemStack> sockets) implements TooltipComponent {
 }

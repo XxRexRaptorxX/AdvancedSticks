@@ -19,6 +19,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -147,7 +148,7 @@ public class Events {
             HttpResponse<String> response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
 
             // Parse supporter list
-            List<String> supporterList = List.of(response.body().split("\\R")); // Split lines
+            List<String> supporterList = List.of(response.body().split("\\R"));
             return supporterList.contains(player.getName().getString());
 
         } catch (Exception e) {
@@ -200,37 +201,45 @@ public class Events {
         String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
-        if (Config.SHOW_STICK_TYPE.get() && !namespace.equals("tconstruct") && !namespace.equals("silentgems") && !namespace.equals("tetra")) {
-            if (item.components().has(DataComponents.TOOL)) {
-                if (name.contains("pickaxe") || name.contains("axe") || name.contains("sword") || name.contains("shovel") || name.contains("hoe")) {
+            if (!ToolUtils.excludedMods(namespace) && item.components().has(DataComponents.TOOL) && ToolUtils.isToolType(name)) {
 
-                    if (namespace.equals(References.MODID)) {
-                        if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
-                            event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
-                        } else {
-                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
-                            event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
-                        }
-
-                    } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
-                        if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
-                            event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
-                        } else {
-                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
-                            event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
-                        }
-
-                    } else if (namespace.equals("bedrockminer")) {
-                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
-                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
+                if (namespace.equals(References.MODID)) {
+                    if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                        event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
+                        event.getToolTip().add(3, Component.empty());
 
                     } else {
-                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.GRAY));
-                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item","stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                        if (Config.SHOW_STICK_TYPE.get()) {
+                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
+                        }
+                    }
+
+                } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
+                    if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                        event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
+                        event.getToolTip().add(3, Component.empty());
+
+                    } else {
+                        if (Config.SHOW_STICK_TYPE.get()) {
+                            event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
+                            event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
+                        }
+                    }
+
+                } else if (namespace.equals("bedrockminer")) {
+                    if (Config.SHOW_STICK_TYPE.get()) {
+                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
+                    }
+
+                } else {
+                    if (Config.SHOW_STICK_TYPE.get()) {
+                        event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
+                        event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                     }
                 }
             }
-        }
     }
 
 
@@ -238,10 +247,36 @@ public class Events {
     @SubscribeEvent
     public static void onGatherComponents(RenderTooltipEvent.GatherComponents event) {
         ItemStack stack = event.getItemStack();
-        if (stack.getItem() instanceof CustomAxeItem) {
-            var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
-            var sockets = data.sockets();
-            event.getTooltipElements().add(Either.right(new SocketTooltipComponent(sockets)));
+
+        // dieselben Bedingungen wie in deinem ItemTooltipEvent
+        Item item = stack.getItem();
+        String namespace = BuiltInRegistries.ITEM.getKey(item).getNamespace();
+        String name      = BuiltInRegistries.ITEM.getKey(item).getPath();
+
+        if (Config.SHOW_STICK_TYPE.get() && item.components().has(DataComponents.TOOL) && !namespace.equals("tconstruct")
+                && ToolUtils.isToolType(name)) {
+
+            if (stack.getItem() instanceof CustomAxeItem tool) {
+                var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
+                var sockets = data.sockets();
+                int maxSockets = tool.getSocketCount();
+
+                TooltipComponent socketComp = new SocketTooltipComponent(maxSockets, sockets);
+
+                // Finde den Index des ersten vorhandenen TooltipComponent-Eintrags
+                var elements = event.getTooltipElements(); // List<Either<FormattedCharSequence, TooltipComponent>>
+                int insertIndex = elements.size();          // default ans Ende
+                for (int i = 0; i < elements.size(); i++) {
+                    boolean isComponent = elements.get(i).map(left -> false, right -> true);
+                    if (isComponent) {
+                        insertIndex = i;
+                        break;
+                    }
+                }
+
+                // Füge direkt *vor* den Standard-Komponenten ein
+                elements.add(insertIndex, Either.right(socketComp));
+            }
         }
     }
 
