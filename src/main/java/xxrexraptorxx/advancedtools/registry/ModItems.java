@@ -97,8 +97,6 @@ public class ModItems {
                 }
             }
         }
-
-        ITEMS.register("_upgrade", () -> new Item(new Item.Properties().setId(itemId("stick_" + handle))));
     }
 
 

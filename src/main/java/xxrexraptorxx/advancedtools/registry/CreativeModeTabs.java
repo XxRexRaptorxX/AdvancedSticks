@@ -38,6 +38,21 @@ public class CreativeModeTabs {
                     }
                 }
 
+                //UPGRADES
+                output.accept(ModItems.RARITY_UPGRADE.get());
+                output.accept(ModItems.NETHERITE_UPGRADE.get());
+                output.accept(ModItems.OBSIDIAN_UPGRADE.get());
+                output.accept(ModItems.KNOCKBACK_UPGRADE.get());
+                output.accept(ModItems.DAMAGE_UPGRADE.get());
+                output.accept(ModItems.SPEED_UPGRADE.get());
+                output.accept(ModItems.LUCK_UPGRADE.get());
+                output.accept(ModItems.EFFICIENCY_UPGRADE.get());
+                output.accept(ModItems.UNDERWATER_UPGRADE.get());
+                output.accept(ModItems.ATTACKRANGE_UPGRADE.get());
+                output.accept(ModItems.MININGRANGE_UPGRADE.get());
+                output.accept(ModItems.SWEEPING_UPGRADE.get());
+                output.accept(ModItems.PROTECTION_UPGRADE.get());
+
                 //TOOLS
                 for (String handle : ModItems.HANDLE_MATERIALS) {
                     for (String head : ModItems.TOOL_HEAD_MATERIALS) {
