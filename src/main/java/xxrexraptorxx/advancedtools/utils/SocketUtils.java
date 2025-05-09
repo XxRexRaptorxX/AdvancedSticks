@@ -3,6 +3,8 @@ package xxrexraptorxx.advancedtools.utils;
 import net.minecraft.world.item.ItemStack;
 import xxrexraptorxx.advancedtools.registry.ModComponents;
 
+import java.util.Objects;
+
 public class SocketUtils {
 
     public static ModComponents.SocketData getSocketData(ItemStack stack) {
@@ -14,7 +16,7 @@ public class SocketUtils {
 
 
     public static boolean hasEmptySockets(ItemStack stack) {
-        return getSocketData(stack).sockets().stream().anyMatch(ItemStack::isEmpty);
+        return Objects.requireNonNull(stack.get(ModComponents.SOCKET_COMPONENT.get())).sockets().isEmpty();
     }
 
 

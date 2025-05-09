@@ -38,6 +38,7 @@ import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import org.checkerframework.checker.units.qual.C;
 import xxrexraptorxx.advancedtools.items.CustomAxeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
@@ -224,7 +225,7 @@ public class Events {
                         if (Config.SHOW_STICK_TYPE.get()) {
                             event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
-                            event.getToolTip().add(3, Component.empty());
+                            //event.getToolTip().add(3, Component.empty());
                         }
                     }
 
@@ -249,19 +250,21 @@ public class Events {
     public static void onGatherComponents(RenderTooltipEvent.GatherComponents event) {
         ItemStack stack = event.getItemStack();
         Item item = stack.getItem();
+        boolean shiftDown = Screen.hasShiftDown();
 
-        if (SocketUtils.hasSockets(stack) && (!Config.HIDE_UPGADE_SLOTS.get() && SocketUtils.hasEmptySockets(stack) || (Config.HIDE_UPGADE_SLOTS.get() && Screen.hasShiftDown()))) {
+        if (SocketUtils.hasSockets(stack) && (!Config.HIDE_UPGADE_SLOTS.get() || (Config.HIDE_UPGADE_SLOTS.get() && shiftDown))) {
             var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
             var sockets = data.sockets();
             int maxSockets = ISocketTool.getSocketCount(item);
             int lineIndex;
 
-            if (Screen.hasShiftDown()) {
+            if (shiftDown) {
                 lineIndex = 4;
             } else {
                 lineIndex = 5;
             }
 
+            if (Config.HIDE_UPGADE_SLOTS.get() && shiftDown || !Config.HIDE_UPGADE_SLOTS.get() && (!SocketUtils.hasEmptySockets(stack) || !shiftDown))
             event.getTooltipElements().add(lineIndex, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
         }
     }
