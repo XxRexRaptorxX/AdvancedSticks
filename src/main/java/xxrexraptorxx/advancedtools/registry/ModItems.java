@@ -28,6 +28,20 @@ public class ModItems {
     public static final DeferredItem<CustomBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new CustomBowItem(new Item.Properties().durability(1560).setId(itemId("diamond_bow"))));
     public static final DeferredItem<CustomBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new CustomBowItem(new Item.Properties().durability(2030).setId(itemId("netherite_bow"))));
 
+    public static final DeferredItem<UpgradeItem> RARITY_UPGRADE = ITEMS.register("rarity_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_upgrade"))));
+    public static final DeferredItem<UpgradeItem> NETHERITE_UPGRADE = ITEMS.register("netherite_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("netherite_upgrade"))));
+    public static final DeferredItem<UpgradeItem> OBSIDIAN_UPGRADE = ITEMS.register("obsidian_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("obsidian_upgrade"))));
+    public static final DeferredItem<UpgradeItem> KNOCKBACK_UPGRADE = ITEMS.register("knockback_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("knockback_upgrade"))));
+    public static final DeferredItem<UpgradeItem> DAMAGE_UPGRADE = ITEMS.register("damage_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("damage_upgrade"))));
+    public static final DeferredItem<UpgradeItem> SPEED_UPGRADE = ITEMS.register("speed_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("speed_upgrade"))));
+    public static final DeferredItem<UpgradeItem> LUCK_UPGRADE = ITEMS.register("luck_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("luck_upgrade"))));
+    public static final DeferredItem<UpgradeItem> EFFICIENCY_UPGRADE = ITEMS.register("efficiency_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("efficiency_upgrade"))));
+    public static final DeferredItem<UpgradeItem> UNDERWATER_UPGRADE = ITEMS.register("underwater_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("underwater_upgrade"))));
+    public static final DeferredItem<UpgradeItem> ATTACKRANGE_UPGRADE = ITEMS.register("attackrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("attackrange_upgrade"))));
+    public static final DeferredItem<UpgradeItem> MININGRANGE_UPGRADE = ITEMS.register("miningrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("miningrange_upgrade"))));
+    public static final DeferredItem<UpgradeItem> SWEEPING_UPGRADE = ITEMS.register("sweeping_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("sweeping_upgrade"))));
+    public static final DeferredItem<UpgradeItem> PROTECTION_UPGRADE = ITEMS.register("protection_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("protection_upgrade"))));
+
     public static final String[] TOOL_TYPES = { "sword", "pickaxe", "axe", "shovel", "hoe" };
 
     public static final String[] VANILLA_HEAD_MATERIALS = { "wood", "stone", "iron", "gold", "diamond", "netherite" };
@@ -84,28 +98,7 @@ public class ModItems {
             }
         }
 
-        ITEMS.register("rarity_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_upgrade"))));
-        ITEMS.register("rarity_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_advanced_upgrade"))));
-        ITEMS.register("resistance_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("resistance_upgrade"))));
-        ITEMS.register("resistance_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("resistance_advanced_upgrade"))));
-        ITEMS.register("knockback_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("knockback_upgrade"))));
-        ITEMS.register("knockback_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("knockback_advanced_upgrade"))));
-        ITEMS.register("damage_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("damage_upgrade"))));
-        ITEMS.register("damage_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("damage_advanced_upgrade"))));
-        ITEMS.register("speed_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("speed_upgrade"))));
-        ITEMS.register("speed_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("speed_advanced_upgrade"))));
-        ITEMS.register("efficiency_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("efficiency_upgrade"))));
-        ITEMS.register("efficiency_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("efficiency_advanced_upgrade"))));
-        ITEMS.register("underwater_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("underwater_upgrade"))));
-        ITEMS.register("underwater_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("underwater_advanced_upgrade"))));
-        ITEMS.register("attackrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("attackrange_upgrade"))));
-        ITEMS.register("attackrange_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("attackrange_advanced_upgrade"))));
-        ITEMS.register("miningrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("miningrange_upgrade"))));
-        ITEMS.register("miningrange_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("miningrange_advanced_upgrade"))));
-        ITEMS.register("sweeping_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("sweeping_upgrade"))));
-        ITEMS.register("sweeping_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("sweeping_advanced_upgrade"))));
-        ITEMS.register("protection_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("protection_upgrade"))));
-        ITEMS.register("protection_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("protection_advanced_upgrade"))));
+        ITEMS.register("_upgrade", () -> new Item(new Item.Properties().setId(itemId("stick_" + handle))));
     }
 
 

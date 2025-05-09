@@ -29,6 +29,21 @@ public class ItemModelGen extends ItemModelGenerators {
         this.generateBow(ModItems.DIAMOND_BOW.get());
         this.generateBow(ModItems.NETHERITE_BOW.get());
 
+        //upgrades
+        this.generateFlatItem(ModItems.RARITY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.NETHERITE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.OBSIDIAN_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.KNOCKBACK_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.DAMAGE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.SPEED_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.LUCK_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.EFFICIENCY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.UNDERWATER_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.ATTACKRANGE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.MININGRANGE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.SWEEPING_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+        this.generateFlatItem(ModItems.PROTECTION_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
+
         //rods
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
