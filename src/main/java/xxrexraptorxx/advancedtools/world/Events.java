@@ -252,7 +252,7 @@ public class Events {
         Item item = stack.getItem();
         boolean shiftDown = Screen.hasShiftDown();
 
-        if (SocketUtils.hasSockets(stack) && (!Config.HIDE_UPGADE_SLOTS.get() || (Config.HIDE_UPGADE_SLOTS.get() && shiftDown))) {
+        if (SocketUtils.hasSockets(stack) && (Config.HIDE_UPGADE_SLOTS.get() ? shiftDown : (!SocketUtils.hasEmptySockets(stack) || !shiftDown))) {
             var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
             var sockets = data.sockets();
             int maxSockets = ISocketTool.getSocketCount(item);
@@ -264,7 +264,6 @@ public class Events {
                 lineIndex = 5;
             }
 
-            if (Config.HIDE_UPGADE_SLOTS.get() && shiftDown || !Config.HIDE_UPGADE_SLOTS.get() && (!SocketUtils.hasEmptySockets(stack) || !shiftDown))
             event.getTooltipElements().add(lineIndex, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
         }
     }
