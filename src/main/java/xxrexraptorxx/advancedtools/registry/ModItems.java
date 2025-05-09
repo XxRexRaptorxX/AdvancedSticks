@@ -83,6 +83,29 @@ public class ModItems {
                 }
             }
         }
+
+        ITEMS.register("rarity_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_upgrade"))));
+        ITEMS.register("rarity_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_advanced_upgrade"))));
+        ITEMS.register("resistance_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("resistance_upgrade"))));
+        ITEMS.register("resistance_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("resistance_advanced_upgrade"))));
+        ITEMS.register("knockback_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("knockback_upgrade"))));
+        ITEMS.register("knockback_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("knockback_advanced_upgrade"))));
+        ITEMS.register("damage_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("damage_upgrade"))));
+        ITEMS.register("damage_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("damage_advanced_upgrade"))));
+        ITEMS.register("speed_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("speed_upgrade"))));
+        ITEMS.register("speed_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("speed_advanced_upgrade"))));
+        ITEMS.register("efficiency_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("efficiency_upgrade"))));
+        ITEMS.register("efficiency_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("efficiency_advanced_upgrade"))));
+        ITEMS.register("underwater_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("underwater_upgrade"))));
+        ITEMS.register("underwater_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("underwater_advanced_upgrade"))));
+        ITEMS.register("attackrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("attackrange_upgrade"))));
+        ITEMS.register("attackrange_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("attackrange_advanced_upgrade"))));
+        ITEMS.register("miningrange_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("miningrange_upgrade"))));
+        ITEMS.register("miningrange_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("miningrange_advanced_upgrade"))));
+        ITEMS.register("sweeping_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("sweeping_upgrade"))));
+        ITEMS.register("sweeping_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("sweeping_advanced_upgrade"))));
+        ITEMS.register("protection_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("protection_upgrade"))));
+        ITEMS.register("protection_advanced_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("protection_advanced_upgrade"))));
     }
 
 

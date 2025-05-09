@@ -2,6 +2,7 @@ package xxrexraptorxx.advancedtools.world;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Either;
+import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -38,6 +39,7 @@ import net.neoforged.neoforge.client.event.RenderTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import org.checkerframework.checker.units.qual.C;
 import xxrexraptorxx.advancedtools.items.CustomAxeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
@@ -265,6 +267,14 @@ public class Events {
             }
 
             event.getTooltipElements().add(lineIndex, Either.right(new SocketTooltipComponent(maxSockets, sockets)));
+        }
+    }
+
+
+    @SubscribeEvent
+    public static void onInventoryTick(PlayerTickEvent.Pre event) {
+        for (ItemStack stack : event.getEntity().getInventory()) {
+            SocketUtils.applySocketEffects(stack);
         }
     }
 
