@@ -39,6 +39,7 @@ public class CreativeModeTabs {
                 }
 
                 //UPGRADES
+                output.accept(ModItems.EMPTY_UPGRADE.get());
                 output.accept(ModItems.RARITY_UPGRADE.get());
                 output.accept(ModItems.NETHERITE_UPGRADE.get());
                 output.accept(ModItems.OBSIDIAN_UPGRADE.get());

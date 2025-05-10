@@ -1,10 +1,12 @@
 package xxrexraptorxx.advancedtools.datagen;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,12 +14,14 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
+import xxrexraptorxx.advancedtools.items.UpgradeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.enums.Upgrades;
 
 import java.util.Arrays;
 import java.util.concurrent.CompletableFuture;
@@ -31,7 +35,7 @@ public class ItemTagGen extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        //rods
+        //RODS
         for (String handle : ModItems.HANDLE_MATERIALS) {
             AdvancedTools.LOGGER.info("Generate item tags for " + handle);
 
@@ -54,7 +58,7 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
             }
 
-            // tools
+            //TOOLS
             for (String otherHandle : ModItems.HANDLE_MATERIALS) {
                 for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
@@ -103,8 +107,8 @@ public class ItemTagGen extends ItemTagsProvider {
         }
 
 
-        //vanilla
-        TagKey<Item> woodStick = ModTags.createItemTag("c", "sticks/wood");
+        //VANILLA
+        TagKey<Item> woodStick = ModTags.createCItemTag("sticks/wood");
         tag(woodStick).add(Items.STICK);
         tag(ModTags.createCItemTag("sticks")).addTags(woodStick);
 
@@ -112,7 +116,7 @@ public class ItemTagGen extends ItemTagsProvider {
         tag(endRod).add(Blocks.END_ROD.asItem());
         tag(ModTags.createCItemTag( "rods")).addTags(endRod);
 
-        //bows
+        //BOWS
         tag(Tags.Items.TOOLS_BOW).add(
                 ModItems.IRON_BOW.get(),
                 ModItems.GOLD_BOW.asItem(),
@@ -126,6 +130,27 @@ public class ItemTagGen extends ItemTagsProvider {
                 ModItems.NETHERITE_BOW.asItem()
         );
 
-    }
+        //UPGRADES
+        tag(ModTags.createModItemTag("rarity_upgrade_materials")).addTags(Tags.Items.GEMS_EMERALD);
+        tag(ModTags.createModItemTag("netherite_upgrade_materials")).addTags(Tags.Items.INGOTS_NETHERITE);
+        tag(ModTags.createModItemTag("obsidian_upgrade_materials")).addTags(Tags.Items.OBSIDIANS);
+        tag(ModTags.createModItemTag("knockback_upgrade_materials")).add(Items.TNT);
+        tag(ModTags.createModItemTag("damage_upgrade_materials")).add(Blocks.QUARTZ_BLOCK.asItem()).addOptionalTags(ModTags.createCItemTag("storage_blocks/quartz"));
+        tag(ModTags.createModItemTag("speed_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_REDSTONE);
+        tag(ModTags.createModItemTag("luck_upgrade_materials")).add(Blocks.AMETHYST_BLOCK.asItem()).addOptionalTags(ModTags.createCItemTag("storage_blocks/amethyst"));
+        tag(ModTags.createModItemTag("efficiency_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_LAPIS);
+        tag(ModTags.createModItemTag("underwater_upgrade_materials")).addTags(Tags.Items.GEMS_PRISMARINE);
+        tag(ModTags.createModItemTag("attackrange_upgrade_materials")).addTags(Tags.Items.RODS_BLAZE);
+        tag(ModTags.createModItemTag("miningrange_upgrade_materials")).addTags(Tags.Items.RODS_BREEZE);
+        tag(ModTags.createModItemTag("sweeping_upgrade_materials")).add(Items.PHANTOM_MEMBRANE);
+        tag(ModTags.createModItemTag("protection_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_IRON);
 
+        for (Item item : BuiltInRegistries.ITEM.stream().toList()) {
+            if (item instanceof UpgradeItem) {
+
+                tag(ModTags.createModItemTag("upgrades")).add(item);
+            }
+        }
+
+    }
 }

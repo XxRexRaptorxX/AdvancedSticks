@@ -23,13 +23,14 @@ public class ItemModelGen extends ItemModelGenerators {
 
     @Override
     public void run() {
-        //bows
+        //BOWS
         this.generateBow(ModItems.IRON_BOW.get());
         this.generateBow(ModItems.GOLD_BOW.get());
         this.generateBow(ModItems.DIAMOND_BOW.get());
         this.generateBow(ModItems.NETHERITE_BOW.get());
 
-        //upgrades
+        //UPGRADES
+        this.generateFlatItem(ModItems.EMPTY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.RARITY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.NETHERITE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.OBSIDIAN_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
@@ -44,7 +45,7 @@ public class ItemModelGen extends ItemModelGenerators {
         this.generateFlatItem(ModItems.SWEEPING_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.PROTECTION_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
 
-        //rods
+        //RODS
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
             if (!ToolUtils.isRod(handle)) {
@@ -53,7 +54,7 @@ public class ItemModelGen extends ItemModelGenerators {
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
 
-            //tools
+            //TOOLS
             for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
 

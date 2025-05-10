@@ -13,6 +13,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
@@ -24,6 +25,10 @@ public class ModTags {
 
     public static TagKey<Item> createItemTag(String id, String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
+    }
+
+    public static TagKey<Item> createModItemTag(String name) {
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(References.MODID, name));
     }
 
     public static TagKey<Item> createCItemTag(String name) {

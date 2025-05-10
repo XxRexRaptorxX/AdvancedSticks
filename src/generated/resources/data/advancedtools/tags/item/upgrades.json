@@ -1,0 +1,18 @@
+{
+  "values": [
+    "advancedtools:empty_upgrade",
+    "advancedtools:rarity_upgrade",
+    "advancedtools:netherite_upgrade",
+    "advancedtools:obsidian_upgrade",
+    "advancedtools:knockback_upgrade",
+    "advancedtools:damage_upgrade",
+    "advancedtools:speed_upgrade",
+    "advancedtools:luck_upgrade",
+    "advancedtools:efficiency_upgrade",
+    "advancedtools:underwater_upgrade",
+    "advancedtools:attackrange_upgrade",
+    "advancedtools:miningrange_upgrade",
+    "advancedtools:sweeping_upgrade",
+    "advancedtools:protection_upgrade"
+  ]
+}

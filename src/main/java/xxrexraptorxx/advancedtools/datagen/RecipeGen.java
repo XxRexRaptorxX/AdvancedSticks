@@ -2,6 +2,7 @@ package xxrexraptorxx.advancedtools.datagen;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -10,13 +11,16 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.conditions.*;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.jetbrains.annotations.NotNull;
+import xxrexraptorxx.advancedtools.items.UpgradeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.enums.Upgrades;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -32,11 +36,13 @@ public class RecipeGen extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
+        //RODS
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
             TagKey<Item> rodTag = ModTags.createItemTag("c", "rods/" + ToolUtils.transformMaterialNames(handle));
             AdvancedTools.LOGGER.info("Generate Recipes with " + handle + "-handle of tag [" + rodTag.location() + "]");
 
+            //TOOLS
             for (String tool : ModItems.TOOL_TYPES) {
                 if (!handle.equals("wood")) {
                     AdvancedTools.LOGGER.info("Try smithing for [" + handle + "_stick_netherite_" + tool + "]");
@@ -45,7 +51,6 @@ public class RecipeGen extends RecipeProvider {
                 }
             }
 
-            //TOOLS
             for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                 if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
 
@@ -58,6 +63,13 @@ public class RecipeGen extends RecipeProvider {
                     shovelRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_shovel")));
                     hoeRecipe(rodTag, craftingMaterialTag, head, BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_hoe")));
                 }
+            }
+        }
+
+        //UPGRADES
+        for (Item item : BuiltInRegistries.ITEM.stream().toList()) {
+            if (item instanceof UpgradeItem upgradeItem && item != ModItems.EMPTY_UPGRADE.get()) {
+                upgradeRecipe(upgradeItem);
             }
         }
     }
@@ -130,6 +142,17 @@ public class RecipeGen extends RecipeProvider {
                 .pattern("# ")
                 .unlockedBy("has_" + headTag.location().getPath(), has(headTag))
                 .save(output.withConditions(createTagNotEmptyConditions(headTag, headMaterial, handleTag)));
+    }
+
+
+    public void upgradeRecipe(UpgradeItem result) {
+        AdvancedTools.LOGGER.info("Generate crafting recipe for " + getItemName(result));
+        TagKey<Item> craftingTag = Upgrades.fromItem(result).get().getCraftingTag();
+
+        shapeless(RecipeCategory.MISC, result)
+                .requires(craftingTag)
+                .unlockedBy(getHasName(ModItems.EMPTY_UPGRADE), has(ModItems.EMPTY_UPGRADE))
+                .save(output.withConditions(new NotCondition(new TagEmptyCondition<>(craftingTag))));
     }
 
 
