@@ -34,7 +34,7 @@ Advanced Tools (aka AdvancedSticks) recognizes when other mods add materials suc
 
 ![review picture](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/resources/review.png?raw=true)
 
-(All values and how they are calculated can be found [here](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/java/xxrexraptorxx/advancedsticks/utils/ToolMaterials.java))
+(All values and how they are calculated can be found [here](https://github.com/XxRexRaptorxX/AdvancedSticks/blob/master/src/main/java/xxrexraptorxx/advancedtools/utils/enums/Materials.java)
 
 -----
 
