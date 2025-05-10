@@ -1,4 +1,4 @@
-// 1.21.5	2025-05-10T20:29:58.7869998	Tags for minecraft:item mod id advancedtools
+// 1.21.5	2025-05-10T20:59:06.74014	Tags for minecraft:item mod id advancedtools
 6a046e2c77f4c1f53d6fdaf41ba86d3154f52a07 data/advancedtools/tags/item/adamant_tools.json
 a987f9d74f2dac0f3fca70e5f9d9238610653a93 data/advancedtools/tags/item/advanced_alloy_tools.json
 34cb3ecc55775e303a4f302c26c6b705810b8713 data/advancedtools/tags/item/advanced_tools.json
@@ -10,7 +10,7 @@ a04907ed99a3507a13e622ed9c541bf454b31795 data/advancedtools/tags/item/antimony_t
 e0de9dd6c5655a144c2203cf93ec859eab802690 data/advancedtools/tags/item/apatite_tools.json
 e50d8a3402061e7ccb3f63f5ad84701f8e6463c2 data/advancedtools/tags/item/aquite_tools.json
 62ad250240c2e74bc6b9a5106a0b60754c348a99 data/advancedtools/tags/item/atomic_alloy_tools.json
-c31625f85ecccae87293a270bacce343fbbecbbc data/advancedtools/tags/item/attackrange_upgrade_materials.json
+c31625f85ecccae87293a270bacce343fbbecbbc data/advancedtools/tags/item/attack_range_upgrade_materials.json
 6783d14ef73ba6c5e43cdd5eab6027767155935e data/advancedtools/tags/item/basalz_tools.json
 c9ddb44eb7bd77bd94c3b901f0aaae889ab3be58 data/advancedtools/tags/item/bedrock_tools.json
 849e6ea06348b33deae5899633d9dbac21a57394 data/advancedtools/tags/item/benitoite_tools.json
@@ -86,7 +86,7 @@ a739feed884e8d3dda844cee5433c27ca9485ec3 data/advancedtools/tags/item/luck_upgra
 f47fa1b02248536eb27263ecc8c19cc6b374664d data/advancedtools/tags/item/magentite_tools.json
 207dcdd5357400a55ae5f98e714dcda250c2ef41 data/advancedtools/tags/item/manasteel_tools.json
 20f6139d5b14fb7ed34cace469bd3881f3436c35 data/advancedtools/tags/item/manganese_tools.json
-8bf78e4a2cc3fc7c2bda0390bb03905855d8bce5 data/advancedtools/tags/item/miningrange_upgrade_materials.json
+8bf78e4a2cc3fc7c2bda0390bb03905855d8bce5 data/advancedtools/tags/item/mining_range_upgrade_materials.json
 0acd1c99dbbac4a449ad9ac6f597fca4f4540904 data/advancedtools/tags/item/netherite_diamond_tools.json
 2544257c7442fc3fb9a0fd919790a3ba9761966c data/advancedtools/tags/item/netherite_emerald_tools.json
 89865849959ce19b4df7c14ec647596e70295bbe data/advancedtools/tags/item/netherite_gold_tools.json

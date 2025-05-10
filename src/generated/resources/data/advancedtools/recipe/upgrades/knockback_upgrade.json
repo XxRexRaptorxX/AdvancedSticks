@@ -10,6 +10,7 @@
   ],
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
+  "group": "advancedtools_upgrades",
   "ingredients": [
     "advancedtools:empty_upgrade",
     "#advancedtools:knockback_upgrade_materials"

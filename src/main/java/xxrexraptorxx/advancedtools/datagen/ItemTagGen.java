@@ -143,8 +143,8 @@ public class ItemTagGen extends ItemTagsProvider {
         tag(ModTags.createModItemTag("luck_upgrade_materials")).add(Blocks.AMETHYST_BLOCK.asItem()).addOptionalTags(ModTags.createCItemTag("storage_blocks/amethyst"));
         tag(ModTags.createModItemTag("efficiency_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_LAPIS);
         tag(ModTags.createModItemTag("underwater_upgrade_materials")).addTags(Tags.Items.GEMS_PRISMARINE);
-        tag(ModTags.createModItemTag("attackrange_upgrade_materials")).addTags(Tags.Items.RODS_BLAZE);
-        tag(ModTags.createModItemTag("miningrange_upgrade_materials")).addTags(Tags.Items.RODS_BREEZE);
+        tag(ModTags.createModItemTag("attack_range_upgrade_materials")).addTags(Tags.Items.RODS_BLAZE);
+        tag(ModTags.createModItemTag("mining_range_upgrade_materials")).addTags(Tags.Items.RODS_BREEZE);
         tag(ModTags.createModItemTag("sweeping_upgrade_materials")).add(Items.PHANTOM_MEMBRANE);
         tag(ModTags.createModItemTag("protection_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_IRON);
 

@@ -150,6 +150,7 @@ public class RecipeGen extends RecipeProvider {
         TagKey<Item> craftingTag = Upgrades.fromItem(result).get().getCraftingTag();
 
         shapeless(RecipeCategory.MISC, result)
+                .group(References.MODID + "_upgrades")
                 .requires(ModItems.EMPTY_UPGRADE)
                 .requires(craftingTag)
                 .unlockedBy(getHasName(ModItems.EMPTY_UPGRADE), has(ModItems.EMPTY_UPGRADE))

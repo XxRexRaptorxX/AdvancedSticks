@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 public enum Upgrades {
 
     EMPTY_UPGRADE(0, null, null, null),
-    RARITY_UPGRADE(2, ModTags.createModItemTag("rarity_upgrade_materials"), null, DataComponents.RARITY),
+    RARITY_UPGRADE(3, ModTags.createModItemTag("rarity_upgrade_materials"), null, DataComponents.RARITY),
     NETHERITE_UPGRADE(1, ModTags.createModItemTag("netherite_upgrade_materials"), null, DataComponents.DAMAGE_RESISTANT),
     OBSIDIAN_UPGRADE(1, ModTags.createModItemTag("obsidian_upgrade_materials"), null, DataComponents.DAMAGE_RESISTANT),
     KNOCKBACK_UPGRADE(10, ModTags.createModItemTag("knockback_upgrade_materials"), Attributes.ATTACK_KNOCKBACK, null),
