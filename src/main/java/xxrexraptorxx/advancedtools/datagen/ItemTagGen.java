@@ -56,6 +56,9 @@ public class ItemTagGen extends ItemTagsProvider {
 
             if (handle.contains("gold")) {
                 tag(ItemTags.PIGLIN_LOVED).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
+
+            } else if (handle.contains("soularium")) {
+                tag(ItemTags.PIGLIN_REPELLENTS).add(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc("stick_" + handle)));
             }
 
             //TOOLS
@@ -68,9 +71,6 @@ public class ItemTagGen extends ItemTagsProvider {
                             Item item = BuiltInRegistries.ITEM.getValue(loc);
 
                             if (item != Items.AIR) {
-                                // Nur Items hinzufügen, wenn:
-                                // - handle == aktueller handle
-                                // - oder head == aktueller handle
                                 if (otherHandle.equals(handle) || head.equals(handle)) {
                                     tag(toolTag).add(item);
 
@@ -84,6 +84,9 @@ public class ItemTagGen extends ItemTagsProvider {
 
                                     if (head.contains("gold") || handle.contains("gold")) {
                                         tag(ItemTags.PIGLIN_LOVED).add(item);
+
+                                    } else if (head.contains("soularium") || handle.contains("soularium")) {
+                                        tag(ItemTags.PIGLIN_REPELLENTS).add(item);
                                     }
                                 }
                             }

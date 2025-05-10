@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "advancedtools:obsidian_upgrade_materials"
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "advancedtools:empty_upgrade",
+    "#advancedtools:obsidian_upgrade_materials"
+  ],
+  "result": {
+    "count": 1,
+    "id": "advancedtools:obsidian_upgrade"
+  }
+}
