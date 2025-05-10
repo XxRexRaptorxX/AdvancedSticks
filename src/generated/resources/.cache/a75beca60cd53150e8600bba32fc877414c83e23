@@ -1,4 +1,4 @@
-// 1.21.5	2025-05-10T19:59:51.1361635	Tags for minecraft:item mod id advancedtools
+// 1.21.5	2025-05-10T20:29:58.7869998	Tags for minecraft:item mod id advancedtools
 6a046e2c77f4c1f53d6fdaf41ba86d3154f52a07 data/advancedtools/tags/item/adamant_tools.json
 a987f9d74f2dac0f3fca70e5f9d9238610653a93 data/advancedtools/tags/item/advanced_alloy_tools.json
 34cb3ecc55775e303a4f302c26c6b705810b8713 data/advancedtools/tags/item/advanced_tools.json
@@ -461,5 +461,6 @@ b7b3e71150d9622d1bf82f7cdce128d98a104c17 data/minecraft/tags/item/enchantable/bo
 310fee8a08cdcc2447270b82c308d2d84c091e2b data/minecraft/tags/item/hoes.json
 2a7e83081b1d9558a12af8b80071caa3759ccca3 data/minecraft/tags/item/pickaxes.json
 301e594bba3b1320836b41ff9df87b2d2bc1ba8e data/minecraft/tags/item/piglin_loved.json
+fd3c3105d71fdea4c475989a6145e8207aa92919 data/minecraft/tags/item/piglin_repellents.json
 ba900ae29f8082ebc6248474f28053afc9f15d49 data/minecraft/tags/item/shovels.json
 ef992a91c765b15580c30818ea8694b29b56ee7f data/minecraft/tags/item/swords.json
