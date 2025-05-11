@@ -11,6 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.main.References;
 
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class ModComponents {
 
@@ -23,13 +24,19 @@ public class ModComponents {
 
 
     public record SocketData(List<ItemStack> sockets) {
-        public static final SocketData EMPTY = new SocketData(List.of());
+        public static final SocketData EMPTY = new SocketData(generateEmptySockets(3)); // z. B. 3 Sockets
+
+        public static List<ItemStack> generateEmptySockets(int count) {
+            return IntStream.range(0, count)
+                    .mapToObj(i -> new ItemStack(ModItems.EMPTY_SOCKET.get()))
+                    .toList();
+        }
 
         public static final Codec<SocketData> SOCKET_CODEC = RecordCodecBuilder.create(inst ->
                 inst.group(Codec.list(ItemStack.CODEC)
-                        .fieldOf("sockets")
-                        .forGetter(SocketData::sockets)
-                ).apply(inst, SocketData::new)
+                                .fieldOf("sockets")
+                                .forGetter(SocketData::sockets))
+                        .apply(inst, SocketData::new)
         );
     }
 

@@ -1,6 +1,6 @@
 {
   "_comment": "If your recipe viewer mod shows you the tools of materials although they are not available in the game, you can switch them off manually here. According to this scheme: “#advancedtools:silver_tools”, “#advancedtools:iridium_tools”, The other items would still be craftable because of this.",
   "values": [
-
+      "advancedtools:empty_socket"
   ]
 }

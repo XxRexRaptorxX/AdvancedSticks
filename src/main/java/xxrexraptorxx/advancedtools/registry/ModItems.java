@@ -28,6 +28,7 @@ public class ModItems {
     public static final DeferredItem<CustomBowItem> DIAMOND_BOW = ITEMS.register("diamond_bow", () -> new CustomBowItem(new Item.Properties().durability(1560).setId(itemId("diamond_bow"))));
     public static final DeferredItem<CustomBowItem> NETHERITE_BOW = ITEMS.register("netherite_bow", () -> new CustomBowItem(new Item.Properties().durability(2030).setId(itemId("netherite_bow"))));
 
+    public static final DeferredItem<Item> EMPTY_SOCKET = ITEMS.register("empty_socket", () -> new Item(new Item.Properties().setId(itemId("empty_socket"))));
     public static final DeferredItem<UpgradeItem> EMPTY_UPGRADE = ITEMS.register("empty_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("empty_upgrade"))));
     public static final DeferredItem<UpgradeItem> RARITY_UPGRADE = ITEMS.register("rarity_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("rarity_upgrade"))));
     public static final DeferredItem<UpgradeItem> NETHERITE_UPGRADE = ITEMS.register("netherite_upgrade", () -> new UpgradeItem(new Item.Properties().setId(itemId("netherite_upgrade"))));

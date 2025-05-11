@@ -2,7 +2,6 @@ package xxrexraptorxx.advancedtools.world;
 
 import com.mojang.authlib.GameProfile;
 import com.mojang.datafixers.util.Either;
-import dev.architectury.event.events.common.TickEvent;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -18,7 +17,6 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -36,12 +34,11 @@ import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.fml.loading.FMLPaths;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RenderTooltipEvent;
+import net.neoforged.neoforge.event.ItemStackedOnOtherEvent;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import org.checkerframework.checker.units.qual.C;
-import xxrexraptorxx.advancedtools.items.CustomAxeItem;
+import xxrexraptorxx.advancedtools.items.UpgradeItem;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModComponents;
@@ -60,7 +57,6 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -254,7 +250,7 @@ public class Events {
         Item item = stack.getItem();
         boolean shiftDown = Screen.hasShiftDown();
 
-        if (SocketUtils.hasSockets(stack) && (Config.HIDE_UPGADE_SLOTS.get() ? shiftDown : (!SocketUtils.hasEmptySockets(stack) || !shiftDown))) {
+        if (SocketUtils.hasSockets(stack) && (Config.HIDE_UPGADE_SLOTS.get() ? shiftDown : (!SocketUtils.hasNoUpgrades(stack) || !shiftDown))) {
             var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
             var sockets = data.sockets();
             int maxSockets = ISocketTool.getSocketCount(item);
@@ -280,26 +276,29 @@ public class Events {
 
 
     @SubscribeEvent
-    public static void onRightClick(PlayerInteractEvent.RightClickItem evt) {
-        ItemStack tool = evt.getItemStack();      // das Tool im Haupt-Handslot
-        ItemStack held = new ItemStack(Items.DIAMOND); // Item, das eingesetzt werden soll
+    public static void onItemStackedOnOther(ItemStackedOnOtherEvent event) {
+        Player player         = event.getPlayer();
+        ItemStack upgrade    = event.getCarriedItem();
+        ItemStack tool    = event.getStackedOnItem();
 
-        // Prüfe, ob es dein Tool ist und ob noch Platz ist:
-        if (tool.getItem() instanceof CustomAxeItem) {
-            tool.update(
-                    ModComponents.SOCKET_COMPONENT.get(),
-                    ModComponents.SocketData.EMPTY,
-                    old -> {
-                        if (old.sockets().size() < ISocketTool.getSocketCount(tool.getItem())) {
-                            var list = new ArrayList<>(old.sockets());
-                            list.add(held.split(1));
-                            return new ModComponents.SocketData(List.copyOf(list));
-                        }
-                        return old; // kein Platz
-                    }
-            );
-            evt.setCancellationResult(InteractionResult.SUCCESS);
-            evt.setCanceled(true);
+        if (!(tool.getItem() instanceof ISocketTool || !(upgrade.getItem() instanceof UpgradeItem))) {
+            return;
+        }
+
+        //add upgrade to free sockets
+        boolean applied = SocketUtils.addUpgrade(tool, upgrade);
+
+        if (!applied) {
+            //no free socket
+            return;
+        }
+
+        upgrade.shrink(1);
+
+        event.setCanceled(true);
+
+        if (player.containerMenu != null) {
+            player.containerMenu.broadcastChanges();
         }
     }
 

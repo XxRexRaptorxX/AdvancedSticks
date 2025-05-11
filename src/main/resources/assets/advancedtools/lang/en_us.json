@@ -395,5 +395,7 @@
   "item.advancedtools.iron_bow": "Iron Bow",
   "item.advancedtools.gold_bow": "Golden Bow",
   "item.advancedtools.diamond_bow": "Diamond Bow",
-  "item.advancedtools.netherite_bow": "Netherite Bow"
+  "item.advancedtools.netherite_bow": "Netherite Bow",
+
+  "item.advancedtools.empty_socket": ""
 }
