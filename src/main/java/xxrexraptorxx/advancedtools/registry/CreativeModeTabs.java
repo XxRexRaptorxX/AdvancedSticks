@@ -30,7 +30,7 @@ public class CreativeModeTabs {
                 //RODS
                 for (String handle : ModItems.HANDLE_MATERIALS) {
                     if (!ToolUtils.isRod(handle)) {
-                        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+                        if (Config.debug_mode()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
 
                         if (ToolUtils.isValidRodForCreative(handle)) {
                             output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
@@ -59,8 +59,7 @@ public class CreativeModeTabs {
                     for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                         if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
 
-                            if (Config.DEBUG_MODE.get())
-                                AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + head + " head.");
+                            if (Config.debug_mode()) AdvancedTools.LOGGER.info("Register tools in creative tab: " + handle + " handle + " + head + " head.");
 
                             if (ToolUtils.isValidForCreative(head, handle)) {
                                 for (String tool : ModItems.TOOL_TYPES) {

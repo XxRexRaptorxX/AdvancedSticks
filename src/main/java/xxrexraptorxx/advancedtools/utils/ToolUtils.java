@@ -208,11 +208,11 @@ public class ToolUtils {
      * Tests whether the rod fulfills all criteria to appear in the creative tab
      */
     public static boolean isValidRodForCreative(String rod) {
-        if (Config.FORCE_ALL_MATERIALS.get()) {
+        if (Config.force_all_materials()) {
             return true;
 
         } else {
-            return Config.HANDLE_MATERIALS.get().contains(rod) && ModTags.isTagValidAndHasMatchingItems(rod);
+            return Config.handle_materials().contains(rod) && ModTags.isTagValidAndHasMatchingItems(rod);
         }
     }
 
@@ -221,11 +221,11 @@ public class ToolUtils {
      * Tests whether the item fulfills all criteria to appear in the creative tab
      */
     public static boolean isValidForCreative(String head, String handle) {
-        if (Config.FORCE_ALL_MATERIALS.get()) {
+        if (Config.force_all_materials()) {
             return true;
 
         } else {
-            return Config.HANDLE_MATERIALS.get().contains(handle) && Config.TOOL_HEAD_MATERIALS.get().contains(head) &&
+            return Config.handle_materials().contains(handle) && Config.tool_head_materials().contains(head) &&
                     ModTags.isTagValidAndHasMatchingItems(handle) && ModTags.isTagValidAndHasMatchingItems(head);
         }
     }
@@ -289,7 +289,7 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHandleMaterialEffect(String material) {
-        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+        if (Config.disabled_material_effects().contains(material)) return null;
 
         return switch (material) {
             case "lumium", "glowstone" -> new MobEffectInstance(MobEffects.GLOWING, 30);
@@ -320,7 +320,7 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHandleMaterialRandomEffect(String material) {
-        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+        if (Config.disabled_material_effects().contains(material)) return null;
 
         Random random = new Random();
 
@@ -350,7 +350,7 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHeadMaterialEffect(String material) {
-        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+        if (Config.disabled_material_effects().contains(material)) return null;
 
         Random random = new Random();
 
@@ -378,7 +378,7 @@ public class ToolUtils {
 
     @Nullable
     public static MobEffectInstance getHeadMaterialRandomEffect(String material) {
-        if (Config.DISABLED_MATERIAL_EFFECTS.get().contains(material)) return null;
+        if (Config.disabled_material_effects().contains(material)) return null;
 
         Random random = new Random();
 

@@ -19,7 +19,7 @@ public class REIIntegration implements REIClientPlugin {
 
     @Override
     public void registerDisplays(DisplayRegistry registry) {
-        if (Config.JEI_DESCRIPTION.get()) {
+        if (Config.jei_description()) {
             BuiltinClientPlugin instance = BuiltinClientPlugin.getInstance();
 
             for (String handle : ModItems.HANDLE_MATERIALS) {

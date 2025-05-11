@@ -8,7 +8,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import xxrexraptorxx.advancedtools.items.*;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
@@ -80,7 +82,7 @@ public class ModItems {
 
             for (String head : TOOL_HEAD_MATERIALS) {
                 if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
-                    //AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + head + " head. " + ToolMaterials.getMaterial(handle, head));
+                    if (Config.debug_mode()) AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + head + " head. " + ModToolMaterials.getMaterial(handle, head));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_sword", props -> new CustomSwordItem(ModToolMaterials.getMaterial(handle, head),
                             3, -4.0f + ModToolMaterials.getSpeed(head, "sword"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));

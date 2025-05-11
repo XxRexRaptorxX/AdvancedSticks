@@ -69,7 +69,7 @@ public class Events {
 
     @SubscribeEvent
     public static void onClientTick(ClientTickEvent.Pre event) {
-        if (Config.UPDATE_CHECKER != null && Config.UPDATE_CHECKER.get()) {
+        if (Config.update_checker()) {
 
             if (!hasShownUp && Minecraft.getInstance().screen == null) {
                 var player = Minecraft.getInstance().player;
@@ -109,7 +109,7 @@ public class Events {
         Player player = event.getEntity();
         Level level = player.level();
 
-        if (Config.PATREON_REWARDS != null && Config.PATREON_REWARDS.get()) {
+        if (Config.patreon_rewards()) {
             // Check if the player already has rewards
             if (!player.getInventory().contains(new ItemStack(Items.PAPER))) {
                 if (player instanceof ServerPlayer serverPlayer) { // Ensure the player is a ServerPlayer
@@ -204,11 +204,11 @@ public class Events {
             if (!ToolUtils.excludedMods(namespace) && item.components().has(DataComponents.TOOL) && ToolUtils.isToolType(name)) {
 
                 if (namespace.equals(References.MODID)) {
-                    if (Screen.hasShiftDown() && Config.SHOW_MATERIAL_STATS.get()) {
+                    if (Screen.hasShiftDown() && Config.show_material_stats()) {
                         event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0], Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
 
                     } else {
-                        if (Config.SHOW_STICK_TYPE.get()) {
+                        if (Config.show_stick_type()) {
                             event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
                             event.getToolTip().add(3, Component.empty());
@@ -220,7 +220,7 @@ public class Events {
                         event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
 
                     } else {
-                        if (Config.SHOW_STICK_TYPE.get()) {
+                        if (Config.show_stick_type()) {
                             event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                             //event.getToolTip().add(3, Component.empty());
@@ -228,13 +228,13 @@ public class Events {
                     }
 
                 } else if (namespace.equals("bedrockminer")) {
-                    if (Config.SHOW_STICK_TYPE.get()) {
+                    if (Config.show_stick_type()) {
                         event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                         event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_diamond")).withStyle(ChatFormatting.DARK_GRAY));
                     }
 
                 } else {
-                    if (Config.SHOW_STICK_TYPE.get()) {
+                    if (Config.show_stick_type()) {
                         event.getToolTip().add(1, FormattingUtils.setModLangComponent("message", "handle").withStyle(ChatFormatting.GRAY));
                         event.getToolTip().add(2, Component.literal(" ").append(FormattingUtils.setModLangComponent("item", "stick_wood")).withStyle(ChatFormatting.DARK_GRAY));
                     }
@@ -250,7 +250,7 @@ public class Events {
         Item item = stack.getItem();
         boolean shiftDown = Screen.hasShiftDown();
 
-        if (SocketUtils.hasSockets(stack) && (Config.HIDE_UPGADE_SLOTS.get() ? shiftDown : (!SocketUtils.hasNoUpgrades(stack) || !shiftDown))) {
+        if (SocketUtils.hasSockets(stack) && (Config.hide_upgade_slots() ? shiftDown : (!SocketUtils.hasNoUpgrades(stack) || !shiftDown))) {
             var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
             var sockets = data.sockets();
             int maxSockets = ISocketTool.getSocketCount(item);

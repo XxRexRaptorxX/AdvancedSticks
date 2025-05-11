@@ -54,13 +54,13 @@ public class ModTags {
             // Get all possible tags for this material
             List<TagKey<Item>> tagKeys = getPossibleTagsForMaterial(material);
 
-            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Searching for items of material [" + ToolUtils.transformMaterialNames(material) + "] in multiple possible tags");
+            if (Config.debug_mode()) AdvancedTools.LOGGER.info("Searching for items of material [" + ToolUtils.transformMaterialNames(material) + "] in multiple possible tags");
 
             // Iterate through all possible tags
             for (TagKey<Item> tagKey : tagKeys) {
                 Optional<? extends HolderLookup<Item>> lookup = lookupProvider.lookup(BuiltInRegistries.ITEM.key());
 
-                if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Checking tag [" + tagKey.location() + "]");
+                if (Config.debug_mode()) AdvancedTools.LOGGER.info("Checking tag [" + tagKey.location() + "]");
 
                 // Check if tag exists and has entries
                 if (lookup.isPresent()) {
@@ -73,11 +73,11 @@ public class ModTags {
                         for (Holder<Item> itemHolder : tagEntries.get()) {
                             // Get resource location of items
                             ResourceLocation itemName = BuiltInRegistries.ITEM.getKey(itemHolder.value());
-                            if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Entry found: " + itemName);
+                            if (Config.debug_mode()) AdvancedTools.LOGGER.info("Entry found: " + itemName);
 
                             // Check if entry is registered as item ingame
                             if (BuiltInRegistries.ITEM.containsKey(itemName)) {
-                                if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Item is registered!");
+                                if (Config.debug_mode()) AdvancedTools.LOGGER.info("Item is registered!");
                                 return true;
                             }
                         }
@@ -91,7 +91,7 @@ public class ModTags {
 
     @Deprecated
     public static boolean isTagContainedInAnother(TagKey<Block> innerTag, TagKey<Block> outerTag) {
-        if (Config.DEBUG_MODE.get()) AdvancedTools.LOGGER.info("Compare if block tag [" + innerTag.location() + "] is in [" + outerTag.location() + "]");
+        if (Config.debug_mode()) AdvancedTools.LOGGER.info("Compare if block tag [" + innerTag.location() + "] is in [" + outerTag.location() + "]");
 
         if (Minecraft.getInstance().level != null) {
             HolderLookup<Block> blockLookup = Minecraft.getInstance().level.registryAccess().lookupOrThrow(Registries.BLOCK);

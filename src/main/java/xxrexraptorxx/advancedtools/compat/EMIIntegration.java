@@ -21,7 +21,7 @@ public class EMIIntegration implements EmiPlugin {
 
     @Override
     public void register(EmiRegistry registry) {
-        if (Config.JEI_DESCRIPTION.get()) {
+        if (Config.jei_description()) {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {;
                     for (String tool : ModItems.TOOL_TYPES) {
