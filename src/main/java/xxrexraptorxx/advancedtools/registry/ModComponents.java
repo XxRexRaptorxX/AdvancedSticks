@@ -24,13 +24,7 @@ public class ModComponents {
 
 
     public record SocketData(List<ItemStack> sockets) {
-        public static final SocketData EMPTY = new SocketData(generateEmptySockets(3)); // z. B. 3 Sockets
-
-        public static List<ItemStack> generateEmptySockets(int count) {
-            return IntStream.range(0, count)
-                    .mapToObj(i -> new ItemStack(ModItems.EMPTY_SOCKET.get()))
-                    .toList();
-        }
+        public static final SocketData EMPTY = new SocketData(List.of());
 
         public static final Codec<SocketData> SOCKET_CODEC = RecordCodecBuilder.create(inst ->
                 inst.group(Codec.list(ItemStack.CODEC)

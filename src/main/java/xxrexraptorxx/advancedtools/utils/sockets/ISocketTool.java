@@ -2,6 +2,7 @@ package xxrexraptorxx.advancedtools.utils.sockets;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
 
@@ -15,5 +16,10 @@ public interface ISocketTool {
         Materials headMaterial = Materials.fromName(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + name));
 
         return handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots();
+    }
+
+
+    default int getSocketCount(ItemStack stack) {
+        return ISocketTool.getSocketCount(stack.getItem());
     }
 }

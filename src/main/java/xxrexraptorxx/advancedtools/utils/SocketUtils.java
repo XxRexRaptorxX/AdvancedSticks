@@ -28,7 +28,33 @@ public class SocketUtils {
      * Reads the SocketData (or returns EMPTY if not present).
      */
     public static ModComponents.SocketData getSocketData(ItemStack stack) {
-        return stack.has(ModComponents.SOCKET_COMPONENT.get()) ? stack.get(ModComponents.SOCKET_COMPONENT.get()) : ModComponents.SocketData.EMPTY;
+        int maxSlots = 0;
+        if (stack.getItem() instanceof ISocketTool tool) {
+            maxSlots = tool.getSocketCount(stack);
+        }
+
+        // raw data (might contain old zeros)
+        var raw = stack.has(ModComponents.SOCKET_COMPONENT.get())
+                ? stack.get(ModComponents.SOCKET_COMPONENT.get()).sockets()
+                : Collections.<ItemStack>emptyList();
+
+        // 1) Clean any zero-count or truly empty stacks → AIR(1)
+        List<ItemStack> cleaned = raw.stream()
+                .map(s -> (s.isEmpty() || s.getCount() <= 0)
+                        ? new ItemStack(Items.AIR, 1)
+                        : s.copy()) // copy to avoid mutating original
+                .collect(Collectors.toList());
+
+        // 2) Pad up to maxSlots with AIR(1)
+        while (cleaned.size() < maxSlots) {
+            cleaned.add(new ItemStack(Items.AIR, 1));
+        }
+        // 3) If someone somehow wrote *too many*, truncate
+        if (cleaned.size() > maxSlots) {
+            cleaned = cleaned.subList(0, maxSlots);
+        }
+
+        return new ModComponents.SocketData(List.copyOf(cleaned));
     }
 
 

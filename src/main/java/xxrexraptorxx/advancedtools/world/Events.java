@@ -46,6 +46,7 @@ import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.SocketUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.enums.Upgrades;
 import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.sockets.SocketTooltipComponent;
 
@@ -57,6 +58,7 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -249,7 +251,7 @@ public class Events {
         boolean shiftDown = Screen.hasShiftDown();
 
         if (SocketUtils.hasSockets(stack) && (Config.getHideUpgradeSlots() ? shiftDown : (!SocketUtils.hasNoUpgrades(stack) || !shiftDown))) {
-            var data = stack.get(ModComponents.SOCKET_COMPONENT.get());
+            ModComponents.SocketData data = SocketUtils.getSocketData(stack);
             var sockets = data.sockets();
             int maxSockets = ISocketTool.getSocketCount(item);
             int lineIndex;
@@ -265,34 +267,80 @@ public class Events {
     }
 
 
-    @SubscribeEvent
-    public static void onInventoryTick(PlayerTickEvent.Pre event) {
-        for (ItemStack stack : event.getEntity().getInventory()) {
-            SocketUtils.applySocketEffects(stack);
-        }
-    }
+    //@SubscribeEvent
+    //public static void onInventoryTick(PlayerTickEvent.Pre event) {
+    //    for (ItemStack stack : event.getEntity().getInventory()) {
+    //        SocketUtils.applySocketEffects(stack);
+    //    }
+    //}
 
 
     @SubscribeEvent
     public static void onItemStackedOnOther(ItemStackedOnOtherEvent event) {
-        Player player         = event.getPlayer();
-        ItemStack upgrade    = event.getCarriedItem();
+        Player player     = event.getPlayer();
+        ItemStack upgrade = event.getCarriedItem();
         ItemStack tool    = event.getStackedOnItem();
 
-        if (!(tool.getItem() instanceof ISocketTool || !(upgrade.getItem() instanceof UpgradeItem))) {
+        // 1) Only our socket‐tools + upgrade items
+        if (!(tool.getItem() instanceof ISocketTool) ||
+                !(upgrade.getItem() instanceof UpgradeItem)) {
             return;
         }
 
-        //add upgrade to free sockets
-        boolean applied = SocketUtils.addUpgrade(tool, upgrade);
+        // 2) Pull exactly one from the cursor as a safe count=1 stack
+        ItemStack toInsert = upgrade.split(1);
+        if (toInsert.isEmpty()) {
+            return;
+        }
 
+        // 3) Snapshot old data
+        ModComponents.SocketData oldData = SocketUtils.getSocketData(tool);
+
+        // 4) Perform the component update (returns the new SocketData)
+        ModComponents.SocketData newData = tool.update(
+                ModComponents.SOCKET_COMPONENT.get(),
+                oldData,
+                old -> {
+                    int max = ((ISocketTool)tool.getItem()).getSocketCount(tool);
+                    List<ItemStack> list = new ArrayList<>(old.sockets());
+
+                    // try stacking into existing slot
+                    Upgrades up = Upgrades.fromItem(toInsert.getItem()).get();
+                    for (int i = 0; i < list.size(); i++) {
+                        ItemStack s = list.get(i);
+                        if (s.getItem() == toInsert.getItem() && s.getCount() < up.getMaxCount()) {
+                            s.grow(1);
+                            return new ModComponents.SocketData(List.copyOf(list));
+                        }
+                    }
+
+                    // else pad & insert into first AIR slot
+                    while (list.size() < max) {
+                        list.add(new ItemStack(Items.AIR, 1));
+                    }
+                    for (int i = 0; i < max; i++) {
+                        if (list.get(i).getItem() == Items.AIR) {
+                            list.set(i, toInsert);
+                            return new ModComponents.SocketData(List.copyOf(list));
+                        }
+                    }
+
+                    // no change
+                    return old;
+                }
+        );
+
+        // 5) detect whether anything changed
+        boolean applied = !newData.equals(oldData);
         if (!applied) {
-            //no free socket
+            // restore the split back onto the cursor
+            upgrade.grow(toInsert.getCount());
             return;
         }
 
-        event.setCanceled(true);
 
+        // 7) Cancel vanilla behavior & update container
+        event.setCanceled(true);
         if (player.containerMenu != null) {
             player.containerMenu.broadcastChanges();
         }
