@@ -28,7 +28,7 @@ public class JEIIntegration implements IModPlugin {
 
     @Override
     public void registerRecipes(@NotNull IRecipeRegistration registry) {
-        if (Config.jei_description()) {
+        if (Config.getJEIDescription()) {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {

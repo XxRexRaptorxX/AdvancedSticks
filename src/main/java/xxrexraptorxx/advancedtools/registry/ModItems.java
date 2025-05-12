@@ -15,6 +15,7 @@ import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class ModItems {
 
@@ -82,22 +83,22 @@ public class ModItems {
 
             for (String head : TOOL_HEAD_MATERIALS) {
                 if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
-                    if (Config.debug_mode()) AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + head + " head. " + ModToolMaterials.getMaterial(handle, head));
+                    if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Register tools with: " + handle + " handle + " + head + " head. " + ModToolMaterials.getMaterial(handle, head));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_sword", props -> new CustomSwordItem(ModToolMaterials.getMaterial(handle, head),
-                            3, -4.0f + ModToolMaterials.getSpeed(head, "sword"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));
+                            3, -4.0f + ModToolMaterials.getSpeed(head, "sword"), props));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_pickaxe", props -> new CustomPickaxeItem(ModToolMaterials.getMaterial(handle, head),
-                            1, -4.0f + ModToolMaterials.getSpeed(head, "pickaxe"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));
+                            1, -4.0f + ModToolMaterials.getSpeed(head, "pickaxe"), props));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_axe", props -> new CustomAxeItem(ModToolMaterials.getMaterial(handle, head),
-                            6, -4.0f + ModToolMaterials.getSpeed(head, "axe"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));
+                            6, -4.0f + ModToolMaterials.getSpeed(head, "axe"), props));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_shovel", props -> new CustomShovelItem(ModToolMaterials.getMaterial(handle, head),
-                            1.5f, -4.0f + ModToolMaterials.getSpeed(head, "shovel"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));
+                            1.5f, -4.0f + ModToolMaterials.getSpeed(head, "shovel"), props));
 
                     ITEMS.registerItem(handle + FormattingUtils.AT_INFIX + head + "_hoe", props -> new CustomHoeItem(ModToolMaterials.getMaterial(handle, head),
-                            0, -4.0f + ModToolMaterials.getSpeed(head, "hoe"), props.component(ModComponents.SOCKET_COMPONENT.get(), ModComponents.SocketData.EMPTY)));
+                            0, -4.0f + ModToolMaterials.getSpeed(head, "hoe"), props));
                 }
             }
         }
