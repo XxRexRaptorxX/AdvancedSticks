@@ -6,7 +6,10 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -15,6 +18,7 @@ import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactori
 import org.joml.Matrix4f;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
+import xxrexraptorxx.advancedtools.utils.SocketUtils;
 
 import java.util.List;
 
@@ -26,7 +30,7 @@ public class ClientTooltipFactories {
         event.register(SocketTooltipComponent.class, data -> new ClientTooltipComponent() {
 
             private final int maxSlots = data.maxSockets();
-            private final List<ItemStack> sockets = ((SocketTooltipComponent) data).sockets();
+            private final List<String> socketIds = ((SocketTooltipComponent) data).sockets();
             private static final int FRAME_COLOR = 0xFF555555;
             private static final int SLOT_COLOR = 0x55333333;
 
@@ -76,11 +80,17 @@ public class ClientTooltipFactories {
                     graphics.fill(slotX + 15,slotY + 1,  slotX + 16, slotY + 15, FRAME_COLOR);
 
                     //draw items
-                    if (i < sockets.size()) {
-                        ItemStack stack = sockets.get(i);
-
-                        if (!stack.isEmpty()) {
-                            graphics.renderItem(stack, slotX, slotY);
+                    if (i < socketIds.size()) {
+                        String id = socketIds.get(i);
+                        if (!id.equals(SocketUtils.EMPTY_SLOT)) {
+                            ResourceLocation loc = ResourceLocation.tryParse(id);
+                            if (loc != null) {
+                                Item item = BuiltInRegistries.ITEM.getValue(loc);
+                                if (item != null) {
+                                    ItemStack stack = new ItemStack(item);
+                                    graphics.renderItem(stack, slotX, slotY);
+                                }
+                            }
                         }
                     }
                 }

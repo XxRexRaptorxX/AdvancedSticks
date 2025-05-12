@@ -17,9 +17,4 @@ public interface ISocketTool {
 
         return handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots();
     }
-
-
-    default int getSocketCount(ItemStack stack) {
-        return ISocketTool.getSocketCount(stack.getItem());
-    }
 }
