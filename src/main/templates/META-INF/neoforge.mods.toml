@@ -15,6 +15,8 @@ logoFile="logo.png"
 authors="${mod_authors}"
 description='''Lets you build tools and weapons from components of many different materials with different stats, properties and effects!'''
 
+[modproperties.${mod_id}]
+configuredBackground="minecraft:textures/block/smithing_table_top.png"
 
 [[dependencies.${mod_id}]]
 modId="neoforge"
