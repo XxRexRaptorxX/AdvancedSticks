@@ -202,7 +202,7 @@ publishing {
 
 //Naming of the built mod jar file
 tasks.named('jar').configure {
-    archiveBaseName.set(mod_name.replace(" " , "").replace("(TowerDefenseBattleMode)", ""))
+    archiveBaseName.set(mod_name.replace(" " , ""))
     archiveVersion.set("${minecraft_version}-(v.${mod_version}-NEO)")
 }
 
