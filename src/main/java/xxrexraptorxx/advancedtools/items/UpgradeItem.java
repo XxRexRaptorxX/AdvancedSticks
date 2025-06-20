@@ -6,7 +6,7 @@ import net.minecraft.world.item.Rarity;
 public class UpgradeItem extends Item {
 
     public UpgradeItem(Properties properties) {
-        super(properties.rarity(Rarity.UNCOMMON));
+        super(properties.rarity(Rarity.UNCOMMON).stacksTo(16));
     }
 
 }

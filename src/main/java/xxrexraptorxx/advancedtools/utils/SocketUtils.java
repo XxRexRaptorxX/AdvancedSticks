@@ -11,14 +11,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
+import xxrexraptorxx.advancedtools.items.UpgradeItem;
+import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.registry.ModComponents;
+import xxrexraptorxx.advancedtools.utils.enums.Upgrades;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class SocketUtils {
 
+    public static final String SEPARATOR = ";";
     public static final String EMPTY_SLOT = Items.AIR.toString();
-
+    public static final String EMPTY_STACK = EMPTY_SLOT + SEPARATOR + "1";
 
     public static void setSockets(ItemStack stack, List<String> socketStrings) {
         stack.set(ModComponents.SOCKETS.value(), socketStrings);
@@ -32,13 +38,13 @@ public class SocketUtils {
 
     // Format: "modid:itemname;count"
     public static String serializeItemStack(ItemStack stack) {
-        if (stack.isEmpty()) return EMPTY_SLOT + ";1";
-        return BuiltInRegistries.ITEM.getKey(stack.getItem()) + ";" + stack.getCount();
+        if (stack.isEmpty()) return EMPTY_STACK;
+        return BuiltInRegistries.ITEM.getKey(stack.getItem()) + SEPARATOR + stack.getCount();
     }
 
 
     public static ItemStack deserializeItemStack(String entry) {
-        String[] parts = entry.split(";");
+        String[] parts = entry.split(SEPARATOR);
         if (parts.length != 2) return ItemStack.EMPTY;
 
         ResourceLocation id = ResourceLocation.parse(parts[0]);
@@ -83,7 +89,61 @@ public class SocketUtils {
     }
 
 
-   //public static void applySocketEffects(ItemStack stack) {
+    public static boolean insertOrStackUpgrade(ItemStack tool, ItemStack upgrade) {
+        if (!(tool.getItem() instanceof ISocketTool socketTool)) return false;
+        if (!(upgrade.getItem() instanceof UpgradeItem upItem)) return false;
+
+        AdvancedTools.LOGGER.info("Try to place a " + upItem + " into a " + tool.getItem());
+        int maxSlots = socketTool.getSocketCount(tool);
+
+        // 1) Read raw string list and make it mutable
+        List<String> raw = new ArrayList<>(SocketUtils.getSockets(tool));
+        // Pad with empty slots if needed
+        String empty = SocketUtils.serializeItemStack(ItemStack.EMPTY); // "minecraft:air;1"
+        while (raw.size() < maxSlots) {
+            raw.add(empty);
+        }
+        if (raw.size() > maxSlots) {
+            raw = new ArrayList<>(raw.subList(0, maxSlots));
+        }
+
+        // 2) Deserialize into a mutable list of ItemStacks
+        List<ItemStack> stacks = new ArrayList<>(SocketUtils.fromStringList(raw));
+        AdvancedTools.LOGGER.info("Old socket list: " + SocketUtils.toStringList(stacks));
+
+        // 3) Try stacking into an existing socket
+        int maxCount = Upgrades.fromItem(upItem).get().getMaxCount();
+        for (int i = 0; i < stacks.size(); i++) {
+            ItemStack s = stacks.get(i);
+            if (s.getItem() == upgrade.getItem() && s.getCount() < maxCount) {
+                s.grow(1);
+                // write back
+                SocketUtils.setSockets(tool, SocketUtils.toStringList(stacks));
+
+                AdvancedTools.LOGGER.info("New socket list: " + SocketUtils.toStringList(stacks));
+                return true;
+            }
+        }
+
+        // 4) Otherwise insert into the first empty slot
+        for (int i = 0; i < stacks.size(); i++) {
+            ItemStack s = stacks.get(i);
+            if (s.isEmpty() || s.getItem() == Items.AIR) {
+                stacks.set(i, new ItemStack(upgrade.getItem(), 1));
+                SocketUtils.setSockets(tool, SocketUtils.toStringList(stacks));
+
+                AdvancedTools.LOGGER.info("New socket list: " + SocketUtils.toStringList(stacks));
+                return true;
+            }
+        }
+
+        AdvancedTools.LOGGER.info("No free sockets!");
+        return false;
+    }
+
+
+
+    //public static void applySocketEffects(ItemStack stack) {
    //    if (!stack.has(ModComponents.SOCKET_COMPONENT.get())) return;
 
    //    ModComponents.SocketData socketData = stack.get(ModComponents.SOCKET_COMPONENT.get());

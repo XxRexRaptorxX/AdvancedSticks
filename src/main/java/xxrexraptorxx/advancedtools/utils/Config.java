@@ -2,15 +2,18 @@ package xxrexraptorxx.advancedtools.utils;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.neoforge.common.ModConfigSpec;
+import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class Config {
 
     public static final String CATEGORY_GENERAL = "general";
