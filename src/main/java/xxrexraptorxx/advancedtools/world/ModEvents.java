@@ -37,7 +37,7 @@ public class ModEvents {
         for (String handle : ModItems.HANDLE_MATERIALS) {
             //RODS
             if (ToolUtils.isFireResistant(handle)) {
-                if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + handle);
+                //if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + handle);
 
                 event.modify(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)), builder ->
                         builder.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE)));

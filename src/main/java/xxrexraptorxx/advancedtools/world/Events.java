@@ -39,9 +39,9 @@ public class Events {
                         if (Config.getShowStickType()) {
                             event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
-                            event.getToolTip().add(3, Component.empty());
                         }
                     }
+                    event.getToolTip().add(3, Component.empty());
 
                 } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
                     if (Screen.hasShiftDown() && Config.getShowMaterialStats()) {
@@ -51,7 +51,6 @@ public class Events {
                         if (Config.getShowStickType()) {
                             event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
                             event.getToolTip().add(2, Component.literal(" ").append(FormattingHelper.setModLangComponent("item", References.MODID, "stick_wood", ChatFormatting.DARK_GRAY)));
-                            //event.getToolTip().add(3, Component.empty());
                         }
                     }
 
