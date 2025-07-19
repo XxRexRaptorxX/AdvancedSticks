@@ -6,6 +6,7 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
+import xxrexraptorxx.magmacore.content.TagHelper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -88,12 +89,12 @@ public class ModToolMaterials {
      */
     private static void addMaterial(String baseName, String handleName, int baseUses, int handleUses, float baseSpeed, float handleSpeed, float baseDamage, float handleDamage, int baseEnchantability, int handleEnchantability) {
         String materialName = baseName + "_" + handleName;
-        ToolMaterial material = new ToolMaterial(ModTags.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(baseName) + "_tool"),
+        ToolMaterial material = new ToolMaterial(TagHelper.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(baseName) + "_tool"),
                 baseUses * 3 + handleUses * 2,
                 baseSpeed * 3 + handleSpeed * 2,
                 baseDamage * 3 + handleDamage * 2,
                 baseEnchantability * 3 + handleEnchantability * 2,
-                ModTags.createCItemTag(ToolUtils.transformMaterialNames(baseName) + "_tool_materials"));
+                TagHelper.createCItemTag(ToolUtils.transformMaterialNames(baseName) + "_tool_materials"));
         TOOL_MATERIALS.put(materialName, material);
     }
 

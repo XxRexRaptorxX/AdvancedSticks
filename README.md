@@ -60,6 +60,11 @@ Advanced Tools (aka AdvancedSticks) recognizes when other mods add materials suc
 
 ## 🗃️ Dependencies
 
+### Required:
+- **Magma Core**
+  - Provides basic code and features such as update-checker
+  - [CurseForge][cf_magmacore] | [Modrinth][mr_magmacore]
+
 ### Supported:
 - **Just Enough Items (JEI)**
   - Provides some additional info pages and shows all recipes
@@ -125,6 +130,8 @@ Advanced Tools (aka AdvancedSticks) recognizes when other mods add materials suc
   <a href="https://bisecthosting.com/REXRAPTOR"><img src="https://github.com/XxRexRaptorxX/General/blob/main/BH_REX_Bisect.png?raw=true" alt="Bisect Hosting - 25% off with code: REXRAPTOR"/></a>
 </p>
 
+[cf_magmacore]: https://www.curseforge.com/minecraft/mc-mods/magma-core
+[mr_magmacore]: https://modrinth.com/mod/magma-core
 [cf_er]: https://www.curseforge.com/minecraft/mc-mods/advanced-sticks-extra-resources-add-on
 [mr_er]: https://modrinth.com/mod/advanced-sticks---extra-resources-add-on
 [cf_jei]: https://www.curseforge.com/minecraft/mc-mods/jei

@@ -5,6 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -17,6 +18,8 @@ import xxrexraptorxx.advancedtools.registry.ModComponents;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
 import xxrexraptorxx.advancedtools.utils.Config;
+import xxrexraptorxx.magmacore.config.ConfigHelper;
+import xxrexraptorxx.magmacore.main.ModRegistry;
 
 /**
  * @author XxRexRaptorxX (RexRaptor)
@@ -31,12 +34,14 @@ public class AdvancedTools {
     public AdvancedTools(IEventBus bus, ModContainer container) {
         ModToolMaterials.registerToolMaterials();
 
-        Config.init(container);
         ModItems.init(bus);
         ModComponents.init(bus);
         CreativeModeTabs.init(bus);
 
         bus.addListener(AdvancedTools::packSetup);
+
+        ConfigHelper.registerConfigs(container, References.MODID, true, Config.SERVER_CONFIG, Config.CLIENT_CONFIG);
+        ModRegistry.register(References.MODID, References.NAME, References.URL);
     }
 
 
@@ -65,5 +70,14 @@ public class AdvancedTools {
                 false,
                 Pack.Position.TOP
         );
+    }
+
+
+    @Mod(value = References.MODID, dist = Dist.CLIENT)
+    public static class AdvancedToolsClient {
+
+        public AdvancedToolsClient(ModContainer container) {
+            ConfigHelper.registerIngameConfig(container);
+        }
     }
 }

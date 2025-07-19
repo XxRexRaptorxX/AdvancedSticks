@@ -34,3 +34,12 @@ versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
 
+[[dependencies.${mod_id}]]
+modId="magmacore"
+referralUrl="https://www.curseforge.com/minecraft/mc-mods/magma-core"
+reason="Provides basic code and features such as update-checker"
+type="required"
+versionRange="${magmacore_version_range}"
+ordering="AFTER"
+side="BOTH"
+

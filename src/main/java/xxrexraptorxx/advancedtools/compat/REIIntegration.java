@@ -8,11 +8,12 @@ import me.shedaniel.rei.plugin.client.BuiltinClientPlugin;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
+import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 @REIPluginClient
 public class REIIntegration implements REIClientPlugin {
@@ -26,7 +27,7 @@ public class REIIntegration implements REIClientPlugin {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
 
-                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemModelGen.getItemLoc(handle + FormattingUtils.AT_INFIX + base + "_" + tool))), Component.empty(), list -> {
+                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + base + "_" + tool))), Component.empty(), list -> {
                             list.add(ToolUtils.getToolStatDescription(handle, base));
                             return list;
                         });

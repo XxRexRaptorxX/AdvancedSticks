@@ -12,6 +12,7 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Arrays;
 
@@ -24,7 +25,7 @@ public class CreativeModeTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MAIN_TAB = CREATIVE_MODE_TABS.register(References.MODID, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup." + References.MODID + "_tab"))
-            .icon(() -> BuiltInRegistries.ITEM.getValue(getItemLoc( "iron_stick_diamond_pickaxe")).getDefaultInstance())
+            .icon(() -> BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "iron_stick_diamond_pickaxe")).getDefaultInstance())
             .displayItems((params, output) -> {
 
                 //RODS
@@ -63,7 +64,7 @@ public class CreativeModeTabs {
 
                             if (ToolUtils.isValidForCreative(head, handle)) {
                                 for (String tool : ModItems.TOOL_TYPES) {
-                                    output.accept(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + "_stick_" + head + "_" + tool)));
+                                    output.accept(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + "_stick_" + head + "_" + tool)));
                                 }
                             }
                         }
@@ -81,10 +82,5 @@ public class CreativeModeTabs {
 
     private static ResourceLocation getStickLoc(String name){
         return ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_" + name);
-    }
-
-
-    private static ResourceLocation getItemLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(References.MODID, name);
     }
 }

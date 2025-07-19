@@ -1,6 +1,5 @@
 package xxrexraptorxx.advancedtools.items;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
@@ -11,8 +10,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
-import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Objects;
 
@@ -31,7 +31,7 @@ public class CustomAxeItem extends AxeItem implements ISocketTool {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
-        String name = BuiltInRegistries.ITEM.getKey(this).getPath();
+        String name = ItemHelper.getPath(this);
         int index = name.indexOf("_");
         String handle = name.substring(0, index);
 

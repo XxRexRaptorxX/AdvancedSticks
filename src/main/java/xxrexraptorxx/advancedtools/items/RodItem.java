@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public class RodItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
-        String name = BuiltInRegistries.ITEM.getKey(this).getPath();
+        String name = ItemHelper.getPath(this);
         int index = name.indexOf("_");
         String handle = name.substring(0, index);
 

@@ -16,33 +16,13 @@ import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.TagHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class ModTags {
-
-    public static TagKey<Item> createItemTag(String id, String name) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
-    }
-
-    public static TagKey<Item> createModItemTag(String name) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(References.MODID, name));
-    }
-
-    public static TagKey<Item> createCItemTag(String name) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
-    }
-
-    public static TagKey<Block> createBlockTag(String id, String name) {
-        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(id, name));
-    }
-
-    public static TagKey<Block> createCBlockTag(String name) {
-        return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
-    }
-
 
     /**
      * Tests whether an item tag is not empty and has at least one existing item registered.
@@ -117,53 +97,53 @@ public class ModTags {
         // Add special material tags
         if (ToolUtils.isSpecial(material)) {
             if (material.equals("wither_bone")) {
-                tags.add(createCItemTag("bones/wither"));
+                tags.add(TagHelper.createCItemTag("bones/wither"));
             } else if (material.equals("bone")) {
-                tags.add(createCItemTag("bones/regular"));
+                tags.add(TagHelper.createCItemTag("bones/regular"));
             } else if (material.equals("carbon")) {
-                tags.add(createCItemTag("plates/carbon"));
-                tags.add(createCItemTag("ingots/carbon"));
+                tags.add(TagHelper.createCItemTag("plates/carbon"));
+                tags.add(TagHelper.createCItemTag("ingots/carbon"));
             } else if (material.equals("plastic")) {
-                tags.add(createCItemTag("pellets/plastic"));
-                tags.add(createCItemTag("plastic_sheets"));
-                tags.add(createCItemTag("plastic"));
+                tags.add(TagHelper.createCItemTag("pellets/plastic"));
+                tags.add(TagHelper.createCItemTag("plastic_sheets"));
+                tags.add(TagHelper.createCItemTag("plastic"));
             } else if (material.equals("silicon")) {
-                tags.add(createCItemTag("silicon"));
-                tags.add(createCItemTag("ingots/silicon"));
+                tags.add(TagHelper.createCItemTag("silicon"));
+                tags.add(TagHelper.createCItemTag("ingots/silicon"));
             } else if (material.equals("bedrock")) {
-                tags.add(createCItemTag("ingots/bedrock"));
-                tags.add(createCItemTag("ingots/bedrock_alloy"));
-                tags.add(createCItemTag("ingots/refined_bedrock"));
+                tags.add(TagHelper.createCItemTag("ingots/bedrock"));
+                tags.add(TagHelper.createCItemTag("ingots/bedrock_alloy"));
+                tags.add(TagHelper.createCItemTag("ingots/refined_bedrock"));
             } else if (material.equals("redstone")) {
-                tags.add(createCItemTag("ingots/redstone"));
-                tags.add(createCItemTag("ingots/refined_redstone"));
-                tags.add(createCItemTag("ingots/redstone_alloy"));
+                tags.add(TagHelper.createCItemTag("ingots/redstone"));
+                tags.add(TagHelper.createCItemTag("ingots/refined_redstone"));
+                tags.add(TagHelper.createCItemTag("ingots/redstone_alloy"));
             } else if (material.equals("glowstone")) {
-                tags.add(createCItemTag("ingots/glowstone"));
-                tags.add(createCItemTag("ingots/refined_glowstone"));
-                tags.add(createCItemTag("ingots/glowstone_alloy"));
+                tags.add(TagHelper.createCItemTag("ingots/glowstone"));
+                tags.add(TagHelper.createCItemTag("ingots/refined_glowstone"));
+                tags.add(TagHelper.createCItemTag("ingots/glowstone_alloy"));
             } else if (material.equals("obsidian")) {
-                tags.add(createCItemTag("ingots/obsidian"));
-                tags.add(createCItemTag("ingots/obsidian_alloy"));
-                tags.add(createCItemTag("ingots/refined_obsidian"));
+                tags.add(TagHelper.createCItemTag("ingots/obsidian"));
+                tags.add(TagHelper.createCItemTag("ingots/obsidian_alloy"));
+                tags.add(TagHelper.createCItemTag("ingots/refined_obsidian"));
             } else if (material.equals("superconductor")) {
-                tags.add(createCItemTag("ingots/superconductor"));
-                tags.add(createCItemTag("ingots/superconductor_alloy"));
+                tags.add(TagHelper.createCItemTag("ingots/superconductor"));
+                tags.add(TagHelper.createCItemTag("ingots/superconductor_alloy"));
             } else if (material.equals("wood") || material.equals("wooden"))  {
-                tags.add(createCItemTag("wooden_tool_materials"));
+                tags.add(TagHelper.createCItemTag("wooden_tool_materials"));
             } else if (material.equals("stone")) {
-                tags.add(createCItemTag("stone_tool_materials"));
+                tags.add(TagHelper.createCItemTag("stone_tool_materials"));
             } else {
                 // Standard rod tags for materials that do not have normal base materials (e.g. enchanted_stick or basalz_rod)
-                tags.add(createCItemTag( "rods/" + material));
+                tags.add(TagHelper.createCItemTag( "rods/" + material));
             }
 
         } else {
             // Add standard material tags
             if (ToolUtils.isGem(material)) {
-                tags.add(createCItemTag("gems/" + material));
+                tags.add(TagHelper.createCItemTag("gems/" + material));
             } else {
-                tags.add(createCItemTag( "ingots/" + material));
+                tags.add(TagHelper.createCItemTag( "ingots/" + material));
             }
 
         }

@@ -11,6 +11,7 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Arrays;
 import java.util.function.BiConsumer;
@@ -61,7 +62,7 @@ public class ItemModelGen extends ItemModelGenerators {
                     if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
                         AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + head + " head with " + handle + " handle");
 
-                        this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_" + tool)));
+                        this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + head + "_" + tool)));
                     }
                 }
             }
@@ -73,7 +74,7 @@ public class ItemModelGen extends ItemModelGenerators {
 
 
     public void generateLayeredHandheldItem(Item item) {
-        String name = BuiltInRegistries.ITEM.getKey(item).getPath();
+        String name = ItemHelper.getPath(item);
         String[] parts = name.split("_");
         String stickType;
         String toolType;
@@ -105,15 +106,11 @@ public class ItemModelGen extends ItemModelGenerators {
 
 
     public static ResourceLocation getTextureLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(References.MODID, "item/" + name);
+        return ItemHelper.getLocation(References.MODID, "item/" + name);
     }
 
     public static ResourceLocation getStickLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_" + name);
-    }
-
-    public static ResourceLocation getItemLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(References.MODID, name);
+        return ItemHelper.getLocation(References.MODID, "stick_" + name);
     }
 
 }

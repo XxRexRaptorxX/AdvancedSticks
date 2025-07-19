@@ -6,7 +6,6 @@ import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.component.DamageResistant;
-import net.minecraft.world.level.ItemLike;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -20,12 +19,13 @@ import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.SocketUtils;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = References.MODID)
 public class ModEvents {
 
     /**
@@ -49,7 +49,7 @@ public class ModEvents {
                         if(!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
                             if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + tool + " with " + head + " head and " + handle + " handle");
 
-                            event.modify(BuiltInRegistries.ITEM.getValue(ModItems.getItemLoc(handle + FormattingUtils.AT_INFIX + head + "_" + tool)), builder ->
+                            event.modify(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID,handle + FormattingUtils.AT_INFIX + head + "_" + tool)), builder ->
                                     builder.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE)));
                         }
                     }

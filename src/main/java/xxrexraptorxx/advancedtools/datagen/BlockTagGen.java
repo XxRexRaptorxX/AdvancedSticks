@@ -8,9 +8,9 @@ import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
-import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
+import xxrexraptorxx.magmacore.content.TagHelper;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,8 +26,8 @@ public class BlockTagGen extends BlockTagsProvider {
             AdvancedTools.LOGGER.info("Generate block tags for " + head);
 
             Materials headMaterial = Materials.fromName(head).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + head));
-            TagKey<Block> needsTag = ModTags.createCBlockTag("needs_" + ToolUtils.transformMaterialNames(head) + "_tool");
-            TagKey<Block> incorrectTag = ModTags.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(head) + "_tool");
+            TagKey<Block> needsTag = TagHelper.createCBlockTag("needs_" + ToolUtils.transformMaterialNames(head) + "_tool");
+            TagKey<Block> incorrectTag = TagHelper.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(head) + "_tool");
 
             tag(incorrectTag).addTags(headMaterial.getIncorrectForMaterialKey()).remove(needsTag);
         }

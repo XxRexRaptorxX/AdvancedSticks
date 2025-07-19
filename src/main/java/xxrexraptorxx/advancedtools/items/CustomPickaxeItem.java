@@ -12,6 +12,7 @@ import net.minecraft.world.item.ToolMaterial;
 import org.jetbrains.annotations.Nullable;
 import xxrexraptorxx.advancedtools.utils.sockets.ISocketTool;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
+import xxrexraptorxx.magmacore.content.ItemHelper;
 
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public class CustomPickaxeItem extends Item implements ISocketTool {
 
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
-        String name = BuiltInRegistries.ITEM.getKey(this).getPath();
+        String name = ItemHelper.getPath(this);
         int index = name.indexOf("_");
         String handle = name.substring(0, index);
 

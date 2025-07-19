@@ -17,12 +17,12 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
 import org.joml.Matrix4f;
 import xxrexraptorxx.advancedtools.main.References;
-import xxrexraptorxx.advancedtools.utils.FormattingUtils;
 import xxrexraptorxx.advancedtools.utils.SocketUtils;
+import xxrexraptorxx.magmacore.utils.FormattingHelper;
 
 import java.util.List;
 
-@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = References.MODID, value = Dist.CLIENT)
 public class ClientTooltipFactories {
 
     @SubscribeEvent
@@ -55,7 +55,7 @@ public class ClientTooltipFactories {
             @Override
             public void renderText(Font font, int x, int y, Matrix4f matrix, MultiBufferSource.BufferSource buffers) {
                 if (!Screen.hasShiftDown()) {
-                    Component title = Component.translatable(FormattingUtils.setLangTag("message", "sockets")).withStyle(ChatFormatting.GRAY);
+                    Component title = FormattingHelper.setModLangComponent("message", References.MODID, "sockets", ChatFormatting.GRAY);
 
                     font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
                 }

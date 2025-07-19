@@ -14,36 +14,17 @@ import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
 import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
+import xxrexraptorxx.magmacore.utils.FormattingHelper;
 
 public class FormattingUtils {
 
     public static final String AT_INFIX = "_stick_";
 
 
-    public static String capitalizeWords(String string) {
-        if (string == null || string.isEmpty()) {
-            return string;
-        }
-
-        String[] words = string.split(" ");
-        StringBuilder capitalizedString = new StringBuilder();
-
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                capitalizedString.append(Character.toUpperCase(word.charAt(0)))
-                        .append(word.substring(1).toLowerCase())
-                        .append(" ");
-            }
-        }
-
-        return capitalizedString.toString().trim();
-    }
-
-
     public static Component getHandleEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHandleMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialRandomEffect(material).getEffect().value();
-            return FormattingUtils.setModLangComponent("message","random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHandleMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialEffect(material).getEffect().value();
@@ -57,7 +38,7 @@ public class FormattingUtils {
     public static Component getHeadEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHeadMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialRandomEffect(material).getEffect().value();
-            return FormattingUtils.setModLangComponent("message", "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHeadMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialEffect(material).getEffect().value();
@@ -174,21 +155,6 @@ public class FormattingUtils {
         } else {
             return ChatFormatting.YELLOW;
         }
-    }
-
-
-    public static String setLangTagPrefix(String prefix) {
-        return prefix + "." + References.MODID + ".";
-    }
-
-
-    public static String setLangTag(String prefix, String suffix) {
-        return prefix + "." + References.MODID + "." + suffix;
-    }
-
-
-    public static MutableComponent setModLangComponent(String prefix, String suffix) {
-        return Component.translatable(setLangTag(prefix, suffix));
     }
 
 }

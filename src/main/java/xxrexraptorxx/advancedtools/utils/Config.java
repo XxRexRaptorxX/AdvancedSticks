@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@EventBusSubscriber(modid = References.MODID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = References.MODID)
 public class Config {
 
     public static final String CATEGORY_GENERAL = "general";

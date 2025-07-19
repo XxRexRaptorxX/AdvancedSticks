@@ -13,11 +13,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ToolMaterial;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
+import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.registry.ModTags;
 import xxrexraptorxx.advancedtools.registry.ModToolMaterials;
 import xxrexraptorxx.advancedtools.utils.enums.Materials;
 import xxrexraptorxx.advancedtools.utils.enums.ToolMaterialStatTypes;
+import xxrexraptorxx.magmacore.utils.FormattingHelper;
 
 import javax.annotation.Nullable;
 import java.text.DecimalFormat;
@@ -35,21 +37,21 @@ public class ToolUtils {
     public static String getStickFromName(Item item) {
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
 
-        if  (BuiltInRegistries.ITEM.getKey(item).getNamespace().equals(ResourceLocation.DEFAULT_NAMESPACE)) {
-            return FormattingUtils.setModLangComponent("item","stick_wood").getString();
+        if (BuiltInRegistries.ITEM.getKey(item).getNamespace().equals(ResourceLocation.DEFAULT_NAMESPACE)) {
+            return FormattingHelper.setModLangComponent("item", References.MODID, "stick_wood").getString();
 
         } else {
             String handle = Objects.requireNonNull(getPartsFromTool(name))[0];
 
             if (isVanillaRod(handle)) {
                 if(handle.equals("end")) {
-                    return Component.translatable("block.minecraft." + handle + "_rod").getString();
+                    return FormattingHelper.setModLangComponent("block", "minecraft", handle + "_rod").getString();
                 } else {
-                    return Component.translatable("item.minecraft." + handle + "_rod").getString();
+                    return FormattingHelper.setModLangComponent("item", "minecraft", handle + "_rod").getString();
                 }
 
             } else {
-                return FormattingUtils.setModLangComponent("item","stick_" + handle).getString();
+                return FormattingHelper.setModLangComponent("item", References.MODID, "stick_" + handle).getString();
             }
         }
     }
@@ -128,8 +130,8 @@ public class ToolUtils {
 
         //MODDED
         } else {
-            return FormattingUtils.setModLangComponent("material", headMaterial).append(" ")
-                    .append(FormattingUtils.setModLangComponent("tooltype", toolType));
+            return FormattingHelper.setModLangComponent("material", References.MODID, headMaterial).append(" ")
+                    .append(FormattingHelper.setModLangComponent("tooltype", References.MODID, toolType));
         }
 
     }
@@ -418,45 +420,45 @@ public class ToolUtils {
             throw new NullPointerException("Material is null: " + base + "_" + handle);
         }
 
-        MutableComponent description = Component.translatable(FormattingUtils.setLangTag("message","material_stats")).withStyle(ChatFormatting.BLUE);
+        MutableComponent description = Component.translatable(FormattingHelper.setLangTag("message", References.MODID, "material_stats")).withStyle(ChatFormatting.BLUE);
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","base").withStyle(ChatFormatting.WHITE).append(" "));
-        description.append(FormattingUtils.setModLangComponent("material", base).withStyle(ChatFormatting.YELLOW));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "base").withStyle(ChatFormatting.WHITE).append(" "));
+        description.append(FormattingHelper.setModLangComponent("material", References.MODID,  base).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","handle").withStyle(ChatFormatting.WHITE).append(" "));
-        description.append(FormattingUtils.setModLangComponent("material", handle).withStyle(ChatFormatting.YELLOW));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "handle").withStyle(ChatFormatting.WHITE).append(" "));
+        description.append(FormattingHelper.setModLangComponent("material", References.MODID,  handle).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator + lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material)).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("        "  + material.durability()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","mining_speed.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "mining_speed.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("    " + df.format(material.speed())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_SPEED)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","damage.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "damage.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("           " + df.format(material.attackDamageBonus())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","enchantability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "enchantability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("   " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(Component.literal("  " + String.valueOf((baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots()))).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS)));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","hit_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "hit_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(FormattingUtils.getHeadEffectNamesFromMaterial(base));
 
         description.append(Component.literal(lineSeperator));
-        description.append(FormattingUtils.setModLangComponent("message","hold_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
+        description.append(FormattingHelper.setModLangComponent("message", References.MODID, "hold_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
         description.append(FormattingUtils.getHandleEffectNamesFromMaterial(handle));
 
         return description;
