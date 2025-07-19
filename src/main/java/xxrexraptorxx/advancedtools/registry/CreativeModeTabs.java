@@ -31,10 +31,10 @@ public class CreativeModeTabs {
                 //RODS
                 for (String handle : ModItems.HANDLE_MATERIALS) {
                     if (!ToolUtils.isRod(handle)) {
-                        if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+                        if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Register rod in creative tab: " + handle + " " + BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)));
 
                         if (ToolUtils.isValidRodForCreative(handle)) {
-                            output.accept(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)));
+                            output.accept(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)));
                         }
                     }
                 }
@@ -78,9 +78,4 @@ public class CreativeModeTabs {
                 output.accept(ModItems.NETHERITE_BOW.get());
             }).build()
     );
-
-
-    private static ResourceLocation getStickLoc(String name){
-        return ResourceLocation.fromNamespaceAndPath(References.MODID, "stick_" + name);
-    }
 }

@@ -12,6 +12,7 @@ import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
 import xxrexraptorxx.advancedtools.datagen.ItemModelGen;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
 import xxrexraptorxx.advancedtools.main.References;
+import xxrexraptorxx.advancedtools.registry.CreativeModeTabs;
 import xxrexraptorxx.advancedtools.registry.ModComponents;
 import xxrexraptorxx.advancedtools.registry.ModItems;
 import xxrexraptorxx.advancedtools.utils.Config;
@@ -38,7 +39,7 @@ public class ModEvents {
             if (ToolUtils.isFireResistant(handle)) {
                 if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + handle);
 
-                event.modify(BuiltInRegistries.ITEM.getValue(ItemModelGen.getStickLoc(handle)), builder ->
+                event.modify(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)), builder ->
                         builder.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE)));
             }
 
@@ -47,7 +48,7 @@ public class ModEvents {
                 if (ToolUtils.isFireResistant(handle) || ToolUtils.isFireResistant(head)) {
                     for (String tool : ModItems.TOOL_TYPES) {
                         if(!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
-                            if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + tool + " with " + head + " head and " + handle + " handle");
+                            //if (Config.getDebugMode()) AdvancedTools.LOGGER.info("Generate components of " + tool + " with " + head + " head and " + handle + " handle");
 
                             event.modify(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID,handle + FormattingUtils.AT_INFIX + head + "_" + tool)), builder ->
                                     builder.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE)));

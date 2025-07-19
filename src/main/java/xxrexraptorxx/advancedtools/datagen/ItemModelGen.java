@@ -52,7 +52,7 @@ public class ItemModelGen extends ItemModelGenerators {
             if (!ToolUtils.isRod(handle)) {
                 AdvancedTools.LOGGER.info("Generate item model of " + handle);
 
-                this.generateFlatItem(BuiltInRegistries.ITEM.getValue(getStickLoc(handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
+                this.generateFlatItem(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
 
             //TOOLS
@@ -99,18 +99,13 @@ public class ItemModelGen extends ItemModelGenerators {
             throw new IllegalArgumentException("Invalid input format: " + name);
         }
 
-        this.itemModelOutput.accept(item, ItemModelUtils.plainModel(TWO_LAYERED_HANDHELD_ITEM.create(ResourceLocation.fromNamespaceAndPath(
-                References.MODID, "item/" + name), TextureMapping.layered(getTextureLoc(stickType), getTextureLoc(toolType)), this.modelOutput)));
+        this.itemModelOutput.accept(item, ItemModelUtils.plainModel(TWO_LAYERED_HANDHELD_ITEM.create(ItemHelper.getLocation(References.MODID, "item/" + name), TextureMapping.layered(getTextureLoc(stickType), getTextureLoc(toolType)), this.modelOutput)));
     }
 
 
 
     public static ResourceLocation getTextureLoc(String name){
         return ItemHelper.getLocation(References.MODID, "item/" + name);
-    }
-
-    public static ResourceLocation getStickLoc(String name){
-        return ItemHelper.getLocation(References.MODID, "stick_" + name);
     }
 
 }
