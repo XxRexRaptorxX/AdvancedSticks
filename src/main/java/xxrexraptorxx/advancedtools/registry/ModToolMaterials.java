@@ -70,13 +70,8 @@ public class ModToolMaterials {
                 Materials handleMaterial = Materials.fromName(handle).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + handle));
                 Materials baseMaterial = Materials.fromName(base).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + base));
 
-                addMaterial(
-                        baseMaterial.getRegistryName(), handleMaterial.getRegistryName(),
-                        baseMaterial.getUses(), handleMaterial.getUses(),
-                        baseMaterial.getSpeed(), handleMaterial.getSpeed(),
-                        baseMaterial.getDamage(), handleMaterial.getDamage(),
-                        baseMaterial.getEnchantability(), handleMaterial.getEnchantability()
-                );
+                addMaterial(baseMaterial.getRegistryName(), handleMaterial.getRegistryName(), baseMaterial.getUses(), handleMaterial.getUses(), baseMaterial.getSpeed(),
+                        handleMaterial.getSpeed(), baseMaterial.getDamage(), handleMaterial.getDamage(), baseMaterial.getEnchantability(), handleMaterial.getEnchantability());
             }
         }
 
@@ -85,15 +80,13 @@ public class ModToolMaterials {
 
 
     /**
-     *  Generate the ToolMaterials for each material
+     * Generate the ToolMaterials for each material
      */
-    private static void addMaterial(String baseName, String handleName, int baseUses, int handleUses, float baseSpeed, float handleSpeed, float baseDamage, float handleDamage, int baseEnchantability, int handleEnchantability) {
+    private static void addMaterial(String baseName, String handleName, int baseUses, int handleUses, float baseSpeed, float handleSpeed, float baseDamage, float handleDamage,
+            int baseEnchantability, int handleEnchantability) {
         String materialName = baseName + "_" + handleName;
-        ToolMaterial material = new ToolMaterial(TagHelper.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(baseName) + "_tool"),
-                baseUses * 3 + handleUses * 2,
-                baseSpeed * 3 + handleSpeed * 2,
-                baseDamage * 3 + handleDamage * 2,
-                baseEnchantability * 3 + handleEnchantability * 2,
+        ToolMaterial material = new ToolMaterial(TagHelper.createCBlockTag("incorrect_for_" + ToolUtils.transformMaterialNames(baseName) + "_tool"), baseUses * 3 + handleUses * 2,
+                baseSpeed * 3 + handleSpeed * 2, baseDamage * 3 + handleDamage * 2, baseEnchantability * 3 + handleEnchantability * 2,
                 TagHelper.createCItemTag(ToolUtils.transformMaterialNames(baseName) + "_tool_materials"));
         TOOL_MATERIALS.put(materialName, material);
     }
@@ -112,20 +105,20 @@ public class ModToolMaterials {
 
 
     /**
-     *  Register tool attack speed
+     * Register tool attack speed
      */
     static {
         // UNUSED FOR NOW
-        //for (String handle : ModItems.HANDLE_MATERIALS) {
-        //    for (String base : ModItems.TOOL_HEAD_MATERIALS) {
-        //        for (String tool : ModItems.TOOL_TYPES) {
-        //            Materials handleMaterial = Materials.fromName(handle).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + handle));
-        //            Materials baseMaterial = Materials.fromName(base).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + base));
+        // for (String handle : ModItems.HANDLE_MATERIALS) {
+        // for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+        // for (String tool : ModItems.TOOL_TYPES) {
+        // Materials handleMaterial = Materials.fromName(handle).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + handle));
+        // Materials baseMaterial = Materials.fromName(base).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + base));
         //
-        //            SPEED_MAP.put(handle + FormattingUtils.AT_INFIX +  base + "_" + tool, baseMaterial.getAttackSpeed() * 3 + handleMaterial.getAttackSpeed() * 2);
-        //        }
-        //    }
-        //}
+        // SPEED_MAP.put(handle + FormattingUtils.AT_INFIX + base + "_" + tool, baseMaterial.getAttackSpeed() * 3 + handleMaterial.getAttackSpeed() * 2);
+        // }
+        // }
+        // }
 
         SPEED_MAP.put("wood_sword", WOOD_SWORD_SPEED);
         SPEED_MAP.put("wood_pickaxe", WOOD_PICKAXE_SPEED);
@@ -165,7 +158,7 @@ public class ModToolMaterials {
     }
 
 
-    //UNUSED FOR NOW!
+    // UNUSED FOR NOW!
     @Deprecated
     public static float getSpeed(String handleMaterial, String baseMaterial, String toolType) {
         String key = handleMaterial.toLowerCase() + FormattingUtils.AT_INFIX + baseMaterial.toLowerCase() + "_" + toolType.toLowerCase();
@@ -228,4 +221,3 @@ public class ModToolMaterials {
         return getPartsFromToolMaterial(material).getSecond();
     }
 }
-

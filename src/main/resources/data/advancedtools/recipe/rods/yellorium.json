@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/yellorium"
   },
-
   "result": {
     "id": "advancedtools:stick_yellorium"
   }

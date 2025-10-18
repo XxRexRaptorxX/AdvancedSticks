@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/refined_redstone"
   },
-
   "result": {
     "id": "advancedtools:stick_redstone"
   }

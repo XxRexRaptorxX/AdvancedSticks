@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public enum Materials {
 
-//   name | durability | mining_speed | attack_damage | enchantability | attack_speed (unused) | mining_level | upgrade slots
+    // name | durability | mining_speed | attack_damage | enchantability | attack_speed (unused) | mining_level | upgrade slots
     ADAMANT(600, 1.33f, 1.07f, 2, 1.20f, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 3),
     ADVANCED(118, 0.592f, 0.296f, 1, 1.00f, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 2),
     ADVANCED_ALLOY(266, 1.33f, 0.67f, 3, 0.90f, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 2),
@@ -152,38 +152,72 @@ public enum Materials {
     ZANITE(233, 1.5f, 0.6f, 5, 1.05f, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1),
     ZINC(36, 1.33f, 0.33f, 2, 0.75f, BlockTags.INCORRECT_FOR_GOLD_TOOL, 1);
 
-    //Tool value calculation:   handle_material_value * 2 + head_material_value * 3 = final tool value
+    // Tool value calculation: handle_material_value * 2 + head_material_value * 3 = final tool value
 
 
-    private final int   uses;
+    private final int uses;
     private final float speed;
     private final float damage;
-    private final int   enchantability;
+    private final int enchantability;
     private final float attackSpeed;
     private final TagKey<Block> incorrectForMaterialKey;
     private final int upgradeSlots;
 
 
     Materials(int uses, float speed, float damage, int enchantability, float attackSpeed, TagKey<Block> incorrectForMaterialKey, int upgradeSlots) {
-        this.uses                    = uses;
-        this.speed                   = speed;
-        this.damage                  = damage;
-        this.enchantability          = enchantability;
-        this.attackSpeed             = attackSpeed;
+        this.uses = uses;
+        this.speed = speed;
+        this.damage = damage;
+        this.enchantability = enchantability;
+        this.attackSpeed = attackSpeed;
         this.incorrectForMaterialKey = incorrectForMaterialKey;
-        this.upgradeSlots            = upgradeSlots;
+        this.upgradeSlots = upgradeSlots;
     }
 
 
-    public int    getUses()                           { return uses; }
-    public float  getSpeed()                          { return speed; }
-    public float  getDamage()                         { return damage; }
-    public int    getEnchantability()                 { return enchantability; }
-    public float  getAttackSpeed()                    { return attackSpeed; }
-    public TagKey<Block> getIncorrectForMaterialKey() { return incorrectForMaterialKey; }
-    public String getName()                           { return name().toLowerCase(); }
-    public String getRegistryName()                   { return getName().replace("_", ""); }
-    public int    getUpgradeSlots()                   { return upgradeSlots; }
+    public int getUses() {
+        return uses;
+    }
+
+
+    public float getSpeed() {
+        return speed;
+    }
+
+
+    public float getDamage() {
+        return damage;
+    }
+
+
+    public int getEnchantability() {
+        return enchantability;
+    }
+
+
+    public float getAttackSpeed() {
+        return attackSpeed;
+    }
+
+
+    public TagKey<Block> getIncorrectForMaterialKey() {
+        return incorrectForMaterialKey;
+    }
+
+
+    public String getName() {
+        return name().toLowerCase();
+    }
+
+
+    public String getRegistryName() {
+        return getName().replace("_", "");
+    }
+
+
+    public int getUpgradeSlots() {
+        return upgradeSlots;
+    }
 
 
     public static Optional<Materials> fromName(String name) {

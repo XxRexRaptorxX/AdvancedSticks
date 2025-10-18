@@ -29,6 +29,7 @@ public class CustomAxeItem extends AxeItem implements ISocketTool {
         return ToolUtils.getToolTranslationKey(this);
     }
 
+
     @Override
     public void inventoryTick(ItemStack stack, ServerLevel level, Entity entity, @Nullable EquipmentSlot slot) {
         String name = ItemHelper.getPath(this);

@@ -1,12 +1,9 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": "#c:ingots/netherite",
-
   "base": "#c:rods/diamond",
-
   "result": {
     "id": "advancedtools:stick_netherite"
   },
-
   "template": "minecraft:netherite_upgrade_smithing_template"
 }

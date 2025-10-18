@@ -3,16 +3,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-  
     "#",
     "#"
-  
   ],
-  
   "key": {
     "#": "#c:ingots/gold"
   },
-  
   "result": {
     "id": "advancedtools:stick_gold"
   }

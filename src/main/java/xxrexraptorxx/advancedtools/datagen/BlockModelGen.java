@@ -15,6 +15,7 @@ public class BlockModelGen extends BlockModelGenerators {
         super(blockstateOutput, itemModelOutput, modelOutput);
     }
 
+
     @Override
     public void run() {
     }

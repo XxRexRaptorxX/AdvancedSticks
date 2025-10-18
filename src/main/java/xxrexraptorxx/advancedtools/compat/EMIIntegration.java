@@ -24,34 +24,33 @@ public class EMIIntegration implements EmiPlugin {
     public void register(EmiRegistry registry) {
         if (Config.getJEIDescription()) {
             for (String handle : ModItems.HANDLE_MATERIALS) {
-                for (String base : ModItems.TOOL_HEAD_MATERIALS) {;
+                for (String base : ModItems.TOOL_HEAD_MATERIALS) {
+                    ;
                     for (String tool : ModItems.TOOL_TYPES) {
-                        ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID,handle + FormattingUtils.AT_INFIX + base + "_" + tool)));
+                        ItemStack stack = new ItemStack(
+                                BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + base + "_" + tool)));
 
-                        ResourceLocation recipeId = ItemHelper.getLocation(References.MODID,"info/" + handle + "_" + base + "_" + tool);
+                        ResourceLocation recipeId = ItemHelper.getLocation(References.MODID, "info/" + handle + "_" + base + "_" + tool);
                         registry.addRecipe(new EmiInfoRecipe(List.of(EmiStack.of(stack)), List.of(ToolUtils.getToolStatDescription(handle, base)), recipeId));
                     }
                 }
             }
 
-            //VANILLA
+            // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
 
                     if (base.equals("wood") || base.equals("gold")) {
                         base = base + "en";
                     }
-                    ResourceLocation recipeId = ItemHelper.getLocation(References.MODID,"info/" + base + "_" + tool);
+                    ResourceLocation recipeId = ItemHelper.getLocation(References.MODID, "info/" + base + "_" + tool);
                     ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool)));
 
                     registry.addRecipe(new EmiInfoRecipe(List.of(EmiStack.of(stack)), List.of(ToolUtils.getToolStatDescription("wood", base)), recipeId));
                 }
             }
         }
-   }
-
-
-
+    }
 
 
 }

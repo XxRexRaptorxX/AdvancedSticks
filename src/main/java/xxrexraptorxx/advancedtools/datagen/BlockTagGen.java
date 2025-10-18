@@ -20,6 +20,7 @@ public class BlockTagGen extends BlockTagsProvider {
         super(output, lookupProvider, References.MODID);
     }
 
+
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         for (String head : ModItems.TOOL_HEAD_MATERIALS) {

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/ender_crystal"
   },
-
   "result": {
     "id": "advancedtools:stick_endercrystal"
   }

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/bedrock"
   },
-
   "result": {
     "id": "advancedtools:stick_bedrock"
   }

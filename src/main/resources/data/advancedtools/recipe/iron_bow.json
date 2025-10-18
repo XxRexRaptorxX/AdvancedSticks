@@ -6,12 +6,10 @@
     "# X",
     " #X"
   ],
-
   "key": {
     "#": "#c:rods/iron",
     "X": "minecraft:string"
   },
-
   "result": {
     "id": "advancedtools:iron_bow"
   }

@@ -3,16 +3,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-  
     "#",
     "#"
-  
   ],
-  
   "key": {
     "#": "#c:gems/emerald"
   },
-  
   "result": {
     "id": "advancedtools:stick_emerald"
   }

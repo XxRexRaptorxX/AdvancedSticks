@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/weak_red_steel"
   },
-
   "result": {
     "id": "advancedtools:stick_weak_red_steel"
   }

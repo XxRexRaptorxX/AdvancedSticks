@@ -50,10 +50,11 @@ public class ModelDataGen extends ModelProvider {
         this.modelPathProvider = packOutput.createPathProvider(PackOutput.Target.RESOURCE_PACK, "models");
     }
 
+
     public CompletableFuture<?> run(CachedOutput output) {
         ItemInfoCollector itemModelOutput = new ItemInfoCollector(this::getKnownItems) {
             @Override
-            public void finalizeAndValidate() { //todo temporary
+            public void finalizeAndValidate() { // todo temporary
                 try {
                     super.finalizeAndValidate();
                 } catch (IllegalStateException ignore) {
@@ -63,7 +64,7 @@ public class ModelDataGen extends ModelProvider {
         };
         BlockModelDefinitionGeneratorCollector blockModelOutput = new BlockModelDefinitionGeneratorCollector(this::getKnownBlocks) {
             @Override
-            public void validate() { //todo temporary
+            public void validate() { // todo temporary
                 try {
                     super.validate();
                 } catch (IllegalStateException ignore) {
@@ -75,7 +76,8 @@ public class ModelDataGen extends ModelProvider {
         this.registerModels(new BlockModelGen(blockModelOutput, itemModelOutput, modelOutput), new ItemModelGen(itemModelOutput, modelOutput));
         blockModelOutput.validate();
         itemModelOutput.finalizeAndValidate();
-        return CompletableFuture.allOf(blockModelOutput.save(output, this.blockStatePathProvider), modelOutput.save(output, this.modelPathProvider), itemModelOutput.save(output, this.itemInfoPathProvider));
+        return CompletableFuture.allOf(blockModelOutput.save(output, this.blockStatePathProvider), modelOutput.save(output, this.modelPathProvider),
+                itemModelOutput.save(output, this.itemInfoPathProvider));
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -95,6 +97,7 @@ public class ModelDataGen extends ModelProvider {
             this.register(item, new ClientItem(model, ClientItem.Properties.DEFAULT));
         }
 
+
         public void register(Item item, ClientItem clientItem) {
             ClientItem clientitem = (ClientItem) this.itemInfos.put(item, clientItem);
             if (clientitem != null) {
@@ -102,9 +105,11 @@ public class ModelDataGen extends ModelProvider {
             }
         }
 
+
         public void copy(Item item, Item item2) {
             this.copies.put(item2, item);
         }
+
 
         public void finalizeAndValidate() {
             (this.knownItems.get()).map(Holder::value).forEach((p_388426_) -> {
@@ -125,11 +130,13 @@ public class ModelDataGen extends ModelProvider {
                     this.register(item, clientitem);
                 }
             });
-            List<ResourceLocation> list = (this.knownItems.get()).filter((p_388636_) -> !this.itemInfos.containsKey(p_388636_.value())).map((p_388278_) -> ((ResourceKey) p_388278_.unwrapKey().orElseThrow()).location()).toList();
+            List<ResourceLocation> list = (this.knownItems.get()).filter((p_388636_) -> !this.itemInfos.containsKey(p_388636_.value()))
+                    .map((p_388278_) -> ((ResourceKey) p_388278_.unwrapKey().orElseThrow()).location()).toList();
             if (!list.isEmpty()) {
                 throw new IllegalStateException("Missing item model definitions for: " + String.valueOf(list));
             }
         }
+
 
         public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
             return DataProvider.saveAll(output, ClientItem.CODEC, (p_388594_) -> provider.json(p_388594_.builtInRegistryHolder().key().location()), this.itemInfos);
@@ -143,6 +150,7 @@ public class ModelDataGen extends ModelProvider {
         SimpleModelCollector() {
         }
 
+
         public void accept(ResourceLocation location, ModelInstance instance) {
             Supplier<JsonElement> supplier = (Supplier) this.models.put(location, instance);
             if (supplier != null) {
@@ -150,10 +158,12 @@ public class ModelDataGen extends ModelProvider {
             }
         }
 
+
         public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
             Objects.requireNonNull(provider);
             return saveAll(output, provider::json, this.models);
         }
+
 
         static <T> CompletableFuture<?> saveAll(CachedOutput output, Function<T, Path> pathFunction, Map<T, ? extends Supplier<JsonElement>> supplier) {
             return DataProvider.saveAll(output, Supplier::get, pathFunction, supplier);
@@ -179,15 +189,16 @@ public class ModelDataGen extends ModelProvider {
             }
         }
 
+
         public void validate() {
             Stream<? extends Holder<Block>> stream = knownBlocks.get();
             List<ResourceLocation> list = stream.filter(p_386843_ -> !this.generators.containsKey(p_386843_.value()))
-                    .map(p_386823_ -> p_386823_.unwrapKey().orElseThrow().location())
-                    .toList();
+                    .map(p_386823_ -> p_386823_.unwrapKey().orElseThrow().location()).toList();
             if (!list.isEmpty()) {
                 throw new IllegalStateException("Missing blockstate definitions for: " + list);
             }
         }
+
 
         public CompletableFuture<?> save(CachedOutput output, PackOutput.PathProvider provider) {
             Map<Block, BlockModelDefinition> map = Maps.transformValues(this.generators, BlockModelDefinitionGenerator::create);

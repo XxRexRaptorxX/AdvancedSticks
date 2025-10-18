@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/cinnabar"
   },
-
   "result": {
     "id": "advancedtools:stick_cinnabar"
   }

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/sapphire"
   },
-
   "result": {
     "id": "advancedtools:stick_sapphire"
   }

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/high_carbon_black_steel"
   },
-
   "result": {
     "id": "advancedtools:stick_high_carbon_black_steel"
   }

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/bismuth"
   },
-
   "result": {
     "id": "advancedtools:stick_bismuth"
   }

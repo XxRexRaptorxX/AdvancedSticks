@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/soularium"
   },
-
   "result": {
     "id": "advancedtools:stick_soularium"
   }

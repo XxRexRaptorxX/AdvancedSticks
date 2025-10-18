@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/pig_iron"
   },
-
   "result": {
     "id": "advancedtools:stick_pig_iron"
   }

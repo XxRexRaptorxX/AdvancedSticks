@@ -32,26 +32,26 @@ public class JEIIntegration implements IModPlugin {
             for (String handle : ModItems.HANDLE_MATERIALS) {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
-                        registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID,handle + FormattingUtils.AT_INFIX + base + "_" + tool))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
+                        registry.addIngredientInfo(
+                                new ItemStack(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + base + "_" + tool))),
+                                VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription(handle, base));
                     }
                 }
             }
 
-            //VANILLA
+            // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 if (base.equals("wood") || base.equals("gold")) {
                     base = base + "en";
                 }
 
                 for (String tool : ModItems.TOOL_TYPES) {
-                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool))), VanillaTypes.ITEM_STACK, ToolUtils.getToolStatDescription("wood", base));
+                    registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool))), VanillaTypes.ITEM_STACK,
+                            ToolUtils.getToolStatDescription("wood", base));
                 }
             }
         }
-   }
-
-
-
+    }
 
 
 }

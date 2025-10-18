@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/certus_quartz"
   },
-
   "result": {
     "id": "advancedtools:stick_certusquartzcrystal"
   }

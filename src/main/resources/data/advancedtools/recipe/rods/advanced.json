@@ -3,18 +3,14 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-  
     "#",
     "x",
     "#"
-  
   ],
-  
   "key": {
     "x": "#c:ingots/iron",
     "#": "#c:gems/diamond"
   },
-  
   "result": {
     "id": "advancedtools:stick_advanced"
   }

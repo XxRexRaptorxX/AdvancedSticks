@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/bio_steel"
   },
-
   "result": {
     "id": "advancedtools:stick_biosteel"
   }

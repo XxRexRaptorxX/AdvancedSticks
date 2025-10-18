@@ -5,19 +5,16 @@
       "modid": "immersiveengineering"
     }
   ],
-  "type":"immersiveengineering:metal_press",
-  "energy":2400,
-  "input":
-  {
+  "type": "immersiveengineering:metal_press",
+  "energy": 2400,
+  "input": {
     "item": "minecraft:bone"
   },
-  "mold":"immersiveengineering:mold_rod",
-  "result":
-  {
-    "base_ingredient":
-    {
-      "item":"advancedtools:stick_bone"
+  "mold": "immersiveengineering:mold_rod",
+  "result": {
+    "base_ingredient": {
+      "item": "advancedtools:stick_bone"
     },
-    "count":2
+    "count": 2
   }
 }

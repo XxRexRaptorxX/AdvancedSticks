@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/energetic_alloy"
   },
-
   "result": {
     "id": "advancedtools:stick_energeticalloy"
   }

@@ -5,19 +5,16 @@
       "modid": "immersiveengineering"
     }
   ],
-  "type":"immersiveengineering:metal_press",
-  "energy":2400,
-  "input":
-  {
+  "type": "immersiveengineering:metal_press",
+  "energy": 2400,
+  "input": {
     "tag": "c:gems/amethyst"
   },
-  "mold":"immersiveengineering:mold_rod",
-  "result":
-  {
-    "base_ingredient":
-    {
-      "item":"advancedtools:stick_amethyst"
+  "mold": "immersiveengineering:mold_rod",
+  "result": {
+    "base_ingredient": {
+      "item": "advancedtools:stick_amethyst"
     },
-    "count":2
+    "count": 2
   }
 }

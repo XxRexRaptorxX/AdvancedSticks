@@ -22,15 +22,16 @@ public class ItemModelGen extends ItemModelGenerators {
         super(itemModelOutput, modelOutput);
     }
 
+
     @Override
     public void run() {
-        //BOWS
+        // BOWS
         this.generateBow(ModItems.IRON_BOW.get());
         this.generateBow(ModItems.GOLD_BOW.get());
         this.generateBow(ModItems.DIAMOND_BOW.get());
         this.generateBow(ModItems.NETHERITE_BOW.get());
 
-        //UPGRADES
+        // UPGRADES
         this.generateFlatItem(ModItems.EMPTY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.RARITY_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.NETHERITE_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
@@ -46,7 +47,7 @@ public class ItemModelGen extends ItemModelGenerators {
         this.generateFlatItem(ModItems.SWEEPING_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
         this.generateFlatItem(ModItems.PROTECTION_UPGRADE.get(), ModelTemplates.FLAT_ITEM);
 
-        //RODS
+        // RODS
         for (String handle : ModItems.HANDLE_MATERIALS) {
 
             if (!ToolUtils.isRod(handle)) {
@@ -55,14 +56,15 @@ public class ItemModelGen extends ItemModelGenerators {
                 this.generateFlatItem(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)), ModelTemplates.FLAT_HANDHELD_ROD_ITEM);
             }
 
-            //TOOLS
+            // TOOLS
             for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
 
                     if (!(Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(head) && handle.equals("wood"))) {
                         AdvancedTools.LOGGER.info("Generate " + tool + " item model of " + head + " head with " + handle + " handle");
 
-                        this.generateLayeredHandheldItem(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + head + "_" + tool)));
+                        this.generateLayeredHandheldItem(
+                                BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + head + "_" + tool)));
                     }
                 }
             }
@@ -99,12 +101,12 @@ public class ItemModelGen extends ItemModelGenerators {
             throw new IllegalArgumentException("Invalid input format: " + name);
         }
 
-        this.itemModelOutput.accept(item, ItemModelUtils.plainModel(TWO_LAYERED_HANDHELD_ITEM.create(ItemHelper.getLocation(References.MODID, "item/" + name), TextureMapping.layered(getTextureLoc(stickType), getTextureLoc(toolType)), this.modelOutput)));
+        this.itemModelOutput.accept(item, ItemModelUtils.plainModel(TWO_LAYERED_HANDHELD_ITEM.create(ItemHelper.getLocation(References.MODID, "item/" + name),
+                TextureMapping.layered(getTextureLoc(stickType), getTextureLoc(toolType)), this.modelOutput)));
     }
 
 
-
-    public static ResourceLocation getTextureLoc(String name){
+    public static ResourceLocation getTextureLoc(String name) {
         return ItemHelper.getLocation(References.MODID, "item/" + name);
     }
 

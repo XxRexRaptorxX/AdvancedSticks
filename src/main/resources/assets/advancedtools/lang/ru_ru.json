@@ -1,19 +1,16 @@
 {
   "_comment": "Переведено DanisimoQ2",
-
   "advancedtools.configuration.title": "Magma Core Configuration",
   "advancedtools.configuration.section.advancedtools.advancedtools.client.toml": "Client Settings",
   "advancedtools.configuration.section.advancedtools.advancedtools.client.toml.title": "Client Options",
   "advancedtools.configuration.section.advancedtools.advancedtools.server.toml": "Server Settings",
   "advancedtools.configuration.section.advancedtools.advancedtools.server.toml.title": "Server Options",
-
   "advancedtools.configuration.general": "General Options",
   "advancedtools.configuration.general.button": "General Settings",
   "advancedtools.configuration.general.tooltip": "Configure general settings",
   "advancedtools.configuration.materials": "Materials Options",
   "advancedtools.configuration.materials.button": "Materials Settings",
   "advancedtools.configuration.materials.tooltip": "Configure Materials settings",
-
   "advancedtools.configuration.disabled_material_effects": "Disabled material effects",
   "advancedtools.configuration.disabled_material_effects.tooltip": "List of materials where the effect should be disabled",
   "advancedtools.configuration.tool_head_materials": "Tool head materials",
@@ -32,9 +29,7 @@
   "advancedtools.configuration.show_material_stats.tooltip": "Shows you the stats of the item as tooltips when you press 'SHIFT' over the tool",
   "advancedtools.configuration.force_all_materials": "Force all materials",
   "advancedtools.configuration.force_all_materials.tooltip": "Manually enable all material variants even if the base material is missing",
-
   "itemGroup.advancedtools_tab": "Advanced Sticks",
-
   "advancements.advancedtools.root.title": "Advanced Sticks",
   "advancements.advancedtools.root.description": "Начнём же",
   "advancements.advancedtools.stick_wood.title": "Это только начало",
@@ -97,7 +92,6 @@
   "advancements.advancedtools.hoe_diamond.description": "Создайте полностью алмазную мотыгу",
   "advancements.advancedtools.hoe_advanced.title": "Слишком много?",
   "advancements.advancedtools.hoe_advanced.description": "Создайте алмазную мотыгу с улучшенным стержнем",
-
   "message.advancedtools.material_stats": "    - MATERIAL STATS -",
   "message.advancedtools.mining_level.jei_desc": "Mining Level",
   "message.advancedtools.durability.jei_desc": "Durability",
@@ -116,7 +110,6 @@
   "tooltype.advancedtools.shovel": "Shovel",
   "tooltype.advancedtools.hoe": "Hoe",
   "tooltype.advancedtools.sword": "Sword",
-
   "material.advancedtools.wood": "Wood",
   "material.advancedtools.iron": "Iron",
   "material.advancedtools.gold": "Gold",
@@ -258,7 +251,6 @@
   "material.advancedtools.weakbluesteel": "Weak Blue Steel",
   "material.advancedtools.sterlingsilver": "Sterling Silver",
   "material.advancedtools.blacksteel": "Black Steel",
-
   "item.advancedtools.rod": "Rod",
   "item.advancedtools.branch": "Ветка",
   "item.advancedtools.stick_wood": "Wooden Stick",
@@ -400,7 +392,6 @@
   "item.advancedtools.stick_weakbluesteel": "Weak Blue Steel Rod",
   "item.advancedtools.stick_sterlingsilver": "Sterling Silver Rod",
   "item.advancedtools.stick_blacksteel": "Black Steel Rod",
-
   "item.advancedtools.empty_upgrade": "Upgrade",
   "item.advancedtools.rarity_upgrade": "Rarity Upgrade",
   "item.advancedtools.netherite_upgrade": "Fire Resistance Upgrade",
@@ -415,7 +406,6 @@
   "item.advancedtools.miningrange_upgrade": "Mining Range Upgrade",
   "item.advancedtools.sweeping_upgrade": "Sweeping Upgrade",
   "item.advancedtools.protection_upgrade": "Protection Upgrade",
-
   "item.advancedtools.elemental_stick_air": "Элементальный стержень",
   "item.advancedtools.elemental_stick_earth": "Элементальный стержень",
   "item.advancedtools.elemental_stick_fire": "Элементальный стержень",

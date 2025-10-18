@@ -46,30 +46,12 @@ public class AdvancedTools {
 
 
     public static void packSetup(@NotNull AddPackFindersEvent event) {
-        event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_vanilla_materials"),
-                PackType.SERVER_DATA,
-                Component.literal("Only Vanilla Materials"),
-                PackSource.DEFAULT,
-                false,
-                Pack.Position.TOP
-        );
-        event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_common_materials"),
-                PackType.SERVER_DATA,
-                Component.literal("Only Common Materials"),
-                PackSource.DEFAULT,
-                false,
-                Pack.Position.TOP
-        );
-        event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_expanded_common_materials"),
-                PackType.SERVER_DATA,
-                Component.literal("Only Uncommon-, Common-modded & Vanilla Materials"),
-                PackSource.DEFAULT,
-                false,
-                Pack.Position.TOP
-        );
+        event.addPackFinders(ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_vanilla_materials"), PackType.SERVER_DATA,
+                Component.literal("Only Vanilla Materials"), PackSource.DEFAULT, false, Pack.Position.TOP);
+        event.addPackFinders(ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_common_materials"), PackType.SERVER_DATA,
+                Component.literal("Only Common Materials"), PackSource.DEFAULT, false, Pack.Position.TOP);
+        event.addPackFinders(ResourceLocation.fromNamespaceAndPath(References.MODID, "resourcepacks/only_expanded_common_materials"), PackType.SERVER_DATA,
+                Component.literal("Only Uncommon-, Common-modded & Vanilla Materials"), PackSource.DEFAULT, false, Pack.Position.TOP);
     }
 
 

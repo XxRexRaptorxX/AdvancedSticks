@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/rose_gold"
   },
-
   "result": {
     "id": "advancedtools:stick_rose_gold"
   }

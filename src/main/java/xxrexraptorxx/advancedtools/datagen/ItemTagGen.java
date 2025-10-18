@@ -34,7 +34,7 @@ public class ItemTagGen extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        //RODS
+        // RODS
         for (String handle : ModItems.HANDLE_MATERIALS) {
             AdvancedTools.LOGGER.info("Generate item tags for " + handle);
 
@@ -60,7 +60,7 @@ public class ItemTagGen extends ItemTagsProvider {
                 tag(ItemTags.PIGLIN_REPELLENTS).add(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, "stick_" + handle)));
             }
 
-            //TOOLS
+            // TOOLS
             for (String otherHandle : ModItems.HANDLE_MATERIALS) {
                 for (String head : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
@@ -109,37 +109,29 @@ public class ItemTagGen extends ItemTagsProvider {
         }
 
 
-        //VANILLA
+        // VANILLA
         TagKey<Item> woodStick = TagHelper.createCItemTag("sticks/wood");
         tag(woodStick).add(Items.STICK);
         tag(TagHelper.createCItemTag("sticks")).addTags(woodStick);
 
         TagKey<Item> endRod = TagHelper.createCItemTag("rods/end");
         tag(endRod).add(Blocks.END_ROD.asItem());
-        tag(TagHelper.createCItemTag( "rods")).addTags(endRod);
+        tag(TagHelper.createCItemTag("rods")).addTags(endRod);
 
-        //BOWS
-        tag(Tags.Items.TOOLS_BOW).add(
-                ModItems.IRON_BOW.get(),
-                ModItems.GOLD_BOW.asItem(),
-                ModItems.DIAMOND_BOW.asItem(),
-                ModItems.NETHERITE_BOW.asItem()
-        );
-        tag(ItemTags.BOW_ENCHANTABLE).add(
-                ModItems.IRON_BOW.get(),
-                ModItems.GOLD_BOW.asItem(),
-                ModItems.DIAMOND_BOW.asItem(),
-                ModItems.NETHERITE_BOW.asItem()
-        );
+        // BOWS
+        tag(Tags.Items.TOOLS_BOW).add(ModItems.IRON_BOW.get(), ModItems.GOLD_BOW.asItem(), ModItems.DIAMOND_BOW.asItem(), ModItems.NETHERITE_BOW.asItem());
+        tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.IRON_BOW.get(), ModItems.GOLD_BOW.asItem(), ModItems.DIAMOND_BOW.asItem(), ModItems.NETHERITE_BOW.asItem());
 
-        //UPGRADES
+        // UPGRADES
         tag(TagHelper.createItemTag(References.MODID, "rarity_upgrade_materials")).addTags(Tags.Items.GEMS_EMERALD);
         tag(TagHelper.createItemTag(References.MODID, "netherite_upgrade_materials")).addTags(Tags.Items.INGOTS_NETHERITE);
         tag(TagHelper.createItemTag(References.MODID, "obsidian_upgrade_materials")).addTags(Tags.Items.OBSIDIANS);
         tag(TagHelper.createItemTag(References.MODID, "knockback_upgrade_materials")).add(Items.TNT);
-        tag(TagHelper.createItemTag(References.MODID, "damage_upgrade_materials")).add(Blocks.QUARTZ_BLOCK.asItem()).addOptionalTags(TagHelper.createCItemTag("storage_blocks/quartz"));
+        tag(TagHelper.createItemTag(References.MODID, "damage_upgrade_materials")).add(Blocks.QUARTZ_BLOCK.asItem())
+                .addOptionalTags(TagHelper.createCItemTag("storage_blocks/quartz"));
         tag(TagHelper.createItemTag(References.MODID, "speed_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_REDSTONE);
-        tag(TagHelper.createItemTag(References.MODID, "luck_upgrade_materials")).add(Blocks.AMETHYST_BLOCK.asItem()).addOptionalTags(TagHelper.createCItemTag("storage_blocks/amethyst"));
+        tag(TagHelper.createItemTag(References.MODID, "luck_upgrade_materials")).add(Blocks.AMETHYST_BLOCK.asItem())
+                .addOptionalTags(TagHelper.createCItemTag("storage_blocks/amethyst"));
         tag(TagHelper.createItemTag(References.MODID, "efficiency_upgrade_materials")).addTags(Tags.Items.STORAGE_BLOCKS_LAPIS);
         tag(TagHelper.createItemTag(References.MODID, "underwater_upgrade_materials")).addTags(Tags.Items.GEMS_PRISMARINE);
         tag(TagHelper.createItemTag(References.MODID, "attack_range_upgrade_materials")).addTags(Tags.Items.RODS_BLAZE);

@@ -3,16 +3,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/prismarine"
   },
-
   "result": {
     "id": "advancedtools:stick_prismarine"
   }

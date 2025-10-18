@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/sterling_silver"
   },
-
   "result": {
     "id": "advancedtools:stick_sterling_silver"
   }

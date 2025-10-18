@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:chemical/carbon"
   },
-
   "result": {
     "id": "advancedtools:stick_carbon"
   }

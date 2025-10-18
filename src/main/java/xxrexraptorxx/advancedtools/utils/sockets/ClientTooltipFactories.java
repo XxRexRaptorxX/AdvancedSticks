@@ -67,19 +67,19 @@ public class ClientTooltipFactories {
                 // y-offset for title
                 int slotY = y + font.lineHeight + 2;
 
-                //draw slots
+                // draw slots
                 for (int i = 0; i < maxSlots; i++) {
                     int slotX = x + 4 + i * 18;
 
-                    //inner part
+                    // inner part
                     graphics.fill(slotX, slotY, slotX + 16, slotY + 16, SLOT_COLOR);
-                    //frames
-                    graphics.fill(slotX + 1, slotY,     slotX + 15, slotY + 1, FRAME_COLOR);
+                    // frames
+                    graphics.fill(slotX + 1, slotY, slotX + 15, slotY + 1, FRAME_COLOR);
                     graphics.fill(slotX + 1, slotY + 15, slotX + 15, slotY + 16, FRAME_COLOR);
-                    graphics.fill(slotX,     slotY + 1,  slotX + 1,  slotY + 15, FRAME_COLOR);
-                    graphics.fill(slotX + 15,slotY + 1,  slotX + 16, slotY + 15, FRAME_COLOR);
+                    graphics.fill(slotX, slotY + 1, slotX + 1, slotY + 15, FRAME_COLOR);
+                    graphics.fill(slotX + 15, slotY + 1, slotX + 16, slotY + 15, FRAME_COLOR);
 
-                    //draw items
+                    // draw items
                     if (i < socketIds.size()) {
                         String id = socketIds.get(i);
                         if (!id.equals(SocketUtils.EMPTY_SLOT)) {

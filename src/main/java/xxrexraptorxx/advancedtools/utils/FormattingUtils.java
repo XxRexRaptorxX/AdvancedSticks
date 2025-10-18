@@ -2,7 +2,6 @@ package xxrexraptorxx.advancedtools.utils;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffect;
@@ -24,7 +23,8 @@ public class FormattingUtils {
     public static Component getHandleEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHandleMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialRandomEffect(material).getEffect().value();
-            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString())
+                    .withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHandleMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHandleMaterialEffect(material).getEffect().value();
@@ -38,7 +38,8 @@ public class FormattingUtils {
     public static Component getHeadEffectNamesFromMaterial(String material) {
         if (ToolUtils.getHeadMaterialRandomEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialRandomEffect(material).getEffect().value();
-            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString()).withStyle(getMobEffectFormatting(effect));
+            return FormattingHelper.setModLangComponent("message", References.MODID, "random").append(" " + effect.getDisplayName().getString())
+                    .withStyle(getMobEffectFormatting(effect));
 
         } else if (ToolUtils.getHeadMaterialEffect(material) != null) {
             MobEffect effect = ToolUtils.getHeadMaterialEffect(material).getEffect().value();
@@ -50,10 +51,11 @@ public class FormattingUtils {
 
 
     /**
-     *  Converts the mining block tags to the old mining level format
+     * Converts the mining block tags to the old mining level format
      */
     public static int getMiningLevel(ToolMaterial material) {
-        Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
+        Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material))
+                .orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
 
         TagKey<Block> tag = headMaterial.getIncorrectForMaterialKey();
 
@@ -80,7 +82,7 @@ public class FormattingUtils {
 
 
     /**
-     *   Gives the color for the tool material stats depending on the strength
+     * Gives the color for the tool material stats depending on the strength
      */
     public static ChatFormatting getToolStatsFormatting(ToolMaterial material, ToolMaterialStatTypes type) {
         ChatFormatting bad = ChatFormatting.DARK_RED;
@@ -90,44 +92,46 @@ public class FormattingUtils {
         ChatFormatting top = ChatFormatting.DARK_GREEN;
 
         switch (type) {
-            case MINING_LEVEL:
+            case MINING_LEVEL :
                 if (getMiningLevel(material) <= 0) return bad;
                 if (getMiningLevel(material) == 1) return okay;
                 if (getMiningLevel(material) == 2) return normal;
                 if (getMiningLevel(material) == 3) return good;
                 return top;
 
-            case DURABILITY:
+            case DURABILITY :
                 if (material.durability() < 200) return bad;
                 if (material.durability() < 600) return okay;
                 if (material.durability() < 2000) return normal;
                 if (material.durability() < 3000) return good;
                 return top;
 
-            case DAMAGE:
+            case DAMAGE :
                 if (material.attackDamageBonus() < 1.5) return bad;
                 if (material.attackDamageBonus() < 2.5) return okay;
                 if (material.attackDamageBonus() < 4) return normal;
                 if (material.attackDamageBonus() < 5.5) return good;
                 return top;
 
-            case MINING_SPEED:
+            case MINING_SPEED :
                 if (material.speed() < 2.5) return bad;
                 if (material.speed() < 4.0) return okay;
                 if (material.speed() < 7.0) return normal;
                 if (material.speed() < 10.0) return good;
                 return top;
 
-            case ENCHANTABILITY:
+            case ENCHANTABILITY :
                 if (material.enchantmentValue() < 8) return bad;
                 if (material.enchantmentValue() < 15) return okay;
                 if (material.enchantmentValue() < 25) return normal;
                 if (material.enchantmentValue() < 32) return good;
                 return top;
 
-            case SOCKETS:
-                Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
-                Materials handleMaterial = Materials.fromName(ModToolMaterials.getHandleFromToolMaterial(material)).orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
+            case SOCKETS :
+                Materials headMaterial = Materials.fromName(ModToolMaterials.getHeadFromToolMaterial(material))
+                        .orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
+                Materials handleMaterial = Materials.fromName(ModToolMaterials.getHandleFromToolMaterial(material))
+                        .orElseThrow(() -> new IllegalArgumentException("Unknown material: " + material.toString()));
 
                 if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 2) return bad;
                 if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 3) return okay;
@@ -135,7 +139,7 @@ public class FormattingUtils {
                 if (handleMaterial.getUpgradeSlots() + headMaterial.getUpgradeSlots() < 6) return good;
                 return top;
 
-            case ATTACK_SPEED:
+            case ATTACK_SPEED :
                 AdvancedTools.LOGGER.error("Not yet implemented!");
                 return normal;
         }

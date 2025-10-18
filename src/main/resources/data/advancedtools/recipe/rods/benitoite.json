@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/benitoite"
   },
-
   "result": {
     "id": "advancedtools:stick_benitoite"
   }

@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/tin"
   },
-
   "result": {
     "id": "advancedtools:stick_tin"
   }

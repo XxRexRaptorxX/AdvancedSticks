@@ -3,16 +3,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/quartz"
   },
-
   "result": {
     "id": "advancedtools:stick_quartz"
   }

@@ -5,7 +5,6 @@
       "modid": "advancednetherite"
     }
   ],
-
   "type": "minecraft:smithing_transform",
   "addition": "#advancednetherite:upgrade_to_netherite_diamond",
   "base": "#c:rods/netherite_emerald",

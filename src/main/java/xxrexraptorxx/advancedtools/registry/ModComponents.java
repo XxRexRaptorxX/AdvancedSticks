@@ -13,18 +13,12 @@ import java.util.List;
 
 public class ModComponents {
 
-    public static final DeferredRegister.DataComponents DATA_COMPONENT_TYPES =
-            DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, References.MODID);
+    public static final DeferredRegister.DataComponents DATA_COMPONENT_TYPES = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, References.MODID);
 
     public static void init(IEventBus bus) {
         DATA_COMPONENT_TYPES.register(bus);
     }
 
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<String>>> SOCKETS =
-            DATA_COMPONENT_TYPES.register("sockets", () ->
-                    DataComponentType.<List<String>>builder()
-                            .persistent(Codec.STRING.listOf())
-                            .networkSynchronized(ByteBufCodecs.STRING_UTF8.apply(ByteBufCodecs.list()))
-                            .build()
-            );
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<List<String>>> SOCKETS = DATA_COMPONENT_TYPES.register("sockets",
+            () -> DataComponentType.<List<String>>builder().persistent(Codec.STRING.listOf()).networkSynchronized(ByteBufCodecs.STRING_UTF8.apply(ByteBufCodecs.list())).build());
 }

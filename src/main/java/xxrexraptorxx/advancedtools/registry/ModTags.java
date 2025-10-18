@@ -7,13 +7,10 @@ import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import xxrexraptorxx.advancedtools.main.AdvancedTools;
-import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
 import xxrexraptorxx.magmacore.content.TagHelper;
@@ -25,8 +22,7 @@ import java.util.Optional;
 public class ModTags {
 
     /**
-     * Tests whether an item tag is not empty and has at least one existing item registered.
-     * Supports multiple tags for a single material.
+     * Tests whether an item tag is not empty and has at least one existing item registered. Supports multiple tags for a single material.
      */
     public static boolean isTagValidAndHasMatchingItems(String material) {
         if (Minecraft.getInstance().level != null) {
@@ -129,13 +125,13 @@ public class ModTags {
             } else if (material.equals("superconductor")) {
                 tags.add(TagHelper.createCItemTag("ingots/superconductor"));
                 tags.add(TagHelper.createCItemTag("ingots/superconductor_alloy"));
-            } else if (material.equals("wood") || material.equals("wooden"))  {
+            } else if (material.equals("wood") || material.equals("wooden")) {
                 tags.add(TagHelper.createCItemTag("wooden_tool_materials"));
             } else if (material.equals("stone")) {
                 tags.add(TagHelper.createCItemTag("stone_tool_materials"));
             } else {
                 // Standard rod tags for materials that do not have normal base materials (e.g. enchanted_stick or basalz_rod)
-                tags.add(TagHelper.createCItemTag( "rods/" + material));
+                tags.add(TagHelper.createCItemTag("rods/" + material));
             }
 
         } else {
@@ -143,7 +139,7 @@ public class ModTags {
             if (ToolUtils.isGem(material)) {
                 tags.add(TagHelper.createCItemTag("gems/" + material));
             } else {
-                tags.add(TagHelper.createCItemTag( "ingots/" + material));
+                tags.add(TagHelper.createCItemTag("ingots/" + material));
             }
 
         }

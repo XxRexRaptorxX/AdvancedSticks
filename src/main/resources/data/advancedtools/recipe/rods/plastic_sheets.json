@@ -16,16 +16,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:sheets/plastic"
   },
-
   "result": {
     "id": "advancedtools:stick_hdpe"
   }

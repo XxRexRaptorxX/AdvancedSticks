@@ -6,12 +6,10 @@
     "# X",
     " #X"
   ],
-
   "key": {
     "#": "#c:rods/netherite",
     "X": "minecraft:string"
   },
-
   "result": {
     "id": "advancedtools:netherite_bow"
   }

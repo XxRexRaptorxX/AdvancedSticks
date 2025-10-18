@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/fluix"
   },
-
   "result": {
     "id": "advancedtools:stick_fluix"
   }

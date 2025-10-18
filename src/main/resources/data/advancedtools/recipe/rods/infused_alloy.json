@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:ingots/infused_alloy"
   },
-
   "result": {
     "id": "advancedtools:stick_infusedalloy"
   }

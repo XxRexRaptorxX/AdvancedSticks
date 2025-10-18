@@ -67,7 +67,6 @@ public class SocketUtils {
     }
 
 
-
     public static boolean hasSockets(ItemStack stack) {
         return stack.has(ModComponents.SOCKETS.get());
     }
@@ -142,98 +141,97 @@ public class SocketUtils {
     }
 
 
+    // public static void applySocketEffects(ItemStack stack) {
+    // if (!stack.has(ModComponents.SOCKET_COMPONENT.get())) return;
 
-    //public static void applySocketEffects(ItemStack stack) {
-   //    if (!stack.has(ModComponents.SOCKET_COMPONENT.get())) return;
+    // ModComponents.SocketData socketData = stack.get(ModComponents.SOCKET_COMPONENT.get());
+    // Set<Item> socketItems = socketData.sockets().stream()
+    // .map(ItemStack::getItem)
+    // .collect(Collectors.toSet());
 
-   //    ModComponents.SocketData socketData = stack.get(ModComponents.SOCKET_COMPONENT.get());
-   //    Set<Item> socketItems = socketData.sockets().stream()
-   //            .map(ItemStack::getItem)
-   //            .collect(Collectors.toSet());
+    // if (socketItems.contains(Items.EMERALD)) {
+    // stack.set(DataComponents.RARITY, Rarity.EPIC);
 
-   //    if (socketItems.contains(Items.EMERALD)) {
-   //        stack.set(DataComponents.RARITY, Rarity.EPIC);
-
-   //    } else if (socketItems.contains(Items.DIAMOND)) {
-   //        stack.set(DataComponents.RARITY, Rarity.RARE);
-   //    }
-
-
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        stack.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION));
-
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        stack.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE));
-   //    }
+    // } else if (socketItems.contains(Items.DIAMOND)) {
+    // stack.set(DataComponents.RARITY, Rarity.RARE);
+    // }
 
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.ATTACK_KNOCKBACK, 1.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.ATTACK_KNOCKBACK, 2.0F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // stack.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION));
+
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // stack.set(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_FIRE));
+    // }
 
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.LUCK, 1.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.LUCK, 2.0F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.ATTACK_KNOCKBACK, 1.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.ATTACK_KNOCKBACK, 2.0F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.ATTACK_DAMAGE, 4.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.ATTACK_DAMAGE, 8.0F);
-   //    }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.ATTACK_SPEED, 0.1F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.ATTACK_SPEED, 0.2F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.LUCK, 1.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.LUCK, 2.0F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.BLOCK_BREAK_SPEED, 0.1F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.BLOCK_BREAK_SPEED, 0.2F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.ATTACK_DAMAGE, 4.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.ATTACK_DAMAGE, 8.0F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.MINING_EFFICIENCY, 0.1F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.MINING_EFFICIENCY, 0.2F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.ATTACK_SPEED, 0.1F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.ATTACK_SPEED, 0.2F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.SUBMERGED_MINING_SPEED, 0.1F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.SUBMERGED_MINING_SPEED, 0.2F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.BLOCK_BREAK_SPEED, 0.1F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.BLOCK_BREAK_SPEED, 0.2F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.BLOCK_INTERACTION_RANGE, 1.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.BLOCK_INTERACTION_RANGE, 2.0F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.MINING_EFFICIENCY, 0.1F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.MINING_EFFICIENCY, 0.2F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.ENTITY_INTERACTION_RANGE, 1.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.ENTITY_INTERACTION_RANGE, 2.0F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.SUBMERGED_MINING_SPEED, 0.1F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.SUBMERGED_MINING_SPEED, 0.2F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.SWEEPING_DAMAGE_RATIO, 0.3F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.SWEEPING_DAMAGE_RATIO, 0.5F);
-   //    }
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.BLOCK_INTERACTION_RANGE, 1.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.BLOCK_INTERACTION_RANGE, 2.0F);
+    // }
 
-   //    if (socketItems.contains(Items.IRON_NUGGET)) {
-   //        setAttributes(stack, Attributes.ARMOR, 1.0F);
-   //    } else if (socketItems.contains(Items.REDSTONE)) {
-   //        setAttributes(stack, Attributes.ARMOR, 2.0F);
-   //    }
-   //}
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.ENTITY_INTERACTION_RANGE, 1.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.ENTITY_INTERACTION_RANGE, 2.0F);
+    // }
+
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.SWEEPING_DAMAGE_RATIO, 0.3F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.SWEEPING_DAMAGE_RATIO, 0.5F);
+    // }
+
+    // if (socketItems.contains(Items.IRON_NUGGET)) {
+    // setAttributes(stack, Attributes.ARMOR, 1.0F);
+    // } else if (socketItems.contains(Items.REDSTONE)) {
+    // setAttributes(stack, Attributes.ARMOR, 2.0F);
+    // }
+    // }
 
 
     public static void setAttributes(ItemStack stack, Holder<Attribute> attribute, float amount) {

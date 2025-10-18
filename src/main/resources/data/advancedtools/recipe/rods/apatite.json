@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/apatite"
   },
-
   "result": {
     "id": "advancedtools:stick_apatite"
   }

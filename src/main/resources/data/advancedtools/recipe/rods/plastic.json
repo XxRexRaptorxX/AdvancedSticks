@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:pellet/plastic"
   },
-
   "result": {
     "id": "advancedtools:stick_hdpe"
   }

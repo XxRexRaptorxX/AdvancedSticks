@@ -27,15 +27,17 @@ public class REIIntegration implements REIClientPlugin {
                 for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                     for (String tool : ModItems.TOOL_TYPES) {
 
-                        instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + base + "_" + tool))), Component.empty(), list -> {
-                            list.add(ToolUtils.getToolStatDescription(handle, base));
-                            return list;
-                        });
+                        instance.registerInformation(
+                                EntryStacks.of(BuiltInRegistries.ITEM.getValue(ItemHelper.getLocation(References.MODID, handle + FormattingUtils.AT_INFIX + base + "_" + tool))),
+                                Component.empty(), list -> {
+                                    list.add(ToolUtils.getToolStatDescription(handle, base));
+                                    return list;
+                                });
                     }
                 }
             }
 
-            //VANILLA
+            // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 String head = base;
 
@@ -44,14 +46,14 @@ public class REIIntegration implements REIClientPlugin {
                 }
 
                 for (String tool : ModItems.TOOL_TYPES) {
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_" + tool))), Component.empty(), list -> {
-                        list.add(ToolUtils.getToolStatDescription("wood", base));
-                        return list;
-                    });
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_" + tool))), Component.empty(),
+                            list -> {
+                                list.add(ToolUtils.getToolStatDescription("wood", base));
+                                return list;
+                            });
                 }
             }
         }
     }
 
 }
-

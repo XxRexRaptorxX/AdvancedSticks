@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/pyrite"
   },
-
   "result": {
     "id": "advancedtools:stick_pyrite"
   }

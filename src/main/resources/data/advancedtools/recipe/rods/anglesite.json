@@ -12,16 +12,12 @@
   "category": "misc",
   "group": "rods",
   "pattern": [
-
     "#",
     "#"
-
   ],
-
   "key": {
     "#": "#c:gems/anglesite"
   },
-
   "result": {
     "id": "advancedtools:stick_anglesite"
   }

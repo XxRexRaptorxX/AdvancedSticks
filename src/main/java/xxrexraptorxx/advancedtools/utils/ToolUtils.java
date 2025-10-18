@@ -32,7 +32,7 @@ import java.util.regex.Pattern;
 public class ToolUtils {
 
     /**
-     *  Returns the cleaned name of the handle type from a tool.
+     * Returns the cleaned name of the handle type from a tool.
      */
     public static String getStickFromName(Item item) {
         String name = BuiltInRegistries.ITEM.getKey(item).getPath();
@@ -44,7 +44,7 @@ public class ToolUtils {
             String handle = Objects.requireNonNull(getPartsFromTool(name))[0];
 
             if (isVanillaRod(handle)) {
-                if(handle.equals("end")) {
+                if (handle.equals("end")) {
                     return FormattingHelper.setModLangComponent("block", "minecraft", handle + "_rod").getString();
                 } else {
                     return FormattingHelper.setModLangComponent("item", "minecraft", handle + "_rod").getString();
@@ -62,8 +62,7 @@ public class ToolUtils {
     private static final Pattern TM_NAME_PATTERN = Pattern.compile("^([a-zA-Z0-9]+)_([a-zA-Z0-9]+)$");
 
     /**
-     * Extracts handleMaterial, headMaterial and toolType from the item name.
-     * Supports both mod tools and vanilla tools.
+     * Extracts handleMaterial, headMaterial and toolType from the item name. Supports both mod tools and vanilla tools.
      *
      * @param toolName The registry name of the tool (e.g. "wood_stick_iron_pickaxe" or "iron_pickaxe")
      * @return A string array {handleMaterial, headMaterial, toolType} or null on error
@@ -112,9 +111,9 @@ public class ToolUtils {
         String headMaterial = Objects.requireNonNull(getPartsFromTool(itemName))[1];
         String toolType = Objects.requireNonNull(getPartsFromTool(itemName))[2];
 
-        //VANILLA
+        // VANILLA
         if (Arrays.asList(ModItems.VANILLA_HEAD_MATERIALS).contains(headMaterial) && handleMaterial.equals("wood")) {
-            //name fix
+            // name fix
             if (headMaterial.equals("wood")) {
                 headMaterial = "wooden";
             } else if (headMaterial.equals("gold")) {
@@ -128,7 +127,7 @@ public class ToolUtils {
 
             return Component.translatable(vanillaItem.getDescriptionId());
 
-        //MODDED
+            // MODDED
         } else {
             return FormattingHelper.setModLangComponent("material", References.MODID, headMaterial).append(" ")
                     .append(FormattingHelper.setModLangComponent("tooltype", References.MODID, toolType));
@@ -142,10 +141,9 @@ public class ToolUtils {
      */
     public static boolean isGem(String material) {
         return switch (material) {
-            case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz",
-                 "fluorite", "cinnabar", "apatite", "aquite", "certusquartzcrystal", "charoite", "diopside",
-                 "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite", "zanite", "endercrystal", "pyrite"
-                    -> true;
+            case "diamond", "emerald", "amethyst", "quartz", "topaz", "peridot", "ruby", "sapphire", "certusquartz", "fluorite", "cinnabar", "apatite", "aquite",
+                    "certusquartzcrystal", "charoite", "diopside", "fluix", "prismarine", "pyrope", "opal", "anglesite", "benitoite", "zanite", "endercrystal", "pyrite" ->
+                true;
 
             default -> false;
         };
@@ -157,10 +155,9 @@ public class ToolUtils {
      */
     public static boolean isSpecial(String material) {
         return switch (material) {
-            case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz",
-                 "blizz", "blitz", "carbon", "plastic", "glowstone", "redstone", "superconductor", "obsidian",
-                 "bedrock", "silicon", "wood", "wooden", "stone"
-                    -> true;
+            case "advanced", "enchanted", "bone", "witherbone", "end", "blaze", "breeze", "basalz", "blizz", "blitz", "carbon", "plastic", "glowstone", "redstone",
+                    "superconductor", "obsidian", "bedrock", "silicon", "wood", "wooden", "stone" ->
+                true;
 
             default -> false;
         };
@@ -172,8 +169,7 @@ public class ToolUtils {
      */
     public static boolean isRod(String material) {
         return switch (material) {
-            case "end", "blaze", "breeze", "basalz", "blizz", "blitz", "wood", "stick"
-                    -> true;
+            case "end", "blaze", "breeze", "basalz", "blizz", "blitz", "wood", "stick" -> true;
 
             default -> false;
         };
@@ -185,8 +181,7 @@ public class ToolUtils {
      */
     public static boolean isVanillaRod(String material) {
         return switch (material) {
-            case "end", "blaze", "breeze"
-                    -> true;
+            case "end", "blaze", "breeze" -> true;
 
             default -> false;
         };
@@ -198,8 +193,7 @@ public class ToolUtils {
      */
     public static boolean isFireResistant(String material) {
         return switch (material) {
-            case "netherite", "netheriteiron", "netheritegold", "netheritediamond", "netheriteemerald", "bedrock", "obsidian", "allthemodium", "vibranium", "unobtainium"
-                    -> true;
+            case "netherite", "netheriteiron", "netheritegold", "netheritediamond", "netheriteemerald", "bedrock", "obsidian", "allthemodium", "vibranium", "unobtainium" -> true;
 
             default -> false;
         };
@@ -227,8 +221,8 @@ public class ToolUtils {
             return true;
 
         } else {
-            return Config.getHandleMaterials().contains(handle) && Config.getToolHeadMaterials().contains(head) &&
-                    ModTags.isTagValidAndHasMatchingItems(handle) && ModTags.isTagValidAndHasMatchingItems(head);
+            return Config.getHandleMaterials().contains(handle) && Config.getToolHeadMaterials().contains(head) && ModTags.isTagValidAndHasMatchingItems(handle)
+                    && ModTags.isTagValidAndHasMatchingItems(head);
         }
     }
 
@@ -265,7 +259,7 @@ public class ToolUtils {
         if (material.equals("compressediron")) material = "compressed_iron";
         if (material.equals("pinkslime")) material = "pink_slime";
         if (material.equals("endercrystal")) material = "ender_crystal";
-        if (material.equals("hdpe")) material = "plastic"; //name fix to make HDPE more versatile
+        if (material.equals("hdpe")) material = "plastic"; // name fix to make HDPE more versatile
         if (material.equals("bluesteel")) material = "blue_steel";
         if (material.equals("highcarbonbluesteel")) material = "high_carbon_blue_steel";
         if (material.equals("wroughtiron")) material = "wrought_iron";
@@ -299,7 +293,7 @@ public class ToolUtils {
             case "bloodiron", "soularium" -> new MobEffectInstance(MobEffects.BAD_OMEN, 30);
             case "enchantedbloodiron" -> new MobEffectInstance(MobEffects.BAD_OMEN, 30, 1);
             case "endsteel" -> new MobEffectInstance(MobEffects.SLOW_FALLING, 30);
-            case "rosegold" -> getOptionalEffect("love", 30, 0 , MobEffects.LUCK);
+            case "rosegold" -> getOptionalEffect("love", 30, 0, MobEffects.LUCK);
             case "sterlingsilver" -> new MobEffectInstance(MobEffects.LUCK, 30);
             case "vibranium" -> new MobEffectInstance(MobEffects.RESISTANCE, 30);
             case "end" -> new MobEffectInstance(MobEffects.NIGHT_VISION, 30);
@@ -396,7 +390,7 @@ public class ToolUtils {
             case "enderium" -> getOptionalEffect("teleportation", random.nextInt(50, 100), 0, MobEffects.INFESTED);
             case "duratium", "falsite", "pigiron" -> new MobEffectInstance(MobEffects.HUNGER, random.nextInt(50, 120));
             case "energizedcopper", "energizedgold", "energite" -> getOptionalEffect("supercharge", "hyperactive", random.nextInt(50, 100), 0, MobEffects.SPEED);
-            case "basalz" -> getOptionalEffect("concrete_feet", "fear", random.nextInt(50, 100), 0 , MobEffects.WEAKNESS);
+            case "basalz" -> getOptionalEffect("concrete_feet", "fear", random.nextInt(50, 100), 0, MobEffects.WEAKNESS);
             case "blitz" -> new MobEffectInstance(MobEffects.WIND_CHARGED, random.nextInt(100, 500));
             case "infusedalloy" -> getOptionalEffect("corrosive", random.nextInt(50, 100), 0, null);
             case "blizz" -> getOptionalEffect("freezing", random.nextInt(50, 100), 0, null);
@@ -405,7 +399,6 @@ public class ToolUtils {
             default -> null;
         };
     }
-
 
 
     public static Component getToolStatDescription(String handle, String base) {
@@ -423,19 +416,20 @@ public class ToolUtils {
         MutableComponent description = Component.translatable(FormattingHelper.setLangTag("message", References.MODID, "material_stats")).withStyle(ChatFormatting.BLUE);
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "base").withStyle(ChatFormatting.WHITE).append(" "));
-        description.append(FormattingHelper.setModLangComponent("material", References.MODID,  base).withStyle(ChatFormatting.YELLOW));
+        description.append(FormattingHelper.setModLangComponent("material", References.MODID, base).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "handle").withStyle(ChatFormatting.WHITE).append(" "));
-        description.append(FormattingHelper.setModLangComponent("material", References.MODID,  handle).withStyle(ChatFormatting.YELLOW));
+        description.append(FormattingHelper.setModLangComponent("material", References.MODID, handle).withStyle(ChatFormatting.YELLOW));
 
         description.append(Component.literal(lineSeperator + lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "mining_level.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material)).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
+        description.append(Component.literal("     " + FormattingUtils.getMiningLevel(material))
+                .withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.MINING_LEVEL)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "durability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("        "  + material.durability()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
+        description.append(Component.literal("        " + material.durability()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DURABILITY)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "mining_speed.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
@@ -443,15 +437,18 @@ public class ToolUtils {
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "damage.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("           " + df.format(material.attackDamageBonus())).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
+        description.append(Component.literal("           " + df.format(material.attackDamageBonus()))
+                .withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.DAMAGE)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "enchantability.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("   " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
+        description
+                .append(Component.literal("   " + material.enchantmentValue()).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.ENCHANTABILITY)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "sockets.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
-        description.append(Component.literal("  " + String.valueOf((baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots()))).withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS)));
+        description.append(Component.literal("  " + String.valueOf((baseMaterial.getUpgradeSlots() + handleMaterial.getUpgradeSlots())))
+                .withStyle(FormattingUtils.getToolStatsFormatting(material, ToolMaterialStatTypes.SOCKETS)));
 
         description.append(Component.literal(lineSeperator));
         description.append(FormattingHelper.setModLangComponent("message", References.MODID, "hit_effect.jei_desc").append(textSeparator).withStyle(ChatFormatting.WHITE));
