@@ -1,0 +1,38 @@
+{
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/advanced-sticks",
+
+    "promos": {
+        "1.21.10-latest": "6.3.0",
+        "1.21.10-recommended": "6.3.0",
+
+        "1.21.9-latest": "6.3.0",
+        "1.21.9-recommended": "6.3.0",
+
+        "1.21.5-latest": "6.2.0",
+        "1.21.5-recommended": "6.2.0",
+
+        "1.21.4-latest": "5.3.0",
+        "1.21.4-recommended": "5.3.0",
+
+        "1.21.3-latest": "5.3.0",
+        "1.21.3-recommended": "5.3.0",
+
+        "1.21.2-latest": "5.3.0",
+        "1.21.2-recommended": "5.3.0",
+
+        "1.21.1-latest": "3.0.3",
+        "1.21.1-recommended": "3.0.3",
+
+        "1.21-latest": "3.0.3",
+        "1.21-recommended": "3.0.3",
+
+        "1.20.4-latest": "2.4.2",
+        "1.20.4-recommended": "2.4.2",
+
+        "1.20.3-latest": "2.4.2",
+        "1.20.3-recommended": "2.4.2",
+
+        "1.20.2-latest": "2.4.2",
+        "1.20.2-recommended": "2.4.2"
+    }
+}
