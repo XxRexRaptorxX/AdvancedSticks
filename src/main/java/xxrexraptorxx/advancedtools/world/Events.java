@@ -1,7 +1,8 @@
 package xxrexraptorxx.advancedtools.world;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.ItemTooltipEvent;
+import org.lwjgl.glfw.GLFW;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.Config;
 import xxrexraptorxx.advancedtools.utils.ToolUtils;
@@ -32,25 +34,25 @@ public class Events {
         if (!ToolUtils.excludedMods(namespace) && item.components().has(DataComponents.TOOL) && ToolUtils.isToolType(name)) {
 
             if (namespace.equals(References.MODID)) {
-                if (Screen.hasShiftDown() && Config.getShowMaterialStats()) {
+                if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT) && Config.getShowMaterialStats()) {
                     event.getToolTip().add(2, ToolUtils.getToolStatDescription(Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[0],
                             Objects.requireNonNull(ToolUtils.getPartsFromTool(name))[1]));
 
                 } else {
                     if (Config.getShowStickType()) {
-                        event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
+                        event.getToolTip().add(1, FormattingHelper.setMessageComponent(References.MODID, "handle", ChatFormatting.GRAY));
                         event.getToolTip().add(2, Component.literal(" " + ToolUtils.getStickFromName(item)).withStyle(ChatFormatting.DARK_GRAY));
                     }
                 }
                 event.getToolTip().add(3, Component.empty());
 
             } else if (namespace.equals(ResourceLocation.DEFAULT_NAMESPACE)) {
-                if (Screen.hasShiftDown() && Config.getShowMaterialStats()) {
+                if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT) && Config.getShowMaterialStats()) {
                     event.getToolTip().add(2, ToolUtils.getToolStatDescription("wood", ToolUtils.getBaseMaterialFromVanillaItem(name)));
 
                 } else {
                     if (Config.getShowStickType()) {
-                        event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
+                        event.getToolTip().add(1, FormattingHelper.setMessageComponent(References.MODID, "handle", ChatFormatting.GRAY));
                         event.getToolTip().add(2,
                                 Component.literal(" ").append(FormattingHelper.setModLangComponent("item", References.MODID, "stick_wood", ChatFormatting.DARK_GRAY)));
                     }
@@ -58,14 +60,14 @@ public class Events {
 
             } else if (namespace.equals("bedrockminer")) {
                 if (Config.getShowStickType()) {
-                    event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
+                    event.getToolTip().add(1, FormattingHelper.setMessageComponent(References.MODID, "handle", ChatFormatting.GRAY));
                     event.getToolTip().add(2,
                             Component.literal(" ").append(FormattingHelper.setModLangComponent("item", References.MODID, "stick_diamond", ChatFormatting.DARK_GRAY)));
                 }
 
             } else {
                 if (Config.getShowStickType()) {
-                    event.getToolTip().add(1, FormattingHelper.setModLangComponent("message", References.MODID, "handle", ChatFormatting.GRAY));
+                    event.getToolTip().add(1, FormattingHelper.setMessageComponent(References.MODID, "handle", ChatFormatting.GRAY));
                     event.getToolTip().add(2,
                             Component.literal(" ").append(FormattingHelper.setModLangComponent("item", References.MODID, "stick_wood", ChatFormatting.DARK_GRAY)));
                 }

@@ -34,7 +34,7 @@ public class RodItem extends Item {
         int index = name.indexOf("_");
         String handle = name.substring(0, index);
 
-        if (entity instanceof LivingEntity player && player.getMainHandItem().getItem().equals(this) && !level.isClientSide) {
+        if (entity instanceof LivingEntity player && player.getMainHandItem().getItem().equals(this) && !level.isClientSide()) {
 
             if (ToolUtils.getHandleMaterialEffect(handle) != null) {
                 player.addEffect(Objects.requireNonNull(ToolUtils.getHandleMaterialEffect(handle)));

@@ -1,11 +1,11 @@
 package xxrexraptorxx.advancedtools.utils.sockets;
 
+import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.tooltip.ClientTooltipComponent;
-import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -15,7 +15,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterClientTooltipComponentFactoriesEvent;
-import org.joml.Matrix4f;
+import org.lwjgl.glfw.GLFW;
 import xxrexraptorxx.advancedtools.main.References;
 import xxrexraptorxx.advancedtools.utils.SocketUtils;
 import xxrexraptorxx.magmacore.utils.FormattingHelper;
@@ -53,11 +53,11 @@ public class ClientTooltipFactories {
 
 
             @Override
-            public void renderText(Font font, int x, int y, Matrix4f matrix, MultiBufferSource.BufferSource buffers) {
-                if (!Screen.hasShiftDown()) {
+            public void renderText(GuiGraphics guiGraphics, Font font, int x, int y) {
+                if (!InputConstants.isKeyDown(Minecraft.getInstance().getWindow(), GLFW.GLFW_KEY_LEFT_SHIFT)) {
                     Component title = FormattingHelper.setModLangComponent("message", References.MODID, "sockets", ChatFormatting.GRAY);
 
-                    font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880);
+                    // font.drawInBatch(title, x, y, -1, true, matrix, buffers, Font.DisplayMode.NORMAL, 0, 15728880); //TODO!!!!!!!!!!!!!!!!!!
                 }
             }
 
