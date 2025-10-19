@@ -247,17 +247,16 @@ afterEvaluate {
             optional.project "energized-power"
             optional.project "immersiveengineering"
             optional.project "continuity"
-            optional.project "moremcmeta-emissive-forge"
+            optional.project "moremcmeta-emissive"
             optional.project "blue-skies"
             optional.project "oritech"
             optional.project "aether"
             optional.project "thermal-foundation"
             optional.project "terrafirmacraft"
-            optional.project "dvanced-netherite"
-            optional.project "biggerreactors"
+            optional.project "advanced-netherite"
             optional.project "modern-industrialization"
             optional.project "extreme-reactors"
-            optional.project "extra-gems"
+            optional.project "extragems"
         }
     }
 }
