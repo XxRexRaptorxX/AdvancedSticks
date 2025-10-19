@@ -39,10 +39,6 @@ public class EMIIntegration implements EmiPlugin {
             // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
                 for (String tool : ModItems.TOOL_TYPES) {
-
-                    if (base.equals("wood") || base.equals("gold")) {
-                        base = base + "en";
-                    }
                     ResourceLocation recipeId = ItemHelper.getLocation(References.MODID, "info/" + base + "_" + tool);
                     ItemStack stack = new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool)));
 

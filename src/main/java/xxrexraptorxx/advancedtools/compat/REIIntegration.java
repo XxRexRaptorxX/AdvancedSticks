@@ -39,14 +39,8 @@ public class REIIntegration implements REIClientPlugin {
 
             // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
-                String head = base;
-
-                if (base.equals("wood") || base.equals("gold")) {
-                    head = base + "en";
-                }
-
                 for (String tool : ModItems.TOOL_TYPES) {
-                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(head + "_" + tool))), Component.empty(),
+                    instance.registerInformation(EntryStacks.of(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool))), Component.empty(),
                             list -> {
                                 list.add(ToolUtils.getToolStatDescription("wood", base));
                                 return list;

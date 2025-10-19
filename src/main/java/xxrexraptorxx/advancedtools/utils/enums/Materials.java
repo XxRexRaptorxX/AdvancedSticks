@@ -221,6 +221,9 @@ public enum Materials {
 
 
     public static Optional<Materials> fromName(String name) {
+        if (name.equals("wooden")) name = "wood";
+        if (name.equals("golden")) name = "gold";
+
         try {
             String key = ToolUtils.transformMaterialNames(name).trim().toUpperCase().replace(' ', '_');
             return Optional.of(valueOf(key));

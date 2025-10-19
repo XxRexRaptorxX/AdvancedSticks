@@ -41,10 +41,6 @@ public class JEIIntegration implements IModPlugin {
 
             // VANILLA
             for (String base : ModItems.TOOL_HEAD_MATERIALS) {
-                if (base.equals("wood") || base.equals("gold")) {
-                    base = base + "en";
-                }
-
                 for (String tool : ModItems.TOOL_TYPES) {
                     registry.addIngredientInfo(new ItemStack(BuiltInRegistries.ITEM.getValue(ResourceLocation.withDefaultNamespace(base + "_" + tool))), VanillaTypes.ITEM_STACK,
                             ToolUtils.getToolStatDescription("wood", base));
