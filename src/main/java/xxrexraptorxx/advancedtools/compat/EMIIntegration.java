@@ -48,5 +48,4 @@ public class EMIIntegration implements EmiPlugin {
         }
     }
 
-
 }
